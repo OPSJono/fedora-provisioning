@@ -1,0 +1,13 @@
+---
+- hosts: all
+  name: Provision
+  remote_user: ubuntu
+  gather_facts: no
+  pre_tasks:
+    - name: install python 2
+      raw: test -e /usr/bin/python || (sudo dnf update -y && sudo dnf install -y python python-dnf)
+      changed_when: False
+  become: true
+
+  roles:
+    - opsjono.package_installations

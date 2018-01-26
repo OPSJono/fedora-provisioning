@@ -1,0 +1,26 @@
+---
+- name: Ensure the APT cache is up to date
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: upgrade all packages
+  dnf:
+    name: "*"
+    state: latest
+
+- name: install the 'Development tools' package group
+  dnf:
+    name: '@Development tools'
+    state: present
+
+- name: install the 'virtualization' package group
+  dnf:
+    name: '@virtualization'
+    state: latest
+
+- name: Install common utilties
+  dnf:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ server_common_packages }}"
