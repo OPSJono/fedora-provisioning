@@ -10,3 +10,4 @@
 
   roles:
     - opsjono.package_installations
+    - opsjono.gitkraken

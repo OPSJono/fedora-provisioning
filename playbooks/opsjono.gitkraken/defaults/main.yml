@@ -1,0 +1,29 @@
+---
+# The download URL for the redistributable package (For Debian based Distro's - Also used for comparing versions installed vs published
+gitkraken_redis_url: https://release.gitkraken.com/linux/gitkraken-amd64.deb
+# Filename of GitKraken redistributable package
+gitkraken_redis_filename: gitkraken-amd64.deb
+
+#####
+
+# The download URL for the zip file containing the Gitkraken software (for Distro's which are not Debian-based)
+gitkraken_zip_url: https://release.gitkraken.com/linux/gitkraken-amd64.tar.gz
+
+# Filename of GitKraken redistributable zip
+gitkraken_zip_filename: gitkraken-amd64.tar.gz
+gitkraken_unzip_folder: gitkraken-amd64
+
+# The location that the zip file version will be installed to.
+gitkraken_install_dir: /opt/gitkraken
+
+# Directory to store files downloaded for GitKraken installation
+gitkraken_download_dir: "~/.ansible/tmp/downloads"
+
+# Filename of GitKraken etag (version installed)
+gitkraken_etag_filename: gitkraken_version.etag
+
+# Path to GitKraken etag file
+gitkraken_etag_path: '{{ gitkraken_install_dir }}/{{ gitkraken_etag_filename }}'
+
+# Default value for existing etag
+gitkraken_existing_etag: none

@@ -1,0 +1,77 @@
+---
+- name: create download directory
+  file:
+    state: directory
+    mode: "u=rwx,go=rx"
+    dest: "{{ gitkraken_download_dir }}"
+
+- name: check for etag file
+  stat:
+    path: '{{ gitkraken_etag_path }}'
+  register: etag_file_test
+
+- name: read current etag file
+  slurp:
+    src: '{{ gitkraken_etag_path }}'
+  register: etag_file
+  when: etag_file_test.stat.exists
+
+- name: set existing etag fact
+  set_fact:
+    gitkraken_existing_etag: '{{ etag_file.content | b64decode }}'
+  when: etag_file_test.stat.exists
+
+- name: check latest remote GitKraken version
+  uri:
+    url: "{{ gitkraken_redis_url }}"
+    method: HEAD
+    follow_redirects: safe
+    check_mode: true
+  register: head_query
+
+- name: save latest etag to file
+  shell: |
+    echo {{ head_query.etag }} > {{ gitkraken_etag_path }}.latest
+  changed_when: false
+
+- name: read latest etag file
+  slurp:
+    src: "{{ gitkraken_etag_path }}.latest"
+  register: etag_file_latest
+
+- name: set latest etag fact
+  set_fact:
+    gitkraken_latest_etag: "{{ etag_file_latest.content | b64decode }}"
+
+- name: Download Latest Version of GitKraken
+  get_url:
+    url: "{{ gitkraken_zip_url }}"
+    dest: "{{ gitkraken_download_dir }}/{{ gitkraken_zip_filename }}"
+    force: "{{ gitkraken_latest_etag != gitkraken_existing_etag }}"
+    use_proxy: yes
+    validate_certs: yes
+    mode: 'u=rw,go=r'
+  when: gitkraken_latest_etag != gitkraken_existing_etag
+
+- name: Install Latest version of GitKraken
+  shell: |
+    cp {{ gitkraken_download_dir }}/{{ gitkraken_zip_filename }} /opt
+    tar -xvzf {{ gitkraken_zip_filename }}
+  args:
+    chdir: /opt
+  when: gitkraken_latest_etag != gitkraken_existing_etag
+  
+- name: Copy GitKraken icon into place
+  copy:
+    src: icon.png
+    dest: /opt/gitkraken/icon.png
+
+- name: Install gitkraken.desktop file
+  template:
+    src: gitkraken.desktop.j2
+    dest: /usr/share/applications/gitkraken.desktop
+
+- name: Set the current installed etag version
+  shell: |
+    echo {{ gitkraken_latest_etag }} > {{ gitkraken_etag_path }}
+  when: gitkraken_latest_etag != gitkraken_existing_etag
