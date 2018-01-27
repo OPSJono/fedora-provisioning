@@ -164,19 +164,11 @@
   when:
     - phpstorm_can_be_installed == true
 
-
-- name: Make sure preferences folder exists
-  file:
-    path: "~/.PhpStorm{{ get_phpstorm_major_version }}"
-    state: directory
-    mode: 0775
-    owner: "{{ ansible_user }}"
-    group: "{{ ansible_user }}"
-  when:
-    - phpstorm_can_be_installed == true
-
 - name: Copy PhpStorm preferences to home folder
   shell: |
-    cp -R opsjono.phpstorm/files/preferences/. ~/.PhpStorm{{ get_phpstorm_major_version }}
+    mkdir -p /home/{{ ansible_user }}/.PhpStorm{{ get_phpstorm_major_version }}/config
+    cp -R opsjono.phpstorm/files/preferences/* /home/{{ ansible_user }}/.PhpStorm{{ get_phpstorm_major_version }}
+  become: true
+  become_user: "{{ ansible_user }}"
   when:
     - phpstorm_can_be_installed == true
