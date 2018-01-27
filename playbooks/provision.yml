@@ -1,7 +1,6 @@
 ---
-- hosts: all
+- hosts: localhost
   name: Provision
-  remote_user: ubuntu
   gather_facts: no
   pre_tasks:
     - name: install python 2
