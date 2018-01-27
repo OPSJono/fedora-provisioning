@@ -7,7 +7,10 @@
       raw: test -e /usr/bin/python || (sudo dnf update -y && sudo dnf install -y python python-dnf)
       changed_when: False
   become: true
-
+  vars_prompt:
+    - name: "ansible_become_pass"
+      prompt: "Sudo password"
+      private: yes
   roles:
     - opsjono.package_installations
     - opsjono.gitkraken
