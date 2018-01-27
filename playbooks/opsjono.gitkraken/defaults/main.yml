@@ -20,10 +20,11 @@ gitkraken_install_dir: /opt/gitkraken
 gitkraken_download_dir: "~/.ansible/tmp/downloads"
 
 # Filename of GitKraken etag (version installed)
-gitkraken_etag_filename: gitkraken_version.etag
+gitkraken_current_etag_filename: gitkraken_version.etag.current
+gitkraken_latest_etag_filename: gitkraken_version.etag.latest
 
 # Path to GitKraken etag file
-gitkraken_etag_path: '{{ gitkraken_install_dir }}/{{ gitkraken_etag_filename }}'
+gitkraken_etag_path: '{{ gitkraken_install_dir }}/'
 
 # Default value for existing etag
 gitkraken_existing_etag: none

@@ -7,12 +7,12 @@
 
 - name: check for etag file
   stat:
-    path: '{{ gitkraken_etag_path }}'
+    path: '{{ gitkraken_etag_path }}{{ gitkraken_current_etag_filename }}'
   register: etag_file_test
 
 - name: read current etag file
   slurp:
-    src: '{{ gitkraken_etag_path }}'
+    src: "{{ gitkraken_etag_path }}{{ gitkraken_current_etag_filename }}"
   register: etag_file
   when: etag_file_test.stat.exists
 
@@ -36,12 +36,12 @@
 
 - name: save latest etag to file
   shell: |
-    echo {{ head_query.etag }} > {{ gitkraken_etag_path }}.latest
+    echo {{ head_query.etag }} > {{ gitkraken_etag_path }}{{ gitkraken_latest_etag_filename }}
   changed_when: false
 
 - name: read latest etag file
   slurp:
-    src: "{{ gitkraken_etag_path }}.latest"
+    src: "{{ gitkraken_etag_path }}{{ gitkraken_latest_etag_filename }}"
   register: etag_file_latest
 
 - name: set latest etag fact
@@ -78,5 +78,5 @@
 
 - name: Set the current installed etag version
   shell: |
-    echo {{ gitkraken_latest_etag }} > {{ gitkraken_etag_path }}
+    cp {{ gitkraken_etag_path }}{{ gitkraken_latest_etag_filename }} {{ gitkraken_etag_path }}{{ gitkraken_current_etag_filename }}
   when: gitkraken_latest_etag != gitkraken_existing_etag
