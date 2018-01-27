@@ -14,3 +14,4 @@
   roles:
     - opsjono.package_installations
     - opsjono.gitkraken
+    - opsjono.phpstorm

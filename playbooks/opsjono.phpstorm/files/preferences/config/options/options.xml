@@ -1,0 +1,26 @@
+<application>
+  <component name="PropertiesComponent">
+    <property name="PhpStorm.InitialConfiguration" value="true" />
+    <property name="PhpStorm.dumbRunEnabled" value="true" />
+    <property name="PhpStorm.initialConfigurationShown" value="true" />
+    <property name="file.chooser.recent.files" value="$USER_HOME$/code/personal/fedora-provisioning&#10;/home/jonathan/code/innoved/webflow&#10;/home/jonathan/code/innoved/october-cms&#10;/usr/local/bin/scss&#10;/home/jonathan/code/innoved/vle2/api/laravel/public/assets/animalates/css/scss/main.scss&#10;/home/jonathan/code/innoved/vle2/api/laravel/public/assets/animalates/css/scss&#10;/home/jonathan/code/innoved/utilities&#10;/home/jonathan/code/innoved/vle2/api/laravel&#10;/home/jonathan/code/innoved/vle2&#10;/home/jonathan/code/innoved/currency&#10;/home/jonathan/code/innoved/vle2/api/laravel/public&#10;/home/jonathan/code/innoved/vle2/vagrant&#10;/home/jonathan/code/innoved/vle2/vagrant/Vagrantfile&#10;/usr/bin/nodejs&#10;/usr/bin/tsc" />
+    <property name="toolwindow.stripes.buttons.info.shown" value="true" />
+    <property name="DeploymentNotificationsComponent.WarnDisplayed.Java7&amp;Windows7FTPIssue" value="false" />
+    <property name="lastTip" value="1" />
+    <property name="KEYMAP" value="close&#10;active tab&#10;close tab&#10;tab" />
+    <property name="CommitChangeListDialog.SPLITTER_PROPORTION_2" value="0.55573" />
+    <property name="CommitChangeListDialog.DETAILS_SPLITTER_PROPORTION_2" value="0.7362924" />
+    <property name="Copy.OpenInEditor" value="true" />
+    <property name="ExpandBeforeRunStepsPanel" value="true" />
+    <property name="ProjectStructure.SecondLevelElements" value="0.13089006" />
+    <property name="OpenOrAttachDialog.OpenMode" value="new" />
+    <property name="ts.lib.d.ts.version" value="2.4.1" />
+    <property name="file.gist.reindex.count" value="6578" />
+    <property name="selected.color.option.type" value="TYPO" />
+    <property name="fileTypeChangedCounter" value="11" />
+    <property name="PLUGIN_FILTER" value="file&#10;scss" />
+    <property name="SplitFileEditor.Proportion" value="0.5690464" />
+    <property name="settings.code.style.selected.tab.PHP" value="Tabs and Indents" />
+    <property name="find.popup.splitter" value="0.6192017" />
+  </component>
+</application>

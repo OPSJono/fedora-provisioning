@@ -1,0 +1,20 @@
+<application>
+  <component name="ToolbarClicksCollector">
+    <counts>
+      <entry action="Vcs.ShowTabbedFileHistory@NavBarToolbar" count="2" />
+      <entry action="com.intellij.diff.merge.TextMergeViewer$MyThreesideViewer$ApplyNonConflictsAction@DiffToolbar" count="38" />
+      <entry action="com.intellij.execution.ui.actions.CloseAction@RunContentExecutor" count="6" />
+      <entry action="com.intellij.find.SearchTextArea$ClearAction@unknown" count="3" />
+      <entry action="com.intellij.find.editorHeaderActions.NextOccurrenceAction@EditorToolbar" count="2" />
+      <entry action="com.intellij.find.editorHeaderActions.PrevOccurrenceAction@EditorToolbar" count="1" />
+      <entry action="com.intellij.find.impl.FindPopupPanel$MySelectScopeToggleAction@EditorToolbar" count="25" />
+      <entry action="com.intellij.notification.EventLogConsole$ClearLogAction@EventLog" count="1" />
+      <entry action="com.intellij.openapi.vcs.actions.ShowNextChangeMarkerAction@toolbar" count="1" />
+      <entry action="com.intellij.openapi.vcs.ex.CopyLineStatusRangeAction@toolbar" count="2" />
+      <entry action="com.intellij.openapi.vcs.ex.LineStatusTrackerDrawing$ToggleByWordDiffAction@toolbar" count="2" />
+      <entry action="com.intellij.openapi.vcs.ex.RollbackLineStatusRangeAction@toolbar" count="160" />
+      <entry action="com.intellij.openapi.vcs.ex.ShowLineStatusRangeDiffAction@toolbar" count="1" />
+      <entry action="com.intellij.ui.CommonActionsPanel$MyActionButton@ToolbarDecorator" count="2" />
+    </counts>
+  </component>
+</application>

@@ -1,0 +1,91 @@
+<application>
+  <component name="RecentDirectoryProjectsManager">
+    <option name="recentPaths">
+      <list>
+        <option value="$USER_HOME$/code/personal/fedora-provisioning" />
+        <option value="$USER_HOME$/code/innoved/utilities" />
+        <option value="$USER_HOME$/code/innoved/vle2" />
+        <option value="$USER_HOME$/code/innoved/webflow" />
+        <option value="$USER_HOME$/code/innoved/october-cms" />
+        <option value="$USER_HOME$/code/innoved/currency" />
+      </list>
+    </option>
+    <option name="openPaths">
+      <list>
+        <option value="$USER_HOME$/code/innoved/utilities" />
+        <option value="$USER_HOME$/code/personal/fedora-provisioning" />
+      </list>
+    </option>
+    <option name="lastPath" value="$USER_HOME$/code/personal/fedora-provisioning" />
+    <option name="additionalInfo">
+      <map>
+        <entry key="$USER_HOME$/code/innoved/currency">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="PS-163.10504.2" />
+              <option name="productionCode" value="PS" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1491832244139" />
+              <option name="buildTimestamp" value="1482245251122" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/innoved/october-cms">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="PS-172.3544.41" />
+              <option name="productionCode" value="PS" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1511176547180" />
+              <option name="buildTimestamp" value="1501660302796" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/innoved/utilities">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="PS-172.3544.41" />
+              <option name="productionCode" value="PS" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1517083650259" />
+              <option name="buildTimestamp" value="1501660285059" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/innoved/vle2">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="PS-172.3544.41" />
+              <option name="productionCode" value="PS" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1516990893172" />
+              <option name="buildTimestamp" value="1501660288374" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/innoved/webflow">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="PS-172.3544.41" />
+              <option name="productionCode" value="PS" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1516976818574" />
+              <option name="buildTimestamp" value="1501660268145" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/personal/fedora-provisioning">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="PS-172.3544.41" />
+              <option name="productionCode" value="PS" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1517083655990" />
+              <option name="buildTimestamp" value="1501660285059" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</application>
