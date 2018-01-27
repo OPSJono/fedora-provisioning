@@ -1,9 +1,4 @@
 ---
-- name: Ensure the APT cache is up to date
-  apt:
-    update_cache: yes
-    cache_valid_time: 3600
-
 - name: upgrade all packages
   dnf:
     name: "*"
@@ -24,3 +19,21 @@
     name: "{{ item }}"
     state: latest
   with_items: "{{ server_common_packages }}"
+
+- name: Add google-chrome-stable repo
+  shell: |
+    cat << EOF > /etc/yum.repos.d/google-chrome.repo
+    [google-chrome]
+    name=google-chrome - \$basearch
+    baseurl=http://dl.google.com/linux/chrome/rpm/stable/\$basearch
+    enabled=1
+    gpgcheck=1
+    gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
+    EOF
+  become: true
+
+- name: Install google chrome
+  dnf:
+    name: "google-chrome-stable"
+    state: latest
+
