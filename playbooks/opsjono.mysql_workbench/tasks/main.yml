@@ -1,0 +1,15 @@
+---
+- name: Add the MySql community source repo
+  template:
+    src: mysql-community-source.repo.j2
+    dest: /etc/yum.repos.d/mysql-community-source.repo
+
+- name: Add the MySql community repo
+  template:
+    src: mysql-community.repo.j2
+    dest: /etc/yum.repos.d/mysql-community.repo
+
+- name: Install MySql Workbench 
+  dnf:
+    name: mysql-workbench-community
+    state: latest

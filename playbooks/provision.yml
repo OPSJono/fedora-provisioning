@@ -15,3 +15,4 @@
     - opsjono.package_installations
     - opsjono.gitkraken
     - opsjono.phpstorm
+    - opsjono.mysql_workbench
