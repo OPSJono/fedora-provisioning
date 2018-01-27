@@ -28,10 +28,12 @@
     follow_redirects: safe
     check_mode: true
   register: head_query
+
 - name: Make sure the installation folder exists
   file:
     path: /opt/gitkraken
     state: directory
+
 - name: save latest etag to file
   shell: |
     echo {{ head_query.etag }} > {{ gitkraken_etag_path }}.latest
