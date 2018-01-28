@@ -4,3 +4,9 @@
     name: mjml
     path: /opt/node/bin
     global: yes
+
+- name: Download latest version of PhpStorm (This could take a few minutes...)
+  get_url:
+    url: http://mjml-app.sigsev.io/download/linux_64
+    dest: "{{ phpstorm_archive_location }}"
+    mode: 0775
