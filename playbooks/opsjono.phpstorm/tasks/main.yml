@@ -172,3 +172,8 @@
   become_user: "{{ ansible_user }}"
   when:
     - phpstorm_can_be_installed == true
+
+- name: Install ilsap PhpStorm Licence Server
+  npm:
+    name: ilsap
+    global: yes
