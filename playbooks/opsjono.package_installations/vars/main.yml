@@ -27,8 +27,6 @@ common_packages:
 
   ## Stuff left to install:
   # rclone
-  # slack
-  # spotify
 
 
 unwanted_packages:

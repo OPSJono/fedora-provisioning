@@ -1,0 +1,11 @@
+---
+
+- name: Add the Negativo17 Spotify repo
+  template:
+    src: fedora-spotify.repo.j2
+    dest: /etc/yum.repos.d/fedora-spotify.repo
+
+- name: Install Spotify
+  dnf:
+    name: spotify
+    state: latest

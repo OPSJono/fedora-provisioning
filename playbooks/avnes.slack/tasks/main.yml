@@ -29,4 +29,4 @@
     tmp_dest: "{{ slack_tmp_dir }}"
   with_items: "{{ registered_download_url.stdout }}"
 
-- include: "{{ ansible_os_family }}.yml"
+- include_tasks: "{{ ansible_os_family }}.yml"
