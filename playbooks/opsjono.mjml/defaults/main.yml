@@ -7,12 +7,14 @@ mjml_archive_name: "mjml_latest.tar.gz"
 mjml_archive_download_path: "{{ mjml_archive_path }}{{ mjml_archive_name }}"
 
 mjml_install_path: "/opt/mjml"
-mjml_tag_name_path: "{{ mjml_install_path }}/tag_name.txt"
+mjml_current_tag_name_path: "{{ mjml_install_path }}/tag_name.current"
+mjml_latest_tag_name_path: "{{ mjml_archive_path }}/mjml_tag_name.latest"
 
 mjml_found_build_version: ""
 
 mjml_already_exists: false
 mjml_current_tag_name: false
+mjml_latest_tag_name: false
 mjml_installed_build_version_available: false
 mjml_can_be_installed: false
 

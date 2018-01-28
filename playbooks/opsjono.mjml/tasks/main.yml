@@ -34,7 +34,7 @@
 # We add a file `tag_name.txt` to the root of the download, to store the installed version.
 - name: Check currently installed build version is available
   stat:
-    path: "{{ mjml_tag_name_path }}"
+    path: "{{ mjml_current_tag_name_path }}"
   register: mjml_installed_build_available_check
 
 - name: Set whether the currently installed build version is avaialable
@@ -42,18 +42,36 @@
     mjml_installed_build_version_available: true
   when: mjml_installed_build_available_check.stat is defined and mjml_installed_build_available_check.stat.exists
 
-- name: Get currently installed build version
+- name: read current etag file
+  slurp:
+    src: "{{ mjml_current_tag_name_path }}"
+  register: current_tag_name_file
+  when: mjml_installed_build_version_available == true
+
+- name: set current etag fact
   set_fact:
-    mjml_current_tag_name: "{{ lookup('file', mjml_tag_name_path) }}"
-  when:
-    - mjml_installed_build_version_available == true
+    mjml_current_tag_name: '{{ current_tag_name_file.content | b64decode  }}'
+  when: mjml_installed_build_version_available == true
+
+- name: Store latest installed tag_name
+  shell: |
+    echo {{ mjml_latest_tag_name }} > {{ mjml_latest_tag_name_path }}
+
+- name: read latest etag from file
+  slurp:
+    src: "{{ mjml_latest_tag_name_path }}"
+  register: latest_tag_name_file
+
+- name: set latest etag fact from file
+  set_fact:
+    mjml_latest_tag_name_from_file: '{{ latest_tag_name_file.content | b64decode  }}'
 
 - name: Check installed version is not the same as currently installed
   set_fact:
     mjml_can_be_installed: true
   when:
-    - mjml_latest_tag_name is defined
-    - mjml_current_tag_name != mjml_latest_tag_name
+    - mjml_latest_tag_name_from_file is defined
+    - mjml_current_tag_name != mjml_latest_tag_name_from_file
 
 - name: Create MJML archive directory
   file:
@@ -105,6 +123,12 @@
     dest: "{{ mjml_install_path }}"
     owner: "{{ ansible_user }}"
     group: "{{ ansible_user }}"
+  when:
+    - mjml_can_be_installed == true
+
+- name: Set current installed tag_name
+  shell: |
+    echo {{ mjml_latest_tag_name }} > {{ mjml_current_tag_name_path }}
   when:
     - mjml_can_be_installed == true
 
