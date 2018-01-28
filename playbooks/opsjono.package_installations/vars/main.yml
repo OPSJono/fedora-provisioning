@@ -22,6 +22,9 @@ common_packages:
   - ntp
   # Required for running Ansible
   - libselinux-python
+  # Required for MJML
+  - npm
+
 
 unwanted_packages:
   - evolution

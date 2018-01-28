@@ -1,0 +1,6 @@
+---
+- name: Install mjml node.js package globally.
+  npm:
+    name: mjml
+    path: /opt/node/bin
+    global: yes
