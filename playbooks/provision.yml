@@ -11,9 +11,13 @@
     - name: "ansible_become_pass"
       prompt: "Sudo password"
       private: yes
+  vars:
+  - ansible_os_family: 'RedHat'
+
   roles:
     - opsjono.package_installations
     - opsjono.gitkraken
     - opsjono.phpstorm
     - opsjono.mysql_workbench
     - opsjono.mjml
+    - avnes.slack

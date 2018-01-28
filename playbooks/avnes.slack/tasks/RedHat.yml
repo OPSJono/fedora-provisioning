@@ -1,0 +1,11 @@
+---
+- name: Install EPEL
+  package:
+    name: epel-release
+    state: present
+  when: ansible_distribution == 'CentOS'
+
+- name: Install Slack
+  package:
+    name: "{{ slack_package }}"
+    state: present

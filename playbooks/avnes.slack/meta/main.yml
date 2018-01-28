@@ -1,0 +1,31 @@
+---
+galaxy_info:
+  author: avnes
+  description: Downloads and install latest version of Slack for Linux
+  company:
+
+  license: license (MIT)
+
+  min_ansible_version: 2.3
+
+  platforms:
+  - name: Fedora
+    versions:
+    - 26
+  - name: EL
+    versions:
+    - 7
+  - name: Ubuntu
+    versions:
+    - xenial
+    - yakkety
+    - zesty
+
+  galaxy_tags:
+    - chat
+    - communication
+    - slack
+    - collaboration
+    - im
+
+dependencies: []

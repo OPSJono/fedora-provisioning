@@ -1,0 +1,3 @@
+---
+slack_distro: ubuntu
+slack_package_format: deb

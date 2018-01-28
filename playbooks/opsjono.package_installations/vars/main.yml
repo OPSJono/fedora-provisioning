@@ -25,6 +25,11 @@ common_packages:
   # Required for MJML
   - npm
 
+  ## Stuff left to install:
+  # rclone
+  # slack
+  # spotify
+
 
 unwanted_packages:
   - evolution
