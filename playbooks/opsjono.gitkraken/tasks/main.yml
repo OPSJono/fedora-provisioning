@@ -2,7 +2,6 @@
 - name: create download directory
   file:
     state: directory
-    mode: "u=rwx,go=rx"
     dest: "{{ gitkraken_download_dir }}"
 
 - name: check for etag file

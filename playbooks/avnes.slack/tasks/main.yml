@@ -15,7 +15,6 @@
   copy:
     src: list_urls.sed
     dest: "{{ slack_tmp_dir }}"
-    mode: 0700
 
 - name: Find latest package to download
   shell: "{{ slack_tmp_dir }}/list_urls.sed {{ slack_html_src }} | grep '\\.{{ slack_package_format }}'| sort -u"

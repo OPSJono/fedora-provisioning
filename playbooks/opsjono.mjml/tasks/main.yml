@@ -77,9 +77,6 @@
   file:
     path: "{{ mjml_archive_path }}"
     state: directory
-    owner: "{{ ansible_user }}"
-    group: "{{ ansible_user }}"
-    mode: 0775
   when:
     - mjml_can_be_installed == true
 
