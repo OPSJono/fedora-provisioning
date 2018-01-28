@@ -1,0 +1,19 @@
+---
+mjml_releases_url: "https://api.github.com/repos/mjmlio/mjml-app/releases/latest"
+mjml_download_url: "http://mjml-app.sigsev.io/download/linux_64"
+
+mjml_archive_path: "/tmp/"
+mjml_archive_name: "mjml_latest.tar.gz"
+mjml_archive_download_path: "{{ mjml_archive_path }}{{ mjml_archive_name }}"
+
+mjml_install_path: "/opt/mjml"
+mjml_tag_name_path: "{{ mjml_install_path }}/tag_name.txt"
+
+mjml_found_build_version: ""
+
+mjml_already_exists: false
+mjml_current_tag_name: false
+mjml_installed_build_version_available: false
+mjml_can_be_installed: false
+
+ansible_user: "{{ lookup('env','USER') }}"

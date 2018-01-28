@@ -2,11 +2,130 @@
 - name: Install mjml node.js package globally.
   npm:
     name: mjml
-    path: /opt/node/bin
     global: yes
 
-- name: Download latest version of PhpStorm (This could take a few minutes...)
-  get_url:
-    url: http://mjml-app.sigsev.io/download/linux_64
-    dest: "{{ phpstorm_archive_location }}"
+- name: Get latest release from MJML GitHub API
+  uri:
+    url: "{{ mjml_releases_url }}"
+    method: GET
+    return_content: yes
+  register: mjml_latest_release_info
+
+- name: github api debug
+  debug:
+    msg: "Tagged release: {{ mjml_latest_release_info.json.tag_name }} |||| Tarball url: {{ mjml_latest_release_info.json.tarball_url }}"
+
+- name: Set latest release tag_name
+  set_fact:
+    mjml_latest_tag_name: "{{ mjml_latest_release_info.json.tag_name }}"
+  when:
+    - mjml_latest_release_info.json.tag_name is defined
+
+- name: Check if MJML is already installed
+  stat:
+    path: "{{ mjml_install_path }}"
+  register: mjml_already_exists_check
+
+- name: Does it exist?
+  set_fact:
+    mjml_already_exists: true
+  when: mjml_already_exists_check.stat.isdir is defined and mjml_already_exists_check.stat.isdir
+
+# We add a file `tag_name.txt` to the root of the download, to store the installed version.
+- name: Check currently installed build version is available
+  stat:
+    path: "{{ mjml_tag_name_path }}"
+  register: mjml_installed_build_available_check
+
+- name: Set whether the currently installed build version is avaialable
+  set_fact:
+    mjml_installed_build_version_available: true
+  when: mjml_installed_build_available_check.stat is defined and mjml_installed_build_available_check.stat.exists
+
+- name: Get currently installed build version
+  set_fact:
+    mjml_current_tag_name: "{{ lookup('file', mjml_tag_name_path) }}"
+  when:
+    - mjml_installed_build_version_available == true
+
+- name: Check installed version is not the same as currently installed
+  set_fact:
+    mjml_can_be_installed: true
+  when:
+    - mjml_latest_tag_name is defined
+    - mjml_current_tag_name != mjml_latest_tag_name
+
+- name: Create MJML archive directory
+  file:
+    path: "{{ mjml_archive_path }}"
+    state: directory
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
     mode: 0775
+  when:
+    - mjml_can_be_installed == true
+
+- name: Check download does not already exist
+  stat:
+    path: "{{ mjml_archive_download_path }}"
+  register: mjml_download_exists
+  when:
+    - mjml_can_be_installed == true
+
+- name: Download latest version of MJML (This could take a few minutes...)
+  get_url:
+    url: "{{ mjml_download_url }}"
+    dest: "{{ mjml_archive_download_path }}"
+    mode: 0775
+  when:
+    - mjml_can_be_installed == true
+    - mjml_download_exists.stat.exists == false
+
+- name: Remove currently installed version
+  file:
+    path: "{{ mjml_install_path }}"
+    state: absent
+  when:
+    - mjml_can_be_installed == true
+    - mjml_already_exists == true
+
+- name: Create MJML install directory
+  file:
+    path: "{{ mjml_install_path }}"
+    state: directory
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: 0775
+  when:
+    - mjml_can_be_installed == true
+
+- name: Extract MJML
+  unarchive:
+    src: "{{ mjml_archive_download_path }}"
+    dest: "{{ mjml_install_path }}"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+  when:
+    - mjml_can_be_installed == true
+
+- name: Create symlink for mjml
+  file:
+    src: "{{ mjml_install_path }}/mjml-app"
+    dest: /usr/local/bin/mjml-app
+    state: link
+  when:
+    - mjml_can_be_installed == true
+
+- name: Copy MJML icon into place
+  copy:
+    src: icon.png
+    dest: /opt/mjml/icon.png
+  when:
+    - mjml_can_be_installed == true
+
+- name: Install mjml.desktop file
+  template:
+    src: mjml.desktop.j2
+    dest: /usr/share/applications/mjml.desktop
+  when:
+    - mjml_can_be_installed == true
