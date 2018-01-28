@@ -30,3 +30,8 @@
     name: "google-chrome-stable"
     state: latest
 
+- name: Remove unwanted packaged
+  dnf:
+    name: "{{ item }}"
+    state: absent
+  with_items: "{{ unwanted_packages }}"

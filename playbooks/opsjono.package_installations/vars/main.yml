@@ -1,5 +1,6 @@
 ---
 common_packages:
+  - thunderbird
   - vim
   - htop
   - iotop
@@ -21,3 +22,6 @@ common_packages:
   - ntp
   # Required for running Ansible
   - libselinux-python
+
+unwanted_packages:
+  - evolution
