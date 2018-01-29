@@ -20,6 +20,7 @@ common_packages:
   - libxslt-devel 
   - libxml2-devel 
   - libguestfs-tools-c
+  - vagrant-libvirt
 
     #  - build-essential
   - nfs-utils

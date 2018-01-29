@@ -20,11 +20,6 @@
     state: latest
   with_items: "{{ common_packages }}"
 
-- name: Install vagrant-libvirt plugin
-  shell: |
-    vagrant plugin install vagrant-libvirt
-  changed_when: false
-
 - name: Add security group for virtual machine management
   group:
     name: libvirt
