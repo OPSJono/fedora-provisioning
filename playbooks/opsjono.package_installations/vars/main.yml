@@ -11,7 +11,7 @@ common_packages:
   - rsync
 
   ## Vagrant and libvirt related
-  - vagrant
+  - vagrant-1.9.1-3.fc27
   - vagrant-libvirt
   - qemu 
   - libvirt 
