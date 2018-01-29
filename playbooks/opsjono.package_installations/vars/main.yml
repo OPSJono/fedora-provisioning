@@ -9,8 +9,21 @@ common_packages:
   - git
   - tcpdump
   - rsync
+
+  ## Vagrant and libvirt related
+  - vagrant
+  - vagrant-libvirt
+  - qemu 
+  - libvirt 
+  - libvirt-devel 
+  - ruby-devel 
+  - gcc 
+  - libxslt-devel 
+  - libxml2-devel 
+  - libguestfs-tools-c
+
     #  - build-essential
-    #- nfs-common
+  - nfs-utils
 
   # Used to perform API requests
   - curl
