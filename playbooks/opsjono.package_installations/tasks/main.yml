@@ -14,6 +14,11 @@
     name: '@virtualization'
     state: latest
 
+- name: Install a specific vagrant version
+  dnf:
+    name: vagrant-1.9.1-3.fc27
+    state: present
+
 - name: Install common utilties
   dnf:
     name: "{{ item }}"
