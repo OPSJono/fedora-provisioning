@@ -14,6 +14,30 @@
     name: '@virtualization'
     state: latest
 
+- name: Add security group for virtual machine management
+  group:
+    name: libvirt
+    state: present
+
+- name: Add the user to the virtual machine management group
+  user:
+    name: "{{ ansible_user }}"
+    append: true
+    groups:
+      - libvirt
+
+- name: Make sure security access directory exists
+  file:
+    path: /etc/polkit-1/localauthority/50-local.d/
+    state: directory
+    mode: 0775
+
+- name: Copy PKLA local access authority into place
+  template:
+    src: libvirt-libvirt-local-access.pkla.j2
+    dest: /etc/polkit-1/localauthority/50-local.d/50-org.libvirt-libvirt-local-access.pkla
+    mode: 0775
+
 - name: Install common utilties
   dnf:
     name: "{{ item }}"
