@@ -17,3 +17,8 @@ phpstorm_installed_build_version_available: false
 phpstorm_can_be_installed: false
 
 ansible_user: "{{ lookup('env','USER') }}"
+
+phpstorm_override_download_url: "http://download.jetbrains.com/webide/PhpStorm-2017.3.3.tar.gz"
+phpstorm_override_available_build: "173.4301.34"
+phpstorm_override_available_version: "2017.3.3"
+phpstorm_override_available_major_version: "2017.3"

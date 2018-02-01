@@ -19,6 +19,18 @@
     - phpstorm_releases.json.PS[0].downloads.linux.link is defined
     - phpstorm_releases.json.PS[0].build is defined
 
+- name: Override the download URL for PhpStorm
+  set_fact:
+    get_phpstorm_available_url: "{{ phpstorm_override_download_url }}"
+    get_phpstorm_available_build: "{{ phpstorm_override_available_build }}"
+    get_phpstorm_major_version: "{{ phpstorm_override_available_version }}"
+    get_phpstorm_available_version: "{{ phpstorm_override_available_major_version }}"
+  when:
+    - phpstorm_override_download_url is defined
+    - phpstorm_override_available_build is defined
+    - phpstorm_override_available_version is defined
+    - phpstorm_override_available_major_version is defined
+
 #- name: Debug JSON varialbes
 #  debug:
 #    msg:
