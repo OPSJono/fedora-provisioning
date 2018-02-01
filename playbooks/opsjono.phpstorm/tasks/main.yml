@@ -23,8 +23,8 @@
   set_fact:
     get_phpstorm_available_url: "{{ phpstorm_override_download_url }}"
     get_phpstorm_available_build: "{{ phpstorm_override_available_build }}"
-    get_phpstorm_major_version: "{{ phpstorm_override_available_version }}"
-    get_phpstorm_available_version: "{{ phpstorm_override_available_major_version }}"
+    get_phpstorm_available_version: "{{ phpstorm_override_available_version }}"
+    get_phpstorm_major_version: "{{ phpstorm_override_available_major_version }}"
   when:
     - phpstorm_override_download_url is defined
     - phpstorm_override_available_build is defined
