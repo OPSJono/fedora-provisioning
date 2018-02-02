@@ -9,6 +9,12 @@ common_packages:
   - git
   - tcpdump
   - rsync
+  - xclip
+
+  # Firewall stuff
+  - python-firewall
+  - firewalld
+  - firewall-config
 
   ## Vagrant and libvirt related
   - qemu 

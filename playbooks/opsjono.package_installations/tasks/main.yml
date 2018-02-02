@@ -64,3 +64,18 @@
     name: "{{ item }}"
     state: absent
   with_items: "{{ unwanted_packages }}"
+
+- name: Make sure NFS/RPC is open in firewalld
+  firewalld:
+    service: "{{ item }}"
+    zone: FedoraWorkstation
+    permanent: true
+    state: enabled
+  with_items:
+    - rpc-bind
+    - nfs
+    
+- name: restart firewalld
+  service:
+    name: firewalld
+    state: restarted
