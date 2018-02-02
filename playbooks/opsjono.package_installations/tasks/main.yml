@@ -74,8 +74,12 @@
   with_items:
     - rpc-bind
     - nfs
+    - mountd
     
-- name: restart firewalld
+- name: restart services
   service:
-    name: firewalld
+    name: "{{ item }}"
     state: restarted
+  with_items:
+    - firewalld
+    - nfs
