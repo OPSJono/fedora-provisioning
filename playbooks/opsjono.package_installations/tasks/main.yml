@@ -1,4 +1,9 @@
 ---
+- name: Copy Bashrc into place
+  template:
+    src: "bashrc.j2"
+    dest: "/home/{{ ansible_user }}/.bashrc"
+
 - name: upgrade all packages
   dnf:
     name: "*"
