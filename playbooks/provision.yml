@@ -16,6 +16,7 @@
 
   roles:
     - opsjono.package_installations
+    - opsjono.discord
     - opsjono.gitkraken
     - opsjono.phpstorm
     - opsjono.mysql_workbench

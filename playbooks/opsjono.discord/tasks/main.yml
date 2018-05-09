@@ -1,0 +1,12 @@
+---
+- name: Install Discord using Flakpak (via Shell)
+  shell: |
+    flatpak install {{ discord_download_url }}> /dev/null 2>&1
+  become: true
+  become_user: "{{ ansible_user }}"
+
+#- name: Uninstall Discord using Flatpak (via Shell)
+#  shell: |
+#    flatpak uninstall com.discordapp.Discord/x86_64/stable
+#  become: true
+#  become_user: "{{ ansible_user }}"
