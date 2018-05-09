@@ -19,17 +19,6 @@
     name: '@virtualization'
     state: latest
 
-- name: Install a specific vagrant version
-  dnf:
-    name: vagrant-1.9.1-3.fc27
-    state: present
-
-- name: Tell DNF to not update Vagrant
-  lineinfile:
-    path: /etc/dnf/dnf.conf
-    line: exclude=vagrant
-    state: present
-
 - name: Install common utilties
   dnf:
     name: "{{ item }}"
