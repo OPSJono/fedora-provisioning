@@ -43,6 +43,8 @@ common_packages:
   # Required for MJML
   - npm
 
+  - steam
+
   ## Stuff left to install:
   # rclone
 
