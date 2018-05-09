@@ -73,16 +73,16 @@
     - mjml_latest_tag_name_from_file is defined
     - mjml_current_tag_name != mjml_latest_tag_name_from_file
 
-- name: Create MJML archive directory
+- name: Create MJML application directory
   file:
-    path: "{{ mjml_archive_path }}"
+    path: "{{ mjml_application_path }}"
     state: directory
   when:
     - mjml_can_be_installed == true
 
 - name: Check download does not already exist
   stat:
-    path: "{{ mjml_archive_download_path }}"
+    path: "{{ mjml_application_download_path }}"
   register: mjml_download_exists
   when:
     - mjml_can_be_installed == true
@@ -90,7 +90,7 @@
 - name: Download latest version of MJML (This could take a few minutes...)
   get_url:
     url: "{{ mjml_download_url }}"
-    dest: "{{ mjml_archive_download_path }}"
+    dest: "{{ mjml_application_download_path }}"
     mode: 0775
   when:
     - mjml_can_be_installed == true
@@ -114,12 +114,13 @@
   when:
     - mjml_can_be_installed == true
 
-- name: Extract MJML
-  unarchive:
-    src: "{{ mjml_archive_download_path }}"
+- name: Install MJML
+  copy:
+    src: "{{ mjml_application_download_path }}"
     dest: "{{ mjml_install_path }}"
     owner: "{{ ansible_user }}"
     group: "{{ ansible_user }}"
+    mode: 0775
   when:
     - mjml_can_be_installed == true
 
@@ -131,22 +132,8 @@
 
 - name: Create symlink for mjml
   file:
-    src: "{{ mjml_install_path }}/mjml-app"
+    src: "{{ mjml_install_path }}/{{ mjml_application_name }}"
     dest: /usr/local/bin/mjml-app
     state: link
-  when:
-    - mjml_can_be_installed == true
-
-- name: Copy MJML icon into place
-  copy:
-    src: icon.png
-    dest: /opt/mjml/icon.png
-  when:
-    - mjml_can_be_installed == true
-
-- name: Install mjml.desktop file
-  template:
-    src: mjml.desktop.j2
-    dest: /usr/share/applications/mjml.desktop
   when:
     - mjml_can_be_installed == true
