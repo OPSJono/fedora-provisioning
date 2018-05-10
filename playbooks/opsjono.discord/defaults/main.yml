@@ -1,4 +1,6 @@
 ---
+discord_package_name: "com.discordapp.Discord/x86_64/stable"
 discord_download_url: "https://flathub.org/repo/appstream/com.discordapp.Discord.flatpakref"
+discord_installed: false
 
 ansible_user: "{{ lookup('env','USER') }}"
