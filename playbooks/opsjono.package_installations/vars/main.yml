@@ -45,8 +45,12 @@ common_packages:
 
   - steam
 
-  ## Stuff left to install:
-  # rclone
+  # Extra's to add
+  - ffmpeg-libs
+  - fuse-exfat
+  - gnome-tweak-tool
+  - keepassx
+  - vlc
 
 
 unwanted_packages:
