@@ -1,0 +1,12 @@
+---
+- name: Enable "johanh/ckb" COPR
+  shell: |
+    dnf copr enable -y johanh/ckb
+  warn: false
+  become: true
+
+- name: Install ckb-next
+  dnf:
+    name: ckb-next
+    state: latest
+  become: true
