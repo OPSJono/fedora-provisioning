@@ -12,7 +12,8 @@ common_packages:
   - xclip
 
   # Firewall stuff
-  - python-firewall
+  # Python firewall seems like it's not always available? (maybe not released for F28 yet?)
+  #  - python-firewall
   - firewalld
   - firewall-config
 

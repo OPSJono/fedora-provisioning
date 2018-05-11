@@ -19,7 +19,8 @@
     - opsjono.discord
     - opsjono.gitkraken
     - opsjono.phpstorm
-    - opsjono.mysql_workbench
+      # mysql_workbench is not available on Fedora 28 yet.
+#    - opsjono.mysql_workbench
     - opsjono.mjml
     - avnes.slack
     - opsjono.spotify
