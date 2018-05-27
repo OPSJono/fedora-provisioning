@@ -1,0 +1,12 @@
+---
+- name: Download atom for RedHat OS family
+  get_url:
+    url: "{{ atom_url_rpm }}"
+    dest: "{{ atom_tmp_rpm }}"
+  tags: ["packages","atom"]
+
+- name: Install atom for RedHat OS family
+  package:
+    name: "{{ atom_tmp_rpm }}"
+    state: latest
+  tags: ["packages","atom"]

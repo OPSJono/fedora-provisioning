@@ -27,4 +27,4 @@
 #  shell: |
 #    flatpak uninstall {{ discord_package_name }}
 #  become: true
-#  become_user: "{{ ansible_user }}"
+#  become_user: root

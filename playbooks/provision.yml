@@ -13,12 +13,15 @@
       private: yes
   vars:
   - ansible_os_family: 'RedHat'
+  - ansible_architecture: 'x86_64'
 
   roles:
     - opsjono.package_installations
     - opsjono.discord
     - opsjono.gitkraken
     - opsjono.phpstorm
+    - jdauphant.atom
+    - jgkim.atom_packages
       # mysql_workbench is not available on Fedora 28 yet.
 #    - opsjono.mysql_workbench
     - opsjono.mjml
