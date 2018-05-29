@@ -85,5 +85,5 @@
     name: "{{ item }}"
     state: restarted
   with_items:
-    - firewalld
+#    - firewalld
     - nfs

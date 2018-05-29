@@ -13,7 +13,7 @@ common_packages:
 
   # Firewall stuff
   # Python firewall seems like it's not always available? (maybe not released for F28 yet?)
-  #  - python-firewall
+  - python-firewall
   - firewalld
   - firewall-config
 
@@ -24,7 +24,7 @@ common_packages:
   - ruby-devel 
   - gcc 
   - libxslt-devel 
-  - libxml2-devel 
+  - libxml2-devel
   - libguestfs-tools-c
   - vagrant-libvirt
 
