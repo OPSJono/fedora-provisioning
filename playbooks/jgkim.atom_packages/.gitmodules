@@ -1,3 +1,0 @@
-[submodule "tests/terryfy"]
-	path = tests/terryfy
-	url = https://github.com/MacPython/terryfy.git

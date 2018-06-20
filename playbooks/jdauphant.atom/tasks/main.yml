@@ -1,5 +1,0 @@
----
- - include_tasks: Debian.yml
-   when: ansible_os_family == 'Debian' and ansible_architecture == 'x86_64'
- - include_tasks: RedHat.yml
-   when: ansible_os_family == 'RedHat' and ansible_architecture == 'x86_64'

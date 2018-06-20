@@ -65,21 +65,25 @@
     state: absent
   with_items: "{{ unwanted_packages }}"
 
-- name: Make sure NFS/RPC is open in firewalld
-  firewalld:
-    service: "{{ item }}"
-    zone: FedoraWorkstation
-    permanent: true
-    state: enabled
-  with_items:
-    - rpc-bind
-    - nfs
-    - mountd
+  ####
+  ## This seems to fall over because of an issue with the python-firewall module.
+  ## (dnf unable to install a python-firewall package - not found)
+  ####
+  #- name: Make sure NFS/RPC is open in firewalld
+  #firewalld:
+  #  service: "{{ item }}"
+  #  zone: FedoraWorkstation
+  #  permanent: true
+  #  state: enabled
+  #with_items:
+  #  - rpc-bind
+  #  - nfs
+  #  - mountd
     
 - name: restart services
   service:
     name: "{{ item }}"
     state: restarted
   with_items:
-    - firewalld
+#    - firewalld
     - nfs
