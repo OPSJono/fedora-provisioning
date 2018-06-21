@@ -10,12 +10,8 @@ common_packages:
   - tcpdump
   - rsync
   - xclip
-
-  # Firewall stuff
-  # Python firewall seems like it's not always available? (maybe not released for F28 yet?)
-  #- python-firewall
-  #- firewalld
-  #- firewall-config
+  # GitKraken was failing to run without having this (and/or it's dependencies installed)
+  - libXScrnSaver
 
   ## Vagrant and libvirt related
   - qemu 
