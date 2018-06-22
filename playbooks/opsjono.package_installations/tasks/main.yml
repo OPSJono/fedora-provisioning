@@ -1,4 +1,6 @@
 ---
+#// Add flash support from here: https://www.if-not-true-then-false.com/2010/install-adobe-flash-player-10-on-fedora-centos-red-hat-rhel/
+
 - name: Copy Bashrc into place
   template:
     src: "bashrc.j2"

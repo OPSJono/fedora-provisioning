@@ -10,6 +10,7 @@ common_packages:
   - tcpdump
   - rsync
   - xclip
+  - remmina
   # GitKraken was failing to run without having this (and/or it's dependencies installed)
   - libXScrnSaver
 
