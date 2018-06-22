@@ -1,0 +1,30 @@
+---
+- name: See if Discord is already installed
+  shell: |
+    flatpak list
+  register: output
+
+- name: Set if discord is installed already
+  set_fact:
+    discord_installed: true
+  when: output.stdout | join('') is search(discord_package_name)
+
+- name: Install Discord using Flakpak (via Shell) if it isn't installed already
+  shell: |
+    flatpak install {{ discord_download_url }} -y > /dev/null 2>&1
+  become: true
+  become_user: root
+  when: discord_installed != true
+
+- name: Update Discord using Flakpak (via Shell) if it is already installed
+  shell: |
+    flatpak update {{ discord_package_name }} > /dev/null 2>&1
+  become: true
+  become_user: root
+  when: discord_installed == true
+
+#- name: Uninstall Discord using Flatpak (via Shell)
+#  shell: |
+#    flatpak uninstall {{ discord_package_name }}
+#  become: true
+#  become_user: root

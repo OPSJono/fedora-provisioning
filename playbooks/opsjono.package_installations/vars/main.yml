@@ -10,11 +10,8 @@ common_packages:
   - tcpdump
   - rsync
   - xclip
-
-  # Firewall stuff
-  - python-firewall
-  - firewalld
-  - firewall-config
+  # GitKraken was failing to run without having this (and/or it's dependencies installed)
+  - libXScrnSaver
 
   ## Vagrant and libvirt related
   - qemu 
@@ -23,7 +20,7 @@ common_packages:
   - ruby-devel 
   - gcc 
   - libxslt-devel 
-  - libxml2-devel 
+  - libxml2-devel
   - libguestfs-tools-c
   - vagrant-libvirt
 
@@ -43,8 +40,14 @@ common_packages:
   # Required for MJML
   - npm
 
-  ## Stuff left to install:
-  # rclone
+  - steam
+
+  # Extra's to add
+  - ffmpeg-libs
+  - fuse-exfat
+  - gnome-tweak-tool
+  - keepassx
+  - vlc
 
 
 unwanted_packages:
