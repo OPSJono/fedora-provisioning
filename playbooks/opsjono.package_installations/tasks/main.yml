@@ -29,8 +29,11 @@
 
 - name: Add security group for virtual machine management
   group:
-    name: libvirt
+    name: "{{ item }}"
     state: present
+  with_items:
+    - libvirt
+    - vagrant
 
 - name: Add the user to the virtual machine management group
   user:
@@ -38,6 +41,7 @@
     append: true
     groups:
       - libvirt
+      - vagrant
 
 - name: Make sure security access directory exists
   file:
@@ -97,3 +101,9 @@
   with_items:
     - ufw
     - nfs
+
+- name: Copy sudoers include file into place
+  template:
+    src: vagrant-sudoers.j2
+    dest: /etc/sudoers.d/vagrant-sudoers
+    mode: 0775
