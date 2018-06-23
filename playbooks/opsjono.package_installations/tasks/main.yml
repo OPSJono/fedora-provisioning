@@ -81,11 +81,19 @@
   #  - rpc-bind
   #  - nfs
   #  - mountd
-    
+
+- name: Make sure NFS/RPC is open in firewalld
+  ufw:
+    rule: allow
+    port: "{{ item }}"
+  with_items:
+    - 2049 # NFS
+    - 20049 # NFS
+
 - name: restart services
   service:
     name: "{{ item }}"
     state: restarted
   with_items:
-#    - firewalld
+    - ufw
     - nfs

@@ -15,6 +15,9 @@ common_packages:
   # GitKraken was failing to run without having this (and/or it's dependencies installed)
   - libXScrnSaver
 
+  # Firewall stuff
+  - ufw
+
   ## Vagrant and libvirt related
   - qemu 
   - libvirt 
