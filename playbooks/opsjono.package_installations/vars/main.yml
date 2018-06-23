@@ -1,6 +1,7 @@
 ---
 common_packages:
   - thunderbird
+  - gnome-terminal-nautilus
   - vim
   - htop
   - iotop

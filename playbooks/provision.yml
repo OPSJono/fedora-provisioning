@@ -17,6 +17,7 @@
 
   roles:
     - opsjono.package_installations
+    - opsjono.themes
     - opsjono.discord
     - opsjono.gitkraken
     - opsjono.phpstorm
