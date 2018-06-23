@@ -88,6 +88,7 @@
     <location key="#com.intellij.fileTypes.FileTypeChooser.0.0.1920.1080" x="594" y="342" />
     <location key="find.popup.0.0.1920.1080" x="612" y="161" />
     <location key="#com.intellij.ide.actions.ChooseComponentsToExportDialog.0.0.1920.1080" x="679" y="383" />
+    <location key="WELCOME_SCREEN.0.0.2560.1440" x="1279" y="592" />
     <size key="FileChooserDialogImpl.0.0.1920.1080" width="426" height="490" />
     <size key="SettingsEditor.0.0.1920.1080" width="1208" height="925" />
     <size key="findTextDialog.0.0.3840.1080" width="965" height="561" />
