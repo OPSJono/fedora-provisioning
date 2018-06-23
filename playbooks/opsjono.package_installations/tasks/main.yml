@@ -71,35 +71,11 @@
     state: absent
   with_items: "{{ unwanted_packages }}"
 
-  ####
-  ## This seems to fall over because of an issue with the python-firewall module.
-  ## (dnf unable to install a python-firewall package - not found)
-  ####
-  #- name: Make sure NFS/RPC is open in firewalld
-  #firewalld:
-  #  service: "{{ item }}"
-  #  zone: FedoraWorkstation
-  #  permanent: true
-  #  state: enabled
-  #with_items:
-  #  - rpc-bind
-  #  - nfs
-  #  - mountd
-
-- name: Make sure NFS/RPC is open in firewalld
-  ufw:
-    rule: allow
-    port: "{{ item }}"
-  with_items:
-    - 2049 # NFS
-    - 20049 # NFS
-
 - name: restart services
   service:
     name: "{{ item }}"
     state: restarted
   with_items:
-    - ufw
     - nfs
 
 - name: Copy sudoers include file into place
