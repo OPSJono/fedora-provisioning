@@ -14,6 +14,7 @@ common_packages:
   - remmina
   # GitKraken was failing to run without having this (and/or it's dependencies installed)
   - libXScrnSaver
+  - libgnome-keyring
 
   ## Vagrant and libvirt related
   - qemu 
