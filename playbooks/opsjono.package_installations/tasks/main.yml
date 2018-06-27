@@ -95,3 +95,9 @@
     src: vagrant-sudoers.j2
     dest: /etc/sudoers.d/vagrant-sudoers
     mode: 0775
+
+- name: Increase inotify user limit
+  sysctl:
+    name: fs.inotify.max_user_watches
+    value: 16384
+    sysctl_set: yes
