@@ -8,6 +8,7 @@ common_packages:
   - pv
   - screen
   - git
+  - gparted
   - tcpdump
   - rsync
   - xclip
