@@ -182,7 +182,7 @@
   when:
     - phpstorm_can_be_installed == true
 
-- name: Install ilsap PhpStorm Licence Server
-  npm:
-    name: ilsap
-    global: yes
+      #- name: Install ilsap PhpStorm Licence Server
+      #  npm:
+      #    name: ilsap
+      #    global: yes
