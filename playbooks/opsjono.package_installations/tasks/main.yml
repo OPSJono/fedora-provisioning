@@ -71,6 +71,11 @@
     state: absent
   with_items: "{{ unwanted_packages }}"
 
+- name: Install SCSS ruby Gem
+  gem:
+    name: scss
+    state: latest
+
 - name: Make sure NFS/RPC is open in firewalld
   firewalld:
     service: "{{ item }}"
