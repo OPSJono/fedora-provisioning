@@ -57,6 +57,9 @@ common_packages:
   - keepassx
   - vlc
 
+  # snap package manager (for gitkraken)
+  - snapd
+
 
 unwanted_packages:
   - evolution

@@ -66,25 +66,35 @@
 
 - name: Remove unwanted packaged
   dnf:
-    name: "{{ item }}"
+    name: "{{ unwanted_packages }}"
     state: absent
-  with_items: "{{ unwanted_packages }}"
 
 - name: Install SCSS ruby Gem
   gem:
     name: scss
     state: latest
+    user_install: no
+#
+#- name: Make sure NFS/RPC is open in firewalld
+#  firewalld:
+#    service: "{{ item }}"
+#    zone: FedoraWorkstation
+#    permanent: true
+#    state: enabled
+#  with_items:
+#    - rpc-bind
+#    - nfs
+#    - mountd
 
-- name: Make sure NFS/RPC is open in firewalld
-  firewalld:
-    service: "{{ item }}"
-    zone: FedoraWorkstation
-    permanent: true
-    state: enabled
+- name: Open NFS ports in firewall for Vagrant (with firewall-cmd in command module)
+  command: "{{ item }}"
   with_items:
-    - rpc-bind
-    - nfs
-    - mountd
+    - firewall-cmd --permanent --add-service=nfs
+    - firewall-cmd --permanent --add-service=rpc-bind
+    - firewall-cmd --permanent --add-service=mountd
+    - firewall-cmd --reload
+  become: true
+  become_user: root
 
 - name: restart services
   service:

@@ -11,9 +11,5 @@
 
 - name: Install themes and icons
   dnf:
-    name: "{{ item }}"
+    name: ['arc-theme', 'papirus-icon-theme', 'moka-icon-theme']
     state: latest
-  with_items:
-    - arc-theme
-    - papirus-icon-theme
-    - moka-icon-theme

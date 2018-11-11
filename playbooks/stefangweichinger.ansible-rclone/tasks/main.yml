@@ -1,5 +1,4 @@
 ---
-- debug: var=ansible_os_family
 - name: gather os specific variables
   include_vars: "{{ item }}"
   with_first_found:
