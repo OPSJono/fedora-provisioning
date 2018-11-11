@@ -23,9 +23,8 @@
 
 - name: Install common utilties
   dnf:
-    name: "{{ item }}"
+    name: "{{ common_packages }}"
     state: latest
-  with_items: "{{ common_packages }}"
 
 - name: Add security group for virtual machine management
   group:
