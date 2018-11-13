@@ -16,5 +16,5 @@
 
 - name: Copy background images to pictures folder.
   shell: |
-    mkdir -p /home/{{ ansible_user }}/pictures/wallpapers
-    cp -R opsjono.themes/files/* /home/{{ ansible_user }}/pictures/wallpapers/
+    mkdir -p /home/{{ ansible_user }}/Pictures/wallpapers
+    cp -R opsjono.themes/files/* /home/{{ ansible_user }}/Pictures/wallpapers/
