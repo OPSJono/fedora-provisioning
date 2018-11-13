@@ -7,12 +7,15 @@
     - "snap install gtk-common-themes --beta"
     - "snap install gitkraken --beta"
 
-- name: Copy GitKraken icon into place
-  copy:
-    src: icon.png
-    dest: /opt/gitkraken.png
-
-- name: Install gitkraken.desktop file
-  template:
-    src: gitkraken.desktop.j2
-    dest: /usr/share/applications/gitkraken.desktop
+###
+# These are not required when using the snapd version of gitkraken
+###
+#- name: Copy GitKraken icon into place
+#  copy:
+#    src: icon.png
+#    dest: /opt/gitkraken.png
+#
+#- name: Install gitkraken.desktop file
+#  template:
+#    src: gitkraken.desktop.j2
+#    dest: /usr/share/applications/gitkraken.desktop
