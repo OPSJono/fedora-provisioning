@@ -6,7 +6,7 @@
   become: true
   become_user: root
 
-- name: Copy KDE Themes into SSDM folder.
+- name: Set SDDM.conf
   shell: |
     rm -f /etc/sddm.conf
     cp opsjono.themes_kde_plasma/files/sddm.conf /etc/sddm.conf

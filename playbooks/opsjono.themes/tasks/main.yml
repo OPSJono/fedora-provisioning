@@ -13,3 +13,8 @@
   dnf:
     name: ['arc-theme', 'papirus-icon-theme', 'moka-icon-theme']
     state: latest
+
+- name: Copy background images to pictures folder.
+  shell: |
+    mkdir -p /home/{{ ansible_user }}/pictures/wallpapers
+    cp -R opsjono.themes/files/* /home/{{ ansible_user }}/pictures/wallpapers/
