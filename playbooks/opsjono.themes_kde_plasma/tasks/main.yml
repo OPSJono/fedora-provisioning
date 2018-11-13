@@ -1,0 +1,14 @@
+---
+- name: Copy KDE Themes into SSDM folder.
+  shell: |
+    mkdir -p /usr/share/sddm/themes
+    cp -R opsjono.themes_kde_plasma/files/themes/* /usr/share/sddm/themes
+  become: true
+  become_user: root
+
+- name: Copy KDE Themes into SSDM folder.
+  shell: |
+    rm -f /etc/sddm.conf
+    cp opsjono.themes_kde_plasma/files/sddm.conf /etc/sddm.conf
+  become: true
+  become_user: root
