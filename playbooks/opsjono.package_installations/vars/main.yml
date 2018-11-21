@@ -13,6 +13,7 @@ common_packages:
   - rsync
   - xclip
   - remmina
+  - openssh-askpass
   # GitKraken was failing to run without having this (and/or it's dependencies installed)
   - libXScrnSaver
   - libgnome-keyring
