@@ -19,11 +19,9 @@
 - name: Enable "ghjm/glibc" COPR
   shell: |
     dnf copr enable -y ghjm/glibc
-  warn: false
   become: true
 
 - name: Update glibc
-  dnf:
-    name: glibc
-    state: latest
+  shell: |
+    sudo dnf update glibc -y --best --allowerasing
   become: true
