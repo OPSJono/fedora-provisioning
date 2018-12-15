@@ -59,7 +59,7 @@ common_packages:
   - vlc
 
   # snap package manager (for gitkraken)
-  - snapd
+  # - snapd
 
 
 unwanted_packages:

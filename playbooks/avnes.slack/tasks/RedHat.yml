@@ -9,3 +9,21 @@
   package:
     name: "{{ slack_package }}"
     state: present
+
+###
+# Fix slack segfaulting on Fedora 29
+#
+# sudo dnf copr enable ghjm/glibc -y && sudo dnf update glibc -y --best --allowerasing
+###
+
+- name: Enable "ghjm/glibc" COPR
+  shell: |
+    dnf copr enable -y ghjm/glibc
+  warn: false
+  become: true
+
+- name: Update glibc
+  dnf:
+    name: glibc
+    state: latest
+  become: true
