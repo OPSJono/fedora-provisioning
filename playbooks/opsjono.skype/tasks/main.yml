@@ -1,0 +1,5 @@
+---
+- name: Install Latest version of skype
+  dnf:
+    name: "{{ skype_url }}"
+    state: latest

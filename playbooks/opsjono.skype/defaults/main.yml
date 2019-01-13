@@ -1,0 +1,3 @@
+---
+# The download URL for the zip file containing the skype software (for Distro's which are not Debian-based)
+skype_url: https://go.skype.com/skypeforlinux-64.rpm

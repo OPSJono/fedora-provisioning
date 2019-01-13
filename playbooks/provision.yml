@@ -24,6 +24,7 @@
     - opsjono.mysql_workbench
     - opsjono.mjml
     - opsjono.postman
+    - opsjono.skype
     - avnes.slack
     - opsjono.spotify
     - stefangweichinger.ansible-rclone
