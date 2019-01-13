@@ -1,0 +1,13 @@
+---
+# The download URL for the zip file containing the postman software (for Distro's which are not Debian-based)
+postman_zip_url: https://dl.pstmn.io/download/latest/linux64
+
+# Filename of postman redistributable zip
+postman_zip_filename: postman.tar.gz
+postman_unzip_folder: postman
+
+# The location that the zip file version will be installed to.
+postman_install_dir: /opt/postman
+
+# Directory to store files downloaded for postman installation
+postman_download_dir: "~/.ansible/tmp/downloads"

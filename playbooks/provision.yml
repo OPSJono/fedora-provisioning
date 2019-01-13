@@ -23,6 +23,7 @@
     - opsjono.phpstorm
     - opsjono.mysql_workbench
     - opsjono.mjml
+    - opsjono.postman
     - avnes.slack
     - opsjono.spotify
     - stefangweichinger.ansible-rclone
