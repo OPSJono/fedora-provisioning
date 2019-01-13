@@ -7,7 +7,7 @@
 - name: Download Latest Version of Postman
   get_url:
     url: "{{ postman_zip_url }}"
-    dest: "{{ postman_download_dir }}/{{ gitkraken_zip_filename }}"
+    dest: "{{ postman_download_dir }}/{{ postman_zip_filename }}"
     force: yes
     use_proxy: yes
     validate_certs: yes
@@ -15,8 +15,8 @@
 
 - name: Install Latest version of Postman
   shell: |
-    cp {{ gitkraken_download_dir }}/{{ gitkraken_zip_filename }} /opt
-    tar -xvzf {{ gitkraken_zip_filename }}
+    cp {{ postman_download_dir }}/{{ postman_zip_filename }} /opt
+    tar -xvzf {{ postman_zip_filename }}
   args:
     chdir: /opt
 
