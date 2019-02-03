@@ -18,3 +18,7 @@
   shell: |
     mkdir -p /home/{{ ansible_user }}/Pictures/wallpapers
     cp -R opsjono.themes/files/* /home/{{ ansible_user }}/Pictures/wallpapers/
+
+- name: Install gnome-terminal Atom Dark Theme.
+  shell: |
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/denysdovhan/gnome-terminal-one/master/one-dark.sh)"
