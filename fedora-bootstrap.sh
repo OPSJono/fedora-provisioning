@@ -3,6 +3,6 @@ sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-r
 sudo dnf update -y
 sudo dnf install -y git vim xclip libselinux-python
 sudo pip3 install ansible boto boto3 scss
-sudo pip install boto
+sudo pip install boto boto3
 sudo mkdir /etc/ansible/
 sudo cp ansible_hosts /etc/ansible/hosts
