@@ -8,13 +8,20 @@ sudo chmod +x fedora-bootstrap.sh
 ./fedora-bootstrap.sh
 cd playbooks
 time ansible-playbook provision.yml
+```  
+
+#### Gnome Terminal Atom One Dark Theme
+
+Go to gnome-terminal preferences and rename the unnamed profile to anything else.
+```
+./atom-one-dark.sh
 ```
 
 ### Mounting a shared folder
-`sudo vim /etc/fstab`
-`//innovedxen/shared /mnt/shared cifs rw,relatime,vers=default,cache=strict,username=guest,domain=,uid=0,noforceuid,gid=0,noforcegid,addr=172.16.0.250,file_mode=0755,dir_mode=0755,soft,nounix,serverino,mapposix,rsize=1048576,wsize=1048576,echo_interval=60,actimeo=1 0 0`
-
-######Go make a cup of tea and come back later.
+```
+sudo vim /etc/fstab
+//innovedxen/shared /mnt/shared cifs rw,relatime,vers=default,cache=strict,username=guest,domain=,uid=0,noforceuid,gid=0,noforcegid,addr=172.16.0.250,file_mode=0755,dir_mode=0755,soft,nounix,serverino,mapposix,rsize=1048576,wsize=1048576,echo_interval=60,actimeo=1 0 0
+```
 
 
 VFIO GPU Passthrough
