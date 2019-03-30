@@ -7,7 +7,7 @@
 - name: Set if discord is installed already
   set_fact:
     discord_installed: true
-  when: output.stdout | join('') is search(discord_package_name)
+  when: output.stdout | join('') is search(discord_search_name)
 
 - name: Install Discord using Flakpak (via Shell) if it isn't installed already
   shell: |
