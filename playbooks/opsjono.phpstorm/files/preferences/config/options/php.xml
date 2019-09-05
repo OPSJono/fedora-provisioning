@@ -1,4 +1,10 @@
 <application>
+  <component name="MessDetector">
+    <phpmd_settings_migrated />
+  </component>
+  <component name="PhpCodeSniffer">
+    <phpcs_settings_migrated />
+  </component>
   <component name="PhpInterpreters">
     <interpreters>
       <interpreter home="vagrant:///home/jonathan/code/innoved/vle2/usr/bin/php" id="809c980f-ecf0-4e5b-82f8-66ac61ccddb3" name="Vagrant PHP 5.6" debugger_id="php.debugger.XDebug">

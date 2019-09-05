@@ -1,0 +1,999 @@
+npm run watch-dash
+npm run watch-
+npm run dash
+npm run watch
+npm run prod
+git status
+npm run prod
+exit
+cd ../test
+time ansible-playbook deployEmsTestSites.yml 
+time ansible-playbook removeEmsDeploymentRunningFileForTest.yml 
+time ansible-playbook deployEmsTestSites.yml 
+exit
+cd ~/code/innoved/utilities/playbooks/demo/
+time ansible-playbook deployEmsDemoSites.yml 
+cd ../production/
+time ansible-playbook deployEmsDemoSites.yml 
+time ansible-playbook deployEmsProductionSites.yml 
+time ansible-playbook removeEmsDeploymentRunningFileForProduction.yml 
+rm deployEmsProductionSites.retry 
+time ansible-playbook deployEmsProductionSites.yml 
+rm deployEmsProductionSites.retry 
+time ansible-playbook removeEmsDeploymentRunningFileForProduction.yml 
+exit
+cd code/innoved/vle2/
+vagrant up
+cd  api/laravel/
+npm install
+npm run prod
+cd ../../
+vagrant ssh
+cd api/laravel/
+npm run prod
+npm install
+npm run prod
+npm run dev
+npm install
+npm run prod
+npm run dev
+npm run prod
+npm run dev
+npm run prod
+vagrant ssh
+cd ../../
+vagrant ssh
+vagrant halt
+exit
+cd code/innoved/utilities/playbooks/production/
+time ansible-playbook deployEmsProductionSites.yml 
+exit
+cd code/innoved/
+git clone git@github.com:innoved/scorm.git
+exit
+ssh backup
+cd ~/code/innoved/utilities/playbooks/demo/
+time ansible-playbook deployEmsDemoSites.yml 
+cd ../production/
+time ansible-playbook deployEmsProductionSites.yml 
+exit
+cd ../demo
+time ansible-playbook deployEmsDemoSites.yml 
+exit
+cd ../test
+time ansible-playbook deployEmsTestSites.yml 
+ansible-playbook removeEmsDeploymentRunningFileForTest.yml 
+time ansible-playbook deployEmsTestSites.yml 
+ansible-playbook removeEmsDeploymentRunningFileForTest.yml 
+time ansible-playbook deployEmsTestSites.yml 
+ansible-playbook removeEmsDeploymentRunningFileForTest.yml 
+time ansible-playbook deployEmsTestSites.yml 
+exit
+cd ../backup/
+time ansible-playbook deployAppAccountCodesToBackup.yml 
+ssh backup
+exit
+cd ../backup/
+pwd
+ls
+exit
+cd code/innoved/vle2/
+vagrant up
+vagrant ssh
+vagrant halt
+exit
+cd api/laravel/
+npm run dev
+npm install
+npm run dev
+npm run prod
+npm install
+npm run prod
+npm install
+npm run prod
+npm install
+npm run prod
+npm run dev
+npm run prod
+npm run bs3
+npm run prod
+cd ../../
+cd ../utilities/
+git status
+git add 
+git add .
+git commit -m "took ccf off a test branch"
+git push
+exit
+ssh jonathanm@52.213.46.87
+exit
+dc code/innoved/utilities/
+cd code/innoved/utilities/
+cd te
+cd playbooks/test/
+time ansible-playbook deployEmsTestSites.
+time ansible-playbook deployEmsTestSites.yml 
+cd ../production/
+time ansible-playbook deployEmsProductionSites.yml 
+exit
+cd ../demo
+rm *.retry
+time ansible-playbook deployEmsDemoSites.yml 
+ansible-playbook removeEmsDeploymentRunningFileForDemo.yml 
+time ansible-playbook deployEmsDemoSites.yml 
+exit
+cd ../test
+rm *.retry
+time ansible-playbook deployEmsTestSites.yml 
+exit
+cd ../backup
+ssh backup
+ansible-playbook deployAppAccountCodesToBackup.yml 
+ssh backup
+exit
+ssh innovedxen
+exit
+cd ../../
+vagrant ssh
+vagrant reload
+git reset --hard origin/rc/phase1
+vagrant halt
+vagrant destroy
+vagrant up
+vagrant ssh
+vagrant halt
+exit
+cd code/innoved/vle2/
+vagrant ssh
+vagrant up
+cd api/laravel/
+npm install
+npm run prod
+npm run dev
+npm run prod
+npm run dev
+npm run prod
+npm run dev
+npm run prod
+npm run dev
+npm run prod
+npm run dev
+npm run prod
+exit
+cd ~/code/innoved/utilities/playbooks/test/
+time ansible-playbook deployEmsTestSites.yml 
+exit
+cd code/innoved/vle2/
+vagrant ssh
+vagrant up
+vagrant ssh
+vagrant halt
+exit
+htop
+cd code/innoved/utilities/playbooks/test/
+time ansible-playbook deployEmsTestSites.yml 
+exit
+cd api/laravel/
+npm run prod
+exit
+cd code/innoved/vle2/
+vagrant up
+vagrant ssh
+vagrant halt
+cd ~/code/innoved/utilities/playbooks/test/
+time ansible-playbook deployEmsTestSites.yml 
+exit
+cd api/laravel/
+npm run prod
+npm run bs3
+exit
+cd ../demo
+time ansible-playbook deployEmsDemoSites.yml 
+ssh backup
+exit
+ssh backup
+cd code/innoved/vle2/
+vagrant up
+vagrant ssh
+vagrant halt
+exit
+cd ~/code/innoved/utilities/playbooks/test/
+time ansible-playbook deployEmsTestSites.yml 
+exit
+ssh backup
+exit
+cd code/innoved/vle2/
+vagrant up
+vagrant ssh
+vagrant halt
+exit
+cd ~/code/personal/fedora-provisioning/playbooks/
+ansible-playbook provision.yml 
+exit
+cd ~/code/personal/fedora-provisioning/playbooks/
+ansible-playbook provision.yml 
+exit
+ssh innoved
+ssh innovedxen 
+exit
+cd ../backup/
+ssh backup
+exit
+cd ../test
+time ansible-playbook deployEmsTestSites.yml 
+htop
+time ansible-playbook deployEmsTestSites.yml 
+exit
+cd ./demo
+cd ../demo
+exit
+cd code/innoved/utilities/playbooks/
+cd production/
+exit
+cd code/innoved/vle2/
+vagrant up
+cd api/laravel/
+npm run dev
+npm run prod
+npm run dev
+npm run prod
+cd ../../
+vagrant ssh
+vagrant halt
+exit
+ssh jonathnm@34.244.90.116
+ssh jonathanm@34.244.90.116
+exit
+ssh jonathanm@52.213.46.87
+exit
+cd code/innoved/vle2/
+vagrant up
+cd api/laravel/
+npm run prod
+npm run bs3
+cd ../../
+vagrant ssh
+vagrant halt
+exit
+cd ../production/
+time ansible-playbook deployEmsProductionSites.yml 
+time ansible-playbook createProductionServers.yml 
+time ansible-playbook deployEmsProductionSites.yml 
+exit
+cd ../demo
+time ansible-playbook deployEmsDemoSites.yml 
+exit
+cd ~/code/innoved/utilities/playbooks/
+cd test/
+time ansible-playbook deployEmsTestSites.yml 
+exit
+ssh backup
+exit
+ssh jonathanm@52.213.46.87
+exit
+vim laravel-whuss-2019-06-26.log 
+ssh jonathanm@52.213.46.87
+exit
+ssh backup
+exit
+cd ../demo
+time ansible-playbook deployEmsDemoSites.yml 
+exit
+cd ../test
+time ansible-playbook deployEmsTestSites.yml 
+exit
+cd code/innoved/utilities/playbooks/production/
+time ansible-playbook deployEmsProductionSites.yml 
+exit
+cd ~/code/innoved/vle2/api/laravel/
+npm run prod
+cd ../../
+vagrant up
+cd api/laravel/
+npm run prod
+exit
+ssh backup
+exit
+cwd
+pwd
+sudo vim /etc/hosts
+exit
+ssh innovedxen
+exit
+ssh backup
+cd ../backup
+time ansible-playbook syncConfigs.yml 
+time ansible-playbook createBackupServers.yml
+time ansible-playbook deployAppAccountCodesToBackup.yml 
+exit
+cd ../test
+time ansible-playbook deployEmsTestSites.yml 
+time ansible-playbook createTestServers.yml 
+exit
+cd ../demo
+time ansible-playbook createDemoServers.yml 
+exit
+cd ~/code/innoved/utilities/playbooks/production/
+time ansible-playbook deployEmsProductionSites.yml 
+time ansible-playbook removeEmsDeploymentRunningFileForProduction.yml 
+time ansible-playbook deployEmsProductionSites.yml 
+time ansible-playbook createProductionServers.yml 
+exit
+cd code/innoved/vle2/
+vagrant up
+cd api/laravel/
+npm run prod
+cd ../../
+vagrant ssh
+cd api/laravel/
+npm run bs3
+npm run dev
+npm run prod
+cd ../../
+vagrant ssh
+cd api/laravel/
+npm run prod
+cd ../../
+vagrant halt
+exit
+rm *.retry
+exit
+cd ../backup/
+ssh backup
+exit
+cd ../test/
+time ansible-playbook deployEmsTestSites.yml 
+exit
+cd ../demo/
+time ansible-playbook deployEmsDemoSites.yml 
+exit
+cd ~/code/innoved/utilities/playbooks/
+cd production/
+time ansible-playbook deployEmsProductionSites.yml 
+exit
+cd code/innoved/vle2/
+vagrant up
+vagrant ssh
+exit
+cd api/laravel/
+npm run dev
+npm run watch
+npm run prod
+npm run dev
+npm run prod
+cd public/
+git clone git@github.com:innoved/scorm
+cd scorm/
+ks
+ls
+mv emslfe/* .
+ls
+cd ../../../
+cd ..
+vagrant halt
+vim .gitignore 
+vim api/laravel/.gitignore 
+vim api/laravel/public/.gitignore 
+ssh backup
+exit
+cd code/innoved/vle2/
+vagrant up
+cd api/laravel/
+npm run dev
+npm run bs3
+npm run bs3 && npm run prod
+npm run bs3
+npm run prod
+npm run bs3
+npm run prod
+htop
+npm run prod
+cd ../../
+vagrant halt
+exit
+cd ~/code/innoved/utilities/playbooks/production/
+time ansible-playbook deployEmsProductionSites.yml 
+exit
+cd ../demo/
+time ansible-playbook deployEmsDemoSites.yml 
+exit
+cd ../test/
+time ansible-playbook deployEmsTestSites.yml 
+exit
+ssh backup
+exit
+ssh jonathanm@52.213.46.87
+ssh jonathanm@34.244.90.116
+exit
+cd ../demo
+time ansible-playbook deployEmsDemoSites.yml 
+exit
+ssh backup
+exit
+cd ../test
+time ansible-playbook deployEmsTestSites.yml 
+exit
+cd code/innoved/utilities/
+cd pro
+cd playbooks/production/
+time ansible-playbook deployEmsProductionSites.yml 
+time ansible-playbook removeEmsDeploymentRunningFileForProduction.yml 
+time ansible-playbook deployEmsProductionSites.yml 
+exit
+cd ~/code/innoved/vle2/
+vagrant up
+vagrant ssh
+git add .
+git commit
+git status
+cd api/laravel/
+npm run prod
+npm install
+npm run prod
+npm install
+cd ../../
+vagrant ssh
+vagrant halt
+exit
+sudo dnf update -y
+exit
+dmesg
+exit
+ssh backup
+exit
+firefox
+exit
+cd ../backup/
+time ansible-playbook syncConfigs.yml 
+time ansible-playbook createBackupServers.yml
+exit
+cd ../test/
+time ansible-playbook createTestServers.yml 
+time ansible-playbook deployEmsTestSites.yml 
+exit
+cd ~/code/innoved/utilities/playbooks/production/
+time ansible-playbook createProductionServers.yml 
+time ansible-playbook deployEmsProductionSites.yml 
+exit
+cd ../demo/
+time ansible-playbook createDemoServers.yml 
+time ansible-playbook deployEmsDemoSites.yml 
+exit
+cd code/innoved/vle2/
+vagrant up
+vagrant ssh
+vagrant halt
+exit
+ssh innovedxen 
+exit
+ssh innovedvedxen
+ssh innovedxen
+exit
+cd ../backup
+ssh backup
+exit
+cd test
+time ansible-playbook deployEmsTestSites.yml 
+exit
+cd demo
+time ansible-playbook deployEmsDemoSites.yml 
+ansible-playbook removeEmsDeploymentRunningFileForDemo.yml 
+time ansible-playbook deployEmsDemoSites.yml 
+ansible-playbook removeEmsDeploymentRunningFileForDemo.yml 
+ssh jonathanm@63.32.55.71
+time ansible-playbook deployEmsDemoSites.yml 
+ssh jonathanm@63.32.55.71
+ansible-playbook removeEmsDeploymentRunningFileForDemo.yml 
+time ansible-playbook deployEmsDemoSites.yml 
+ansible-playbook removeEmsDeploymentRunningFileForDemo.yml 
+time ansible-playbook deployEmsDemoSites.yml 
+ansible-playbook removeEmsDeploymentRunningFileForDemo.yml 
+time ansible-playbook deployEmsDemoSites.yml 
+exit
+cd ~/code/innoved/utilities/playbooks/
+cd production/
+rm *.retry
+time ansible-playbook deployEmsProductionSites.yml 
+exit
+cd code/innoved/vle2/
+vagrant up
+sudo vim /etc/hosts
+vagrant ssh
+cd api/laravel/
+npm run prod
+npm run bs3
+npm run prod
+npm run dev
+npm run prod
+npm install
+npm run prod
+cd ../../
+vagrant ssh
+cd api/laravel/
+npm run prod
+cd ../../
+vagrant ssh
+cd api/laravel/
+npm run dev
+npm run prod
+npm run dev
+npm run prod
+npm rub dev
+npm run dev
+npm run prod
+npm run dev
+exit
+ssh backup
+npm run dev
+exit
+cd ../production/
+time ansible-playbook deployEmsProductionSites.yml 
+exit
+cd ~/code/innoved/utilities/playbooks/demo/
+time ansible-playbook deployEmsDemoSites.yml 
+exit
+cd code/innoved/vle2/
+vagrant up
+htop
+cd api/laravel/
+npm run dev
+npm run prod
+npm run dev
+cd ../../
+vagrant ssh
+vagrant halt
+exit
+ssh backup
+exit
+cd ../backup
+exit
+ssh backup
+exit
+cd api/laravel/
+npm run dev
+npm run prod
+npm run dev
+npm install
+npm run prod
+cd ../../
+git add.
+git add .
+git commit 
+exit
+ssh backup
+exit
+ssh innovedxen 
+exit
+cd ~/code/innoved/vle2/
+cd ../utilities/playbooks/production/
+time ansible-playbook deployEmsProductionSites.yml 
+time ansible-playbook deployEmsProductionSites.yml 
+exit
+cd ../demo/
+time ansible-playbook deployEmsDemoSites.yml 
+exit
+ssh backup
+exit
+cd code/innoved/vle2/
+vagrant up
+vagrant ssh
+cd api/laravel/
+npm run prod
+npm install
+npm run prod
+npm install
+npm run prod
+npm install
+npm run prod
+cd ../../
+vagrant ssh
+cd api/laravel/
+npm run prod
+cd ../../
+vagrant halt
+exit
+cd ../test
+time ansible-playbook deployEmsTestSites.yml 
+exit
+cd ../demo/
+time ansible-playbook deployEmsDemoSites.yml 
+ansible-playbook removeEmsDeploymentRunningFileForDemo.yml 
+time ansible-playbook deployEmsDemoSites.yml 
+cd ~/code/innoved/utilities/playbooks/production/
+time ansible-playbook deployEmsProductionSites.
+time ansible-playbook deployEmsProductionSites.yml 
+cd ../test/
+time ansible-playbook deployEmsTestSites.yml 
+cd code/innoved/vle2/
+ssh backup
+exit
+ansible-playbook deployAppAccountCodesToBackup.yml 
+exit
+cd ../backup/
+ssh backup
+ansible-playbook syncConfigs.yml 
+time ansible-playbook createBackupServers.yml 
+exit
+cd api/laravel/
+npm install
+npm run prod
+npm run dev
+npm run prod
+npm run dev
+npm run prod
+npm run dev
+exit
+cd ~/code/innoved/utilities/playbooks/production/
+time ansible-playbook deployEmsProductionSites.yml 
+exit
+cd ../test/
+cd ../demo
+time ansible-playbook deployEmsDemoSites.yml 
+time ansible-playbook createDemoServers.yml 
+time ansible-playbook deployEmsDemoSites.yml 
+exit
+cd ../test
+time ansible-playbook deployEmsTestSites.yml 
+time ansible-playbook createTestServers.yml 
+time ansible-playbook deployEmsTestSites.yml 
+exit
+cd ../backup
+exit
+vagrant up
+vagrant ssh
+vagrant halt
+exit
+cd code/innoved/vle2/api/laravel/
+npm run prod
+exit
+cd ~/code/innoved/utilities/playbooks/production/
+time ansible-playbook deployEmsProductionSites.yml 
+exit
+cd ../dem
+cd ../demo
+time ansible-playbook deployEmsDemoSites.yml 
+ansible-playbook removeEmsDeploymentRunningFileForDemo.yml 
+time ansible-playbook deployEmsDemoSites.yml 
+exit
+cd ../test
+time ansible-playbook deployEmsTestSites.yml 
+ansible-playbook removeEmsDeploymentRunningFileForTest.yml 
+time ansible-playbook deployEmsTestSites.yml 
+ansible-playbook removeEmsDeploymentRunningFileForTest.yml 
+time ansible-playbook deployEmsTestSites.yml 
+ansible-playbook removeEmsDeploymentRunningFileForTest.yml 
+time ansible-playbook deployEmsTestSites.yml 
+exit
+cd ../backup
+ssh backup
+exit
+cd code/innoved/vle2/
+vagrant up
+vagrant ssh
+cd api/laravel/
+npm run dev
+npm run prod
+cd ../../
+vagrant halt
+exit
+cd ../demo
+time ansible-playbook deployEmsDemoSites.yml 
+ssh innovedxen
+exit
+cd api/laravel/
+npm run prod
+npm install
+npm run prod
+npm run dev
+npm run prod
+exit
+cd ../backup
+sudo vim /etc/hosts
+ssh backup
+ssh innovedxen
+ssh backup
+exit
+time ansible-playbook deployEmsDemoSites.yml 
+exit
+cd ../test
+time ansible-playbook deployEmsTestSites.yml 
+exit
+cd ~/code/innoved/utilities/playbooks/production/
+time ansible-playbook deployEmsProductionSites.
+time ansible-playbook deployEmsProductionSites.yml 
+ansible-playbook removeEmsDeploymentRunningFileForProduction.yml 
+time ansible-playbook deployEmsProductionSites.yml 
+exit
+cd code/innoved/vle2/
+vagrant ssh
+vagrant up
+vagrant ssh
+vagrant halt
+exit
+cd ../demo
+time ansible-playbook deployEmsDemoSites.yml 
+exit
+cd ~/code/innoved/utilities/playbooks/production/
+time ansible-playbook deployEmsProductionSites.yml 
+exit
+cd ../demo
+time ansible-playbook deployEmsDemoSites.yml 
+ansible-playbook removeEmsDeploymentRunningFileForDemo.yml 
+time ansible-playbook deployEmsDemoSites.yml 
+ansible-playbook removeEmsDeploymentRunningFileForDemo.yml 
+time ansible-playbook deployEmsDemoSites.yml 
+exit
+cd ../test
+time ansible-playbook deployEmsTestSites.yml 
+exit
+ssh backup
+scp backup:/mnt/shared/shares/production/emslfe/transient/imports/LearnerData-20190722150314.csv Portsmouth Pre 16 July 2019.csv
+scp backup:/mnt/shared/shares/production/emslfe/transient/imports/LearnerData-20190722150314.csv Portsmouth_Pre_16_July_2019.csv
+exit
+cd code/innoved/vle2/
+vagrant up
+cd api/laravel/
+npm run build
+exit
+cd ../demo
+time ansible-playbook deployEmsDemoSites.yml 
+exit
+cd ../test
+time ansible-playbook deployEmsTestSites.yml 
+exit
+cd ../backup
+ssh backup
+exit
+cd ~/code/innoved/utilities/playbooks/production/
+time ansible-playbook deployEmsProductionSites.yml 
+exit
+cd code/innoved/vle2/
+vagrant up
+vagrant halt
+exit
+cd ../backup
+ssh backup
+exit
+cd ../test
+time ansible-playbook deployEmsTestSites.yml 
+exit
+cd ../demo
+time ansible-playbook deployEmsDemoSites.yml 
+exit
+cd ~/code/innoved/utilities/playbooks/production/
+time ansible-playbook deployEmsProductionSites.yml 
+exit
+cd code/innoved/vle2/
+vagrant ssh
+vagrant up
+cd api/laravel/
+npm install
+npm run prod
+npm install
+npm run prod
+cd ../../
+vagrant ssh
+cd ../../
+npm install
+cd innoved/vle2/api/laravel/
+npm install
+npm run prod
+cd ../../
+vagrant halt
+exit
+cd ../backup/
+ssh backup
+ssh innovedxen
+cd ../test/
+time ansible-playbook deployEmsTestSites.yml 
+exit
+cd ../demo
+time ansible-playbook deployEmsDemoSites.yml 
+exit
+cd ~/code/innoved/utilities/playbooks/production/
+exit
+cd ../backup/
+ssh backup
+cd code/innoved/vle2/
+vagrant up
+vagrant ssh
+cd api/laravel/
+npm run dev
+npm run prod
+cd ../../
+vagrant ssh
+vagrant reload
+cd api/laravel/
+npm run dev
+npm run prod
+npm install
+npm run prod
+npm install
+npm run prod
+npm run dev
+npm run prod
+npm run dev
+npm run bs3
+npm run dev
+npm run bs3
+npm run dev
+npm run prod
+npm run bs3
+npm run dev
+npm run bs3
+npm run dev
+npm run bs3
+npm run dev
+npm run bs3
+npm run dev
+npm install
+npm run dev
+cat /home/jonathan/.npm/_logs/2019-07-26T16_05_17_373Z-debug.log
+npm run dev
+npm run prod
+exit
+cd ~/code/innoved/utilities/playbooks/production/
+time ansible-playbook deployEmsProductionSites.yml 
+exit
+cd ../demo
+time ansible-playbook deployEmsDemoSites.yml 
+exit
+cd ../test
+time ansible-playbook deployEmsTestSites.yml 
+exit
+exit
+ssh innovedxen
+exit
+cd ../../
+vagrant ssh
+vagrant halt
+exit
+cd code/innoved/vle2/
+vagrant up
+cd api/laravel/
+npm run dev
+exit
+cd ../../
+vagrant ssh
+vagrant halt
+exit
+cd ../test/
+time ansible-playbook deployEmsTestSites.yml 
+ansible-playbook removeEmsDeploymentRunningFileForTest.yml 
+time ansible-playbook deployEmsTestSites.yml 
+ansible-playbook removeEmsDeploymentRunningFileForTest.yml 
+time ansible-playbook deployEmsTestSites.yml 
+exit
+cd ../demo
+time ansible-playbook deployEmsDemoSites.yml 
+time ansible-playbook removeEmsDeploymentRunningFileForDemo.yml 
+time ansible-playbook deployEmsDemoSites.yml 
+exit
+cd ~/code/innoved/utilities/playbooks/production/
+time ansible-playbook deployEmsProductionSites.yml 
+exit
+cd ../../
+vagrant ssh
+vagrant halt
+exit
+cd code/innoved/vle2/
+vagrant ssh
+vagrant up
+cd api/laravel/
+npm run dev
+npm run bs3
+npm run prod
+npm run dev
+npm run prod
+npm run dev
+npm run prod
+exit
+ssh jonathanm@34.244.90.116
+ssh jonathanm@34.247.182.63
+exit
+ssh innovedxen
+ssh backup
+exit
+cd ../backup
+ssh backup
+exit
+ssh ubuntu@34.242.219.165
+ssh ubuntu@34.243.252.139
+exit
+ssh jonathanm@34.242.219.165
+ssh jonathanm@34.243.252.139
+cd ../test
+time ansible-playbook deployEmsTestSites.yml 
+time ansible-playbook removeEmsDeploymentRunningFileForTest.yml 
+time ansible-playbook deployEmsTestSites.yml 
+ssh jonathanm@34.242.205.55
+time ansible-playbook deployEmsTestSites.yml 
+time ansible-playbook createTestServers.yml 
+time ansible-playbook deployEmsTestSites.yml 
+ansible-playbook createTestServers.yml 
+exit
+ssh ubuntu@34.249.66.230
+ssh backup
+cd ../backup
+ls
+time ansible-playbook deployDashboardsToBackup.yml 
+exit
+ssh jonathanm@34.245.110.115
+exit
+ssh jonathanm@34.246.163.164
+exit
+cd ../demo
+time ansible-playbook deployEmsDemoSites.yml 
+ansible-playbook removeEmsDeploymentRunningFileForDemo.yml 
+time ansible-playbook deployEmsDemoSites.yml 
+time ansible-playbook createDemoServers.yml 
+ssh ubuntu@54.154.65.250
+time ansible-playbook createDemoServers.yml 
+ssh jonathanm@34.249.66.230
+ssh ubuntu@34.249.66.230
+time ansible-playbook createDemoServers.yml 
+ssh ubuntu@52.214.133.190
+time ansible-playbook createDemoServers.yml 
+ssh jonathanm@52.48.56.74
+ssh ubuntu@52.48.56.74
+time ansible-playbook createDemoServers.yml 
+time ansible-playbook deployEmsDemoSites.yml 
+time ansible-playbook disableEmsDemoSites.yml 
+ansible-playbook removeEmsDeploymentRunningFileForDemo.yml 
+ssh jonathanm@34.242.219.165
+time ansible-playbook deployEmsDemoSites.yml 
+ansible-playbook removeEmsDeploymentRunningFileForDemo.yml 
+time ansible-playbook deployEmsDemoSites.yml 
+ansible-playbook removeEmsDeploymentRunningFileForDemo.yml 
+time ansible-playbook deployEmsDemoSites.yml 
+ansible-playbook removeEmsDeploymentRunningFileForDemo.yml 
+time ansible-playbook deployEmsDemoSites.yml 
+time ansible-playbook createDemoServers.yml 
+time ansible-playbook deployEmsDemoSites.yml 
+time ansible-playbook createDemoServers.yml 
+ansible-playbook removeEmsDeploymentRunningFileForDemo.yml 
+time ansible-playbook deployEmsDemoSites.yml 
+ansible-playbook disableEmsDemoSites.yml 
+time ansible-playbook createDemoServers.yml 
+time ansible-playbook deployEmsDemoSites.yml 
+exit
+cd ~/code/innoved/utilities/playbooks/production/
+time ansible-playbook deployEmsProductionSites.yml 
+ansible-playbook deployEmsProductionSites.yml 
+exit
+cd api/laravel/
+npm run dev
+npm run prod
+npm run dev
+npm run bs3
+npm run prod
+npm run bs3
+npm run dev
+npm run prod
+npm run dev
+npm run prod
+npm install
+npm run prod
+npm run dev
+npm run prod
+npm run dev
+npm run prod
+npm run dev
+npm run prod
+npm run bs3
+npm run prod
+npm run dev
+npm run bs3
+npm run prod
+npm install
+npm run prod
+npm run dev
+npm run prod
+exit
+cd code/innoved/vle2/
+vagrant up
+vagrant ssh
+vagrant halt
+exit
+ssh backup
+exit

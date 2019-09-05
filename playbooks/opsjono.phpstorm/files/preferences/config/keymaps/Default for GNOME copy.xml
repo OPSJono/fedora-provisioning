@@ -10,6 +10,9 @@
   <action id="Diff.FocusOppositePaneAndScroll" />
   <action id="EditorSelectWord" />
   <action id="EditorUnSelectWord" />
+  <action id="Git.ResolveConflicts">
+    <keyboard-shortcut first-keystroke="ctrl alt r" />
+  </action>
   <action id="GotoTest" />
   <action id="Images.ShowThumbnails" />
   <action id="NextTab">

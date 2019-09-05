@@ -16,7 +16,7 @@
     <location key="MultipleFileMergeDialog.0.0.1920.1080" x="877" y="234" />
     <location key="findTextDialog.0.0.1920.1080" x="685" y="268" />
     <location key="RollbackChangesDialog.0.0.1920.1080" x="694" y="225" />
-    <location key="VCS.ChangeListViewerDialog.0.0.1920.1080" x="754" y="221" />
+    <location key="VCS.ChangeListViewerDialog.0.0.1920.1080" x="992" y="231" />
     <location key="jetbrains.nodejs.interpreters-dialog.0.0.1920.1080" x="676" y="283" />
     <location key="#Inspections.0.0.1920.1080" x="589" y="194" />
     <location key="com.intellij.javascript.nodejs.NodeInterpretersView.0.0.1920.1080" x="707" y="288" />
@@ -89,6 +89,26 @@
     <location key="find.popup.0.0.1920.1080" x="612" y="161" />
     <location key="#com.intellij.ide.actions.ChooseComponentsToExportDialog.0.0.1920.1080" x="679" y="383" />
     <location key="WELCOME_SCREEN.0.0.2560.1440" x="1279" y="592" />
+    <location key="find.popup.1920.0.2560.1440" x="2885" y="368" />
+    <location key="search.everywhere.popup.1920.0.2560.1440" x="2863" y="341" />
+    <location key="MergeDialog.1920.0.2560.1440" x="2154" y="98" />
+    <location key="MultipleFileMergeDialog.1920.0.2560.1440" x="2902" y="434" />
+    <location key="VCS.ChangeListViewerDialog.1920.0.2560.1440" x="2937" y="386" />
+    <location key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser.1920.0.2560.1440" x="2778" y="365" />
+    <location key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog.1920.0.2560.1440" x="2933" y="475" />
+    <location key="run.anything.popup.1920.0.2560.1440" x="2864" y="336" />
+    <location key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate.1920.0.2560.1440" x="2945" y="615" />
+    <location key="#SQL_Dialects.1920.0.2560.1440" x="2795" y="378" />
+    <location key="search.everywhere.popup.0.0.1920.1080" x="624" y="184" />
+    <location key="SettingsEditor.1920.0.2560.1440" x="2674" y="361" />
+    <location key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1.0.0.1920.1080" x="671" y="395" />
+    <location key="#Web_Browsers.1920.0.2560.1440" x="2795" y="378" />
+    <location key="CommitChangelistDialog2.1920.0.2560.1440" x="2716" y="241" />
+    <location key="ProcessPopupWindow.1920.0.2560.1440" x="3713" y="1277" />
+    <location key="FileChooserDialogImpl.1920.0.2560.1440" x="2983" y="475" />
+    <location key="#com.intellij.fileTypes.FileTypeChooser.1920.0.2560.1440" x="2893" y="521" />
+    <location key="#com.intellij.execution.impl.EditConfigurationsDialog.1920.0.2560.1440" x="2658" y="375" />
+    <location key="DiffContextDialog.1920.0.2560.1440" x="2161" y="124" />
     <size key="FileChooserDialogImpl.0.0.1920.1080" width="426" height="490" />
     <size key="SettingsEditor.0.0.1920.1080" width="1208" height="925" />
     <size key="findTextDialog.0.0.3840.1080" width="965" height="561" />
@@ -183,5 +203,23 @@
     <size key="#com.intellij.fileTypes.FileTypeChooser.0.0.4480.1440" width="627" height="424" />
     <size key="find.popup.0.0.1920.1080" width="946" height="732" />
     <size key="#com.intellij.ide.actions.ChooseComponentsToExportDialog.0.0.1920.1080" width="552" height="341" />
+    <size key="find.popup.1920.0.2560.1440" width="1370" height="693" />
+    <size key="search.everywhere.popup.1920.0.2560.1440" width="672" height="678" />
+    <size key="MergeDialog.1920.0.2560.1440" width="2072" height="1234" />
+    <size key="MultipleFileMergeDialog.1920.0.2560.1440" width="586" height="563" />
+    <size key="VCS.ChangeListViewerDialog.1920.0.2560.1440" width="515" height="660" />
+    <size key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser.1920.0.2560.1440" width="834" height="701" />
+    <size key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog.1920.0.2560.1440" width="524" height="482" />
+    <size key="run.anything.popup.1920.0.2560.1440" width="672" height="677" />
+    <size key="#SQL_Dialects.1920.0.2560.1440" width="800" height="675" />
+    <size key="search.everywhere.popup.0.0.1920.1080" width="672" height="676" />
+    <size key="SettingsEditor.1920.0.2560.1440" width="1042" height="710" />
+    <size key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1.0.0.1920.1080" width="568" height="282" />
+    <size key="#Web_Browsers.1920.0.2560.1440" width="800" height="675" />
+    <size key="CommitChangelistDialog2.1920.0.2560.1440" width="957" height="950" />
+    <size key="ProcessPopupWindow.1920.0.2560.1440" width="400" height="125" />
+    <size key="FileChooserDialogImpl.1920.0.2560.1440" width="424" height="482" />
+    <size key="#com.intellij.fileTypes.FileTypeChooser.1920.0.2560.1440" width="594" height="389" />
+    <size key="DiffContextDialog.1920.0.2560.1440" width="2048" height="1180" />
   </component>
 </application>
