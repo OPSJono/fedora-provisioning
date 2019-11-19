@@ -91,7 +91,7 @@
     state: restarted
   with_items:
     - firewalld
-    - nfs
+#    - nfs
 
 - name: Copy sudoers include file into place
   template:

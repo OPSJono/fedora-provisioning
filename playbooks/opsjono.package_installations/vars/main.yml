@@ -2,7 +2,7 @@
 common_packages:
   - thunderbird
   - gnome-terminal-nautilus
-  - vim
+  - vim-enhanced
   - htop
   - iotop
   - pv
@@ -45,11 +45,11 @@ common_packages:
   # Ensures the server's clock is set properly
   - ntp
   # Required for running Ansible
-  - libselinux-python
+  #  - libselinux-python
   # Required for MJML
   - npm
 
-  - steam
+#  - steam
 
   # Extra's to add
   - ffmpeg-libs

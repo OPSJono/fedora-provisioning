@@ -25,7 +25,7 @@
     url: "{{ gitkraken_redis_url }}"
     method: HEAD
     follow_redirects: safe
-    check_mode: true
+#    check_mode: true
   register: head_query
 
 - name: Make sure the installation folder exists
@@ -81,17 +81,17 @@
     dest: /usr/lib64/libcurl-gnutls.so.4
     state: link
 
-- name: Symlink to (/usr/lib64/) libcrypto.so.10 -> libcrypto.so.1.0.0
-  file:
-    src: /usr/lib64/libcrypto.so.10
-    dest: /usr/lib64/libcrypto.so.1.0.0
-    state: link
+    #- name: Symlink to (/usr/lib64/) libcrypto.so.10 -> libcrypto.so.1.0.0
+    #file:
+    #src: /usr/lib64/libcrypto.so.10
+    #dest: /usr/lib64/libcrypto.so.1.0.0
+    #state: link
 
-- name: Symlink to (/usr/lib64/) libssl.so.10 -> libssl.so.1.0.0
-  file:
-    src: /usr/lib64/libssl.so.10
-    dest: /usr/lib64/libssl.so.1.0.0
-    state: link
+    #- name: Symlink to (/usr/lib64/) libssl.so.10 -> libssl.so.1.0.0
+    #file:
+    #src: /usr/lib64/libssl.so.10
+    #dest: /usr/lib64/libssl.so.1.0.0
+    #state: link
 
 - name: Set the current installed etag version
   shell: |

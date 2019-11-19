@@ -16,12 +16,12 @@
 # sudo dnf copr enable ghjm/glibc -y && sudo dnf update glibc -y --best --allowerasing
 ###
 
-- name: Enable "ghjm/glibc" COPR
-  shell: |
-    dnf copr enable -y ghjm/glibc
-  become: true
+    #- name: Enable "ghjm/glibc" COPR
+    #shell: |
+    # dnf copr enable -y ghjm/glibc
+    #become: true
 
-- name: Update glibc
-  shell: |
-    sudo dnf update glibc -y --best --allowerasing
-  become: true
+    #- name: Update glibc
+    #shell: |
+    #sudo dnf update glibc -y --best --allowerasing
+    #become: true
