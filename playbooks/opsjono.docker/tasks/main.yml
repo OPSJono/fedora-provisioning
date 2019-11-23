@@ -1,0 +1,17 @@
+---
+
+- name: Add the Docker CE repo
+  template:
+    src: fedora-docker-ce.repo.j2
+    dest: /etc/yum.repos.d/fedora-docker-ce.repo
+
+- name: Install Docker CE, Docker CLI and Containerd.io
+  dnf:
+    name: ['docker-ce', 'docker-ce-cli', 'containerd.io']
+    state: latest
+
+- name: Add user to the docker user group.
+  user:
+    name: "{{ local_user.stdout }}"
+    append: true
+    groups: "docker"
