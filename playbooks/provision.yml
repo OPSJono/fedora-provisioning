@@ -41,4 +41,5 @@
     - geerlingguy.apache
     - geerlingguy.redis
     - geerlingguy.php
-#    - geerlingguy.mysql
+    - role: geerlingguy.mysql
+      become: true
