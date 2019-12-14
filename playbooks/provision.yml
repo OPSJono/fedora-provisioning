@@ -39,4 +39,6 @@
     - avnes.slack
     - stefangweichinger.ansible-rclone
     - geerlingguy.apache
+    - geerlingguy.redis
     - geerlingguy.php
+#    - geerlingguy.mysql

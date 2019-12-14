@@ -52,7 +52,7 @@ php_apc_enable_cli: "0"
 php_use_managed_ini: true
 
 php_expose_php: "On"
-php_memory_limit: "256M"
+php_memory_limit: "1024M"
 php_max_execution_time: "60"
 php_max_input_time: "60"
 php_max_input_vars: "1000"
@@ -62,8 +62,8 @@ php_file_uploads: "On"
 php_upload_max_filesize: "64M"
 php_max_file_uploads: "20"
 
-php_post_max_size: "32M"
-php_date_timezone: "America/Chicago"
+php_post_max_size: "1024M"
+php_date_timezone: "UTC"
 php_allow_url_fopen: "On"
 
 php_sendmail_path: "/usr/sbin/sendmail -t -i"
@@ -75,8 +75,8 @@ php_session_cookie_lifetime: 0
 php_session_gc_probability: 1
 php_session_gc_divisor: 1000
 php_session_gc_maxlifetime: 1440
-php_session_save_handler: files
-php_session_save_path: ''
+php_session_save_handler: redis
+php_session_save_path: "\"tcp://localhost:6379?weight=1&timeout=5\""
 
 php_error_reporting: "E_ALL & ~E_DEPRECATED & ~E_STRICT"
 php_display_errors: "Off"
