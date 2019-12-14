@@ -7,7 +7,7 @@
       raw: test -e /usr/bin/python || (sudo dnf update -y && sudo dnf install -y python python-dnf)
       changed_when: False
 
-    - name: get the username running the deploy
+    - name: get the username running the playbook
       become: false
       local_action: command whoami
       register: local_user
@@ -18,8 +18,11 @@
       prompt: "Sudo password"
       private: yes
   vars:
-  - ansible_os_family: 'RedHat'
-  - ansible_architecture: 'x86_64'
+    - ansible_os_family: 'RedHat'
+    - ansible_architecture: 'x86_64'
+    - ansible_distribution_version: '10.04'
+    - ansible_distribution: 'RedHat'
+    - ansible_distribution_major_version: '8'
 
   roles:
     - opsjono.package_installations
@@ -35,3 +38,5 @@
     - opsjono.spotify
     - avnes.slack
     - stefangweichinger.ansible-rclone
+    - geerlingguy.apache
+    - geerlingguy.php
