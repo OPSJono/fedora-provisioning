@@ -10,6 +10,7 @@
   dnf:
     name: "*"
     state: latest
+    skip_broken: yes
 
 - name: install the 'Development tools' package group
   dnf:
