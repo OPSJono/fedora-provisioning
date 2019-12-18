@@ -2,7 +2,7 @@
 __mysql_daemon: mysqld
 __mysql_packages:
   - mysql
-  - mysql-server
+  - mysql-community-server
 __mysql_slow_query_log_file: /var/log/mysql-slow.log
 __mysql_log_error: /var/log/mysql.err
 __mysql_syslog_tag: mysql

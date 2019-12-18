@@ -1,7 +1,7 @@
 ---
 - name: Acquire temporary root pass
   shell: >
-    cat /var/log/mysqld.log | grep 'A temporary password' | awk 'NF>1{print $NF}' | tail -n 1
+    cat /var/log/mysql.err | grep 'A temporary password' | awk 'NF>1{print $NF}' | tail -n 1
   register: mysql_root_temp_password
   when: (mysql_install_packages | bool)
     and ('5.7.' in mysql_cli_version.stdout or '8.0.' in mysql_cli_version.stdout)
