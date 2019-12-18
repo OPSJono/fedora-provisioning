@@ -18,7 +18,7 @@
 
 - name: Update Discord using Flakpak (via Shell) if it is already installed
   shell: |
-    flatpak update {{ discord_package_name }} > /dev/null 2>&1
+    flatpak update {{ discord_package_name }} -y > /dev/null 2>&1
   become: true
   become_user: root
   when: discord_installed == true
