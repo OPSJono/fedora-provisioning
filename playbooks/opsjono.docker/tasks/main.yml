@@ -15,3 +15,9 @@
     name: "{{ local_user.stdout }}"
     append: true
     groups: "docker"
+
+- name: Make sure the Docker service is running and enabled on boot.
+  service:
+    name: docker
+    state: started
+    enabled: yes
