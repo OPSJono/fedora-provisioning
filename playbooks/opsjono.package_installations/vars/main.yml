@@ -57,6 +57,7 @@ common_packages:
   - gnome-tweak-tool
   - keepassx
   - vlc
+  - vlc-extras
 
   # snap package manager (for gitkraken)
   # - snapd
