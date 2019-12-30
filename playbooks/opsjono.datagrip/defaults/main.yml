@@ -1,0 +1,24 @@
+---
+
+datagrip_releases_url: "https://data.services.jetbrains.com/products/releases?code=DG&latest=true&type=release"
+datagrip_available_version: ""
+datagrip_available_url: ""
+datagrip_available_build: ""
+datagrip_archive_location: "/tmp/"
+datagrip_archive_path: "{{ datagrip_archive_location }}"
+
+datagrip_install_path: "/opt/datagrip"
+datagrip_build_path: "{{ datagrip_install_path }}/build.txt"
+
+datagrip_found_build_version: ""
+
+datagrip_already_exists: false
+datagrip_installed_build_version_available: false
+datagrip_can_be_installed: false
+
+ansible_user: "{{ lookup('env','USER') }}"
+
+#datagrip_override_download_url: "http://download.jetbrains.com/webide/PhpStorm-2017.3.3.tar.gz"
+#datagrip_override_available_build: "173.4301.34"
+#datagrip_override_available_version: "2017.3.3"
+#datagrip_override_available_major_version: "2017.3"

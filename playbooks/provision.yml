@@ -30,6 +30,7 @@
     - opsjono.discord
     - opsjono.gitkraken
     - opsjono.phpstorm
+    - opsjono.datagrip
     - opsjono.mysql_workbench
     - opsjono.mjml
     - opsjono.postman

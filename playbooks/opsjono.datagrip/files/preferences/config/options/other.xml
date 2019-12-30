@@ -1,0 +1,11 @@
+<application>
+  <component name="PropertiesComponent">
+    <property name="DBE.Init.Cfg.1" value="true" />
+    <property name="DBE.Init.DialogShown.Ide" value="true" />
+    <property name="Default.SavedEditorTheme" value="_@user_Default" />
+    <property name="ask.about.ctrl.y.shortcut" value="true" />
+    <property name="evlsprt3.193" value="18" />
+    <property name="ide.memory.adjusted" value="true" />
+    <property name="lastTip" value="1" />
+  </component>
+</application>

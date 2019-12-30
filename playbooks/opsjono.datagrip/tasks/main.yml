@@ -1,0 +1,183 @@
+---
+# Install & Configure Datagrip
+
+- name: Get JSON from Datagrip URL
+  uri:
+    url: "{{ datagrip_releases_url }}"
+    method: GET
+    return_content: yes
+  register: datagrip_releases
+
+- name: Get latest version number and download url
+  set_fact:
+    get_datagrip_available_version: "{{ datagrip_releases.json.DG[0].version }}"
+    get_datagrip_available_url: "{{ datagrip_releases.json.DG[0].downloads.linux.link }}"
+    get_datagrip_available_build: "{{ datagrip_releases.json.DG[0].build }}"
+    get_datagrip_major_version: "{{ datagrip_releases.json.DG[0].majorVersion }}"
+  when:
+    - datagrip_releases.json.DG[0].version is defined
+    - datagrip_releases.json.DG[0].downloads.linux.link is defined
+    - datagrip_releases.json.DG[0].build is defined
+
+- name: Override the download URL for Datagrip
+  set_fact:
+    get_datagrip_available_url: "{{ datagrip_override_download_url }}"
+    get_datagrip_available_build: "{{ datagrip_override_available_build }}"
+    get_datagrip_available_version: "{{ datagrip_override_available_version }}"
+    get_datagrip_major_version: "{{ datagrip_override_available_major_version }}"
+  when:
+    - datagrip_override_download_url is defined
+    - datagrip_override_available_build is defined
+    - datagrip_override_available_version is defined
+    - datagrip_override_available_major_version is defined
+
+#- name: Debug JSON varialbes
+#  debug:
+#    msg:
+#    - "{{ get_datagrip_available_version }}"
+#    - "{{ get_datagrip_available_url }}"
+#    - "{{ get_datagrip_available_build }}"
+
+- name: reset facts
+  set_fact:
+    datagrip_available_version: "{{ get_datagrip_available_version }}"
+    datagrip_available_url: "{{ get_datagrip_available_url }}"
+    datagrip_available_build: "{{ get_datagrip_available_build }}"
+  when:
+    - ci_testing is not defined
+
+#- name: debug datagrip variables
+#  debug:
+#    msg:
+#    - "Verison: {{ datagrip_available_version }}"
+#    - "URL: {{ datagrip_available_url }}"
+#    - "Build path: {{ datagrip_build_path }}"
+
+- name: Check if datagrip is already installed
+  stat:
+    path: "{{ datagrip_install_path }}"
+  register: datagrip_already_exists_check
+
+- name: Does it exist?
+  set_fact:
+    datagrip_already_exists: true
+  when: datagrip_already_exists_check.stat.isdir is defined and datagrip_already_exists_check.stat.isdir
+
+# JetBrains adds a file `build.txt` to the root of the download, to store the build version.
+- name: Check currently installed build version is available
+  stat:
+    path: "{{ datagrip_build_path }}"
+  register: datagrip_installed_build_available_check
+
+- name: Set whether the currently installed build version is avaialable
+  set_fact:
+    datagrip_installed_build_version_available: true
+  when: datagrip_installed_build_available_check.stat is defined and datagrip_installed_build_available_check.stat.exists
+
+- name: Get currently installed build version
+  set_fact:
+    datagrip_found_build_version: "{{ lookup('file', datagrip_build_path) }}"
+  when:
+    - datagrip_installed_build_version_available == true
+
+#- name: Debug build versions
+#  debug:
+#    msg:
+#      - "Currently installed build version: {{ datagrip_found_build_version }}"
+#      - "Available build version: DG-{{ datagrip_available_build }}"
+#      - "ansible_user: {{ ansible_user }}"
+
+- name: Check installed version is not the same as currently installed
+  set_fact:
+    datagrip_can_be_installed: true
+  when:
+    - datagrip_found_build_version != 'DG-'+datagrip_available_build
+
+- name: Set location variables
+  set_fact:
+    datagrip_archive_path: "{{ datagrip_archive_location }}datagrip-{{ datagrip_available_version }}.tar.gz"
+  when:
+    - ci_testing is not defined
+
+- name: Check download does not already exist
+  stat:
+    path: "{{ datagrip_archive_path }}"
+  register: datagrip_download_exists
+  when:
+    - datagrip_can_be_installed == true
+
+- name: Create Datagrip archive directory
+  file:
+    path: "{{ datagrip_archive_location }}"
+    state: directory
+  when:
+    - datagrip_can_be_installed == true
+
+- name: Download latest version of Datagrip (This could take a few minutes...)
+  get_url:
+    url: "{{ datagrip_available_url }}"
+    dest: "{{ datagrip_archive_location }}"
+    mode: 0775
+  when:
+    - datagrip_can_be_installed == true
+    - datagrip_download_exists.stat.exists == false
+    - ci_testing is not defined # doing this during testing will make tests slow.
+
+- name: Remove currently installed version
+  file:
+    path: "{{ datagrip_install_path }}"
+    state: absent
+  when:
+    - datagrip_can_be_installed == true
+    - datagrip_already_exists == true
+
+- name: Create Datagrip install directory
+  file:
+    path: /opt/datagrip
+    state: directory
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: 0775
+  when:
+    - datagrip_can_be_installed == true
+
+- name: Extract Datagrip
+  unarchive:
+    extra_opts: ['--strip-components=1']
+    src: "{{ datagrip_archive_path }}"
+    dest: "{{ datagrip_install_path }}"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+  when:
+    - datagrip_can_be_installed == true
+
+- name: Create symlink for datagrip
+  file:
+    src: "{{ datagrip_install_path }}/bin/datagrip.sh"
+    dest: /usr/local/bin/datagrip
+    state: link
+  when:
+    - datagrip_can_be_installed == true
+
+- name: Copy Datagrip icon into place
+  copy:
+    src: icon.png
+    dest: /opt/datagrip/icon.png
+  when:
+    - datagrip_can_be_installed == true
+
+- name: Install datagrip.desktop file
+  template:
+    src: datagrip.desktop.j2
+    dest: /usr/share/applications/datagrip.desktop
+  when:
+    - datagrip_can_be_installed == true
+
+- name: Copy Datagrip preferences to home folder
+  shell: |
+    mkdir -p /home/{{ ansible_user }}/.DataGrip{{ get_datagrip_major_version }}/config
+    cp -R opsjono.datagrip/files/preferences/* /home/{{ ansible_user }}/.DataGrip{{ get_datagrip_major_version }}
+  become: true
+  become_user: "{{ ansible_user }}"
+  when:
+    - datagrip_can_be_installed == true

@@ -1,0 +1,53 @@
+2019-12-30 09:55:35,197 [      0]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE STARTED ------------------------------------------------------ 
+2019-12-30 09:55:35,268 [     71]   INFO -        #com.intellij.idea.Main - JNA library (64-bit) loaded in 48 ms 
+2019-12-30 09:55:35,358 [    161]   INFO -        #com.intellij.idea.Main - IDE: DataGrip (build #DB-193.5662.58, 18 Dec 2019 10:06) 
+2019-12-30 09:55:35,358 [    161]   INFO -        #com.intellij.idea.Main - OS: Linux (5.3.16-300.fc31.x86_64, amd64) 
+2019-12-30 09:55:35,358 [    161]   INFO -        #com.intellij.idea.Main - JRE: 11.0.5+10-b520.17 (JetBrains s.r.o) 
+2019-12-30 09:55:35,358 [    161]   INFO -        #com.intellij.idea.Main - JVM: 11.0.5+10-b520.17 (OpenJDK 64-Bit Server VM) 
+2019-12-30 09:55:35,359 [    162]   INFO -        #com.intellij.idea.Main - JVM Args: -Xms128m -Xmx750m -XX:ReservedCodeCacheSize=240m -XX:+UseConcMarkSweepGC -XX:SoftRefLRUPolicyMSPerMB=50 -ea -XX:CICompilerCount=2 -Dsun.io.useCanonPrefixCache=false -Djava.net.preferIPv4Stack=true -Djdk.http.auth.tunneling.disabledSchemes="" -XX:+HeapDumpOnOutOfMemoryError -XX:-OmitStackTraceInFastThrow -Djdk.attach.allowAttachSelf=true -Dkotlinx.coroutines.debug=off -Djdk.module.illegalAccess.silent=true -Dawt.useSystemAAFontSettings=lcd -Dsun.java2d.renderer=sun.java2d.marlin.MarlinRenderingEngine -Dsun.tools.attach.tmp.only=true -XX:ErrorFile=/home/jonathan/java_error_in_DATAGRIP_%p.log -XX:HeapDumpPath=/home/jonathan/java_error_in_DATAGRIP.hprof -Didea.paths.selector=DataGrip2019.3 -Djb.vmOptionsFile=/opt/datagrip/bin/datagrip64.vmoptions -Didea.platform.prefix=DataGrip 
+2019-12-30 09:55:35,359 [    162]   INFO -        #com.intellij.idea.Main - charsets: JNU=UTF-8 file=UTF-8 
+2019-12-30 09:55:36,118 [    921]   INFO - .intellij.util.io.HttpRequests - Application is not initialized yet; Using default SSL configuration to connect to https://www.jetbrains.com/config/IdeaCloudConfig.xml 
+2019-12-30 09:55:36,432 [   1235]   INFO - .cloudConfig.CloudConfigClient - === Get cloud config URL: https://cloudconfig.jetbrains.com/cloudconfig/files === 
+2019-12-30 09:55:36,610 [   1413]   INFO -        #com.intellij.idea.Main - CPU cores: 4; ForkJoinPool.commonPool: java.util.concurrent.ForkJoinPool@73d4266e[Running, parallelism = 3, size = 0, active = 0, running = 0, steals = 0, tasks = 0, submissions = 0]; factory: com.intellij.concurrency.IdeaForkJoinWorkerThreadFactory@4c2165a0 
+2019-12-30 09:55:36,641 [   1444]   INFO -        #com.intellij.idea.Main - WM detected: GNOME Shell 
+2019-12-30 09:55:52,231 [  17034]   INFO - llij.ide.plugins.PluginManager - Loaded bundled plugins: DataGrip Customization (193.5662.58), DataGrip Help (193.5662.58), Database Tools and SQL (193.5662.58), IDEA CORE (193.5662.58), IntelliLang (193.5662.58), UML (193.5662.58) 
+2019-12-30 09:55:52,331 [  17134]   INFO - til.net.ssl.CertificateManager - Default SSL context initialized 
+2019-12-30 09:55:52,382 [  17185]   INFO - fs.newvfs.persistent.FSRecords - Marking VFS as corrupted: '/home/jonathan/.DataGrip2019.3/system/caches/names.dat' does not exist 
+2019-12-30 09:55:52,384 [  17187]   INFO - ellij.util.io.PagedFileStorage - lower=100; upper=500; buffer=10; max=705 
+2019-12-30 09:55:52,424 [  17227]   INFO - .history.utils.LocalHistoryLog - local history version mismatch (was: 0, expected: 6), rebuilding... 
+2019-12-30 09:55:52,424 [  17227]   INFO - .history.utils.LocalHistoryLog - FS has been rebuild, rebuilding local history... 
+2019-12-30 09:55:52,432 [  17235]   INFO - pl.local.NativeFileWatcherImpl - Starting file watcher: /opt/datagrip/bin/fsnotifier64 
+2019-12-30 09:55:52,464 [  17267]   INFO - pl.local.NativeFileWatcherImpl - Native file watcher is operational. 
+2019-12-30 09:55:52,473 [  17276]   INFO - com.intellij.ide.ui.UISettings - Loaded: fontSize=12, fontScale=1.0; restored: fontSize=12, fontScale=1.0 
+2019-12-30 09:55:52,495 [  17298]   INFO - rains.ide.BuiltInServerManager - built-in server started, port 63343 
+2019-12-30 09:55:52,521 [  17324]   INFO - com.intellij.ide.ui.UISettings - Loaded: fontSize=13, fontScale=null; restored: fontSize=15, fontScale=1.0 
+2019-12-30 09:55:52,527 [  17330]   INFO - gs.impl.UpdateCheckerComponent - channel: release 
+2019-12-30 09:55:52,536 [  17339]   INFO - com.intellij.ide.ui.UISettings - Loaded: fontSize=13, fontScale=null; restored: fontSize=15, fontScale=1.0 
+2019-12-30 09:55:52,681 [  17484]   INFO - llij.database.util.SqlDialects - SQL dialects initialized in 26 ms 
+2019-12-30 09:55:52,800 [  17603]   INFO - ij.psi.stubs.StubUpdatingIndex - Following new file types will be indexed:XML,SQL,HTML 
+2019-12-30 09:55:52,898 [  17701]   INFO - il.indexing.FileBasedIndexImpl - Indices to be built:FrameworkDetectionIndex,TodoIndex,IdIndex,FilenameIndex,filetypes,Stubs,Trigram.Index,fileIncludes,DomFileIndex,RelaxSymbolIndex,XmlTagNames,XmlNamespaces,html5.custom.attributes.index,SchemaTypeInheritance,ImageFileInfoIndex,json.file.root.values,HashFragmentIndex,sql.types.count.index,sql.routine.index 
+2019-12-30 09:55:52,899 [  17702]   INFO - pl$FileIndexDataInitialization - Initialization done: 404 
+2019-12-30 09:55:52,918 [  17721]   INFO - tellij.psi.stubs.StubIndexImpl - Following stub indices will be built:dom.namespaceKey,dom.elementClass,sql.table.shortName,sql.column.name,sql.names 
+2019-12-30 09:55:52,918 [  17721]   INFO - exImpl$StubIndexInitialization - Initialization done: 18 
+2019-12-30 09:55:54,004 [  18807]   INFO - tellij.ide.SystemHealthMonitor - restored ignored PIPE handler 
+2019-12-30 09:56:02,674 [  27477]   INFO - rojectCodeStyleSettingsManager - Initialized from default code style settings. 
+2019-12-30 09:56:02,844 [  27647]   INFO - rationStore.ComponentStoreImpl - Saving Project (name=default, containerState=ACTIVE, componentStore=/home/jonathan/.DataGrip2019.3/config/projects/default) ProjectCodeStyleConfiguration took 14 ms 
+2019-12-30 09:56:03,236 [  28039]   INFO - penapi.wm.impl.GlobalMenuLinux - Closed dbus-service 'com.canonical.AppMenu.Registrar' 
+2019-12-30 09:56:03,334 [  28137]   INFO - penapi.wm.impl.GlobalMenuLinux - created instance of GlobalMenuLinux for xid=0x120018a 
+2019-12-30 09:56:03,381 [  28184]   INFO - rojectCodeStyleSettingsManager - Initialized from default code style settings. 
+2019-12-30 09:56:03,634 [  28437]   INFO - j.ide.script.IdeStartupScripts - 0 startup script(s) found 
+2019-12-30 09:56:04,056 [  28859]   INFO - .diagnostic.PerformanceWatcher - Post-startup activities under progress took 342ms; general responsiveness: ok; EDT responsiveness: ok 
+2019-12-30 09:56:04,277 [  29080]   INFO - ntellij.idea.ApplicationLoader - canDisableInputMethod spent 20 ms, found keyboard layouts: [(gb, xkb), ], result==false 
+2019-12-30 09:56:04,397 [  29200]   INFO - .diagnostic.PerformanceWatcher - Pushing properties took 55ms; general responsiveness: ok; EDT responsiveness: ok 
+2019-12-30 09:56:04,544 [  29347]   INFO - .diagnostic.PerformanceWatcher - Indexable file iteration took 146ms; general responsiveness: ok; EDT responsiveness: 1/1 sluggish 
+2019-12-30 09:56:04,546 [  29349]   INFO - indexing.UnindexedFilesUpdater - Unindexed files update started: 210 files to update 
+2019-12-30 09:56:04,668 [  29471]   INFO - pl.ProjectRootManagerComponent - project roots have changed 
+2019-12-30 09:56:04,671 [  29474]   INFO - indexing.UnindexedFilesUpdater - Unindexed files update canceled 
+2019-12-30 09:56:04,692 [  29495]   INFO - .diagnostic.PerformanceWatcher - Pushing properties took 0ms; general responsiveness: ok; EDT responsiveness: ok 
+2019-12-30 09:56:04,694 [  29497]   INFO - tor.impl.FileEditorManagerImpl - Project opening took 1694 ms 
+2019-12-30 09:56:04,712 [  29515]   INFO - .diagnostic.PerformanceWatcher - Indexable file iteration took 19ms; general responsiveness: ok; EDT responsiveness: ok 
+2019-12-30 09:56:04,714 [  29517]   INFO - indexing.UnindexedFilesUpdater - Unindexed files update started: 210 files to update 
+2019-12-30 09:56:05,475 [  30278]   INFO - .diagnostic.PerformanceWatcher - Unindexed files update took 761ms; general responsiveness: ok; EDT responsiveness: ok 
+2019-12-30 09:56:09,726 [  34529]   INFO - j.ide.plugins.RepositoryHelper - using cached plugin list (updated at 30/12/2019, 09:55) 
+2019-12-30 09:56:09,914 [  34717]   INFO - gnostic.MemorySizeConfigurator - Physical memory 7901M, minimum memory size 128M, -Xmx adjusted from 750M to 987M 
+2019-12-30 09:56:09,936 [  34739]   INFO - ge.ExternalProjectsDataStorage - Load external projects data in 1 millis (read time: 1) 
