@@ -35,6 +35,7 @@
     - opsjono.postman
     - opsjono.skype
     - opsjono.docker
+    - opsjono.keybase
     - opsjono.spotify
     - avnes.slack
     - stefangweichinger.ansible-rclone

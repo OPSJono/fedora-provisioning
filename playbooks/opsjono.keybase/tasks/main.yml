@@ -1,0 +1,10 @@
+---
+- name: Install keybase repo rpm
+  dnf:
+    name: https://prerelease.keybase.io/keybase_amd64.rpm
+    state: present
+
+- name: Install keybase app
+  dnf:
+    name: keybase
+    state: latest
