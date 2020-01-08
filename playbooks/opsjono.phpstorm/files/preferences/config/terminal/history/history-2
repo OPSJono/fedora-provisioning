@@ -1,0 +1,67 @@
+sudo chmod 600 id_rsa
+sudo chmod 600 id_rsa.pub
+mkdir -p code/personal
+cd code/personal/
+git clone git@guthub.com:opsjono/fedora-provisioning
+ls
+git clone git@github.com:opsjono/fedora-provisioning
+cd fedora-provisioning/
+ssh-keygen -t rsa -b 4096 -C "Jonathan.Marshall@c2o.com"
+cat ~/.ssh/c2o_id_rsa.pub 
+htop
+exit
+sudo dnf update -y
+cd fedora-provisioning/playbooks/
+cd ../
+ls -lap
+sudo ./fedora-bootstrap.sh 
+time ansible-playbook playbooks/provision.yml 
+sudo ./fix-docker.sh 
+ls -lap
+cat post-install.notes
+sudo vim /etc/ssh/ssh_config
+time ansible-playbook playbooks/provision.yml 
+git push
+./atom-one-dark.sh 
+exit
+sudo snap install datagrip --classic
+cd code/personal/fedora-provisioning/playbooks/
+time ansible-playbook provision.yml 
+ls -lap /tmp | grep rip
+time ansible-playbook provision.yml 
+cat ~/.ssh/c2o_id_rsa
+cat ~/.ssh/c2o_id_rsa.pub 
+exit
+ssh quaysidegroup@52.48.118.52
+exit
+$(ssh-agent)
+ssh-agent
+eval(ssh-agent)
+sudo vim /etc/ssh/ssh_config
+exit
+cd ~/.ssh
+vim c2o_staging_rds_id_rsa
+sudo chmod 6-- c2o_staging_rds_id_rsa 
+sudo chmod 600 c2o_staging_rds_id_rsa 
+exit
+composer install
+php -v
+exit
+composer install
+php artisan key:generate
+chmod +x /path/to/NVIDIA-Linux-*.run
+chmod +x NVIDIA-Linux-*.run
+sudo su
+lspci |grep -E "VGA|3D"
+cd Downloads/
+./NVIDIA-Linux-x86_64-340.108.run 
+sudo su
+cd Downloads/
+./NVIDIA-Linux-x86_64-340.108.run 
+sudo su
+sudo chown jonathan:jonathan * -R
+exit
+composer install
+php artisan migrate
+php artisan key:generate
+php artisan migrate

@@ -13,6 +13,9 @@
   <component name="NodeLocalInterpreterManager">
     <node-interpreter path="/usr/bin/nodejs" version="4.2.6" last-modified="1463787647000" />
   </component>
+  <component name="NotRoamableUiSettings">
+    <option name="fontFace" value="Cantarell Regular" />
+  </component>
   <component name="PropertiesComponent">
     <property name="CommitChangeListDialog.DETAILS_SPLITTER_PROPORTION_2" value="0.74761903" />
     <property name="CommitChangeListDialog.SPLITTER_PROPORTION_2" value="0.55573" />
@@ -21,10 +24,12 @@
     <property name="DeploymentNotificationsComponent.WarnDisplayed.Java7&amp;Windows7FTPIssue" value="false" />
     <property name="ExpandBeforeRunStepsPanel" value="true" />
     <property name="ExpandRunDashboardTypesPanel" value="false" />
+    <property name="InstalledPluginsSearchHistory" value="atom one&#10;l&#10;la&#10;lar&#10;lara" />
     <property name="JSHintOptionsTreeView.TREE_SCROLL_BAR_HORIZONTAL" value="18" />
     <property name="JSHintOptionsTreeView.TREE_SCROLL_BAR_VERTICAL" value="1675" />
     <property name="JSHintOptionsTreeView.TREE_SELECTED_NODE_ID" value="1" />
     <property name="KEYMAP" value="close&#10;active tab&#10;close tab&#10;tab" />
+    <property name="MarketplacePluginsSearchHistory" value="atom one" />
     <property name="OpenOrAttachDialog.OpenMode" value="new" />
     <property name="PLUGIN_FILTER" value="file&#10;scss" />
     <property name="PhpStorm.InitialConfiguration" value="true" />
@@ -32,17 +37,21 @@
     <property name="PhpStorm.initialConfigurationShown" value="true" />
     <property name="PluginConfigurable.selectionTab" value="1" />
     <property name="ProjectStructure.SecondLevelElements" value="0.13089006" />
-    <property name="SettingsSearchHistory" value="resolve&#10;Tab,Indent&#10;tabs" />
+    <property name="SettingsSearchHistory" value="mysql&#10;resolve&#10;Tab,Indent&#10;tabs" />
     <property name="SplitFileEditor.Proportion" value="0.5690464" />
-    <property name="file.chooser.recent.files" value="$USER_HOME$/code/personal/atlas&#10;/home/jonathan/code/innoved/auditlogs&#10;/home/jonathan/code/personal/verex/aac-dont-renew&#10;/home/jonathan/Documents/fedora-provisioning&#10;/home/jonathan/code/personal/fedora-provisioning&#10;/home/jonathan/code/innoved/webflow&#10;/home/jonathan/code/innoved/october-cms&#10;/usr/local/bin/scss&#10;/home/jonathan/code/innoved/vle2/api/laravel/public/assets/animalates/css/scss/main.scss&#10;/home/jonathan/code/innoved/vle2/api/laravel/public/assets/animalates/css/scss&#10;/home/jonathan/code/innoved/utilities&#10;/home/jonathan/code/innoved/vle2/api/laravel&#10;/home/jonathan/code/innoved/vle2&#10;/home/jonathan/code/innoved/currency&#10;/home/jonathan/code/innoved/vle2/api/laravel/public&#10;/home/jonathan/code/innoved/vle2/vagrant&#10;/home/jonathan/code/innoved/vle2/vagrant/Vagrantfile&#10;/usr/bin/nodejs&#10;/usr/bin/tsc" />
-    <property name="file.gist.reindex.count" value="42399" />
+    <property name="TextEditorWithPreview.SplitterProportionKey" value="0.6957447" />
+    <property name="disable.forced.soft.wraps.notification" value="true" />
+    <property name="evlsprt3.193" value="13" />
+    <property name="file.chooser.recent.files" value="$USER_HOME$/code/c2o/c2o&#10;/home/jonathan/code/personal/atlas&#10;/home/jonathan/code/c2o/api&#10;/home/jonathan/code/c2o/ops&#10;/var/www/c2o/expenses&#10;/home/jonathan/code/personal/vle2&#10;/home/jonathan/code/c2o/expenses&#10;/home/jonathan/code/innoved/auditlogs&#10;/home/jonathan/code/personal/verex/aac-dont-renew&#10;/home/jonathan/Documents/fedora-provisioning&#10;/home/jonathan/code/personal/fedora-provisioning&#10;/home/jonathan/code/innoved/webflow&#10;/home/jonathan/code/innoved/october-cms&#10;/usr/local/bin/scss&#10;/home/jonathan/code/innoved/vle2/api/laravel/public/assets/animalates/css/scss/main.scss&#10;/home/jonathan/code/innoved/vle2/api/laravel/public/assets/animalates/css/scss&#10;/home/jonathan/code/innoved/utilities&#10;/home/jonathan/code/innoved/vle2/api/laravel&#10;/home/jonathan/code/innoved/vle2&#10;/home/jonathan/code/innoved/currency&#10;/home/jonathan/code/innoved/vle2/api/laravel/public&#10;/home/jonathan/code/innoved/vle2/vagrant&#10;/home/jonathan/code/innoved/vle2/vagrant/Vagrantfile&#10;/usr/bin/nodejs&#10;/usr/bin/tsc" />
+    <property name="file.gist.reindex.count" value="46022" />
     <property name="fileTypeChangedCounter" value="14" />
     <property name="find.popup.splitter" value="0.6192017" />
     <property name="lastTip" value="1" />
     <property name="selected.color.option.type" value="TYPO" />
+    <property name="settings.code.style.selected.tab.MySQL" value="Case" />
     <property name="settings.code.style.selected.tab.PHP" value="Tabs and Indents" />
     <property name="tasks.pass.word.conversion.enforced" value="true" />
     <property name="toolwindow.stripes.buttons.info.shown" value="true" />
-    <property name="ts.lib.d.ts.version" value="3.4.1" />
+    <property name="ts.lib.d.ts.version" value="3.7.2" />
   </component>
 </application>

@@ -1,130 +1,199 @@
 <application>
   <component name="RecentDirectoryProjectsManager">
-    <option name="recentPaths">
-      <list>
-        <option value="$USER_HOME$/code/personal/fedora-provisioning" />
-        <option value="$USER_HOME$/code/personal/verex/aac-dont-renew" />
-        <option value="$USER_HOME$/code/innoved/utilities" />
-        <option value="$USER_HOME$/code/innoved/vle2" />
-        <option value="$USER_HOME$/code/personal/atlas" />
-        <option value="$USER_HOME$/code/innoved/auditlogs" />
-        <option value="$USER_HOME$/code/innoved/webflow" />
-        <option value="$USER_HOME$/code/innoved/october-cms" />
-        <option value="$USER_HOME$/code/innoved/currency" />
-      </list>
-    </option>
-    <option name="openPaths">
-      <list>
-        <option value="$USER_HOME$/code/innoved/vle2" />
-        <option value="$USER_HOME$/code/innoved/utilities" />
-        <option value="$USER_HOME$/code/personal/verex/aac-dont-renew" />
-        <option value="$USER_HOME$/code/personal/fedora-provisioning" />
-      </list>
-    </option>
-    <option name="lastPath" value="$USER_HOME$/code/personal/fedora-provisioning" />
-    <option name="pid" value="" />
     <option name="additionalInfo">
       <map>
         <entry key="$USER_HOME$/code/innoved/auditlogs">
           <value>
             <RecentProjectMetaInfo>
-              <option name="build" value="PS-191.7479.51" />
-              <option name="productionCode" value="PS" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="projectOpenTimestamp" value="1566486922888" />
+              <option name="build" value="PS-191.7479.51" />
               <option name="buildTimestamp" value="1560854167775" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1566486922888" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="$USER_HOME$/code/innoved/currency">
           <value>
             <RecentProjectMetaInfo>
-              <option name="build" value="PS-163.10504.2" />
-              <option name="productionCode" value="PS" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="projectOpenTimestamp" value="1491832244139" />
+              <option name="build" value="PS-163.10504.2" />
               <option name="buildTimestamp" value="1482245251122" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1491832244139" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="$USER_HOME$/code/innoved/october-cms">
           <value>
             <RecentProjectMetaInfo>
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
               <option name="build" value="PS-172.3544.41" />
-              <option name="productionCode" value="PS" />
-              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="projectOpenTimestamp" value="1511176547180" />
               <option name="buildTimestamp" value="1501660302796" />
-            </RecentProjectMetaInfo>
-          </value>
-        </entry>
-        <entry key="$USER_HOME$/code/innoved/utilities">
-          <value>
-            <RecentProjectMetaInfo>
-              <option name="build" value="PS-191.7479.51" />
               <option name="productionCode" value="PS" />
-              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="projectOpenTimestamp" value="1567693281994" />
-              <option name="buildTimestamp" value="1560854210684" />
-            </RecentProjectMetaInfo>
-          </value>
-        </entry>
-        <entry key="$USER_HOME$/code/innoved/vle2">
-          <value>
-            <RecentProjectMetaInfo>
-              <option name="build" value="PS-191.7479.51" />
-              <option name="productionCode" value="PS" />
-              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="projectOpenTimestamp" value="1567693281994" />
-              <option name="buildTimestamp" value="1560854210684" />
+              <option name="projectOpenTimestamp" value="1511176547180" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="$USER_HOME$/code/innoved/webflow">
           <value>
             <RecentProjectMetaInfo>
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
               <option name="build" value="PS-172.3544.41" />
-              <option name="productionCode" value="PS" />
-              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="projectOpenTimestamp" value="1516976818574" />
               <option name="buildTimestamp" value="1501660268145" />
-            </RecentProjectMetaInfo>
-          </value>
-        </entry>
-        <entry key="$USER_HOME$/code/personal/atlas">
-          <value>
-            <RecentProjectMetaInfo>
-              <option name="build" value="PS-191.7479.51" />
               <option name="productionCode" value="PS" />
-              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="projectOpenTimestamp" value="1567280044433" />
-              <option name="buildTimestamp" value="1560854178152" />
-            </RecentProjectMetaInfo>
-          </value>
-        </entry>
-        <entry key="$USER_HOME$/code/personal/fedora-provisioning">
-          <value>
-            <RecentProjectMetaInfo>
-              <option name="build" value="PS-191.7479.51" />
-              <option name="productionCode" value="PS" />
-              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="projectOpenTimestamp" value="1567693281994" />
-              <option name="buildTimestamp" value="1560854210684" />
+              <option name="projectOpenTimestamp" value="1516976818574" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="$USER_HOME$/code/personal/verex/aac-dont-renew">
           <value>
             <RecentProjectMetaInfo>
-              <option name="build" value="PS-191.7479.51" />
-              <option name="productionCode" value="PS" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="projectOpenTimestamp" value="1567693281994" />
+              <option name="build" value="PS-191.7479.51" />
               <option name="buildTimestamp" value="1560854210684" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1567693281994" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/innoved/utilities">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-191.7479.51" />
+              <option name="buildTimestamp" value="1560854210684" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1567693281994" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/innoved/vle2">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-191.7479.51" />
+              <option name="buildTimestamp" value="1560854210684" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1567693281994" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/personal/vle2">
+          <value>
+            <RecentProjectMetaInfo projectWorkspaceId="1VhOqPYHEfHBafJ9ZHtb75XyANH">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-193.5662.63" />
+              <option name="buildTimestamp" value="1576752332747" />
+              <frame x="0" y="27" width="1280" height="964" extendedState="6" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1577702050993" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="/var/www/c2o/expenses">
+          <value>
+            <RecentProjectMetaInfo projectWorkspaceId="1VhOY83NhaPRhRiapGCmk9JhLdW">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-193.5662.63" />
+              <option name="buildTimestamp" value="1576752346920" />
+              <frame x="0" y="27" width="1280" height="964" extendedState="7" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1577710914929" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/personal/fedora-provisioning">
+          <value>
+            <RecentProjectMetaInfo projectWorkspaceId="1VhC2lyzXVatb5OqJvty4GysdxK">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-193.5662.63" />
+              <option name="buildTimestamp" value="1576752346920" />
+              <frame x="1461" y="0" width="1144" height="890" extendedState="7" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1577712214501" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/c2o/expenses">
+          <value>
+            <RecentProjectMetaInfo opened="true" projectWorkspaceId="1VhRZSVxp3yNgVaDdkX1WOTr6Y6">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-193.5662.63" />
+              <option name="buildTimestamp" value="1576752308381" />
+              <frame x="0" y="27" width="1260" height="960" extendedState="6" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1578408420918" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/c2o/ops">
+          <value>
+            <RecentProjectMetaInfo opened="true" projectWorkspaceId="1VqEYoZgwAObxQfRk4NDfrrWBaP">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-193.5662.63" />
+              <option name="buildTimestamp" value="1576752308381" />
+              <frame x="0" y="27" width="1280" height="964" extendedState="6" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1578408420918" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/personal/atlas">
+          <value>
+            <RecentProjectMetaInfo projectWorkspaceId="1W1ifRys80jpM777j7iJ3jL5hi5">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-193.5662.63" />
+              <option name="buildTimestamp" value="1576752308381" />
+              <frame x="0" y="27" width="1280" height="964" extendedState="6" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1578323604385" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/c2o/api">
+          <value>
+            <RecentProjectMetaInfo opened="true" projectWorkspaceId="1VqF6HhVqXwYQDz5lJIi1kFwNCJ">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-193.5662.63" />
+              <option name="buildTimestamp" value="1576752308381" />
+              <frame x="0" y="27" width="1280" height="964" extendedState="6" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1578408420918" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/c2o/c2o">
+          <value>
+            <RecentProjectMetaInfo opened="true" projectWorkspaceId="1W4Ua82VKIjxFWuSUWNVl4hc0WH">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-193.5662.63" />
+              <option name="buildTimestamp" value="1576752308381" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1578408420918" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
       </map>
+    </option>
+    <option name="recentPaths">
+      <list>
+        <option value="$USER_HOME$/code/c2o/c2o" />
+        <option value="$USER_HOME$/code/c2o/api" />
+        <option value="$USER_HOME$/code/personal/atlas" />
+        <option value="$USER_HOME$/code/c2o/ops" />
+        <option value="$USER_HOME$/code/c2o/expenses" />
+        <option value="$USER_HOME$/code/personal/fedora-provisioning" />
+        <option value="/var/www/c2o/expenses" />
+        <option value="$USER_HOME$/code/personal/vle2" />
+        <option value="$USER_HOME$/code/innoved/vle2" />
+        <option value="$USER_HOME$/code/innoved/utilities" />
+        <option value="$USER_HOME$/code/personal/verex/aac-dont-renew" />
+        <option value="$USER_HOME$/code/innoved/webflow" />
+        <option value="$USER_HOME$/code/innoved/october-cms" />
+        <option value="$USER_HOME$/code/innoved/currency" />
+        <option value="$USER_HOME$/code/innoved/auditlogs" />
+      </list>
     </option>
   </component>
 </application>

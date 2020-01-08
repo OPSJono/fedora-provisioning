@@ -1,6 +1,6 @@
 <application>
   <component name="NotificationConfiguration">
-    <notification groupId="Docker: Dockerfile detection" displayType="NONE" />
+    <notification groupId="Docker: Dockerfile detection" displayType="NONE" shouldLog="false" />
     <notification groupId="PHP Interpreters" displayType="NONE" />
     <notification groupId="Platform and Plugin Updates" displayType="NONE" />
   </component>
