@@ -1,0 +1,18 @@
+---
+galaxy_info:
+  role_name: virtualbox
+  author: Garrett Hyde
+  description: Install VirtualBox on Fedora
+  issue_tracker_url: https://github.com/ghyde/ansible-role-virtualbox/issues
+  license: MIT
+  min_ansible_version: 2.5
+  platforms:
+  - name: Fedora
+    versions:
+    - 30
+  galaxy_tags:
+  - fedora
+  - hypervisor
+  - virtualbox
+  - virtualization
+...

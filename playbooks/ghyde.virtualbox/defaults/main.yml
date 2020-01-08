@@ -1,0 +1,10 @@
+---
+virtualbox_dependencies:
+  - "@development-tools"
+  - kernel-devel
+  - kernel-headers
+  - dkms
+  - elfutils-libelf-devel
+  - qt5-qtx11extras
+virtualbox_package_name: "VirtualBox-6.0"
+...

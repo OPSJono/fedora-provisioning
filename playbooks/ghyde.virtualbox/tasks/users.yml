@@ -1,0 +1,11 @@
+---
+- block:
+  - name: add users to vboxusers group
+    user:
+      name: "{{ local_user.stdout }}"
+      groups: vboxusers
+      append: True
+    notify: reload group permissions
+  become: True
+  become_user: root
+...

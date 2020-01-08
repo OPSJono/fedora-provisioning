@@ -1,0 +1,4 @@
+---
+- name: reload group permissions
+  command: newgrp vboxusers
+...

@@ -26,7 +26,6 @@
 
   roles:
     - opsjono.package_installations
-#    - opsjono.virtualbox (6.0)
     - opsjono.themes
     - opsjono.discord
     - opsjono.gitkraken
@@ -40,6 +39,7 @@
     - opsjono.keybase
     - opsjono.spotify
     - avnes.slack
+    - ghyde.virtualbox
     - stefangweichinger.ansible-rclone
     - geerlingguy.apache
     - geerlingguy.redis

@@ -1,0 +1,7 @@
+---
+- block:
+  - import_tasks: install.yml
+  - import_tasks: users.yml
+  tags:
+  - virtualbox
+...

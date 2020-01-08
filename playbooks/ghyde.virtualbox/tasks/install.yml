@@ -1,0 +1,24 @@
+---
+- block:
+  - name: import VirtualBox key
+    rpm_key:
+      state: present
+      key: "{{ virtualbox_key_url }}"
+  - name: enable VirtualBox repo
+    get_url:
+      url: "{{ virtualbox_repo_url }}"
+      dest: /etc/yum.repos.d/virtualbox.repo
+      owner: root
+      group: root
+      mode: "0644"
+  - name: install dependencies
+    dnf:
+      name: "{{ virtualbox_dependencies }}"
+      state: present
+  - name: install {{ virtualbox_package_name }}
+    dnf:
+      name: "{{ virtualbox_package_name }}"
+      state: present
+  become: True
+  become_user: root
+...
