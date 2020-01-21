@@ -39,6 +39,7 @@
     - opsjono.keybase
     - opsjono.spotify
     - avnes.slack
+    - azavea.terraform
     - ghyde.virtualbox
     - stefangweichinger.ansible-rclone
     - geerlingguy.apache
