@@ -11,6 +11,7 @@
       owner: root
       group: root
       mode: "0644"
+      force: yes
   - name: install dependencies
     dnf:
       name: "{{ virtualbox_dependencies }}"

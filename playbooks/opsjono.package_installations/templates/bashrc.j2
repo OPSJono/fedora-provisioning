@@ -15,3 +15,7 @@ export ANSIBLE_DEPLOYMENT_USER=jonathanm
 export ANSIBLE_SSH_ARGS='-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o AddKeysToAgent=no'
 export ANSIBLE_PIPELINING=True
 export ANSIBLE_HOST_KEY_CHECKING=False
+
+function homestead() {
+    ( cd ~/Homestead && vagrant $* )
+}
