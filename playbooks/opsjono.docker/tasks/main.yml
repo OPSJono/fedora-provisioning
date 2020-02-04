@@ -7,7 +7,7 @@
 
 - name: Install Docker CE, Docker CLI and Containerd.io
   dnf:
-    name: ['docker-ce', 'docker-ce-cli', 'containerd.io']
+    name: ['docker-ce', 'docker-ce-cli', 'containerd.io', 'docker-compose']
     state: latest
 
 - name: Add user to the docker user group.
