@@ -69,7 +69,7 @@
     <location key="#Inspections.0.0.2560.1440" x="915" y="369" />
     <location key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate.0.0.2560.1440" x="1055" y="580" />
     <location key="#com.intellij.fileTypes.FileTypeChooser.0.0.2560.1440" x="975" y="491" />
-    <location key="find.popup.0.0.2560.1440" x="460" y="456" />
+    <location key="find.popup.0.0.2560.1440" x="642" y="297" />
     <location key="find.popup.0.0.4480.1440" x="804" y="33" />
     <location key="FileChooserDialogImpl.0.0.4480.1440" x="1063" y="484" />
     <location key="VCS.ChangeListViewerDialog.0.0.4480.1440" x="1050" y="386" />
@@ -110,7 +110,7 @@
     <location key="#com.intellij.execution.impl.EditConfigurationsDialog.1920.0.2560.1440" x="2658" y="375" />
     <location key="DiffContextDialog.1920.0.2560.1440" x="2161" y="124" />
     <location key="find.popup.1280.0.1280.1024" x="1491" y="33" />
-    <location key="find.popup.0.0.1280.1024" x="267" y="236" />
+    <location key="find.popup.0.0.1280.1024" x="288" y="98" />
     <size key="FileChooserDialogImpl.0.0.1920.1080" width="426" height="490" />
     <size key="SettingsEditor.0.0.1920.1080" width="1208" height="925" />
     <size key="findTextDialog.0.0.3840.1080" width="965" height="561" />
@@ -187,7 +187,7 @@
     <size key="#Inspections.0.0.2560.1440" width="722" height="658" />
     <size key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate.0.0.2560.1440" width="441" height="236" />
     <size key="#com.intellij.fileTypes.FileTypeChooser.0.0.2560.1440" width="728" height="410" />
-    <size key="find.popup.0.0.2560.1440" width="1701" height="819" />
+    <size key="find.popup.0.0.2560.1440" width="1490" height="939" />
     <size key="find.popup.0.0.4480.1440" width="946" height="1081" />
     <size key="FileChooserDialogImpl.0.0.4480.1440" width="424" height="498" />
     <size key="VCS.ChangeListViewerDialog.0.0.4480.1440" width="450" height="695" />
@@ -228,10 +228,14 @@
     <size key="GridCell.Tab.0.center.0.0.1280.1024" width="843" height="249" />
     <size key="GridCell.Tab.0.right.0.0.1280.1024" width="843" height="249" />
     <size key="GridCell.Tab.0.bottom.0.0.1280.1024" width="843" height="249" />
-    <size key="find.popup.0.0.1280.1024" width="745" height="546" />
+    <size key="find.popup.0.0.1280.1024" width="899" height="819" />
+    <size key="GridCell.Tab.0.left.0.0.2560.1440" width="2514" height="386" />
+    <size key="GridCell.Tab.0.center.0.0.2560.1440" width="2514" height="386" />
+    <size key="GridCell.Tab.0.right.0.0.2560.1440" width="2514" height="386" />
+    <size key="GridCell.Tab.0.bottom.0.0.2560.1440" width="2514" height="386" />
   </component>
   <component name="WindowManager">
-    <frame x="0" y="27" width="1280" height="964" extendedState="6" />
+    <frame x="1426" y="27" width="1104" height="882" extendedState="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
       <window_info id="Structure" order="1" weight="0.25" />

@@ -11,6 +11,7 @@
       <mapping pattern="memory" type="PLAIN_TEXT" />
       <mapping ext="package_installations" type="PLAIN_TEXT" />
       <mapping ext="j2" type="PLAIN_TEXT" />
+      <mapping ext="ttf" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
 </application>

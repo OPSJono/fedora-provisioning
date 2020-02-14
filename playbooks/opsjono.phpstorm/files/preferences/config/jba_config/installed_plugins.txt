@@ -1,0 +1,5 @@
+BashSupport
+github.cweijan.test-theme
+org.intellij.plugins.hcl
+org.jetbrains.plugins.rest
+ru.adelf.idea.dotenv

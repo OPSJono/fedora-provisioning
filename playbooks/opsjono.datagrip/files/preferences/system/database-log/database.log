@@ -1,0 +1,339 @@
+-- 2020-02-14 13:55:31 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547267] finished - execution time: 33 ms, fetching time: 36 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 13:55:31 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547268] 
+select * from customisation_files_perceptual_hashes where perceptual_hash > '' and error is not null
+-- ] --------------------------------------------------
+-- 2020-02-14 13:55:31 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547268] results received
+-- 2020-02-14 13:55:31 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547268] finished - execution time: 191 ms, fetching time: 141 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 13:55:35 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547269] 
+select database()
+-- ] --------------------------------------------------
+-- 2020-02-14 13:55:35 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547269] results received
+-- 2020-02-14 13:55:35 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547269] finished - execution time: 28 ms, fetching time: 28 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 13:55:35 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547270] 
+select count(*) from customisation_files_perceptual_hashes where perceptual_hash is not null
+-- ] --------------------------------------------------
+-- 2020-02-14 13:55:35 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547270] results received
+-- 2020-02-14 13:55:35 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547270] finished - execution time: 84 ms, fetching time: 106 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 13:55:37 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547271] 
+select database()
+-- ] --------------------------------------------------
+-- 2020-02-14 13:55:37 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547271] results received
+-- 2020-02-14 13:55:37 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547271] finished - execution time: 25 ms, fetching time: 27 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 13:55:37 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547272] 
+select count(*) from customisation_files_perceptual_hashes where perceptual_hash is not null
+-- ] --------------------------------------------------
+-- 2020-02-14 13:55:37 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547272] results received
+-- 2020-02-14 13:55:37 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547272] finished - execution time: 85 ms, fetching time: 91 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 13:55:44 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547273] 
+select database()
+-- ] --------------------------------------------------
+-- 2020-02-14 13:55:44 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547273] results received
+-- 2020-02-14 13:55:44 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547273] finished - execution time: 35 ms, fetching time: 25 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 13:55:44 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547274] 
+select * from customisation_files_perceptual_hashes where error is not null
+-- ] --------------------------------------------------
+-- 2020-02-14 13:55:44 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547274] results received
+-- 2020-02-14 13:55:45 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547274] finished - execution time: 99 ms, fetching time: 230 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 13:56:07 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547275] 
+select database()
+-- ] --------------------------------------------------
+-- 2020-02-14 13:56:07 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547275] results received
+-- 2020-02-14 13:56:07 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547275] finished - execution time: 43 ms, fetching time: 37 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 13:56:07 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547276] 
+select * from customisation_files_perceptual_hashes where error is not null
+-- ] --------------------------------------------------
+-- 2020-02-14 13:56:07 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547276] results received
+-- 2020-02-14 13:56:07 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547276] finished - execution time: 135 ms, fetching time: 282 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 13:56:33 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547277] 
+select database()
+-- ] --------------------------------------------------
+-- 2020-02-14 13:56:33 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547277] results received
+-- 2020-02-14 13:56:33 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547277] finished - execution time: 45 ms, fetching time: 52 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 13:56:33 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547278] 
+select * from customisation_files_perceptual_hashes where perceptual_hash = '' and error like '%{"bucket":null,"hash":"File not on disk","general":"file_put_contents():%'
+order by updated_at asc
+-- ] --------------------------------------------------
+-- 2020-02-14 13:56:33 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547278] results received
+-- 2020-02-14 13:56:33 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547278] finished - execution time: 161 ms, fetching time: 136 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 13:56:54 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547279] 
+select database()
+-- ] --------------------------------------------------
+-- 2020-02-14 13:56:54 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547279] results received
+-- 2020-02-14 13:56:54 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547279] finished - execution time: 43 ms, fetching time: 36 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 13:56:54 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547280] 
+select * from customisation_files_perceptual_hashes where error like '{"bucket":null,"hash":null,"general":"{"bucket":null,"hash":"File not on disk","general":"file_put_contents():%'
+-- ] --------------------------------------------------
+-- 2020-02-14 13:56:55 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547280] results received
+-- 2020-02-14 13:56:55 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547280] finished - execution time: 291 ms, fetching time: 101 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 13:56:59 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547281] 
+select database()
+-- ] --------------------------------------------------
+-- 2020-02-14 13:56:59 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547281] results received
+-- 2020-02-14 13:56:59 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547281] finished - execution time: 55 ms, fetching time: 56 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 13:56:59 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547282] 
+select * from customisation_files_perceptual_hashes where error like '{"bucket":null,"hash":"File not on disk","general":"file_put_contents():%'
+-- ] --------------------------------------------------
+-- 2020-02-14 13:56:59 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547282] results received
+-- 2020-02-14 13:56:59 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547282] finished - execution time: 299 ms, fetching time: 145 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 13:57:21 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547283] 
+update customisation_files_perceptual_hashes set perceptual_hash = null, error = null where error like '{"bucket":null,"hash":"File not on disk","general":"file_put_contents():%'
+-- ] --------------------------------------------------
+-- 2020-02-14 13:57:21 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547283] update count received - 6
+-- 2020-02-14 13:57:22 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547283] finished - execution time: 394 ms, fetching time: 57 ms, total update count: 6
+-- [ --------------------------------------------------
+-- 2020-02-14 13:57:22 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547284] 
+select database()
+-- ] --------------------------------------------------
+-- 2020-02-14 13:57:22 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547284] results received
+-- 2020-02-14 13:57:22 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547284] finished - execution time: 36 ms, fetching time: 42 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 13:57:28 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547285] 
+select database()
+-- ] --------------------------------------------------
+-- 2020-02-14 13:57:28 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547285] results received
+-- 2020-02-14 13:57:28 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547285] finished - execution time: 39 ms, fetching time: 58 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 13:57:28 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547286] 
+select distinct SUBSTRING(t1.error, 1, 100) as `error_message`, count(t2.url) as `error_count`
+from customisation_files_perceptual_hashes as t1
+left join customisation_files_perceptual_hashes as t2 on t1.url = t2.url
+where t1.error is not null and t1.perceptual_hash = ''
+group by `error_message`
+-- ] --------------------------------------------------
+-- 2020-02-14 13:57:41 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547286] results received
+-- 2020-02-14 13:57:41 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547286] finished - execution time: 13 s 164 ms, fetching time: 89 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 13:58:15 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547287] 
+update customisation_files_perceptual_hashes set perceptual_hash = null, error = null where error like '%{"bucket":null,"hash":"File not on disk","general":"file_put_contents()%'
+-- ] --------------------------------------------------
+-- 2020-02-14 13:58:16 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547287] finished - execution time: 285 ms
+-- [ --------------------------------------------------
+-- 2020-02-14 13:58:16 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547288] 
+select database()
+-- ] --------------------------------------------------
+-- 2020-02-14 13:58:16 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547288] results received
+-- 2020-02-14 13:58:16 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547288] finished - execution time: 23 ms, fetching time: 27 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 13:58:22 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547289] 
+select database()
+-- ] --------------------------------------------------
+-- 2020-02-14 13:58:22 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547289] results received
+-- 2020-02-14 13:58:22 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547289] finished - execution time: 26 ms, fetching time: 27 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 13:58:22 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547290] 
+select distinct SUBSTRING(t1.error, 1, 100) as `error_message`, count(t2.url) as `error_count`
+from customisation_files_perceptual_hashes as t1
+left join customisation_files_perceptual_hashes as t2 on t1.url = t2.url
+where t1.error is not null and t1.perceptual_hash = ''
+group by `error_message`
+-- ] --------------------------------------------------
+-- 2020-02-14 13:58:35 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547290] results received
+-- 2020-02-14 13:58:35 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547290] finished - execution time: 13 s 592 ms, fetching time: 64 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 14:00:02 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547291] 
+update customisation_files_perceptual_hashes set perceptual_hash = null, error = null where error like '%{"bucket":null,"hash":"File not on disk","general":"cURL error 23%'
+-- ] --------------------------------------------------
+-- 2020-02-14 14:00:02 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547291] update count received - 4
+-- 2020-02-14 14:00:02 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547291] finished - execution time: 297 ms, fetching time: 28 ms, total update count: 4
+-- [ --------------------------------------------------
+-- 2020-02-14 14:00:02 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547292] 
+select database()
+-- ] --------------------------------------------------
+-- 2020-02-14 14:00:02 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547292] results received
+-- 2020-02-14 14:00:02 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547292] finished - execution time: 25 ms, fetching time: 30 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 14:00:17 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547293] 
+update customisation_files_perceptual_hashes set perceptual_hash = null, error = null where error like '%{"bucket":null,"hash":"File not on disk%'
+-- ] --------------------------------------------------
+-- 2020-02-14 14:00:17 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547293] update count received - 304
+-- 2020-02-14 14:00:17 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547293] finished - execution time: 291 ms, fetching time: 26 ms, total update count: 304
+-- [ --------------------------------------------------
+-- 2020-02-14 14:00:17 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547294] 
+select database()
+-- ] --------------------------------------------------
+-- 2020-02-14 14:00:17 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547294] results received
+-- 2020-02-14 14:00:17 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547294] finished - execution time: 28 ms, fetching time: 31 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 14:00:20 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547295] 
+select database()
+-- ] --------------------------------------------------
+-- 2020-02-14 14:00:20 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547295] results received
+-- 2020-02-14 14:00:20 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547295] finished - execution time: 24 ms, fetching time: 27 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 14:00:20 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547296] 
+select distinct SUBSTRING(t1.error, 1, 100) as `error_message`, count(t2.url) as `error_count`
+from customisation_files_perceptual_hashes as t1
+left join customisation_files_perceptual_hashes as t2 on t1.url = t2.url
+where t1.error is not null and t1.perceptual_hash = ''
+group by `error_message`
+-- ] --------------------------------------------------
+-- 2020-02-14 14:00:25 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547296] results received
+-- 2020-02-14 14:00:25 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547296] finished - execution time: 4 s 256 ms, fetching time: 76 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 14:00:51 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547297] 
+update customisation_files_perceptual_hashes set perceptual_hash = null, error = null where error is not null
+-- ] --------------------------------------------------
+-- 2020-02-14 14:00:52 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547297] update count received - 157
+-- 2020-02-14 14:00:52 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547297] finished - execution time: 293 ms, fetching time: 25 ms, total update count: 157
+-- [ --------------------------------------------------
+-- 2020-02-14 14:00:52 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547298] 
+select database()
+-- ] --------------------------------------------------
+-- 2020-02-14 14:00:52 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547298] results received
+-- 2020-02-14 14:00:52 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547298] finished - execution time: 27 ms, fetching time: 27 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 14:00:56 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547299] 
+select database()
+-- ] --------------------------------------------------
+-- 2020-02-14 14:00:56 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547299] results received
+-- 2020-02-14 14:00:57 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547299] finished - execution time: 24 ms, fetching time: 28 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 14:00:57 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547300] 
+select count(*) from customisation_files_perceptual_hashes where perceptual_hash is not null
+-- ] --------------------------------------------------
+-- 2020-02-14 14:00:57 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547300] results received
+-- 2020-02-14 14:00:57 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547300] finished - execution time: 82 ms, fetching time: 86 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 14:01:03 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547301] 
+select database()
+-- ] --------------------------------------------------
+-- 2020-02-14 14:01:03 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547301] results received
+-- 2020-02-14 14:01:03 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547301] finished - execution time: 52 ms, fetching time: 62 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 14:01:03 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547302] 
+select count(*) from customisation_files_perceptual_hashes where perceptual_hash is null
+-- ] --------------------------------------------------
+-- 2020-02-14 14:01:03 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547302] results received
+-- 2020-02-14 14:01:03 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547302] finished - execution time: 213 ms, fetching time: 109 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 14:01:12 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547303] 
+select database()
+-- ] --------------------------------------------------
+-- 2020-02-14 14:01:12 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547303] results received
+-- 2020-02-14 14:01:12 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547303] finished - execution time: 34 ms, fetching time: 44 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 14:01:12 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547304] 
+select count(*) from customisation_files_perceptual_hashes where perceptual_hash is not null
+-- ] --------------------------------------------------
+-- 2020-02-14 14:01:12 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547304] results received
+-- 2020-02-14 14:01:12 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547304] finished - execution time: 131 ms, fetching time: 100 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 15:14:21 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547305] 
+select database()
+-- ] --------------------------------------------------
+-- 2020-02-14 15:14:21 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547305] results received
+-- 2020-02-14 15:14:21 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547305] finished - execution time: 33 ms, fetching time: 34 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 15:14:21 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547306] 
+select * from customisation_files_perceptual_hashes where error is not null
+-- ] --------------------------------------------------
+-- 2020-02-14 15:14:21 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547306] results received
+-- 2020-02-14 15:14:21 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547306] finished - execution time: 82 ms, fetching time: 247 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 15:14:38 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547307] 
+select database()
+-- ] --------------------------------------------------
+-- 2020-02-14 15:14:38 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547307] results received
+-- 2020-02-14 15:14:38 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547307] finished - execution time: 24 ms, fetching time: 30 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 15:14:38 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547308] 
+select count(*) from customisation_files_perceptual_hashes where perceptual_hash is null
+-- ] --------------------------------------------------
+-- 2020-02-14 15:14:38 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547308] results received
+-- 2020-02-14 15:14:38 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547308] finished - execution time: 125 ms, fetching time: 75 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 15:14:45 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547309] 
+select database()
+-- ] --------------------------------------------------
+-- 2020-02-14 15:14:45 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547309] results received
+-- 2020-02-14 15:14:45 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547309] finished - execution time: 27 ms, fetching time: 29 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 15:14:45 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547310] 
+select count(*) from customisation_files_perceptual_hashes where perceptual_hash is not null
+-- ] --------------------------------------------------
+-- 2020-02-14 15:14:45 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547310] results received
+-- 2020-02-14 15:14:45 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547310] finished - execution time: 82 ms, fetching time: 63 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 15:14:59 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547311] 
+select database()
+-- ] --------------------------------------------------
+-- 2020-02-14 15:14:59 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547311] results received
+-- 2020-02-14 15:14:59 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547311] finished - execution time: 25 ms, fetching time: 27 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 15:15:00 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547312] 
+select count(*) from customisation_files_perceptual_hashes where perceptual_hash = ''
+-- ] --------------------------------------------------
+-- 2020-02-14 15:15:00 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547312] results received
+-- 2020-02-14 15:15:00 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547312] finished - execution time: 83 ms, fetching time: 58 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 15:15:27 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547313] 
+select database()
+-- ] --------------------------------------------------
+-- 2020-02-14 15:15:27 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547313] results received
+-- 2020-02-14 15:15:27 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547313] finished - execution time: 26 ms, fetching time: 30 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 15:15:27 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547314] 
+select distinct SUBSTRING(t1.error, 1, 100) as `error_message`, count(t2.url) as `error_count`
+from customisation_files_perceptual_hashes as t1
+left join customisation_files_perceptual_hashes as t2 on t1.url = t2.url
+where t1.error is not null and t1.perceptual_hash = ''
+group by `error_message`
+-- ] --------------------------------------------------
+-- 2020-02-14 15:15:31 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547314] results received
+-- 2020-02-14 15:15:31 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547314] finished - execution time: 3 s 709 ms, fetching time: 73 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 15:27:55 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547315] 
+select database()
+-- ] --------------------------------------------------
+-- 2020-02-14 15:27:55 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547315] results received
+-- 2020-02-14 15:27:55 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547315] finished - execution time: 56 ms, fetching time: 74 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 15:27:55 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547316] 
+select count(*) from customisation_files_perceptual_hashes
+-- ] --------------------------------------------------
+-- 2020-02-14 15:27:55 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547316] results received
+-- 2020-02-14 15:27:55 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547316] finished - execution time: 287 ms, fetching time: 106 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 15:28:06 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547317] 
+select database()
+-- ] --------------------------------------------------
+-- 2020-02-14 15:28:06 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547317] results received
+-- 2020-02-14 15:28:06 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547317] finished - execution time: 122 ms, fetching time: 61 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 15:28:06 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547318] 
+select distinct SUBSTRING(t1.error, 1, 100) as `error_message`, count(t2.url) as `error_count`
+from customisation_files_perceptual_hashes as t1
+left join customisation_files_perceptual_hashes as t2 on t1.url = t2.url
+where t1.error is not null and t1.perceptual_hash = ''
+group by `error_message`
+-- ] --------------------------------------------------
+-- 2020-02-14 15:28:10 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547318] results received
+-- 2020-02-14 15:28:10 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547318] finished - execution time: 3 s 825 ms, fetching time: 89 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 15:28:52 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547319] 
+select database()
+-- ] --------------------------------------------------
+-- 2020-02-14 15:28:52 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547319] results received
+-- 2020-02-14 15:28:52 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547319] finished - execution time: 55 ms, fetching time: 40 ms, total result sets count: 1
+-- [ --------------------------------------------------
+-- 2020-02-14 15:28:52 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547320] 
+select count(*), count(distinct perceptual_hash) from customisation_files_perceptual_hashes where perceptual_hash is not null and error is null
+-- ] --------------------------------------------------
+-- 2020-02-14 15:28:52 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547320] results received
+-- 2020-02-14 15:28:52 [default] [Staging RDS-RO] [console: console [Staging RDS-RO]] [session id: 846898222] [statement id: 169547320] finished - execution time: 249 ms, fetching time: 93 ms, total result sets count: 1

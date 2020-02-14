@@ -4,63 +4,71 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/playbooks/provision.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+            <state relative-caret-position="864">
+              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/playbooks/geerlingguy.php/tasks/main.yml">
+        <entry file="file://$PROJECT_DIR$/playbooks/opsjono.package_installations/vars/main.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1260">
-              <caret line="70" column="37" selection-start-line="70" selection-start-column="37" selection-end-line="70" selection-end-column="37" />
+            <state relative-caret-position="324">
+              <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/playbooks/geerlingguy.php/tasks/configure.yml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/playbooks/geerlingguy.php/tasks/install-composer.yml">
+        <entry file="file://$PROJECT_DIR$/playbooks/opsjono.docker/tasks/main.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="396">
+              <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/playbooks/opsjono.datagrip/defaults/main.yml">
+        <entry file="file://$PROJECT_DIR$/playbooks/azavea.terraform/tasks/main.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+            <state relative-caret-position="432">
+              <caret line="24" column="76" selection-start-line="24" selection-start-column="76" selection-end-line="24" selection-end-column="76" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/playbooks/opsjono.datagrip/tasks/main.yml">
+        <entry file="file://$PROJECT_DIR$/playbooks/azavea.terraform/defaults/main.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3204">
-              <caret line="178" column="81" selection-start-line="178" selection-start-column="81" selection-end-line="178" selection-end-column="81" />
+            <state relative-caret-position="18">
+              <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/playbooks/opsjono.datagrip/files/preferences/config/port">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/playbooks/ghyde.virtualbox/defaults/main.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/playbooks/opsjono.datagrip/templates/datagrip.desktop.j2">
+        <entry file="file://$PROJECT_DIR$/playbooks/opsjono.package_installations/templates/bashrc.j2">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+            <state relative-caret-position="288">
+              <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/playbooks/ghyde.virtualbox/tasks/install.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -71,6 +79,9 @@
     <findStrings>
       <find>Datagrip</find>
       <find>prefere</find>
+      <find>local_user</find>
+      <find>enable VirtualBox repo</find>
+      <find>docker</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -88,11 +99,18 @@
         <option value="$PROJECT_DIR$/playbooks/opsjono.datagrip/tasks/main.yml" />
         <option value="$PROJECT_DIR$/playbooks/geerlingguy.php/tasks/main.yml" />
         <option value="$PROJECT_DIR$/playbooks/geerlingguy.php/tasks/install-composer.yml" />
+        <option value="$PROJECT_DIR$/playbooks/ghyde.virtualbox/tasks/users.yml" />
+        <option value="$PROJECT_DIR$/playbooks/opsjono.package_installations/templates/bashrc.j2" />
+        <option value="$PROJECT_DIR$/playbooks/ghyde.virtualbox/tasks/install.yml" />
+        <option value="$PROJECT_DIR$/playbooks/ghyde.virtualbox/defaults/main.yml" />
+        <option value="$PROJECT_DIR$/playbooks/azavea.terraform/defaults/main.yml" />
+        <option value="$PROJECT_DIR$/playbooks/azavea.terraform/tasks/main.yml" />
+        <option value="$PROJECT_DIR$/playbooks/opsjono.docker/tasks/main.yml" />
         <option value="$PROJECT_DIR$/playbooks/provision.yml" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" x="1461" y="0" width="1144" height="890" extendedState="7" />
+  <component name="ProjectFrameBounds" x="1426" y="27" width="1104" height="882" extendedState="6" />
   <component name="ProjectView">
     <navigator proportions="" version="1" />
     <panes>
@@ -113,14 +131,34 @@
               <item name="fedora-provisioning" type="b2602c69:ProjectViewProjectNode" />
               <item name="fedora-provisioning" type="462c0819:PsiDirectoryNode" />
               <item name="playbooks" type="462c0819:PsiDirectoryNode" />
-              <item name="geerlingguy.php" type="462c0819:PsiDirectoryNode" />
+              <item name="opsjono.docker" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fedora-provisioning" type="b2602c69:ProjectViewProjectNode" />
               <item name="fedora-provisioning" type="462c0819:PsiDirectoryNode" />
               <item name="playbooks" type="462c0819:PsiDirectoryNode" />
-              <item name="geerlingguy.php" type="462c0819:PsiDirectoryNode" />
+              <item name="opsjono.docker" type="462c0819:PsiDirectoryNode" />
               <item name="tasks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fedora-provisioning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fedora-provisioning" type="462c0819:PsiDirectoryNode" />
+              <item name="playbooks" type="462c0819:PsiDirectoryNode" />
+              <item name="opsjono.docker" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fedora-provisioning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fedora-provisioning" type="462c0819:PsiDirectoryNode" />
+              <item name="playbooks" type="462c0819:PsiDirectoryNode" />
+              <item name="opsjono.package_installations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fedora-provisioning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fedora-provisioning" type="462c0819:PsiDirectoryNode" />
+              <item name="playbooks" type="462c0819:PsiDirectoryNode" />
+              <item name="opsjono.package_installations" type="462c0819:PsiDirectoryNode" />
+              <item name="vars" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -129,13 +167,13 @@
     </panes>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7294000" />
+    <option name="totallyTimeSpent" value="14618000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="0" width="1280" height="991" extended-state="6" />
+    <frame x="0" y="27" width="2560" height="1380" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25364667" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27844074" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -180,13 +218,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/playbooks/provision.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/playbooks/geerlingguy.php/tasks/main.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1260">
@@ -225,6 +256,79 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playbooks/ghyde.virtualbox/vars/main.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playbooks/ghyde.virtualbox/tasks/users.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playbooks/azavea.terraform/ansible.cfg" />
+    <entry file="file://$PROJECT_DIR$/playbooks/azavea.terraform/playbook.yml" />
+    <entry file="file://$PROJECT_DIR$/playbooks/azavea.terraform/requirements.yml" />
+    <entry file="file://$PROJECT_DIR$/playbooks/azavea.terraform/README.md" />
+    <entry file="file://$PROJECT_DIR$/playbooks/geerlingguy.mysql/vars/RedHat-8.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playbooks/provision.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playbooks/opsjono.package_installations/vars/main.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playbooks/opsjono.docker/tasks/main.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playbooks/azavea.terraform/tasks/main.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="76" selection-start-line="24" selection-start-column="76" selection-end-line="24" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playbooks/azavea.terraform/defaults/main.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playbooks/ghyde.virtualbox/defaults/main.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playbooks/opsjono.package_installations/templates/bashrc.j2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playbooks/ghyde.virtualbox/tasks/install.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
         </state>
       </provider>
     </entry>

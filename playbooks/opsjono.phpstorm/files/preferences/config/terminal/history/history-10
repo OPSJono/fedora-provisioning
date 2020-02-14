@@ -44,3 +44,4 @@ vim c2o_staging_rds_id_rsa
 sudo chmod 6-- c2o_staging_rds_id_rsa 
 sudo chmod 600 c2o_staging_rds_id_rsa 
 exit
+git reset --hard
