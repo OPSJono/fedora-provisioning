@@ -1,9 +1,8 @@
-select orders_id, credit_reminder_sent from orders where orders_id = 5176037;
-update orders set credit_reminder_sent = 1 where orders_id = 5176037;
+select orders_id, credit_reminder_sent from orders where orders_id = 5170983;
+update orders set credit_reminder_sent = 1 where orders_id = 5170983;
 
-select orders_id, credit_reminder_sent from orders where orders_id = 5176401;
-update orders set credit_reminder_sent = 1 where orders_id = 5176401;
-
+insert into logins_users (username, password, fullname, lastLoginTime, lastLoginIP, accessLevels, site_username, site_password, unread, sort_order, site, signature, department, is_artworker, auto_assign_type, is_on_holiday)
+VALUES ('rachel.wilkinson@clothes2order.com', '', 'Rachel Wilkinson', 0, '', '', '', '', 0, 0, '', '', 1, 0, '', 0);
 
 explain update polo_customers pc
 join polo_address_book pab on pc.customers_id = pab.customers_id
@@ -13,12 +12,21 @@ where pc.customers_default_address_id = ''
 
 
 
+select * from staff_info where staff_id = 756;
+
+delete from quaysidg_news.integrity_check_notification
+where check_id in (4,24)
+and staff_id in (756);
+
+
+
 select * from poloshir_osC.products_stock_allocated where order_id = 5181442 and allocated_site = 'c2o';
 update poloshir_osC.products_stock_allocated set vendor_email_sent = 'Y' where order_id = 5181442 and allocated_site = 'c2o';
 
 select * from quaysidg_news.staff_info where first_name like "%oppy%";
 
-select * from staff_info where first_name like "%ayne%";
+select * from staff_info where first_name like "%dan%";
+update staff_info set password = 'cRkdR5sNBwmmQO2atq/e99k6Of1H1ZBxHxx84aD8ZEE=' where staff_id = 599;
 
 # workwearportal
 

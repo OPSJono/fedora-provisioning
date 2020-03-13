@@ -19,35 +19,39 @@
   <component name="PropertiesComponent">
     <property name="CommitChangeListDialog.DETAILS_SPLITTER_PROPORTION_2" value="0.74761903" />
     <property name="CommitChangeListDialog.SPLITTER_PROPORTION_2" value="0.55573" />
-    <property name="Copy.OpenInEditor" value="true" />
+    <property name="Copy.OpenInEditor" value="false" />
     <property name="DBE.Default.Dialect" value="MySQL" />
     <property name="DeploymentNotificationsComponent.WarnDisplayed.Java7&amp;Windows7FTPIssue" value="false" />
     <property name="ExpandBeforeRunStepsPanel" value="true" />
     <property name="ExpandRunDashboardTypesPanel" value="false" />
-    <property name="InstalledPluginsSearchHistory" value="atom one&#10;l&#10;la&#10;lar&#10;lara" />
+    <property name="FileTemplates.SelectedTemplate" value="HTML File" />
+    <property name="InstalledPluginsSearchHistory" value="filetyp&#10;filety&#10;file&#10;fi&#10;file typ" />
     <property name="JSHintOptionsTreeView.TREE_SCROLL_BAR_HORIZONTAL" value="18" />
     <property name="JSHintOptionsTreeView.TREE_SCROLL_BAR_VERTICAL" value="1675" />
     <property name="JSHintOptionsTreeView.TREE_SELECTED_NODE_ID" value="1" />
-    <property name="KEYMAP" value="close&#10;active tab&#10;close tab&#10;tab" />
-    <property name="MarketplacePluginsSearchHistory" value="atom one" />
+    <property name="KEYMAP" value="upload&#10;deploy&#10;close&#10;active tab&#10;close tab" />
+    <property name="MarketplacePluginsSearchHistory" value="yaml&#10;y&#10;atom one" />
     <property name="OpenOrAttachDialog.OpenMode" value="new" />
     <property name="PLUGIN_FILTER" value="file&#10;scss" />
     <property name="PhpStorm.InitialConfiguration" value="true" />
     <property name="PhpStorm.dumbRunEnabled" value="true" />
     <property name="PhpStorm.initialConfigurationShown" value="true" />
     <property name="PluginConfigurable.selectionTab" value="1" />
-    <property name="ProjectStructure.SecondLevelElements" value="0.13089006" />
-    <property name="SettingsSearchHistory" value="reformat&#10;mysql&#10;resolve&#10;Tab,Indent&#10;tabs" />
+    <property name="ProjectStructure.SecondLevelElements" value="0.2352415" />
+    <property name="SHELLCHECK.PATH" value="$APPLICATION_PLUGINS_DIR$/Shell Script/shellcheck" />
+    <property name="SHFMT.PATH" value="$APPLICATION_PLUGINS_DIR$/Shell Script/shfmt" />
+    <property name="SettingsSearchHistory" value="file ty&#10;fi&#10;type coer&#10;upload&#10;ftp" />
     <property name="SplitFileEditor.Proportion" value="0.5690464" />
     <property name="TextEditorWithPreview.SplitterProportionKey" value="0.6957447" />
     <property name="disable.forced.soft.wraps.notification" value="true" />
     <property name="evlsprt3.193" value="13" />
-    <property name="file.chooser.recent.files" value="$USER_HOME$/code/c2o/auto-po&#10;/home/jonathan/customisation_files_for_2019.sql&#10;/home/jonathan/code/c2o/customisation-api&#10;/home/jonathan/code/c2o/qs&#10;/home/jonathan/code/personal/udemy-docker-mastery/dockerfile-assignment-1&#10;/home/jonathan/code/personal/emails&#10;/home/jonathan/code/c2o/customisation-api-infrastructure&#10;/home/jonathan/code/c2o/q-tag&#10;/home/jonathan/code/c2o/polo-shirts&#10;/home/jonathan/code/c2o/analytics&#10;/home/jonathan/code/c2o/c2o&#10;/home/jonathan/code/personal/atlas&#10;/home/jonathan/code/c2o/api&#10;/home/jonathan/code/c2o/ops&#10;/var/www/c2o/expenses&#10;/home/jonathan/code/personal/vle2&#10;/home/jonathan/code/c2o/expenses&#10;/home/jonathan/code/innoved/auditlogs&#10;/home/jonathan/code/personal/verex/aac-dont-renew&#10;/home/jonathan/Documents/fedora-provisioning&#10;/home/jonathan/code/personal/fedora-provisioning&#10;/home/jonathan/code/innoved/webflow&#10;/home/jonathan/code/innoved/october-cms&#10;/usr/local/bin/scss&#10;/home/jonathan/code/innoved/vle2/api/laravel/public/assets/animalates/css/scss/main.scss&#10;/home/jonathan/code/innoved/vle2/api/laravel/public/assets/animalates/css/scss&#10;/home/jonathan/code/innoved/utilities&#10;/home/jonathan/code/innoved/vle2/api/laravel&#10;/home/jonathan/code/innoved/vle2&#10;/home/jonathan/code/innoved/currency" />
-    <property name="file.gist.reindex.count" value="47266" />
-    <property name="fileTypeChangedCounter" value="15" />
+    <property name="file.chooser.recent.files" value="$USER_HOME$/code/c2o/snow&#10;/home/jonathan/code/c2o/config-manager&#10;/home/jonathan/code/c2o/c2o-stores&#10;/home/jonathan/Videos&#10;/home/jonathan/.ssh/aws_staging&#10;/home/jonathan/code/c2o/laravel-apache-docker&#10;/home/jonathan/code/c2o/auto-po&#10;/home/jonathan/customisation_files_for_2019.sql&#10;/home/jonathan/code/c2o/customisation-api&#10;/home/jonathan/code/c2o/qs&#10;/home/jonathan/code/personal/udemy-docker-mastery/dockerfile-assignment-1&#10;/home/jonathan/code/personal/emails&#10;/home/jonathan/code/c2o/customisation-api-infrastructure&#10;/home/jonathan/code/c2o/q-tag&#10;/home/jonathan/code/c2o/polo-shirts&#10;/home/jonathan/code/c2o/analytics&#10;/home/jonathan/code/c2o/c2o&#10;/home/jonathan/code/personal/atlas&#10;/home/jonathan/code/c2o/api&#10;/home/jonathan/code/c2o/ops&#10;/var/www/c2o/expenses&#10;/home/jonathan/code/personal/vle2&#10;/home/jonathan/code/c2o/expenses&#10;/home/jonathan/code/innoved/auditlogs&#10;/home/jonathan/code/personal/verex/aac-dont-renew&#10;/home/jonathan/Documents/fedora-provisioning&#10;/home/jonathan/code/personal/fedora-provisioning&#10;/home/jonathan/code/innoved/webflow&#10;/home/jonathan/code/innoved/october-cms&#10;/usr/local/bin/scss" />
+    <property name="file.gist.reindex.count" value="53411" />
+    <property name="fileTypeChangedCounter" value="20" />
     <property name="find.popup.splitter" value="0.6192017" />
     <property name="large.file.editor.notification.disabled" value="true" />
     <property name="lastTip" value="1" />
+    <property name="perl.last.update.timestamp" value="1583325283049" />
     <property name="selected.color.option.type" value="TYPO" />
     <property name="settings.code.style.selected.tab.MySQL" value="Case" />
     <property name="settings.code.style.selected.tab.PHP" value="Wrapping and Braces" />

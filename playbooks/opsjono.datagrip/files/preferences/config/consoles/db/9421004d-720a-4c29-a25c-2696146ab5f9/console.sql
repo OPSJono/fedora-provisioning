@@ -7,17 +7,23 @@ group by oc.custom_id;
 
 select * from orders where orders_id = 4877140;*/
 
+select * from shopify_user_options where (value in (122, 121)) and shopify_user = 98;
+
 select * from staff_info where first_name like "%onathan%";
 
 update staff_info set is_admin = 1, is_qs_admin = 1 where staff_id = 628;
 
-select * from products_options;
+select * from additional_tracking;
+
+select * from ms_stores;
 
 select * from customers_basket_attributes
 where customers_id = 4993624
 and products_id = 765
 limit 10;
 
+select * from orders where api_partner_id = 6 order by date_purchased desc;
+select * from api_partners where show_custom_invoice > 0;
 ###
 # Get the records from this table based on the products id, options id and options values id.
 # Then  if there is a price_prefix and the options_values_price > 0, do the math...
@@ -153,6 +159,31 @@ SELECT *
                     GROUP BY countries_name
 ;
 
+select * from configuration;
+
+DROP TABLE IF EXISTS `sales_wallboard_targets`;
+CREATE TABLE `sales_wallboard_targets` (
+  `id` int(11) AUTO_INCREMENT,
+  `staff_id` int(11) NOT NULL,
+  `month` int(2) NOT NULL,
+  `year` int(4) NOT NULL,
+  `target` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `staff_id` (`staff_id`),
+  KEY `month` (`month`),
+  KEY `year` (`year`),
+  UNIQUE `unique_index`(`staff_id`, `month`, `year`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+select swt.id, si.staff_id, concat_ws(' ', si.first_name, si.last_name) as staff_name, swt.month, swt.year, swt.target
+from quaysidg_news.sales_wallboard_targets as swt
+join quaysidg_news.staff_info as si on swt.staff_id = si.staff_id;
+select count(distinct staff_id) from sales_wallboard_targets;
+select * from staff_info where first_name like "%Rebecca%" and employed = 1;
+
+select * from sales_wallboard_targets;
+truncate sales_wallboard_targets;
+
 
 CREATE TABLE `customisation_files_s3` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -172,22 +203,30 @@ CREATE TABLE `customisation_files_s3` (
   KEY `customisation_files_file_type_index` (`file_type`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1879938 DEFAULT CHARSET=latin1;
 
+update staff_info set password = '7CN7+V1PfZ6rMIfz/UUxTFRK0d7w4fz224PqMxSRCQM=' where staff_id = 628;
+select * from staff_info where first_name like "%Steve%";
+select staff_id, concat_ws(' ', first_name, last_name) as full_name from quaysidg_news.staff_info
+    where first_name > '' and last_name > ''
+    and (department = 14 or dep_filter = 'sales')
+    order by first_name asc, last_name asc
+;
 
 # truncate customisation_files_perceptual_hashes;
 
 
 select count(*) from customisation_files_perceptual_hashes; # 317254 total
-select count(*) from customisation_files_perceptual_hashes where perceptual_hash is not null; # 58856 at 14:00
-select count(*) from customisation_files_perceptual_hashes where perceptual_hash is null; # 258398 at 14:00
-select * from customisation_files_perceptual_hashes where error is not null; # 144 at 15:15
-select count(*) from customisation_files_perceptual_hashes where perceptual_hash = ''; # 144 at 15:15
+select count(*) from customisation_files_perceptual_hashes where perceptual_hash is not null; #
+select count(*) from customisation_files_perceptual_hashes where perceptual_hash is null; #
+select count(*) from customisation_files_perceptual_hashes where error is not null; #
+select * from customisation_files_perceptual_hashes where error is not null and perceptual_hash > ''; #
+select * from customisation_files_perceptual_hashes where perceptual_hash = '' and error is null; # 144 at 15:15
 
 # Files hashed but have an error (46)
 select * from customisation_files_perceptual_hashes where perceptual_hash > '' and error is not null;
 
 select * from customisation_files_perceptual_hashes where error like '{"bucket":null,"hash":"File not on disk"%';
 select * from customisation_files_perceptual_hashes where error like '{"bucket":null,"hash":"File not on disk","general":"file_put_contents():%';
-update customisation_files_perceptual_hashes set perceptual_hash = null, error = null where error is not null;
+update customisation_files_perceptual_hashes set perceptual_hash = null, error = null where error is not null and perceptual_hash > '';
 select * from customisation_files_perceptual_hashes where perceptual_hash = '' and error like '%{"bucket":null,"hash":"File not on disk","general":"file_put_contents():%';
 
 # Errors and their counts

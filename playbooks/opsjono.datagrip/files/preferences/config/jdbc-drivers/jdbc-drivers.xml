@@ -431,4 +431,10 @@
           md5=""/>
     <item name="mongodb-license.txt" url="https://download.jetbrains.com/idea/jdbc-drivers/MongoDB/mongodb-license.txt" md5=""/>
   </artifact>
+  <artifact version="1.7.2" name="MongoDB">
+    <item name="mongo-jdbc-standalone-1.7.2.jar"
+          url="https://download.jetbrains.com/idea/jdbc-drivers/MongoDB/1.7/mongo-jdbc-standalone-1.7.2.jar"
+          md5=""/>
+    <item name="mongodb-license.txt" url="https://download.jetbrains.com/idea/jdbc-drivers/MongoDB/mongodb-license.txt" md5=""/>
+  </artifact>
 </artifacts>

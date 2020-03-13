@@ -1,279 +1,3 @@
-select vendor_email_sent, vendor_stock_updated from orders where orders_id = 4877139;
-;-- -. . -..- - / . -. - .-. -.--
-select * from poloshir_osC.products_stock_allocated;
-;-- -. . -..- - / . -. - .-. -.--
-select vendor_email_sent, vendor_stock_updated from orders where orders_id = 4877161;
-;-- -. . -..- - / . -. - .-. -.--
-select * from poloshir_osC.products_stock_allocated_extra;
-;-- -. . -..- - / . -. - .-. -.--
-update staff_info set is_admin = 1 and is_qs_admin = 1 where staff_id = 628;
-;-- -. . -..- - / . -. - .-. -.--
-update staff_info set is_admin = 0 and is_qs_admin = 0 where staff_id = 628;
-;-- -. . -..- - / . -. - .-. -.--
-update staff_info set is_admin = 0, is_qs_admin = 0 where staff_id = 628;
-;-- -. . -..- - / . -. - .-. -.--
-update staff_info set is_admin = 1, is_qs_admin = 1 where staff_id = 628;
-;-- -. . -..- - / . -. - .-. -.--
-select * from staff_info where first_name like "%onathan%";
-;-- -. . -..- - / . -. - .-. -.--
-select * from orders_customisations where order_id = 4877161;
-;-- -. . -..- - / . -. - .-. -.--
-select vendor_email_sent, vendor_stock_updated, orders_status from orders where orders_id = 4877161;
-;-- -. . -..- - / . -. - .-. -.--
-select * FROM poloshir_osC.products_stock_allocated WHERE allocated_site = 'c2o' and order_id = '0' AND ( vendors_id IN (0,28) OR vendor_email_sent = 'N' );
-;-- -. . -..- - / . -. - .-. -.--
-select * from poloshir_osC.products_stock_allocated where order_id = 4877161;
-;-- -. . -..- - / . -. - .-. -.--
-select * from customisation_files;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT op.orders_products_id, op.orders_id, op.products_id, op.products_name, op.products_quantity, op.products_stock_attributes, o.customers_id
-						 FROM orders_products op, orders o
-						 WHERE op.orders_products_id = '2120633'
-						 AND op.orders_id = '4877160'
-						 AND o.orders_id = op.orders_id;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT oc.custom_id AS cid, op.products_id AS pid, op.products_stock_attributes AS attrib FROM orders_products AS op LEFT JOIN orders_products_customisations AS opc ON op.orders_products_id = opc.orders_products_id LEFT JOIN orders_customisations AS oc ON opc.customisation_id = oc.customisation_id WHERE op.orders_id = '4877158' AND op.products_stock_attributes != '' AND oc.order_id = '4877158';
-;-- -. . -..- - / . -. - .-. -.--
-SELECT a.id, a.partner_name, a.api_status, a.partner_logo, a.on_demand
-                        FROM api_partners a
-                        JOIN orders AS b ON b. api_partner_id = a.id
-                        WHERE b.orders_id = '4877158' LIMIT 1;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT a.id, a.partner_name, a.api_status, a.partner_logo, a.on_demand
-                        FROM api_partners a;
-;-- -. . -..- - / . -. - .-. -.--
-UPDATE customisation_options set custom_type = 'emb_creativeb', custom_name = 'Creative Branding' where custom_type = 'emb_kingf' and custom_name = 'Kingfisher';
-;-- -. . -..- - / . -. - .-. -.--
-UPDATE customisation_options set custom_type = 'emb_kingf', custom_name = 'Kingfisher' where custom_type = 'emb_creativeb';
-;-- -. . -..- - / . -. - .-. -.--
-INSERT INTO customisation_options (custom_type, custom_name, custom_base_type, customisation_department, is_selectable, is_external, active, default_printer, abbreviation)
-VALUES('emb_creativeb', 'Creative Branding', 'emb', 'Outsourced', '1', '1', '1', 'emb', 'CB');
-;-- -. . -..- - / . -. - .-. -.--
-INSERT INTO customisation_options (custom_type, custom_name, custom_base_type, customisation_department, is_selectable, is_external, active, price_array, cust_address, daily_capacity_percentages, colour, default_printer, default_artworker, default_email_address, production_stage_timing, production_target_percentage, artwork_completion_target, abbreviation, sort_order)
-VALUES('emb_creativeb', 'Creative Branding', 'emb', 'Outsourced', '1', '1', '1','', '', '', '', 'emb', '', '', '', '', '', 'CB', '0');
-;-- -. . -..- - / . -. - .-. -.--
-SELECT * FROM customisation_options WHERE active = '1';
-;-- -. . -..- - / . -. - .-. -.--
-UPDATE customisation_options set active = '0', is_selectable = '0' where custom_type = 'emb_kingf';
-;-- -. . -..- - / . -. - .-. -.--
-UPDATE customisation_options set active = '1', is_selectable = '1' where custom_type = 'emb_kingf';
-;-- -. . -..- - / . -. - .-. -.--
-select * from orders_customisations_types;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT c.customers_id, c.customers_firstname, c.customers_lastname, c.customers_telephone, c.customers_mobile, c.customers_email_address, cb.customers_basket_quantity, p.products_id
-
-			FROM customers_basket AS cb
-			JOIN customers AS c ON cb.customers_id = c.customers_id
-			JOIN customers_info AS ci ON c.customers_id = ci.customers_info_id
-			left JOIN products AS p ON cb.products_id = p.products_id
-			WHERE cb.basket_date_added BETWEEN NOW() - INTERVAL 2 DAY AND NOW()
-            AND (c.customers_email_address != '' OR c.customers_mobile != '' OR c.customers_telephone != '')
-            AND c.customers_email_address = 'Jonathan.Marshall@c2o.com'
-			GROUP BY cb.customers_id;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT c.customers_id, c.customers_firstname, c.customers_lastname, c.customers_telephone, c.customers_mobile, c.customers_email_address, cb.customers_basket_quantity, p.products_id
-
-			FROM customers_basket AS cb
-			JOIN customers AS c ON cb.customers_id = c.customers_id
-			JOIN customers_info AS ci ON c.customers_id = ci.customers_info_id
-			left JOIN products AS p ON cb.products_id = p.products_id
-			WHERE cb.basket_date_added BETWEEN NOW() - INTERVAL 2 DAY AND NOW()
-            AND (c.customers_email_address != '' OR c.customers_mobile != '' OR c.customers_telephone != '')
-            AND c.customers_email_address = 'Jonathan.Marshall@c2o.com';
-;-- -. . -..- - / . -. - .-. -.--
-SELECT c.customers_id, c.customers_firstname, c.customers_lastname, c.customers_telephone, c.customers_mobile, c.customers_email_address, cb.customers_basket_quantity, p.products_id,
-            MIN(cb.basket_date_added) AS basket_date_added,
-            IF((SELECT count(o.orders_id)
-				FROM orders AS o
-				WHERE o.customers_id = c.customers_id
-				GROUP BY o.customers_id) > 0, 'Yes', 'No') AS returning_customer,
-            c.account_manager,
-            ci.customers_info_number_of_logons,
-            max(cb.basket_last_updated) AS last_updated
-			FROM customers_basket AS cb
-			JOIN customers AS c ON cb.customers_id = c.customers_id
-			JOIN customers_info AS ci ON c.customers_id = ci.customers_info_id
-			left JOIN products AS p ON cb.products_id = p.products_id
-			WHERE cb.basket_date_added BETWEEN NOW() - INTERVAL 2 DAY AND NOW()
-            AND (c.customers_email_address != '' OR c.customers_mobile != '' OR c.customers_telephone != '')
-            AND c.customers_email_address = 'Jonathan.Marshall@c2o.com';
-;-- -. . -..- - / . -. - .-. -.--
-SELECT c.customers_id, c.customers_firstname, c.customers_lastname, c.customers_telephone, c.customers_mobile, c.customers_email_address, cb.customers_basket_quantity, p.products_id,
-            MIN(cb.basket_date_added) AS basket_date_added,
-            
-            c.account_manager,
-            ci.customers_info_number_of_logons,
-            max(cb.basket_last_updated) AS last_updated
-			FROM customers_basket AS cb
-			JOIN customers AS c ON cb.customers_id = c.customers_id
-			JOIN customers_info AS ci ON c.customers_id = ci.customers_info_id
-			left JOIN products AS p ON cb.products_id = p.products_id
-			WHERE cb.basket_date_added BETWEEN NOW() - INTERVAL 2 DAY AND NOW()
-            AND (c.customers_email_address != '' OR c.customers_mobile != '' OR c.customers_telephone != '')
-            AND c.customers_email_address = 'Jonathan.Marshall@c2o.com';
-;-- -. . -..- - / . -. - .-. -.--
-SELECT c.customers_id, c.customers_firstname, c.customers_lastname, c.customers_telephone, c.customers_mobile, c.customers_email_address, cb.customers_basket_quantity, p.products_id,
-            MIN(cb.basket_date_added) AS basket_date_added,
-            c.account_manager,
-            ci.customers_info_number_of_logons,
-            max(cb.basket_last_updated) AS last_updated
-			FROM customers_basket AS cb
-			JOIN customers AS c ON cb.customers_id = c.customers_id
-			JOIN customers_info AS ci ON c.customers_id = ci.customers_info_id
-			left JOIN products AS p ON cb.products_id = p.products_id
-			WHERE cb.basket_date_added BETWEEN NOW() - INTERVAL 2 DAY AND NOW()
-            AND (c.customers_email_address != '' OR c.customers_mobile != '' OR c.customers_telephone != '')
-            AND c.customers_email_address = 'Jonathan.Marshall@c2o.com';
-;-- -. . -..- - / . -. - .-. -.--
-SELECT c.customers_id, c.customers_firstname, c.customers_lastname, c.customers_telephone, c.customers_mobile, c.customers_email_address, cb.customers_basket_quantity, p.products_id,
-            MIN(cb.basket_date_added) AS basket_date_added,
-            c.account_manager,
-            ci.customers_info_number_of_logons
-			FROM customers_basket AS cb
-			JOIN customers AS c ON cb.customers_id = c.customers_id
-			JOIN customers_info AS ci ON c.customers_id = ci.customers_info_id
-			left JOIN products AS p ON cb.products_id = p.products_id
-			WHERE cb.basket_date_added BETWEEN NOW() - INTERVAL 2 DAY AND NOW()
-            AND (c.customers_email_address != '' OR c.customers_mobile != '' OR c.customers_telephone != '')
-            AND c.customers_email_address = 'Jonathan.Marshall@c2o.com';
-;-- -. . -..- - / . -. - .-. -.--
-SELECT c.customers_id, c.customers_firstname, c.customers_lastname, c.customers_telephone, c.customers_mobile, c.customers_email_address, cb.customers_basket_quantity, p.products_id,
-            MIN(cb.basket_date_added) AS basket_date_added,
-            c.account_manager
-			FROM customers_basket AS cb
-			JOIN customers AS c ON cb.customers_id = c.customers_id
-			JOIN customers_info AS ci ON c.customers_id = ci.customers_info_id
-			left JOIN products AS p ON cb.products_id = p.products_id
-			WHERE cb.basket_date_added BETWEEN NOW() - INTERVAL 2 DAY AND NOW()
-            AND (c.customers_email_address != '' OR c.customers_mobile != '' OR c.customers_telephone != '')
-            AND c.customers_email_address = 'Jonathan.Marshall@c2o.com';
-;-- -. . -..- - / . -. - .-. -.--
-SELECT c.customers_id, c.customers_firstname, c.customers_lastname, c.customers_telephone, c.customers_mobile, c.customers_email_address, cb.customers_basket_quantity, p.products_id,
-            MIN(cb.basket_date_added) AS basket_date_added
-			FROM customers_basket AS cb
-			JOIN customers AS c ON cb.customers_id = c.customers_id
-			JOIN customers_info AS ci ON c.customers_id = ci.customers_info_id
-			left JOIN products AS p ON cb.products_id = p.products_id
-			WHERE cb.basket_date_added BETWEEN NOW() - INTERVAL 2 DAY AND NOW()
-            AND (c.customers_email_address != '' OR c.customers_mobile != '' OR c.customers_telephone != '')
-            AND c.customers_email_address = 'Jonathan.Marshall@c2o.com';
-;-- -. . -..- - / . -. - .-. -.--
-SELECT c.customers_id, c.customers_firstname, c.customers_lastname, c.customers_telephone, c.customers_mobile, c.customers_email_address, cb.customers_basket_quantity, p.products_id
-			FROM customers_basket AS cb
-			JOIN customers AS c ON cb.customers_id = c.customers_id
-			JOIN customers_info AS ci ON c.customers_id = ci.customers_info_id
-			left JOIN products AS p ON cb.products_id = p.products_id
-			WHERE cb.basket_date_added BETWEEN NOW() - INTERVAL 2 DAY AND NOW()
-            AND (c.customers_email_address != '' OR c.customers_mobile != '' OR c.customers_telephone != '')
-            AND c.customers_email_address = 'Jonathan.Marshall@c2o.com';
-;-- -. . -..- - / . -. - .-. -.--
-SELECT c.customers_id, c.customers_firstname, c.customers_lastname, c.customers_telephone, c.customers_mobile, c.customers_email_address, cb.customers_basket_quantity, p.products_id,
-            cb.basket_date_added AS basket_date_added
-			FROM customers_basket AS cb
-			JOIN customers AS c ON cb.customers_id = c.customers_id
-			JOIN customers_info AS ci ON c.customers_id = ci.customers_info_id
-			left JOIN products AS p ON cb.products_id = p.products_id
-			WHERE cb.basket_date_added BETWEEN NOW() - INTERVAL 2 DAY AND NOW()
-            AND (c.customers_email_address != '' OR c.customers_mobile != '' OR c.customers_telephone != '')
-            AND c.customers_email_address = 'Jonathan.Marshall@c2o.com';
-;-- -. . -..- - / . -. - .-. -.--
-SELECT c.customers_id, c.customers_firstname, c.customers_lastname, c.customers_telephone, c.customers_mobile, c.customers_email_address, cb.customers_basket_quantity, p.products_id,
-            cb.basket_date_added AS basket_date_added,
-            IF((SELECT count(o.orders_id)
-				FROM orders AS o
-				WHERE o.customers_id = c.customers_id
-				GROUP BY o.customers_id) > 0, 'Yes', 'No') AS returning_customer,
-            c.account_manager,
-            ci.customers_info_number_of_logons,
-            max(cb.basket_last_updated) AS last_updated
-			FROM customers_basket AS cb
-			JOIN customers AS c ON cb.customers_id = c.customers_id
-			JOIN customers_info AS ci ON c.customers_id = ci.customers_info_id
-			left JOIN products AS p ON cb.products_id = p.products_id
-			WHERE cb.basket_date_added BETWEEN NOW() - INTERVAL 2 DAY AND NOW()
-            AND (c.customers_email_address != '' OR c.customers_mobile != '' OR c.customers_telephone != '')
-            AND c.customers_email_address = 'Jonathan.Marshall@c2o.com';
-;-- -. . -..- - / . -. - .-. -.--
-SELECT c.customers_id, c.customers_firstname, c.customers_lastname, c.customers_telephone, c.customers_mobile, c.customers_email_address, cb.customers_basket_quantity, p.products_id,
-            cb.basket_date_added AS basket_date_added,
-            c.account_manager,
-            ci.customers_info_number_of_logons,
-            max(cb.basket_last_updated) AS last_updated
-			FROM customers_basket AS cb
-			JOIN customers AS c ON cb.customers_id = c.customers_id
-			JOIN customers_info AS ci ON c.customers_id = ci.customers_info_id
-			left JOIN products AS p ON cb.products_id = p.products_id
-			WHERE cb.basket_date_added BETWEEN NOW() - INTERVAL 2 DAY AND NOW()
-            AND (c.customers_email_address != '' OR c.customers_mobile != '' OR c.customers_telephone != '')
-            AND c.customers_email_address = 'Jonathan.Marshall@c2o.com';
-;-- -. . -..- - / . -. - .-. -.--
-SELECT c.customers_id, c.customers_firstname, c.customers_lastname, c.customers_telephone, c.customers_mobile, c.customers_email_address, cb.customers_basket_quantity, p.products_id,
-            
-            c.account_manager,
-            ci.customers_info_number_of_logons,
-            max(cb.basket_last_updated) AS last_updated
-			FROM customers_basket AS cb
-			JOIN customers AS c ON cb.customers_id = c.customers_id
-			JOIN customers_info AS ci ON c.customers_id = ci.customers_info_id
-			left JOIN products AS p ON cb.products_id = p.products_id
-			WHERE cb.basket_date_added BETWEEN NOW() - INTERVAL 2 DAY AND NOW()
-            AND (c.customers_email_address != '' OR c.customers_mobile != '' OR c.customers_telephone != '')
-            AND c.customers_email_address = 'Jonathan.Marshall@c2o.com';
-;-- -. . -..- - / . -. - .-. -.--
-SELECT c.customers_id, c.customers_firstname, c.customers_lastname, c.customers_telephone, c.customers_mobile, c.customers_email_address, cb.customers_basket_quantity, p.products_id,
-            cb.basket_date_added AS basket_date_added,
-            c.account_manager,
-            ci.customers_info_number_of_logons,
-            cb.basket_last_updated AS last_updated
-			FROM customers_basket AS cb
-			JOIN customers AS c ON cb.customers_id = c.customers_id
-			JOIN customers_info AS ci ON c.customers_id = ci.customers_info_id
-			left JOIN products AS p ON cb.products_id = p.products_id
-			WHERE cb.basket_date_added BETWEEN NOW() - INTERVAL 2 DAY AND NOW()
-            AND (c.customers_email_address != '' OR c.customers_mobile != '' OR c.customers_telephone != '')
-            AND c.customers_email_address = 'Jonathan.Marshall@c2o.com';
-;-- -. . -..- - / . -. - .-. -.--
-SELECT c.customers_id, c.customers_id, c.customers_firstname, c.customers_lastname, c.customers_telephone, c.customers_mobile, c.customers_email_address, cb.customers_basket_quantity, p.products_id,
-            cb.basket_date_added AS basket_date_added,
-       IF((SELECT count(o.orders_id)
-				FROM orders AS o
-				WHERE o.customers_id = c.customers_id
-				GROUP BY o.customers_id) > 0, 'Yes', 'No') AS returning_customer,
-            c.account_manager,
-            ci.customers_info_number_of_logons,
-            cb.basket_last_updated AS last_updated
-			FROM customers_basket AS cb
-			JOIN customers AS c ON cb.customers_id = c.customers_id
-			JOIN customers_info AS ci ON c.customers_id = ci.customers_info_id
-			left JOIN products AS p ON cb.products_id = p.products_id
-			WHERE cb.basket_date_added BETWEEN NOW() - INTERVAL 2 DAY AND NOW()
-            AND (c.customers_email_address != '' OR c.customers_mobile != '' OR c.customers_telephone != '')
-            AND c.customers_email_address = 'Jonathan.Marshall@c2o.com';
-;-- -. . -..- - / . -. - .-. -.--
-select * from products_options;
-;-- -. . -..- - / . -. - .-. -.--
-select * from products_options_values_to_products_options;
-;-- -. . -..- - / . -. - .-. -.--
-select * from customers_basket_attributes
-where customers_id = 4993624
-and products_id = 765
-limit 10;
-;-- -. . -..- - / . -. - .-. -.--
-select * from customers_basket_customisations
-where customers_id = 4993624
-and products_id = 765
-limit 10;
-;-- -. . -..- - / . -. - .-. -.--
-select * from products_options
-# where customers_id = 4993624
-# and products_id = 765
-limit 10;
-;-- -. . -..- - / . -. - .-. -.--
-select * from products_store_options
-# where customers_id = 4993624
-# and products_id = 765
-limit 10;
-;-- -. . -..- - / . -. - .-. -.--
 select * from products_attributes
 # where customers_id = 4993624
 # and products_id = 765
@@ -810,8 +534,6 @@ ALTER TABLE `orders_customisations_types` ADD KEY `emb_creativeb` (`emb_creative
 ;-- -. . -..- - / . -. - .-. -.--
 select countries_id, countries_iso_code_2, countries_iso_code_3 from countries;
 ;-- -. . -..- - / . -. - .-. -.--
-select * from api_partners;
-;-- -. . -..- - / . -. - .-. -.--
 select * from orders order by orders_id desc;
 ;-- -. . -..- - / . -. - .-. -.--
 SELECT countries_name, address_format_id
@@ -864,8 +586,6 @@ select count(*) from customisation_files_perceptual_hashes where perceptual_hash
 select count(*) from customisation_files_perceptual_hashes where perceptual_hash like '%404%';
 ;-- -. . -..- - / . -. - .-. -.--
 select count(*) from customisation_files_perceptual_hashes where perceptual_hash like '%404:%';
-;-- -. . -..- - / . -. - .-. -.--
-select * from customisation_files_perceptual_hashes where perceptual_hash = '';
 ;-- -. . -..- - / . -. - .-. -.--
 update customisation_files_perceptual_hashes set perceptual_hash = null where perceptual_hash = '';
 ;-- -. . -..- - / . -. - .-. -.--
@@ -2404,8 +2124,6 @@ select * from customisation_files_perceptual_hashes;
 ;-- -. . -..- - / . -. - .-. -.--
 truncate customisation_files_perceptual_hashes;
 ;-- -. . -..- - / . -. - .-. -.--
-select count(*) from customisation_files_perceptual_hashes where error is not null;
-;-- -. . -..- - / . -. - .-. -.--
 select * from customisation_files_perceptual_hashes where error is not null and perceptual_hash is null;
 ;-- -. . -..- - / . -. - .-. -.--
 select distinct error from customisation_files_perceptual_hashes where error is not null and perceptual_hash = '';
@@ -2501,10 +2219,6 @@ select * from customisation_files_perceptual_hashes where error like '{"bucket":
 ;-- -. . -..- - / . -. - .-. -.--
 select count(*) from customisation_files_perceptual_hashes where perceptual_hash > '' and error is not null;
 ;-- -. . -..- - / . -. - .-. -.--
-update customisation_files_perceptual_hashes set perceptual_hash = null, error = null where error is not null and perceptual_hash > '';
-;-- -. . -..- - / . -. - .-. -.--
-select * from customisation_files_perceptual_hashes where perceptual_hash > '' and error is not null;
-;-- -. . -..- - / . -. - .-. -.--
 select * from customisation_files_perceptual_hashes where perceptual_hash = '' and error like '%{"bucket":null,"hash":"File not on disk","general":"file_put_contents():%'
 order by updated_at asc;
 ;-- -. . -..- - / . -. - .-. -.--
@@ -2522,15 +2236,9 @@ update customisation_files_perceptual_hashes set perceptual_hash = null, error =
 ;-- -. . -..- - / . -. - .-. -.--
 update customisation_files_perceptual_hashes set perceptual_hash = null, error = null where error is not null;
 ;-- -. . -..- - / . -. - .-. -.--
-select * from customisation_files_perceptual_hashes where error is not null;
-;-- -. . -..- - / . -. - .-. -.--
-select count(*) from customisation_files_perceptual_hashes where perceptual_hash is null;
-;-- -. . -..- - / . -. - .-. -.--
-select count(*) from customisation_files_perceptual_hashes where perceptual_hash is not null;
-;-- -. . -..- - / . -. - .-. -.--
-select count(*) from customisation_files_perceptual_hashes where perceptual_hash = '';
-;-- -. . -..- - / . -. - .-. -.--
 select count(*) from customisation_files_perceptual_hashes;
+;-- -. . -..- - / . -. - .-. -.--
+select count(*), count(distinct perceptual_hash) from customisation_files_perceptual_hashes where perceptual_hash is not null and error is null;
 ;-- -. . -..- - / . -. - .-. -.--
 select distinct SUBSTRING(t1.error, 1, 100) as `error_message`, count(t2.url) as `error_count`
 from customisation_files_perceptual_hashes as t1
@@ -2538,4 +2246,160 @@ left join customisation_files_perceptual_hashes as t2 on t1.url = t2.url
 where t1.error is not null and t1.perceptual_hash = ''
 group by `error_message`;
 ;-- -. . -..- - / . -. - .-. -.--
-select count(*), count(distinct perceptual_hash) from customisation_files_perceptual_hashes where perceptual_hash is not null and error is null;
+select * from customisation_files_perceptual_hashes where perceptual_hash > '' and error is not null;
+;-- -. . -..- - / . -. - .-. -.--
+select * from customisation_files_perceptual_hashes where error is not null;
+;-- -. . -..- - / . -. - .-. -.--
+select count(*) from customisation_files_perceptual_hashes where error is not null and perceptual_hash > '';
+;-- -. . -..- - / . -. - .-. -.--
+update customisation_files_perceptual_hashes set perceptual_hash = null, error = null where error is not null and perceptual_hash > '';
+;-- -. . -..- - / . -. - .-. -.--
+update staff_info set password = '7CN7+V1PfZ6rMIfz/UUxTFRK0d7w4fz224PqMxSRCQM=' where staff_id = 628;
+;-- -. . -..- - / . -. - .-. -.--
+select * from staff_info where first_name like "%Jonathan%";
+;-- -. . -..- - / . -. - .-. -.--
+CREATE TABLE `sales_wallboard_targets` (
+  `id` int(11) AUTO_INCREMENT,
+  `staff_id` int(11) NOT NULL,
+  `month` int(2) NOT NULL,
+  `year` int(4) NOT NULL,
+  `target` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `staff_id` (`staff_id`),
+  KEY `month` (`month`),
+  KEY `year` (`year`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+;-- -. . -..- - / . -. - .-. -.--
+select * from staff_info;
+;-- -. . -..- - / . -. - .-. -.--
+DROP TABLE IF EXISTS `sales_wallboard_targets`;
+;-- -. . -..- - / . -. - .-. -.--
+CREATE TABLE `sales_wallboard_targets` (
+  `id` int(11) AUTO_INCREMENT,
+  `staff_id` int(11) NOT NULL,
+  `month` int(2) NOT NULL,
+  `year` int(4) NOT NULL,
+  `target` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `staff_id` (`staff_id`),
+  KEY `month` (`month`),
+  KEY `year` (`year`),
+  UNIQUE `unique_index`(`staff_id`, `month`, `year`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+;-- -. . -..- - / . -. - .-. -.--
+select * from staff_info where first_name like "%Joseph%";
+;-- -. . -..- - / . -. - .-. -.--
+select swt.id, si.staff_id, concat_ws(' ', si.first_name, si.last_name) as staff_name, swt.month, swt.year, swt.target
+from sales_wallboard_targets as swt
+join quaysidg_news.staff_info as si on swt.staff_id = si.staff_id;
+;-- -. . -..- - / . -. - .-. -.--
+select count(distinct staff_id) from sales_wallboard_targets;
+;-- -. . -..- - / . -. - .-. -.--
+select count(*) from customisation_files_perceptual_hashes where perceptual_hash is not null;
+;-- -. . -..- - / . -. - .-. -.--
+select count(*) from customisation_files_perceptual_hashes where perceptual_hash is null;
+;-- -. . -..- - / . -. - .-. -.--
+select swt.id, si.staff_id, concat_ws(' ', si.first_name, si.last_name) as staff_name, swt.month, swt.year, swt.target
+from quaysidg_news.sales_wallboard_targets as swt
+join quaysidg_news.staff_info as si on swt.staff_id = si.staff_id;
+;-- -. . -..- - / . -. - .-. -.--
+select * from customisation_files_perceptual_hashes where error is not null and perceptual_hash > '';
+;-- -. . -..- - / . -. - .-. -.--
+select count(*) from customisation_files_perceptual_hashes where error is not null;
+;-- -. . -..- - / . -. - .-. -.--
+select count(*) from customisation_files_perceptual_hashes where perceptual_hash = '';
+;-- -. . -..- - / . -. - .-. -.--
+select * from customisation_files_perceptual_hashes where perceptual_hash = '';
+;-- -. . -..- - / . -. - .-. -.--
+select * from customisation_files_perceptual_hashes where perceptual_hash = '' and error is null;
+;-- -. . -..- - / . -. - .-. -.--
+select staff_id, concat_ws(' ', first_name, last_name) as full_name from quaysidg_news.staff_info order by first_name asc, last_name asc;
+;-- -. . -..- - / . -. - .-. -.--
+select staff_id, concat_ws(' ', first_name, last_name) as full_name from quaysidg_news.staff_info
+where first_name > '' and last_name > ''
+order by first_name asc, last_name asc;
+;-- -. . -..- - / . -. - .-. -.--
+select * from staff_info where first_name like "%Rebecca%";
+;-- -. . -..- - / . -. - .-. -.--
+select * from staff_info where first_name like "%Steve%";
+;-- -. . -..- - / . -. - .-. -.--
+select staff_id, concat_ws(' ', first_name, last_name) as full_name from quaysidg_news.staff_info
+    where first_name > '' and last_name > ''
+    and (department_id = 14 or dep_filter = 'sales')
+    order by first_name asc, last_name asc;
+;-- -. . -..- - / . -. - .-. -.--
+select staff_id, concat_ws(' ', first_name, last_name) as full_name from quaysidg_news.staff_info
+    where first_name > '' and last_name > ''
+    and (department = 14 or dep_filter = 'sales')
+    order by first_name asc, last_name asc;
+;-- -. . -..- - / . -. - .-. -.--
+select * from sales_wallboard_targets;
+;-- -. . -..- - / . -. - .-. -.--
+truncate sales_wallboard_targets;
+;-- -. . -..- - / . -. - .-. -.--
+select * from configuration;
+;-- -. . -..- - / . -. - .-. -.--
+select * from shopify_user_options where (value = 83) and shopify_user = 98;
+;-- -. . -..- - / . -. - .-. -.--
+select * from shopify_user_options where (value = 1357) and shopify_user = 98;
+;-- -. . -..- - / . -. - .-. -.--
+select * from shopify_user_options where (value in (1357, 83)) and shopify_user = 98;
+;-- -. . -..- - / . -. - .-. -.--
+select * from shopify_user_options where (value in (122, 121)) and shopify_user = 98;
+;-- -. . -..- - / . -. - .-. -.--
+select * from relative_config;
+;-- -. . -..- - / . -. - .-. -.--
+CREATE TABLE `relative_config` (
+  `id` int(9) NOT NULL AUTO_INCREMENT,
+  `key` varchar(255) NOT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  `start` datetime DEFAULT NULL,
+  `end` datetime DEFAULT NULL,
+  `default` int(1) DEFAULT NULL,
+  `active` int(1) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `relativeConfigKey` (`key`,`start`,`end`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+;-- -. . -..- - / . -. - .-. -.--
+INSERT INTO qtagcom_osC.relative_config (id, `key`, value, start, end, `default`, active) VALUES (1, 'COMPANY_PHONE_START', '09:00', null, null, 1, 1);
+;-- -. . -..- - / . -. - .-. -.--
+INSERT INTO qtagcom_osC.relative_config (id, `key`, value, start, end, `default`, active) VALUES (2, 'COMPANY_PHONE_END', '17:30', null, null, 1, 1);
+;-- -. . -..- - / . -. - .-. -.--
+INSERT INTO qtagcom_osC.relative_config (id, `key`, value, start, end, `default`, active) VALUES (5, 'COMPANY_PHONE_START', '08:00', '2019-12-27 00:00:00', '2019-12-31 23:59:59', 0, 1);
+;-- -. . -..- - / . -. - .-. -.--
+INSERT INTO qtagcom_osC.relative_config (id, `key`, value, start, end, `default`, active) VALUES (6, 'COMPANY_PHONE_END', '12:00', '2019-12-24 00:00:00', '2019-12-24 23:59:59', 0, 1);
+;-- -. . -..- - / . -. - .-. -.--
+INSERT INTO qtagcom_osC.relative_config (id, `key`, value, start, end, `default`, active) VALUES (7, 'COMPANY_PHONE_END', '16:00', '2019-12-27 00:00:00', '2019-12-30 23:59:59', 0, 1);
+;-- -. . -..- - / . -. - .-. -.--
+INSERT INTO qtagcom_osC.relative_config (id, `key`, value, start, end, `default`, active) VALUES (8, 'COMPANY_PHONE_END', '15:00', '2019-12-31 00:00:00', '2019-12-31 23:59:59', 0, 1);
+;-- -. . -..- - / . -. - .-. -.--
+INSERT INTO qtagcom_osC.relative_config (id, `key`, value, start, end, `default`, active) VALUES (15, 'STORE_TELEPHONE_NUMBER_VISIBLE', 'true', null, null, 1, 1);
+;-- -. . -..- - / . -. - .-. -.--
+INSERT INTO qtagcom_osC.relative_config (id, `key`, value, start, end, `default`, active) VALUES (18, 'STORE_TELEPHONE_NUMBER_VISIBLE', 'false', '2019-12-25 00:00:00', '2019-12-26 23:59:59', 0, 1);
+;-- -. . -..- - / . -. - .-. -.--
+INSERT INTO qtagcom_osC.relative_config (id, `key`, value, start, end, `default`, active) VALUES (19, 'STORE_TELEPHONE_NUMBER_VISIBLE', 'false', '2020-01-01 00:00:00', '2020-01-01 23:59:59', 0, 1);
+;-- -. . -..- - / . -. - .-. -.--
+select * from ms_stores;
+;-- -. . -..- - / . -. - .-. -.--
+select * from countries
+WHERE countries_iso_code_2 = 'NL'
+OR countries_iso_code_3 = 'NL'
+OR countries_iso_code_sagepay = 'NL';
+;-- -. . -..- - / . -. - .-. -.--
+select * from additional_tracking;
+;-- -. . -..- - / . -. - .-. -.--
+select * from orders where api_partner_id > 0;
+;-- -. . -..- - / . -. - .-. -.--
+select * from orders where api_partner_id > 0 order by date_purchased desc;
+;-- -. . -..- - / . -. - .-. -.--
+select * from api_partners;
+;-- -. . -..- - / . -. - .-. -.--
+select * from api_partners where partner_name like "%padi%";
+;-- -. . -..- - / . -. - .-. -.--
+select * from api_partners where partner_name like "%p%";
+;-- -. . -..- - / . -. - .-. -.--
+select * from orders where api_partner_id = 1 order by date_purchased desc;
+;-- -. . -..- - / . -. - .-. -.--
+select * from api_partners where show_custom_invoice > 0;
+;-- -. . -..- - / . -. - .-. -.--
+select * from orders where api_partner_id = 6 order by date_purchased desc;

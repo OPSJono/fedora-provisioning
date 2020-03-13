@@ -48,6 +48,7 @@ common_packages:
   #  - libselinux-python
   # Required for MJML
   - npm
+  - awscli
 
 #  - steam
 

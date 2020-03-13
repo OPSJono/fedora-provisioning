@@ -395,8 +395,6 @@ select * from logins_passwords;
 ;-- -. . -..- - / . -. - .-. -.--
 select * from password_resets;
 ;-- -. . -..- - / . -. - .-. -.--
-select * from shopify_users where shop like "%Cosmic%";
-;-- -. . -..- - / . -. - .-. -.--
 select * from shopify_users where shopify_user = 107;
 ;-- -. . -..- - / . -. - .-. -.--
 select * from categories_description where categories_name = 'personalised hoodies';
@@ -489,3 +487,69 @@ update polo_customers pc
 join polo_address_book pab on pc.customers_id = pab.customers_id
 set pc.customers_default_address_id = pab.address_book_id
 where pc.customers_default_address_id = '';
+;-- -. . -..- - / . -. - .-. -.--
+select * from shopify_users where shop like "%Cosmic%";
+;-- -. . -..- - / . -. - .-. -.--
+update orders set credit_reminder_sent = 0 where orders_id = 5154008;
+;-- -. . -..- - / . -. - .-. -.--
+select orders_id, credit_reminder_sent from orders where orders_id = 5154008;
+;-- -. . -..- - / . -. - .-. -.--
+select * from staff_info where first_name like "%dan%";
+;-- -. . -..- - / . -. - .-. -.--
+update staff_info set password = 'cRkdR5sNBwmmQO2atq/e99k6Of1H1ZBxHxx84aD8ZEE=' where staff_id = 599;
+;-- -. . -..- - / . -. - .-. -.--
+update orders set credit_reminder_sent = 1 where orders_id = 5154008;
+;-- -. . -..- - / . -. - .-. -.--
+update orders set credit_reminder_sent = 0 where orders_id = 5166265;
+;-- -. . -..- - / . -. - .-. -.--
+update orders set credit_reminder_sent = 1 where orders_id = 5166265;
+;-- -. . -..- - / . -. - .-. -.--
+select orders_id, credit_reminder_sent from orders where orders_id = 5166265;
+;-- -. . -..- - / . -. - .-. -.--
+insert into logins_users (username, password, fullname, lastLoginTime, lastLoginIP, accessLevels, site_username, site_password, unread, sort_order, site, signature, department, is_artworker, auto_assign_type, is_on_holiday)
+VALUES ('rachel.wilkinson@clothes2order.com', '', 'Rachel Wilkinson', 0, '', '', '', '', 0, 0, '', '', 1, 0, '', 0);
+;-- -. . -..- - / . -. - .-. -.--
+insert into quaysidg_news.integrity_check_notification (check_id, type, staff_id, active) VALUES
+(4, 'email', 556, 1),
+(24, 'email', 556, 1),
+(4, 'email', 756, 1),
+(24, 'email', 756, 1);
+;-- -. . -..- - / . -. - .-. -.--
+insert into quaysidg_news.integrity_check_notification (check_id, type, staff_id, active) VALUES
+(4, 'email', 724, 1),
+(24, 'email', 724, 1);
+;-- -. . -..- - / . -. - .-. -.--
+delete from quaysidg_news.integrity_check_notification
+where check_id in (4,24)
+and staff_id in (67, 135);
+;-- -. . -..- - / . -. - .-. -.--
+CREATE TABLE `sales_wallboard_targets` (
+  `id` int(11) AUTO_INCREMENT,
+  `staff_id` int(11) NOT NULL,
+  `month` int(2) NOT NULL,
+  `year` int(4) NOT NULL,
+  `target` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `staff_id` (`staff_id`),
+  KEY `month` (`month`),
+  KEY `year` (`year`),
+  UNIQUE `unique_index`(`staff_id`, `month`, `year`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+;-- -. . -..- - / . -. - .-. -.--
+select * from staff_info where staff_id = 756;
+;-- -. . -..- - / . -. - .-. -.--
+delete from quaysidg_news.integrity_check_notification
+where check_id in (4,24)
+and staff_id in (756);
+;-- -. . -..- - / . -. - .-. -.--
+UPDATE orders
+SET delivery_country = 'Netherlands',
+    customers_country = 'Netherlands',
+    billing_country = 'Netherlands'
+WHERE orders_id = 5189893;
+;-- -. . -..- - / . -. - .-. -.--
+update orders set credit_reminder_sent = 0 where orders_id = 5170983;
+;-- -. . -..- - / . -. - .-. -.--
+update orders set credit_reminder_sent = 1 where orders_id = 5170983;
+;-- -. . -..- - / . -. - .-. -.--
+select orders_id, credit_reminder_sent from orders where orders_id = 5170983;

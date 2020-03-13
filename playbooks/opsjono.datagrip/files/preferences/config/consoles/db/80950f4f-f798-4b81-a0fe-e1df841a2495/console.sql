@@ -1,91 +1,51 @@
-select pc.customers_id, pab.address_book_id
-from polo_customers pc
-join polo_address_book pab on pc.customers_id = pab.customers_id
-where pc.customers_default_address_id = ''
-group by pc.customers_id
-;
+desc countries;
 
-select distinct pc.customers_id, pc.customers_firstname, pc.customers_lastname, pc.customers_email_address, count(pab.address_book_id) as address_count
-from polo_customers pc
-left join polo_address_book pab on pc.customers_firstname = pab.entry_firstname and pc.customers_lastname = pab.entry_lastname
+select * from countries where countries_iso_code_2 <> countries_iso_code_sagepay
+order by countries_name asc;
 
-where customers_default_address_id = ''
-having address_count > 1
-;
 
-# 5655
-select count(*) from polo_customers
-where customers_default_address_id = ''
-;
 
-explain update polo_customers pc
-join polo_address_book pab on pc.customers_id = pab.customers_id
-set pc.customers_default_address_id = pab.address_book_id
-where pc.customers_default_address_id = ''
-;
+select api_partner_id, date_purchased from orders where orders_id = 5189893;
 
-select * from polo_customers where customers_default_address_id > '';
-select * from polo_address_book;
+api_partner_id = 1050;
 
-select * from polo_address_book;
-select * from
-
-select * from orders where orders_id = '5176464';
-
-select * from products where products_id = 765;
-
-select
-products_price1,
-products_price2_qty, products_price2,
-products_price3_qty, products_price3,
-products_price4_qty, products_price4,
-products_price5_qty, products_price5,
-products_price6_qty, products_price6,
-products_price7_qty, products_price7
-from products where products_id = '765';
-
-desc products;
-
-select * from customers_basket_attributes
-where customers_id = 5961034
-and products_id = 765
+select * from api_partners_log
+where api_partner_id = 1050
+and date_added between '2020-03-04 17:00:00' and '2020-03-04 18:00:00'
 limit 10;
 
-select products_id, options_id, options_values_id, options_values_price, price_prefix
-from products_attributes
-where price_prefix > ''
-  and options_values_price > 0.0000
+
+select * from countries
+WHERE countries_iso_code_2 = 'NL'
+OR countries_iso_code_3 = 'NL'
+OR countries_iso_code_sagepay = 'NL'
 ;
 
-select * from stock;
+UPDATE orders
+SET delivery_country = 'Netherlands',
+    customers_country = 'Netherlands',
+    billing_country = 'Netherlands'
+WHERE orders_id = 5189893;
+
+select * from orders
+where delivery_country in (
+    select countries_iso_code_sagepay from countries
+    WHERE countries_iso_code_2 <> countries_iso_code_sagepay
+)
+or customers_country in (
+    select countries_iso_code_sagepay from countries
+    WHERE countries_iso_code_2 <> countries_iso_code_sagepay
+)
+or billing_country in (
+    select countries_iso_code_sagepay from countries
+    WHERE countries_iso_code_2 <> countries_iso_code_sagepay
+)
+and customers_id = 0
+;
 
 
-select * from customisation_files where id = 1875321;
 
-select * from orders_customisations_types where emb_kingf > 0;
 
-show create table customisation_files;
-EXPLAIN SELECT customisation_id
-FROM clothes2_osC.customisation_files AS cf
-WHERE cf.customer_id <> 0 AND cf.file_type = 1
- AND (
-    SELECT COUNT(*)
-    FROM customisation_files AS cff
-    WHERE cff.id <> cf.id AND cf.customer_id = cff.customer_id
-        AND cff.created_at BETWEEN DATE_ADD(cf.created_at, INTERVAL 2 MINUTE ) AND DATE_ADD(cf.created_at, INTERVAL 1 HOUR)
-        AND SUBSTRING_INDEX(cf.url, '.', -1) = SUBSTRING_INDEX(cff.url, '.', -1)
-) <> 0
-LIMIT 5000;
-
-show full processlist;
-
-select count(*) from customisation_files_perceptual_hashes;
-
-# 143000 orders
-select oc.customisation_id from orders o
-join orders_customisations oc on oc.order_id = o.orders_id
-where o.date_purchased > '2019-01-01 00:00:00'
-order by orders_id desc;
 
 # Total order count: 557675
 # 419 records grouped by (orders_id, custom_type, customisation_width)

@@ -1,4 +1,5 @@
 <keymap version="1" name="Default for GNOME copy" parent="Default for GNOME">
+  <action id="ChangesView.UnshelveSilently" />
   <action id="CloseAllEditorsButActive">
     <keyboard-shortcut first-keystroke="ctrl alt w" />
   </action>
@@ -23,10 +24,15 @@
     <keyboard-shortcut first-keystroke="alt left" />
     <keyboard-shortcut first-keystroke="shift ctrl tab" />
   </action>
+  <action id="PublishGroup.UploadTo">
+    <keyboard-shortcut first-keystroke="shift ctrl alt x" />
+    <keyboard-shortcut first-keystroke="ctrl alt u" />
+  </action>
   <action id="ReopenClosedTab">
     <keyboard-shortcut first-keystroke="shift ctrl t" />
     <keyboard-shortcut first-keystroke="shift ctrl w" />
   </action>
+  <action id="ShowUmlDiagramPopup" />
   <action id="SwitchApply">
     <keyboard-shortcut first-keystroke="shift alt enter" />
   </action>

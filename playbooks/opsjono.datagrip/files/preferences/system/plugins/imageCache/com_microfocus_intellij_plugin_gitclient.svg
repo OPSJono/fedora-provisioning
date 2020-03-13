@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     preserveAspectRatio="xMidYMid meet" viewBox="0 0 40 40" width="40" height="40">
+    <defs>
+        <path d="M20 0L37.5 10L37.5 30L20 40L2.5 30L2.5 10L20 0Z" id="c3yKolG6ik"></path>
+        <path d="M2.5 30L2.5 10L20 20L20 40L2.5 30Z" id="e3Lc6mZVWa"></path>
+        <path d="M37.5 10L20 20L20 40L37.5 30L37.5 10Z" id="bAorhF3Lv"></path>
+        <path d="M20 0L2.5 10L20 20L20 0Z" id="cErxpKvtX"></path>
+        <path d="M37.5 10L20 0L20 20L37.5 10Z" id="eJiCkDPdo"></path>
+        <path d="" id="abWlK4URK"></path>
+        <path d="" id="dIbotNDhN"></path>
+        <path d="M2.81 30.17L20 20" id="c2EJhHD5HC"></path>
+        <path d="M2.5 10L20 20L2.5 30L2.5 10Z" id="c1q14w2Bp"></path>
+        <path d="M2.5 30L20 20L20 40" id="hobo9qxDd"></path>
+    </defs>
+    <g>
+        <g>
+            <g>
+                <g>
+                    <use xlink:href="#c3yKolG6ik" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="0"
+                         stroke-opacity="1"></use>
+                </g>
+                <g>
+                    <filter id="shadow5200454" x="-45.5" y="-48" width="171" height="137" filterUnits="userSpaceOnUse"
+                            primitiveUnits="userSpaceOnUse">
+                        <feFlood></feFlood>
+                        <feComposite in2="SourceAlpha" operator="out"></feComposite>
+                        <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+                        <feOffset dx="40" dy="1" result="afterOffset"></feOffset>
+                        <feFlood flood-color="#ffffff" flood-opacity="0.8"></feFlood>
+                        <feComposite in2="afterOffset" operator="in"></feComposite>
+                        <feMorphology operator="dilate" radius="1"></feMorphology>
+                        <feComposite in2="SourceAlpha" operator="in"></feComposite>
+                    </filter>
+                    <path d="M20 0L37.5 10L37.5 30L20 40L2.5 30L2.5 10L20 0Z" id="c1rr6bo6Ka" fill="white"
+                          fill-opacity="1" filter="url(#shadow5200454)"></path>
+                </g>
+            </g>
+            <g>
+                <g>
+                    <use xlink:href="#e3Lc6mZVWa" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="0"
+                         stroke-opacity="1"></use>
+                </g>
+                <g>
+                    <filter id="shadow4036173" x="-25.5" y="-18" width="93.5" height="87" filterUnits="userSpaceOnUse"
+                            primitiveUnits="userSpaceOnUse">
+                        <feFlood></feFlood>
+                        <feComposite in2="SourceAlpha" operator="out"></feComposite>
+                        <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+                        <feOffset dx="20" dy="1" result="afterOffset"></feOffset>
+                        <feFlood flood-color="#e3f3ff" flood-opacity="1"></feFlood>
+                        <feComposite in2="afterOffset" operator="in"></feComposite>
+                        <feMorphology operator="dilate" radius="1"></feMorphology>
+                        <feComposite in2="SourceAlpha" operator="in"></feComposite>
+                    </filter>
+                    <path d="M2.5 30L2.5 10L20 20L20 40L2.5 30Z" id="aGVK6f5mE" fill="white" fill-opacity="1"
+                          filter="url(#shadow4036173)"></path>
+                </g>
+            </g>
+            <g>
+                <g>
+                    <use xlink:href="#bAorhF3Lv" opacity="1" fill-opacity="0" stroke="#3b48c2" stroke-width="0"
+                         stroke-opacity="1"></use>
+                </g>
+                <g>
+                    <filter id="shadow12148451" x="-8" y="-18" width="93.5" height="87" filterUnits="userSpaceOnUse"
+                            primitiveUnits="userSpaceOnUse">
+                        <feFlood></feFlood>
+                        <feComposite in2="SourceAlpha" operator="out"></feComposite>
+                        <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+                        <feOffset dx="20" dy="1" result="afterOffset"></feOffset>
+                        <feFlood flood-color="#6abcfe" flood-opacity="1"></feFlood>
+                        <feComposite in2="afterOffset" operator="in"></feComposite>
+                        <feMorphology operator="dilate" radius="1"></feMorphology>
+                        <feComposite in2="SourceAlpha" operator="in"></feComposite>
+                    </filter>
+                    <path d="M37.5 10L20 20L20 40L37.5 30L37.5 10Z" id="a1HYmgKNxS" fill="white" fill-opacity="1"
+                          filter="url(#shadow12148451)"></path>
+                </g>
+            </g>
+            <g>
+                <g>
+                    <use xlink:href="#cErxpKvtX" opacity="1" fill-opacity="0" stroke="#3b48c2" stroke-width="0"
+                         stroke-opacity="1"></use>
+                </g>
+                <g>
+                    <filter id="shadow6486557" x="-25.5" y="-28" width="93.5" height="77" filterUnits="userSpaceOnUse"
+                            primitiveUnits="userSpaceOnUse">
+                        <feFlood></feFlood>
+                        <feComposite in2="SourceAlpha" operator="out"></feComposite>
+                        <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+                        <feOffset dx="20" dy="1" result="afterOffset"></feOffset>
+                        <feFlood flood-color="#50b1fe" flood-opacity="1"></feFlood>
+                        <feComposite in2="afterOffset" operator="in"></feComposite>
+                        <feMorphology operator="dilate" radius="1"></feMorphology>
+                        <feComposite in2="SourceAlpha" operator="in"></feComposite>
+                    </filter>
+                    <path d="M20 0L2.5 10L20 20L20 0Z" id="fQ9saHFch" fill="white" fill-opacity="1"
+                          filter="url(#shadow6486557)"></path>
+                </g>
+            </g>
+            <g>
+                <g>
+                    <use xlink:href="#eJiCkDPdo" opacity="1" fill-opacity="0" stroke="#3b48c2" stroke-width="0"
+                         stroke-opacity="1"></use>
+                </g>
+                <g>
+                    <filter id="shadow6632785" x="-8" y="-28" width="93.5" height="77" filterUnits="userSpaceOnUse"
+                            primitiveUnits="userSpaceOnUse">
+                        <feFlood></feFlood>
+                        <feComposite in2="SourceAlpha" operator="out"></feComposite>
+                        <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+                        <feOffset dx="20" dy="1" result="afterOffset"></feOffset>
+                        <feFlood flood-color="#32a4fe" flood-opacity="1"></feFlood>
+                        <feComposite in2="afterOffset" operator="in"></feComposite>
+                        <feMorphology operator="dilate" radius="1"></feMorphology>
+                        <feComposite in2="SourceAlpha" operator="in"></feComposite>
+                    </filter>
+                    <path d="M37.5 10L20 0L20 20L37.5 10Z" id="d4DamOmiu3" fill="white" fill-opacity="1"
+                          filter="url(#shadow6632785)"></path>
+                </g>
+            </g>
+            <g>
+                <g>
+                    <use xlink:href="#abWlK4URK" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1"
+                         stroke-opacity="1"></use>
+                </g>
+            </g>
+            <g>
+                <g>
+                    <use xlink:href="#dIbotNDhN" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1"
+                         stroke-opacity="1"></use>
+                </g>
+            </g>
+            <g>
+                <g>
+                    <use xlink:href="#c2EJhHD5HC" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="0"
+                         stroke-opacity="1"></use>
+                </g>
+            </g>
+            <g>
+                <g>
+                    <use xlink:href="#c1q14w2Bp" opacity="1" fill-opacity="0" stroke="#3b48c2" stroke-width="0"
+                         stroke-opacity="1"></use>
+                </g>
+                <g>
+                    <filter id="shadow1021096" x="-25.5" y="-18" width="93.5" height="77" filterUnits="userSpaceOnUse"
+                            primitiveUnits="userSpaceOnUse">
+                        <feFlood></feFlood>
+                        <feComposite in2="SourceAlpha" operator="out"></feComposite>
+                        <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+                        <feOffset dx="20" dy="1" result="afterOffset"></feOffset>
+                        <feFlood flood-color="#cde6f9" flood-opacity="1"></feFlood>
+                        <feComposite in2="afterOffset" operator="in"></feComposite>
+                        <feMorphology operator="dilate" radius="1"></feMorphology>
+                        <feComposite in2="SourceAlpha" operator="in"></feComposite>
+                    </filter>
+                    <path d="M2.5 10L20 20L2.5 30L2.5 10Z" id="d9GW13Fz9n" fill="white" fill-opacity="1"
+                          filter="url(#shadow1021096)"></path>
+                </g>
+            </g>
+            <g>
+                <g>
+                    <use xlink:href="#hobo9qxDd" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="0"
+                         stroke-opacity="1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

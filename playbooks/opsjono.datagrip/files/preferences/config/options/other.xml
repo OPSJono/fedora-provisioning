@@ -3,18 +3,20 @@
     <property name="DBE.Init.Cfg.1" value="true" />
     <property name="DBE.Init.DialogShown.Ide" value="true" />
     <property name="Default.SavedEditorTheme" value="_@user_Default" />
+    <property name="InstalledPluginsSearchHistory" value="atom one dark" />
     <property name="KEYMAP" value="close tab&#10;tab" />
     <property name="MYSQL_DUMP_CLI_PACK_LAST_USED_CONFIGURATION" value="MYSQL_PROPERTIES" />
     <property name="MYSQL_PROPERTIES_COMMAND" value="&quot;clothes2_osC&quot; --result-file=&quot;/home/jonathan/all-customisation-files-dump.sql&quot; &quot;customisation_files&quot;" />
     <property name="MYSQL_PROPERTIES_EXPANDED" value="true" />
     <property name="MYSQL_PROPERTIES_PATH" value="/usr/bin/mysqldump" />
     <property name="MYSQL_PROPERTIES_VARIANTS_-753420028" value="--databases --all-databases -A -Y --all-tablespaces -y --no-tablespaces --add-drop-database --add-drop-table --skip-add-drop-table --add-drop-trigger --add-locks --skip-add-locks --allow-keywords --apply-slave-statements --bind-address= --character-sets-dir= --column-statistics --skip-column-statistics -i --comments --skip-comments --compatible= --compact --skip-disable-keys --skip-set-charset -c --complete-insert -C --compress -a --create-options --skip-create-options -B -# --debug --debug-check --debug-info --default-character-set= --delete-master-logs --master-data -K --disable-keys --dump-slave --lock-all-tables --single-transaction --lock-tables -E --events -e --extended-insert --skip-extended-insert --fields-terminated-by= --fields-enclosed-by= --fields-optionally-enclosed-by= --fields-escaped-by= -F --flush-logs --databases= --flush-privileges -f --force --help --hex-blob -h --host= --ignore-error= --ignore-table= --include-master-host-port --insert-ignore --lines-terminated-by= -x -l --skip-lock-tables --log-error= --max-allowed-packet= --net-buffer-length= --no-autocommit -n --no-create-db -t --no-create-info -d --no-data -N --no-set-names --opt --quick --set-charset --skip-opt --order-by-primary -p --password -P --port= --protocol= -q --skip-quick -Q --quote-names --skip-quote-names --replace -r --result-file= -R --routines --set-gtid-purged --dump-date --skip-dump-date -S --socket= --server-public-key-path= --get-server-public-key --ssl-mode= --ssl-ca= --ssl-capath= --ssl-cert= --ssl-cipher= --ssl-key= --ssl-crl= --ssl-crlpath= --tls-version= --ssl-fips-mode= --tls-ciphersuites= -T --tab= --tables --triggers --skip-triggers --tz-utc --skip-tz-utc -u --user= -v --verbose -V --version -w --where= -X --xml --plugin-dir= --default-auth= --enable-cleartext-plugin -M --network-timeout --skip-network-timeout --show-create-table-skip-secondary-engine --compression-algorithms= --zstd-compression-level=" />
+    <property name="MarketplacePluginsSearchHistory" value="OneDark&#10;OneDar&#10;OneD&#10;atom one dark&#10;atom one dar" />
     <property name="ask.about.ctrl.y.shortcut" value="true" />
     <property name="database.data.paste.format" value="format:Comma-separated (CSV)_id" />
     <property name="disable.forced.soft.wraps.notification" value="true" />
     <property name="evlsprt3.193" value="18" />
-    <property name="file.chooser.recent.files" value="$USER_HOME$/customisation_files_for_2019.sql&#10;/home/jonathan&#10;/home/jonathan/customisation_files_for_2019.csv&#10;/home/jonathan/code/c2o/customisation-api/customisation_api_test_db.sql&#10;/home/jonathan/Downloads/Long.Day.Got.Longer.json&#10;/home/jonathan/Documents&#10;/home/jonathan/Documents/vendor_sku_id_matrix.csv" />
-    <property name="file.gist.reindex.count" value="682" />
+    <property name="file.chooser.recent.files" value="$USER_HOME$/.ssh/rds_aws_staging.ppk&#10;/home/jonathan/customisation_files_for_2019.sql&#10;/home/jonathan&#10;/home/jonathan/customisation_files_for_2019.csv&#10;/home/jonathan/code/c2o/customisation-api/customisation_api_test_db.sql&#10;/home/jonathan/Downloads/Long.Day.Got.Longer.json&#10;/home/jonathan/Documents&#10;/home/jonathan/Documents/vendor_sku_id_matrix.csv" />
+    <property name="file.gist.reindex.count" value="1016" />
     <property name="ide.memory.adjusted" value="true" />
     <property name="import_error_directory" value="$USER_HOME$" />
     <property name="import_write_errors" value="true" />

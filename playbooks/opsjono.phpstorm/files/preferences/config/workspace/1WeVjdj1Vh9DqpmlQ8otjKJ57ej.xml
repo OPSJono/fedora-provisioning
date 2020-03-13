@@ -1,15 +1,92 @@
 <project version="4">
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public_html/includes/languages/english/delivery.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="32" column="6" lean-forward="true" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
-              <folding>
-                <element signature="e#504#511#0" expanded="true" />
-                <element signature="e#1894#1915#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="192">
+              <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public_html/vat_cookie.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docker/php/Dockerfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="639">
+              <caret line="135" lean-forward="true" selection-start-line="135" selection-end-line="135" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public_html/includes/configure.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env.ecs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env.local">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker-build.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="93" selection-start-column="93" selection-end-column="93" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker-push.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="24">
+              <caret line="1" column="66" selection-start-line="1" selection-start-column="66" selection-end-line="1" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker/php/apache/010-qtag-ecs.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="7" selection-start-line="7" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker/php/apache/010-qtag-staging.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -18,20 +95,124 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&lt;!-- Xmas info --&gt;</find>
+      <find>production</find>
+      <find>apache2</find>
+      <find>composer</find>
+      <find>github</find>
+      <find>config</find>
+      <find>home/qtagcom/.htpasswds/public_html</find>
+      <find>//srv/auth/qtag/htpasswd</find>
+      <find>qtag</find>
+      <find>vim</find>
+      <find>apache2.co</find>
+      <find>apache2.con</find>
+      <find>a2enmod</find>
+      <find>https</find>
+      <find>127</find>
+      <find>ARG</find>
+      <find>_htacc</find>
+      <find>access</find>
+      <find>${APACHE_LOG_DIR}</find>
+      <find>apache</find>
+      <find>NEWJH_SITE_URL',</find>
+      <find>category_headers</find>
+      <find>NEWJH_SITE_FULLURL . '</find>
+      <find>NEWJH_SITE_FULLURL</find>
+      <find>sudo</find>
+      <find>define('NEWJH_SITE_FULLURL'</find>
+      <find>define('NEWJH_SITE_FULLURL</find>
+      <find>qtag.com</find>
+      <find>NEWJH_SITE_FULLURL',</find>
+      <find>configma</find>
+      <find>HTTP_DOMAIN',</find>
     </findStrings>
+    <replaceStrings>
+      <replace>&quot;/access/images/</replace>
+      <replace>&quot;&lt;?php echo DIR_WS_IMAGES ?&gt;/</replace>
+      <replace>/access/images/oscommerce.gif</replace>
+      <replace>${deployment_base_folder}</replace>
+      <replace>QT_DB_DATABASE</replace>
+      <replace>QT_DB_USERNAME</replace>
+      <replace>QS_DB_DATABASE</replace>
+      <replace>NEWJH_DHL_ACCOUNT_NUMBER</replace>
+      <replace>ENABLE_RECAPTCHA</replace>
+      <replace>5050</replace>
+      <replace>remoteCommand</replace>
+      <replace>.env.local</replace>
+      <replace>DIR_FS_APP_ROOT . '/configure.php'</replace>
+      <replace>qtag.osc-staging.co.uk</replace>
+      <replace>&quot;&lt;?php echo HTTPS_SERVER ?&gt;</replace>
+      <replace>'.HTTPS_SERVER.'</replace>
+      <replace>href=&quot;'.HTTPS_SERVER</replace>
+      <replace>'.NEWJH_SITE_URL</replace>
+      <replace>/srv/auth/qtag/htpasswd/public_html</replace>
+      <replace>/srv/auth/qtag/htpasswd</replace>
+      <replace>${website}</replace>
+    </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
+      <dir>$PROJECT_DIR$/vendor/quayside</dir>
+      <dir>$PROJECT_DIR$/config</dir>
     </dirStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public_html/includes/languages/english/delivery.php" />
+        <option value="$PROJECT_DIR$/public_html/includes/functions/general-22-01-2019.php" />
+        <option value="$PROJECT_DIR$/public_html/includes/languages/english/email_template_standard.php" />
+        <option value="$PROJECT_DIR$/public_html/includes/classes/new_jh_page_split.php" />
+        <option value="$PROJECT_DIR$/public_html/access/categories.php" />
+        <option value="$PROJECT_DIR$/public_html/access/includes/configure.php" />
+        <option value="$PROJECT_DIR$/public_html/access/includes/application_top.php" />
+        <option value="$PROJECT_DIR$/public_html/bookkeeping-files/includes/application_top.php" />
+        <option value="$PROJECT_DIR$/public_html/bookkeeping-files/includes/configure.php" />
+        <option value="$PROJECT_DIR$/public_html/includes/footer.php" />
+        <option value="$PROJECT_DIR$/public_html/includes/footer_checkout-01-03-2019.php" />
+        <option value="$PROJECT_DIR$/public_html/includes/footer_checkout.php" />
+        <option value="$PROJECT_DIR$/public_html/includes/footer_checkout2.php" />
+        <option value="$PROJECT_DIR$/public_html/includes/footer-01-03-2019.php" />
+        <option value="$PROJECT_DIR$/.docker.env" />
+        <option value="$PROJECT_DIR$/docker/php/docker-entrypoint.sh" />
+        <option value="$PROJECT_DIR$/public_html/includes/functions/database.php" />
+        <option value="$PROJECT_DIR$/public_html/_htaccess.local" />
+        <option value="$PROJECT_DIR$/public_html/access/_htaccess.production" />
+        <option value="$PROJECT_DIR$/public_html/access/_htaccess.staging" />
+        <option value="$PROJECT_DIR$/public_html/bookkeeping-files/_htaccess.local" />
+        <option value="$PROJECT_DIR$/public_html/bookkeeping-files/.htaccess" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/init.sh" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/docker/php/apache/010-qtag.conf" />
+        <option value="$PROJECT_DIR$/public_html/_htaccess.staging" />
+        <option value="$PROJECT_DIR$/public_html/_htaccess.production" />
+        <option value="$PROJECT_DIR$/docker/php/apache/010-qtag-local.conf" />
+        <option value="$PROJECT_DIR$/rsyncDeploy.sh" />
+        <option value="$PROJECT_DIR$/docker/php/apache/010-qtag-production.conf" />
+        <option value="$PROJECT_DIR$/docker/php/apache/010-qtag-ecs.conf" />
+        <option value="$PROJECT_DIR$/.env.production" />
+        <option value="$PROJECT_DIR$/.env.staging" />
+        <option value="$PROJECT_DIR$/docker-compose.yaml" />
+        <option value="$PROJECT_DIR$/public_html/includes/classes/category_refine.php" />
+        <option value="$PROJECT_DIR$/public_html/includes/languages/english.php" />
+        <option value="$PROJECT_DIR$/public_html/includes/english.php" />
+        <option value="$PROJECT_DIR$/public_html/access/includes/classes/qs_db_access.php" />
+        <option value="$PROJECT_DIR$/public_html/access/includes/functions/general.php" />
+        <option value="$PROJECT_DIR$/public_html/includes/functions/general.php" />
+        <option value="$PROJECT_DIR$/public_html/includes/scripts/main_scripts.js" />
+        <option value="$PROJECT_DIR$/.env.local" />
+        <option value="$PROJECT_DIR$/.env.ecs" />
+        <option value="$PROJECT_DIR$/config/app.php" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/public_html/includes/configure.php" />
+        <option value="$PROJECT_DIR$/public_html/vat_cookie.php" />
+        <option value="$PROJECT_DIR$/docker-push.sh" />
+        <option value="$PROJECT_DIR$/docker-build.sh" />
+        <option value="$PROJECT_DIR$/docker/php/apache/010-qtag-staging.conf" />
+        <option value="$PROJECT_DIR$/docker/php/Dockerfile" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" x="0" y="27" width="2560" height="1380" extendedState="6" />
+  <component name="ProjectFrameBounds" x="0" y="27" width="2550" height="1378" extendedState="6" />
   <component name="ProjectView">
     <navigator proportions="" version="1" />
     <panes>
@@ -45,28 +226,20 @@
             <path>
               <item name="q-tag" type="b2602c69:ProjectViewProjectNode" />
               <item name="q-tag" type="462c0819:PsiDirectoryNode" />
-              <item name="public_html" type="462c0819:PsiDirectoryNode" />
+              <item name="docker" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="q-tag" type="b2602c69:ProjectViewProjectNode" />
               <item name="q-tag" type="462c0819:PsiDirectoryNode" />
-              <item name="public_html" type="462c0819:PsiDirectoryNode" />
-              <item name="includes" type="462c0819:PsiDirectoryNode" />
+              <item name="docker" type="462c0819:PsiDirectoryNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="q-tag" type="b2602c69:ProjectViewProjectNode" />
               <item name="q-tag" type="462c0819:PsiDirectoryNode" />
-              <item name="public_html" type="462c0819:PsiDirectoryNode" />
-              <item name="includes" type="462c0819:PsiDirectoryNode" />
-              <item name="languages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="q-tag" type="b2602c69:ProjectViewProjectNode" />
-              <item name="q-tag" type="462c0819:PsiDirectoryNode" />
-              <item name="public_html" type="462c0819:PsiDirectoryNode" />
-              <item name="includes" type="462c0819:PsiDirectoryNode" />
-              <item name="languages" type="462c0819:PsiDirectoryNode" />
-              <item name="english" type="462c0819:PsiDirectoryNode" />
+              <item name="docker" type="462c0819:PsiDirectoryNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
+              <item name="apache" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -75,44 +248,365 @@
       <pane id="Scope" />
     </panes>
   </component>
+  <component name="TerminalArrangementManager">
+    <option name="myTabStates">
+      <TerminalTabState tabName="Local" commandHistoryFileName="history-12" />
+      <TerminalTabState tabName="Local (2)" currentWorkingDirectory="$PROJECT_DIR$" commandHistoryFileName="history-82" />
+    </option>
+    <option name="mySelectedTabIndex" value="1" />
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1573000" />
+    <option name="totallyTimeSpent" value="204029000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="2560" height="1380" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24980111" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.291965" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Services" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Internal Method Tracing" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3293556" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Services" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Internal Method Tracing" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3325378" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Duplicates" order="13" weight="0.3293556" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public_html/includes/languages/english/delivery.php">
+    <entry file="file://$PROJECT_DIR$/public_html/access/coupon_admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/php/docker-entrypoint.sh" />
+    <entry file="file://$PROJECT_DIR$/docker/php/etc/php/production.ini" />
+    <entry file="file://$PROJECT_DIR$/docker/php/etc/php/development.ini" />
+    <entry file="file://$PROJECT_DIR$/docker/php/etc/cron/crontab" />
+    <entry file="file://$PROJECT_DIR$/public_html/includes/functions/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/dispatch-files/.htaccess">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/access/_htaccess.local" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1013">
+          <caret line="59" column="30" selection-start-line="59" selection-start-column="30" selection-end-line="59" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/bookkeeping-files/.htaccess" />
+    <entry file="file://$PROJECT_DIR$/public_html/bookkeeping-files/_htaccess.local" />
+    <entry file="file://$PROJECT_DIR$/init.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" selection-start-line="5" selection-end-line="7" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="192">
+            <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/access/_htaccess.staging" />
+    <entry file="file://$PROJECT_DIR$/public_html/access/_htaccess.production" />
+    <entry file="file://$PROJECT_DIR$/public_html/_htaccess.staging" />
+    <entry file="file://$PROJECT_DIR$/public_html/_htaccess.local" />
+    <entry file="file://$PROJECT_DIR$/public_html/_htaccess.production" />
+    <entry file="file://$PROJECT_DIR$/docker/php/apache/010-qtag-production.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1233">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/php/apache/010-qtag-local.conf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
-          <caret line="32" column="6" lean-forward="true" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
+          <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/bookkeeping-files/_htaccess.production" />
+    <entry file="file://$PROJECT_DIR$/public_html/includes/languages/english.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="363" column="27" selection-start-line="363" selection-end-line="363" selection-end-column="27" />
           <folding>
-            <element signature="e#504#511#0" expanded="true" />
-            <element signature="e#1894#1915#0" expanded="true" />
+            <element signature="e#20#26#0" expanded="true" />
+            <element signature="e#26#32#0" expanded="true" />
+            <element signature="e#10#16#0" expanded="true" />
+            <element signature="e#756#779#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/includes/classes/category_refine.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="330" column="30" selection-start-line="330" selection-start-column="30" selection-end-line="330" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#option#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#option#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#option#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#option#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#0#6#0" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#br#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#h3#0;n#!!top" expanded="true" />
+            <element signature="e#0#6#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.docker.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.docker.env.example">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/includes/english.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="361" column="11" lean-forward="true" selection-start-line="361" selection-start-column="11" selection-end-line="361" selection-end-column="11" />
+          <folding>
+            <element signature="e#20#26#0" expanded="true" />
+            <element signature="e#26#32#0" expanded="true" />
+            <element signature="e#10#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-compose.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/includes/scripts/main_scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="259" column="33" lean-forward="true" selection-start-line="259" selection-start-column="33" selection-end-line="259" selection-end-column="33" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#center#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/includes/languages/english/modules/payment/moneyorder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="14" column="450" selection-start-line="14" selection-start-column="450" selection-end-line="14" selection-end-column="450" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/includes/languages/english/modules/payment/cheque.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="14" column="426" selection-start-line="14" selection-start-column="426" selection-end-line="14" selection-end-column="426" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/includes/languages/english/cron_survey.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="27" column="137" selection-start-line="27" selection-start-column="137" selection-end-line="27" selection-end-column="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/includes/functions/general.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="741">
+          <caret line="1843" column="103" selection-start-line="1843" selection-start-column="103" selection-end-line="1843" selection-end-column="103" />
+          <caret line="1880" column="93" selection-start-line="1880" selection-start-column="93" selection-end-line="1880" selection-end-column="93" />
+          <folding>
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#br#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/access/includes/classes/amazon_market.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+          <folding>
+            <element signature="e#3#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/access/includes/classes/qs_db_access.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="132" column="17" selection-start-line="132" selection-start-column="17" selection-end-line="132" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/access/includes/functions/general.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="2467" column="53" lean-forward="true" selection-start-line="2467" selection-start-column="53" selection-end-line="2467" selection-end-column="53" />
+          <folding>
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#br#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#0#6#0" expanded="true" />
+            <element signature="n#style#0;n#em#0;n#!!top" expanded="true" />
+            <element signature="e#59#65#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1920">
+          <caret line="89" column="17" lean-forward="true" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rsyncDeploy.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="148" column="14" selection-start-line="148" selection-start-column="14" selection-end-line="148" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env.staging">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" selection-start-line="7" selection-end-line="8" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env.production">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1128">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/includes/application_top.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="37" column="36" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/vat_cookie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/includes/configure.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env.ecs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env.local">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-build.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="93" selection-start-column="93" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-push.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="66" selection-start-line="1" selection-start-column="66" selection-end-line="1" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/php/apache/010-qtag-ecs.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" selection-start-line="7" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/php/apache/010-qtag-staging.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/php/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="639">
+          <caret line="135" lean-forward="true" selection-start-line="135" selection-end-line="135" />
         </state>
       </provider>
     </entry>

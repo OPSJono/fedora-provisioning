@@ -1,1783 +1,3 @@
-select * from customers_basket_customisations;
-;-- -. . -..- - / . -. - .-. -.--
-select * from customers_basket_customisations
-where customers_id = 5961034
-and products_id = 765;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT c.customers_id, c.customers_firstname, c.customers_email_address,
-       sum((SELECT CASE
-						WHEN cb.customers_basket_quantity >= pp.products_price7_qty THEN pp.products_price7
-						WHEN cb.customers_basket_quantity >= pp.products_price6_qty THEN pp.products_price6
-						WHEN cb.customers_basket_quantity >= pp.products_price5_qty THEN pp.products_price5
-						WHEN cb.customers_basket_quantity >= pp.products_price4_qty THEN pp.products_price4
-						WHEN cb.customers_basket_quantity >= pp.products_price3_qty THEN pp.products_price3
-						WHEN cb.customers_basket_quantity >= pp.products_price2_qty THEN pp.products_price2
-						ELSE pp.products_price1
-					   END
-				FROM products AS pp
-				WHERE pp.products_id = cb.products_id)*cb.customers_basket_quantity) as final_basket_price
-
-			FROM customers_basket AS cb
-			JOIN customers AS c ON cb.customers_id = c.customers_id
-			JOIN customers_info AS ci ON c.customers_id = ci.customers_info_id
-			WHERE cb.basket_date_added BETWEEN NOW() - INTERVAL 3 DAY AND NOW()
-            AND c.customers_email_address = 'buzzboy66@gmail.com';
-;-- -. . -..- - / . -. - .-. -.--
-SELECT c.customers_id, c.customers_firstname, c.customers_email_address,
-       sum((SELECT CASE
-						WHEN cb.customers_basket_quantity >= pp.products_price7_qty THEN pp.products_price7
-						WHEN cb.customers_basket_quantity >= pp.products_price6_qty THEN pp.products_price6
-						WHEN cb.customers_basket_quantity >= pp.products_price5_qty THEN pp.products_price5
-						WHEN cb.customers_basket_quantity >= pp.products_price4_qty THEN pp.products_price4
-						WHEN cb.customers_basket_quantity >= pp.products_price3_qty THEN pp.products_price3
-						WHEN cb.customers_basket_quantity >= pp.products_price2_qty THEN pp.products_price2
-						ELSE pp.products_price1
-					   END
-				FROM products AS pp
-				WHERE pp.products_id = cb.products_id)*cb.customers_basket_quantity) as final_basket_price
-
-			FROM customers_basket AS cb
-			JOIN customers AS c ON cb.customers_id = c.customers_id
-			JOIN customers_info AS ci ON c.customers_id = ci.customers_info_id
-			WHERE cb.basket_date_added BETWEEN NOW() - INTERVAL 2 DAY AND NOW()
-            AND c.customers_email_address = 'buzzboy66@gmail.com';
-;-- -. . -..- - / . -. - .-. -.--
-SELECT c.customers_firstname, c.customers_lastname, c.customers_telephone, c.customers_mobile, c.customers_email_address,
-       sum((SELECT CASE
-						WHEN cb.customers_basket_quantity >= pp.products_price7_qty THEN pp.products_price7
-						WHEN cb.customers_basket_quantity >= pp.products_price6_qty THEN pp.products_price6
-						WHEN cb.customers_basket_quantity >= pp.products_price5_qty THEN pp.products_price5
-						WHEN cb.customers_basket_quantity >= pp.products_price4_qty THEN pp.products_price4
-						WHEN cb.customers_basket_quantity >= pp.products_price3_qty THEN pp.products_price3
-						WHEN cb.customers_basket_quantity >= pp.products_price2_qty THEN pp.products_price2
-						ELSE pp.products_price1
-					   END
-				FROM products AS pp
-				WHERE pp.products_id = cb.products_id)*cb.customers_basket_quantity) as final_basket_price
-
-			FROM customers_basket AS cb
-			JOIN customers AS c ON cb.customers_id = c.customers_id
-			JOIN customers_info AS ci ON c.customers_id = ci.customers_info_id
-# 			left JOIN customers_basket_attributes AS cba ON cba.customers_id = cb.customers_id AND cba.products_id = cb.products_id
-# 			left JOIN products AS p ON cb.products_id = p.products_id
-			WHERE cb.basket_date_added BETWEEN NOW() - INTERVAL 1 DAY AND NOW()
-			AND (c.customers_email_address != '' OR c.customers_mobile != '' OR c.customers_telephone != '')
-            AND c.customers_email_address = 'buzzboy66@gmail.com'
-			GROUP BY cb.customers_id;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT c.customers_firstname, c.customers_lastname, c.customers_telephone, c.customers_mobile, c.customers_email_address,
-       sum((SELECT CASE
-						WHEN cb.customers_basket_quantity >= pp.products_price7_qty THEN pp.products_price7
-						WHEN cb.customers_basket_quantity >= pp.products_price6_qty THEN pp.products_price6
-						WHEN cb.customers_basket_quantity >= pp.products_price5_qty THEN pp.products_price5
-						WHEN cb.customers_basket_quantity >= pp.products_price4_qty THEN pp.products_price4
-						WHEN cb.customers_basket_quantity >= pp.products_price3_qty THEN pp.products_price3
-						WHEN cb.customers_basket_quantity >= pp.products_price2_qty THEN pp.products_price2
-						ELSE pp.products_price1
-					   END
-				FROM products AS pp
-				WHERE pp.products_id = cb.products_id)*cb.customers_basket_quantity) as final_basket_price
-
-			FROM customers_basket AS cb
-			JOIN customers AS c ON cb.customers_id = c.customers_id
-			JOIN customers_info AS ci ON c.customers_id = ci.customers_info_id
-# 			left JOIN customers_basket_attributes AS cba ON cba.customers_id = cb.customers_id AND cba.products_id = cb.products_id
-# 			left JOIN products AS p ON cb.products_id = p.products_id
-			WHERE cb.basket_date_added BETWEEN NOW() - INTERVAL 2 DAY AND NOW()
-			AND (c.customers_email_address != '' OR c.customers_mobile != '' OR c.customers_telephone != '')
-            AND c.customers_email_address = 'buzzboy66@gmail.com'
-			GROUP BY cb.customers_id;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT c.customers_firstname, c.customers_lastname, c.customers_telephone, c.customers_mobile, c.customers_email_address,
-       sum((SELECT CASE
-						WHEN cb.customers_basket_quantity >= pp.products_price7_qty THEN pp.products_price7
-						WHEN cb.customers_basket_quantity >= pp.products_price6_qty THEN pp.products_price6
-						WHEN cb.customers_basket_quantity >= pp.products_price5_qty THEN pp.products_price5
-						WHEN cb.customers_basket_quantity >= pp.products_price4_qty THEN pp.products_price4
-						WHEN cb.customers_basket_quantity >= pp.products_price3_qty THEN pp.products_price3
-						WHEN cb.customers_basket_quantity >= pp.products_price2_qty THEN pp.products_price2
-						ELSE pp.products_price1
-					   END
-				FROM products AS pp
-				WHERE pp.products_id = cb.products_id)*cb.customers_basket_quantity) as final_basket_price
-
-			FROM customers_basket AS cb
-			JOIN customers AS c ON cb.customers_id = c.customers_id
-			JOIN customers_info AS ci ON c.customers_id = ci.customers_info_id
-			left JOIN customers_basket_attributes AS cba ON cba.customers_id = cb.customers_id AND cba.products_id = cb.products_id
-			left JOIN products AS p ON cb.products_id = p.products_id
-			WHERE cb.basket_date_added BETWEEN NOW() - INTERVAL 2 DAY AND NOW()
-			AND (c.customers_email_address != '' OR c.customers_mobile != '' OR c.customers_telephone != '')
-            AND c.customers_email_address = 'buzzboy66@gmail.com'
-			GROUP BY cb.customers_id;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT c.customers_firstname, c.customers_lastname, c.customers_telephone, c.customers_mobile, c.customers_email_address,
-       sum((SELECT CASE
-						WHEN cb.customers_basket_quantity >= pp.products_price7_qty THEN pp.products_price7
-						WHEN cb.customers_basket_quantity >= pp.products_price6_qty THEN pp.products_price6
-						WHEN cb.customers_basket_quantity >= pp.products_price5_qty THEN pp.products_price5
-						WHEN cb.customers_basket_quantity >= pp.products_price4_qty THEN pp.products_price4
-						WHEN cb.customers_basket_quantity >= pp.products_price3_qty THEN pp.products_price3
-						WHEN cb.customers_basket_quantity >= pp.products_price2_qty THEN pp.products_price2
-						ELSE pp.products_price1
-					   END
-				FROM products AS pp
-				WHERE pp.products_id = cb.products_id)*cb.customers_basket_quantity) as final_basket_price
-
-			FROM customers_basket AS cb
-			JOIN customers AS c ON cb.customers_id = c.customers_id
-			JOIN customers_info AS ci ON c.customers_id = ci.customers_info_id
-# 			left JOIN customers_basket_attributes AS cba ON cba.customers_id = cb.customers_id AND cba.products_id = cb.products_id
-			left JOIN products AS p ON cb.products_id = p.products_id
-			WHERE cb.basket_date_added BETWEEN NOW() - INTERVAL 2 DAY AND NOW()
-			AND (c.customers_email_address != '' OR c.customers_mobile != '' OR c.customers_telephone != '')
-            AND c.customers_email_address = 'buzzboy66@gmail.com'
-			GROUP BY cb.customers_id;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT c.customers_id, c.customers_firstname, c.customers_email_address, cb.customers_basket_quantity, p.products_id
-			FROM customers_basket AS cb
-			JOIN customers AS c ON cb.customers_id = c.customers_id
-			JOIN customers_info AS ci ON c.customers_id = ci.customers_info_id
-			left JOIN products AS p ON cb.products_id = p.products_id
-			WHERE cb.basket_date_added BETWEEN NOW() - INTERVAL 2 DAY AND NOW()
-            AND (c.customers_email_address != '' OR c.customers_mobile != '' OR c.customers_telephone != '')
-            AND c.customers_email_address = 'buzzboy66@gmail.com';
-;-- -. . -..- - / . -. - .-. -.--
-SELECT c.customers_id, c.customers_firstname, c.customers_telephone, c.customers_mobile, c.customers_email_address, cb.customers_basket_quantity, p.products_id
-			FROM customers_basket AS cb
-			JOIN customers AS c ON cb.customers_id = c.customers_id
-			JOIN customers_info AS ci ON c.customers_id = ci.customers_info_id
-			left JOIN products AS p ON cb.products_id = p.products_id
-			WHERE cb.basket_date_added BETWEEN NOW() - INTERVAL 2 DAY AND NOW()
-            AND (c.customers_email_address != '' OR c.customers_mobile != '' OR c.customers_telephone != '')
-            AND c.customers_email_address = 'buzzboy66@gmail.com';
-;-- -. . -..- - / . -. - .-. -.--
-SELECT c.customers_id, c.customers_firstname, c.customers_telephone, c.customers_mobile, c.customers_email_address, cb.customers_basket_quantity, p.products_id,
-            MIN(cb.basket_date_added) AS basket_date_added,
-            IF((SELECT count(o.orders_id)
-				FROM orders AS o
-				WHERE o.customers_id = c.customers_id
-				GROUP BY o.customers_id) > 0, 'Yes', 'No') AS returning_customer, c.account_manager, ci.customers_info_number_of_logons, max(cb.basket_last_updated) AS last_updated
-
-			FROM customers_basket AS cb
-			JOIN customers AS c ON cb.customers_id = c.customers_id
-			JOIN customers_info AS ci ON c.customers_id = ci.customers_info_id
-			left JOIN products AS p ON cb.products_id = p.products_id
-			WHERE cb.basket_date_added BETWEEN NOW() - INTERVAL 2 DAY AND NOW()
-            AND (c.customers_email_address != '' OR c.customers_mobile != '' OR c.customers_telephone != '')
-            AND c.customers_id = 4993624;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT c.customers_id, c.customers_firstname, c.customers_telephone, c.customers_mobile, c.customers_email_address, cb.customers_basket_quantity, p.products_id,
-            MIN(cb.basket_date_added) AS basket_date_added,
-            IF((SELECT count(o.orders_id)
-				FROM orders AS o
-				WHERE o.customers_id = c.customers_id
-				GROUP BY o.customers_id) > 0, 'Yes', 'No') AS returning_customer, c.account_manager, ci.customers_info_number_of_logons, max(cb.basket_last_updated) AS last_updated
-
-			FROM customers_basket AS cb
-			JOIN customers AS c ON cb.customers_id = c.customers_id
-			JOIN customers_info AS ci ON c.customers_id = ci.customers_info_id
-			left JOIN products AS p ON cb.products_id = p.products_id
-			WHERE cb.basket_date_added BETWEEN NOW() - INTERVAL 2 DAY AND NOW()
-            AND (c.customers_email_address != '' OR c.customers_mobile != '' OR c.customers_telephone != '')
-            AND c.customers_email_address = 'buzzboy66@gmail.com';
-;-- -. . -..- - / . -. - .-. -.--
-SELECT c.customers_id, c.customers_firstname, c.customers_telephone, c.customers_mobile, c.customers_email_address,
-       cb.customers_basket_quantity,
-       p.products_id,
-       MIN(cb.basket_date_added) AS basket_date_added,
-       IF((SELECT count(o.orders_id)
-            FROM orders AS o
-            WHERE o.customers_id = c.customers_id
-            GROUP BY o.customers_id) > 0, 'Yes', 'No') AS returning_customer,
-       c.account_manager,
-       ci.customers_info_number_of_logons,
-       max(cb.basket_last_updated) AS last_updated
-        FROM customers_basket AS cb
-		JOIN customers AS c ON cb.customers_id = c.customers_id
-		JOIN customers_info AS ci ON c.customers_id = ci.customers_info_id
-		left JOIN products AS p ON cb.products_id = p.products_id
-		WHERE cb.basket_date_added BETWEEN NOW() - INTERVAL 2 DAY AND NOW()
-        AND (c.customers_email_address != '' OR c.customers_mobile != '' OR c.customers_telephone != '')
-        AND c.customers_email_address = 'buzzboy66@gmail.com';
-;-- -. . -..- - / . -. - .-. -.--
-SELECT c.customers_id, c.customers_firstname, c.customers_telephone, c.customers_mobile, c.customers_email_address,
-       cb.customers_basket_quantity,
-       p.products_id,
-       MIN(cb.basket_date_added) AS basket_date_added,
-       IF((SELECT count(o.orders_id)
-            FROM orders AS o
-            WHERE o.customers_id = c.customers_id
-            GROUP BY o.customers_id) > 0, 'Yes', 'No') AS returning_customer,
-       c.account_manager,
-       ci.customers_info_number_of_logons,
-       max(cb.basket_last_updated) AS last_updated
-        FROM customers_basket AS cb
-		JOIN customers AS c ON cb.customers_id = c.customers_id
-		JOIN customers_info AS ci ON c.customers_id = ci.customers_info_id
-		JOIN products AS p ON cb.products_id = p.products_id
-		WHERE cb.basket_date_added BETWEEN NOW() - INTERVAL 2 DAY AND NOW()
-        AND (c.customers_email_address != '' OR c.customers_mobile != '' OR c.customers_telephone != '')
-        AND c.customers_email_address = 'buzzboy66@gmail.com';
-;-- -. . -..- - / . -. - .-. -.--
-SELECT c.customers_id, c.customers_firstname, c.customers_lastname, c.customers_telephone, c.customers_mobile, c.customers_email_address,
-       cb.customers_basket_quantity,
-       p.products_id,
-       MIN(cb.basket_date_added) AS basket_date_added,
-       IF((SELECT count(o.orders_id)
-            FROM orders AS o
-            WHERE o.customers_id = c.customers_id
-            GROUP BY o.customers_id) > 0, 'Yes', 'No') AS returning_customer,
-       c.account_manager,
-       ci.customers_info_number_of_logons,
-       max(cb.basket_last_updated) AS last_updated
-        FROM customers_basket AS cb
-		JOIN customers AS c ON cb.customers_id = c.customers_id
-		JOIN customers_info AS ci ON c.customers_id = ci.customers_info_id
-		JOIN products AS p ON cb.products_id = p.products_id
-		WHERE cb.basket_date_added BETWEEN NOW() - INTERVAL 2 DAY AND NOW()
-        AND (c.customers_email_address != '' OR c.customers_mobile != '' OR c.customers_telephone != '')
-        AND c.customers_email_address = 'buzzboy66@gmail.com';
-;-- -. . -..- - / . -. - .-. -.--
-select * from customers_basket_attributes
-where customers_id = 5961034
-and products_id = 765
-limit 10;
-;-- -. . -..- - / . -. - .-. -.--
-select * from products_attributes where price_prefix <> '';
-;-- -. . -..- - / . -. - .-. -.--
-select * from products_attributes where price_prefix > '';
-;-- -. . -..- - / . -. - .-. -.--
-select * from products_attributes where price_prefix > '' and options_values_price > 0;
-;-- -. . -..- - / . -. - .-. -.--
-select * from products_attributes where price_prefix > '' and options_values_price > 0.0000;
-;-- -. . -..- - / . -. - .-. -.--
-select t1.customer_id, t1.created_at, t2.created_at, datediff(t2.created_at,t1.created_at)
-from customisation_files t1, customisation_files t2
-where t1.customer_id=t2.customer_id
-and t2.created_at = (select min(created_at) from customisation_files t3 where t1.customer_id=t3.customer_id and t3.created_at > t1.created_at);
-;-- -. . -..- - / . -. - .-. -.--
-select t1.customer_id, t1.created_at, t2.created_at, datediff(t2.created_at,t1.created_at) as date_diff
-from customisation_files t1, customisation_files t2
-where t1.customer_id=t2.customer_id
-and t2.created_at = (select min(created_at) from customisation_files t3 where t1.customer_id=t3.customer_id and t3.created_at > t1.created_at)
-
-and date_diff = 0;
-;-- -. . -..- - / . -. - .-. -.--
-select t1.customer_id, t1.created_at, t2.created_at, datediff(t2.created_at,t1.created_at)
-from customisation_files t1, customisation_files t2
-where t1.customer_id=t2.customer_id
-and t2.created_at = (select min(created_at) from customisation_files t3 where t1.customer_id=t3.customer_id and t3.created_at > t1.created_at)
-
-and datediff(t2.created_at,t1.created_at) = 0;
-;-- -. . -..- - / . -. - .-. -.--
-select t1.customer_id, t1.created_at, t2.created_at, datediff(t2.created_at,t1.created_at)
-from customisation_files t1, customisation_files t2
-where t1.customer_id=t2.customer_id
-and t2.created_at = (select min(created_at) from customisation_files t3 where t1.customer_id=t3.customer_id and t3.created_at > t1.created_at)
-
-and datediff(t2.created_at,t1.created_at) = 0
-and t1.created_at > '2019-01-01 00:00:00';
-;-- -. . -..- - / . -. - .-. -.--
-select t1.customer_id, t1.created_at, t2.created_at, timediff(t2.created_at,t1.created_at)
-from customisation_files t1, customisation_files t2
-where t1.customer_id=t2.customer_id
-and t2.created_at = (select min(created_at) from customisation_files t3 where t1.customer_id=t3.customer_id and t3.created_at > t1.created_at)
-
-and datediff(t2.created_at,t1.created_at) = 0
-and t1.created_at > '2019-01-01 00:00:00';
-;-- -. . -..- - / . -. - .-. -.--
-select t1.customer_id, t1.created_at, t2.created_at, timediff(t2.created_at,t1.created_at)
-from customisation_files t1, customisation_files t2
-where t1.customer_id=t2.customer_id
-and t2.created_at = (select min(created_at) from customisation_files t3 where t1.customer_id=t3.customer_id and t3.created_at > t1.created_at)
-
-and timediff(t2.created_at,t1.created_at) < '01:00:00'
-and t1.created_at > '2019-01-01 00:00:00';
-;-- -. . -..- - / . -. - .-. -.--
-select t1.customisation_id, t1.customer_id, t1.created_at, t2.created_at, timediff(t2.created_at,t1.created_at)
-from customisation_files t1, customisation_files t2
-where t1.customer_id=t2.customer_id
-and t2.created_at = (select min(created_at) from customisation_files t3 where t1.customer_id=t3.customer_id and t3.created_at > t1.created_at)
-
-and timediff(t2.created_at,t1.created_at) < '01:00:00'
-and t1.created_at > '2019-01-01 00:00:00';
-;-- -. . -..- - / . -. - .-. -.--
-select t1.customisation_id, t1.file_type, t1.customer_id, t1.created_at, t2.created_at, timediff(t2.created_at,t1.created_at)
-from customisation_files t1, customisation_files t2
-where t1.customer_id=t2.customer_id
-and t2.created_at = (select min(created_at) from customisation_files t3 where t1.customer_id=t3.customer_id and t3.created_at > t1.created_at)
-
-and timediff(t2.created_at,t1.created_at) < '01:00:00'
-and t1.created_at > '2019-01-01 00:00:00';
-;-- -. . -..- - / . -. - .-. -.--
-select t1.customisation_id, t1.file_type, t1.customer_id, t1.created_at, t2.created_at, timediff(t2.created_at,t1.created_at)
-from customisation_files t1, customisation_files t2
-where t1.customer_id=t2.customer_id
-and t2.created_at = (select min(created_at) from customisation_files t3 where t1.customer_id=t3.customer_id and t3.created_at > t1.created_at)
-
-and timediff(t2.created_at,t1.created_at) < '01:00:00'
-and t1.created_at > '2019-01-01 00:00:00'
-group by t1.customisation_id, t1.file_type, t1.customer_id;
-;-- -. . -..- - / . -. - .-. -.--
-select t1.customisation_id, t1.file_type, t1.customer_id, t1.created_at, t2.created_at, timediff(t2.created_at,t1.created_at)
-from customisation_files t1, customisation_files t2
-where t1.customer_id=t2.customer_id
-and t2.created_at = (select min(created_at) from customisation_files t3 where t1.customer_id=t3.customer_id and t3.created_at > t1.created_at)
-
-and timediff(t2.created_at,t1.created_at) < '01:00:00'
-and t1.created_at > '2019-01-01 00:00:00'
-group by t1.customisation_id, t1.file_type, t1.customer_id, t1.created_at, t2.created_at, timediff(t2.created_at,t1.created_at);
-;-- -. . -..- - / . -. - .-. -.--
-select t1.customisation_id, t1.file_type, t1.customer_id, t1.created_at, t2.created_at, timediff(t2.created_at,t1.created_at), t1.url
-from customisation_files t1, customisation_files t2
-where t1.customer_id=t2.customer_id
-and t2.created_at = (select min(created_at) from customisation_files t3 where t1.customer_id=t3.customer_id and t3.created_at > t1.created_at)
-
-and timediff(t2.created_at,t1.created_at) < '01:00:00'
-and t1.created_at > '2019-01-01 00:00:00';
-;-- -. . -..- - / . -. - .-. -.--
-select t1.customisation_id, t1.file_type, t1.customer_id, t1.created_at, t2.created_at, timediff(t2.created_at,t1.created_at), t1.url
-from customisation_files t1, customisation_files t2
-where t1.customer_id=t2.customer_id and t1.file_type = t2.file_type
-and t2.created_at = (select min(created_at) from customisation_files t3 where t1.customer_id=t3.customer_id and t3.created_at > t1.created_at)
-
-and timediff(t2.created_at,t1.created_at) < '01:00:00'
-and t1.created_at > '2019-01-01 00:00:00';
-;-- -. . -..- - / . -. - .-. -.--
-select t1.customisation_id, t1.file_type, t1.customer_id, t1.created_at, t2.created_at, timediff(t2.created_at,t1.created_at), t1.url
-from customisation_files t1, customisation_files t2
-where t1.customer_id=t2.customer_id and t1.file_type = t2.file_type
-and t2.created_at = (select min(created_at) from customisation_files t3 where t1.customer_id=t3.customer_id and t1.file_type = t3.file_type and t3.created_at > t1.created_at)
-
-and timediff(t2.created_at,t1.created_at) < '01:00:00'
-and t1.created_at > '2019-01-01 00:00:00';
-;-- -. . -..- - / . -. - .-. -.--
-select t1.id as t1_id, t2.id as t2_id, t1.customisation_id, t1.file_type, t1.customer_id, t1.created_at, t2.created_at, timediff(t2.created_at,t1.created_at), t1.url
-from customisation_files t1, customisation_files t2
-where t1.customer_id=t2.customer_id and t1.file_type = t2.file_type
-and t2.created_at = (select min(created_at) from customisation_files t3 where t1.customer_id=t3.customer_id and t1.file_type = t3.file_type and t3.created_at > t1.created_at)
-
-and timediff(t2.created_at,t1.created_at) < '01:00:00'
-and t1.created_at > '2019-01-01 00:00:00';
-;-- -. . -..- - / . -. - .-. -.--
-select count(t1.id)
-from customisation_files t1
-JOIN  customisation_files t2
-    ON t1.file_type = t2.file_type
-        AND t1.customer_id=t2.customer_id
-        AND SUBSTRING_INDEX(t1.url, '.', -1) = SUBSTRING_INDEX(t2.url, '.', -1)
-where t2.created_at = (
-    select min(created_at)
-    from customisation_files t3
-    where t1.customer_id=t3.customer_id and t1.file_type = t3.file_type
-      and t3.created_at > t1.created_at
-) and timediff(t2.created_at,t1.created_at) < '01:00:00' and timediff(t2.created_at,t1.created_at) > '00:00:02'
-and t1.customer_id <> 0;
-;-- -. . -..- - / . -. - .-. -.--
-select count(*)
-from customisation_files t1
-JOIN  customisation_files t2
-    ON t1.file_type = t2.file_type
-        AND t1.customer_id=t2.customer_id
-        AND SUBSTRING_INDEX(t1.url, '.', -1) = SUBSTRING_INDEX(t2.url, '.', -1)
-where t2.created_at = (
-    select min(created_at)
-    from customisation_files t3
-    where t1.customer_id=t3.customer_id and t1.file_type = t3.file_type
-      and t3.created_at > t1.created_at
-) and timediff(t2.created_at,t1.created_at) < '01:00:00' and timediff(t2.created_at,t1.created_at) > '00:00:02'
-and t1.customer_id <> 0;
-;-- -. . -..- - / . -. - .-. -.--
-select count(*)
-from customisation_files t1
-JOIN  customisation_files t2
-    ON t1.file_type = t2.file_type
-        AND t1.customer_id=t2.customer_id
-        AND SUBSTRING_INDEX(t1.url, '.', -1) = SUBSTRING_INDEX(t2.url, '.', -1)
-where t2.created_at = (
-    select min(created_at)
-    from customisation_files t3
-    where t1.customer_id=t3.customer_id and t1.file_type = t3.file_type
-      and t3.created_at > t1.created_at
-) and timediff(t2.created_at,t1.created_at) < '01:00:00' and timediff(t2.created_at,t1.created_at) > '00:00:02'
-and t1.customer_id <> 0
-limit 500;
-;-- -. . -..- - / . -. - .-. -.--
-select t1.id as t1_id, t1.file_type, t2.id as t2_id, t1.url, t2.url,
-    timediff(t2.created_at,t1.created_at),
-        (
-            select min(created_at)
-            from customisation_files t3
-            where t1.customer_id=t3.customer_id and t1.file_type = t3.file_type
-              and t3.created_at > t1.created_at
-        ) AS second_file_created
-from customisation_files t1
-JOIN  customisation_files t2
-    ON t1.file_type = t2.file_type
-        AND t1.customer_id=t2.customer_id
-        AND SUBSTRING_INDEX(t1.url, '.', -1) = SUBSTRING_INDEX(t2.url, '.', -1)
-where t2.created_at = (
-    select min(created_at)
-    from customisation_files t3
-    where t1.customer_id=t3.customer_id and t1.file_type = t3.file_type
-      and t3.created_at > t1.created_at
-) and timediff(t2.created_at,t1.created_at) < '01:00:00' and timediff(t2.created_at,t1.created_at) > '00:00:02'
-and t1.customer_id <> 0;
-;-- -. . -..- - / . -. - .-. -.--
-select t1.id as t1_id, t1.file_type, t2.id as t2_id, t1.url, t2.url,
-    timediff(t2.created_at,t1.created_at),
-        (
-            select min(created_at)
-            from customisation_files t3
-            where t1.customer_id=t3.customer_id and t1.file_type = t3.file_type
-              and t3.created_at > t1.created_at
-        ) AS second_file_created
-from customisation_files t1
-JOIN  customisation_files t2
-    ON t1.file_type = t2.file_type
-        AND t1.customer_id=t2.customer_id
-        AND SUBSTRING_INDEX(t1.url, '.', -1) = SUBSTRING_INDEX(t2.url, '.', -1)
-where t2.created_at = (
-    select min(created_at)
-    from customisation_files t3
-    where t1.customer_id=t3.customer_id and t1.file_type = t3.file_type
-      and t3.created_at > t1.created_at
-) and timediff(t2.created_at,t1.created_at) < '01:00:00' and timediff(t2.created_at,t1.created_at) > '00:00:02'
-and t1.customer_id <> 0
-and t1.created_at > '2019-01-01 00:00:00';
-;-- -. . -..- - / . -. - .-. -.--
-select t1.id as t1_id, t1.file_type, t2.id as t2_id, t1.url as t1_url, t2.url as t2_url,
-    timediff(t2.created_at,t1.created_at),
-        (
-            select min(created_at)
-            from customisation_files t3
-            where t1.customer_id=t3.customer_id and t1.file_type = t3.file_type
-              and t3.created_at > t1.created_at
-        ) AS second_file_created
-from customisation_files t1
-JOIN  customisation_files t2
-    ON t1.file_type = t2.file_type
-        AND t1.customer_id=t2.customer_id
-        AND SUBSTRING_INDEX(t1.url, '.', -1) = SUBSTRING_INDEX(t2.url, '.', -1)
-where t2.created_at = (
-    select min(created_at)
-    from customisation_files t3
-    where t1.customer_id=t3.customer_id and t1.file_type = t3.file_type
-      and t3.created_at > t1.created_at
-) and timediff(t2.created_at,t1.created_at) < '01:00:00' and timediff(t2.created_at,t1.created_at) > '00:00:02'
-and t1.customer_id <> 0
-and t1.created_at > '2019-01-01 00:00:00';
-;-- -. . -..- - / . -. - .-. -.--
-select
-       count(*)
-#t1.id as t1_id, t1.file_type, t2.id as t2_id, t1.url as t1_url, t2.url as t2_url,
-#     timediff(t2.created_at,t1.created_at),
-#         (
-#             select min(created_at)
-#             from customisation_files t3
-#             where t1.customer_id=t3.customer_id and t1.file_type = t3.file_type
-#               and t3.created_at > t1.created_at
-#         ) AS second_file_created
-from customisation_files t1
-JOIN  customisation_files t2
-    ON t1.file_type = t2.file_type
-        AND t1.customer_id=t2.customer_id
-        AND SUBSTRING_INDEX(t1.url, '.', -1) = SUBSTRING_INDEX(t2.url, '.', -1)
-where t2.created_at = (
-    select min(created_at)
-    from customisation_files t3
-    where t1.customer_id=t3.customer_id and t1.file_type = t3.file_type
-      and t3.created_at > t1.created_at
-) and timediff(t2.created_at,t1.created_at) < '01:00:00' and timediff(t2.created_at,t1.created_at) > '00:00:02'
-and t1.customer_id <> 0
-and t1.created_at > '2019-01-01 00:00:00';
-;-- -. . -..- - / . -. - .-. -.--
-select * from customisation_files order by created_at asc limit 10;
-;-- -. . -..- - / . -. - .-. -.--
-CALL mysql.rds_kill(26463664);
-;-- -. . -..- - / . -. - .-. -.--
-select * from customisation_files
-where created_at BETWEEN '2020-01-01 00:00:00' and '2020-02-01 00:00:00'
-order by created_at asc;
-;-- -. . -..- - / . -. - .-. -.--
-select count(*) from customisation_files
-where created_at BETWEEN '2020-01-01 00:00:00' and '2020-02-01 00:00:00'
-order by created_at asc;
-;-- -. . -..- - / . -. - .-. -.--
-select count(*) from customisation_files
-where created_at BETWEEN '2020-01-15 00:00:00' and '2020-02-01 00:00:00'
-order by created_at asc;
-;-- -. . -..- - / . -. - .-. -.--
-select count(*) from customisation_files
-where created_at BETWEEN '2020-01-25 00:00:00' and '2020-02-01 00:00:00'
-order by created_at asc;
-;-- -. . -..- - / . -. - .-. -.--
-select count(*) from customisation_files
-where created_at BETWEEN '2020-01-30 00:00:00' and '2020-02-01 00:00:00'
-order by created_at asc;
-;-- -. . -..- - / . -. - .-. -.--
-select count(*) from customisation_files
-where created_at BETWEEN '2020-01-28 00:00:00' and '2020-02-01 00:00:00'
-order by created_at asc;
-;-- -. . -..- - / . -. - .-. -.--
-select count(*) from customisation_files
-where created_at BETWEEN '2020-01-20 00:00:00' and '2020-02-01 00:00:00'
-order by created_at asc;
-;-- -. . -..- - / . -. - .-. -.--
-select
-      count(*)
-# t1.id as t1_id, t1.file_type, t2.id as t2_id, t1.url as t1_url, t2.url as t2_url,
-#     timediff(t2.created_at,t1.created_at),
-#         (
-#             select min(created_at)
-#             from customisation_files t3
-#             where t1.customer_id=t3.customer_id and t1.file_type = t3.file_type
-#               and t3.created_at > t1.created_at
-#         ) AS second_file_created
-from customisation_files t1
-JOIN  customisation_files t2
-    ON t1.file_type = t2.file_type
-        AND t1.customer_id=t2.customer_id
-        AND SUBSTRING_INDEX(t1.url, '.', -1) = SUBSTRING_INDEX(t2.url, '.', -1)
-where t2.created_at = (
-    select min(created_at)
-    from customisation_files t3
-    where t1.customer_id=t3.customer_id and t1.file_type = t3.file_type
-      and t3.created_at > t1.created_at
-) and timediff(t2.created_at,t1.created_at) < '01:00:00' and timediff(t2.created_at,t1.created_at) > '00:00:02'
-and t1.customer_id <> 0
-and (t1.created_at BETWEEN '2020-01-20 00:00:00' and '2020-02-01 00:00:00');
-;-- -. . -..- - / . -. - .-. -.--
-select
-      count(*)
-# t1.id as t1_id, t1.file_type, t2.id as t2_id, t1.url as t1_url, t2.url as t2_url,
-#     timediff(t2.created_at,t1.created_at),
-#         (
-#             select min(created_at)
-#             from customisation_files t3
-#             where t1.customer_id=t3.customer_id and t1.file_type = t3.file_type
-#               and t3.created_at > t1.created_at
-#         ) AS second_file_created
-from customisation_files t1
-JOIN  customisation_files t2
-    ON t1.file_type = t2.file_type
-        AND t1.customer_id=t2.customer_id
-        AND SUBSTRING_INDEX(t1.url, '.', -1) = SUBSTRING_INDEX(t2.url, '.', -1)
-where t2.created_at = (
-    select min(created_at)
-    from customisation_files t3
-    where t1.customer_id=t3.customer_id and t1.file_type = t3.file_type
-      and t3.created_at > t1.created_at
-) and timediff(t2.created_at,t1.created_at) < '01:00:00' and timediff(t2.created_at,t1.created_at) > '00:00:02'
-and t1.customer_id <> 0
-and (t1.created_at BETWEEN '2020-01-30 00:00:00' and '2020-02-01 00:00:00');
-;-- -. . -..- - / . -. - .-. -.--
-select
-t1.id as t1_id, t1.file_type, t2.id as t2_id, t1.url as t1_url, t2.url as t2_url,
-    timediff(t2.created_at,t1.created_at),
-        (
-            select min(created_at)
-            from customisation_files t3
-            where t1.customer_id=t3.customer_id and t1.file_type = t3.file_type
-              and t3.created_at > t1.created_at
-        ) AS second_file_created
-from customisation_files t1
-JOIN  customisation_files t2
-    ON t1.file_type = t2.file_type
-        AND t1.customer_id=t2.customer_id
-        AND SUBSTRING_INDEX(t1.url, '.', -1) = SUBSTRING_INDEX(t2.url, '.', -1)
-where t2.created_at = (
-    select min(created_at)
-    from customisation_files t3
-    where t1.customer_id=t3.customer_id and t1.file_type = t3.file_type
-      and t3.created_at > t1.created_at
-) and timediff(t2.created_at,t1.created_at) < '01:00:00' and timediff(t2.created_at,t1.created_at) > '00:00:02'
-and t1.customer_id <> 0
-and (t1.created_at BETWEEN '2020-01-30 00:00:00' and '2020-02-01 00:00:00');
-;-- -. . -..- - / . -. - .-. -.--
-select * from customisation_files
-where created_at BETWEEN '2020-01-31 00:00:00' and '2020-02-01 00:00:00'
-order by created_at asc;
-;-- -. . -..- - / . -. - .-. -.--
-select count(*) from customisation_files;
-;-- -. . -..- - / . -. - .-. -.--
-select * from customisation_files
-where created_at BETWEEN '2020-01-00 00:00:00' and '2020-02-01 00:00:00'
-order by created_at asc;
-;-- -. . -..- - / . -. - .-. -.--
-select * from customisation_files
-where created_at BETWEEN '2019-12-01 00:00:00' and '2020-02-01 00:00:00'
-order by created_at asc;
-;-- -. . -..- - / . -. - .-. -.--
-select * from customisation_files
-where created_at BETWEEN '2019-11-01 00:00:00' and '2020-02-01 00:00:00'
-order by created_at asc;
-;-- -. . -..- - / . -. - .-. -.--
-select * from customisation_files;
-;-- -. . -..- - / . -. - .-. -.--
-select * from customisation_files
-where created_at BETWEEN '2019-10-01 00:00:00' and '2020-02-01 00:00:00'
-order by created_at asc;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT customisation_id
-FROM clothes2_osC.customisation_files AS cf
-WHERE cf.customer_id <> 0 AND cf.file_type = 1
- AND (
-    SELECT COUNT(*)
-    FROM customisation_files AS cff
-    WHERE cff.id <> cf.id AND cf.customer_id = cff.customer_id
-        AND cff.created_at BETWEEN DATE_ADD(cf.created_at, INTERVAL 2 MINUTE ) AND DATE_ADD(cf.created_at, INTERVAL 1 HOUR)
-        AND SUBSTRING_INDEX(cf.url, '.', -1) = SUBSTRING_INDEX(cff.url, '.', -1)
-) <> 0
-LIMIT 5000;
-;-- -. . -..- - / . -. - .-. -.--
-EXPLAIN SELECT customisation_id
-FROM clothes2_osC.customisation_files AS cf
-WHERE cf.customer_id <> 0 AND cf.file_type = 1
- AND (
-    SELECT COUNT(*)
-    FROM customisation_files AS cff
-    WHERE cff.id <> cf.id AND cf.customer_id = cff.customer_id
-        AND cff.created_at BETWEEN DATE_ADD(cf.created_at, INTERVAL 2 MINUTE ) AND DATE_ADD(cf.created_at, INTERVAL 1 HOUR)
-        AND SUBSTRING_INDEX(cf.url, '.', -1) = SUBSTRING_INDEX(cff.url, '.', -1)
-) <> 0
-LIMIT 5000;
-;-- -. . -..- - / . -. - .-. -.--
-show create table customisation_files;
-;-- -. . -..- - / . -. - .-. -.--
-desc orders_customisations_types;
-;-- -. . -..- - / . -. - .-. -.--
-select emb_kingf from orders_customisations_types;
-;-- -. . -..- - / . -. - .-. -.--
-select emb_kingf from orders_customisations_types where emb_kingf > 0;
-;-- -. . -..- - / . -. - .-. -.--
-select * from orders_customisations_types where emb_kingf > 0;
-;-- -. . -..- - / . -. - .-. -.--
-select * from customisation_files
-where id = 1875321;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT  pq.orders_id, pq.staff_id, pq.date_created, pqr.garment_reorder, pq.qc_group_id, pq.location_reported, pqr.qc_reason_class, pqr.qc_reason_text, pq.products_quantity AS qc_qty, op.orders_products_id, opc.orders_products_customisations_id, op.products_id, op.products_name, op.vendors_product_price, op.products_quantity, op.vendors_id, oc.custom_type,
-		SUBSTRING_INDEX(
-			SUBSTRING_INDEX(op.products_stock_attributes, ',', 1),
-			'-' ,- 1 ) AS colour_id,
-		SUBSTRING_INDEX(
-			SUBSTRING_INDEX( op.products_stock_attributes, ',', 2),
-			'-' ,- 1) AS size_id,
-		(	SELECT group_concat(oc2.custom_type) AS cust_cnt
-			FROM orders_products_customisations AS opc2, orders_customisations AS oc2
-			WHERE opc2.orders_products_id = pq.orders_products_id
-				AND opc2.orders_id = oc2.order_id
-				AND opc2.customisation_id = oc2.customisation_id
-		) AS cust_apps_cnt,
-		(	SELECT GROUP_CONCAT(DISTINCT pe.equipment_shortname)
-			FROM clothes2_osC.production_staff_actions AS psa, clothes2_osC.production_action_equipment AS pae, clothes2_osC.production_equipment AS pe
-			WHERE psa.orders_id = oc.order_id
-				AND psa.custom_id = oc.custom_id
-				AND psa.actions_id = pae.actions_id
-				AND pae.equipment_id = pe.equipment_id
-			GROUP BY psa.custom_id,psa.orders_id
-		) AS equipment,
-		IF((SELECT COUNT(cn.custom_names_id)
-			FROM custom_names AS cn
-			WHERE cn.custom_products_id = op.products_id
-				AND cn.custom_products_colour = colour_id
-				AND cn.custom_products_size = size_id
-				AND cn.custom_order_id = pq.orders_id
-		) > 0, 1, 0) AS names_numbes,
-		IFNULL(
-			oc.assigned_artworker,
-			(	SELECT DISTINCT cn.assigned_artworker
-				FROM custom_names AS cn
-				WHERE cn.custom_products_id = op.products_id
-					AND cn.custom_products_colour = colour_id
-					AND cn.custom_products_size = size_id
-					AND cn.custom_order_id = pq.orders_id
-			)
-		) AS assigned_artworker,
-		pq.operator_id
-		FROM production_qc AS pq
-		LEFT JOIN orders_products AS op ON ( pq.orders_id = op.orders_id AND pq.orders_products_id = op.orders_products_id )
-		LEFT JOIN orders_products_customisations AS opc ON ( pq.orders_id = opc.orders_id AND pq.orders_products_customisations_id = opc.orders_products_customisations_id )
-		LEFT JOIN orders_customisations AS oc ON ( pq.orders_id = oc.order_id AND pq.custom_id = oc.custom_id)
-		LEFT JOIN production_qc_reasons AS pqr ON (pq.issue_id = pqr.qc_reason_id)
-		WHERE pq.date_created BETWEEN now() AND date_sub(now(), interval 1 day)
-            AND pq.deleted_at = '0000-00-00 00:00:00';
-;-- -. . -..- - / . -. - .-. -.--
-SELECT  pq.orders_id, pq.staff_id, pq.date_created, pqr.garment_reorder, pq.qc_group_id, pq.location_reported, pqr.qc_reason_class, pqr.qc_reason_text, pq.products_quantity AS qc_qty, op.orders_products_id, opc.orders_products_customisations_id, op.products_id, op.products_name, op.vendors_product_price, op.products_quantity, op.vendors_id, oc.custom_type,
-		SUBSTRING_INDEX(
-			SUBSTRING_INDEX(op.products_stock_attributes, ',', 1),
-			'-' ,- 1 ) AS colour_id,
-		SUBSTRING_INDEX(
-			SUBSTRING_INDEX( op.products_stock_attributes, ',', 2),
-			'-' ,- 1) AS size_id,
-		(	SELECT group_concat(oc2.custom_type) AS cust_cnt
-			FROM orders_products_customisations AS opc2, orders_customisations AS oc2
-			WHERE opc2.orders_products_id = pq.orders_products_id
-				AND opc2.orders_id = oc2.order_id
-				AND opc2.customisation_id = oc2.customisation_id
-		) AS cust_apps_cnt,
-		(	SELECT GROUP_CONCAT(DISTINCT pe.equipment_shortname)
-			FROM clothes2_osC.production_staff_actions AS psa, clothes2_osC.production_action_equipment AS pae, clothes2_osC.production_equipment AS pe
-			WHERE psa.orders_id = oc.order_id
-				AND psa.custom_id = oc.custom_id
-				AND psa.actions_id = pae.actions_id
-				AND pae.equipment_id = pe.equipment_id
-			GROUP BY psa.custom_id,psa.orders_id
-		) AS equipment,
-		IF((SELECT COUNT(cn.custom_names_id)
-			FROM custom_names AS cn
-			WHERE cn.custom_products_id = op.products_id
-				AND cn.custom_products_colour = colour_id
-				AND cn.custom_products_size = size_id
-				AND cn.custom_order_id = pq.orders_id
-		) > 0, 1, 0) AS names_numbes,
-		IFNULL(
-			oc.assigned_artworker,
-			(	SELECT DISTINCT cn.assigned_artworker
-				FROM custom_names AS cn
-				WHERE cn.custom_products_id = op.products_id
-					AND cn.custom_products_colour = colour_id
-					AND cn.custom_products_size = size_id
-					AND cn.custom_order_id = pq.orders_id
-			)
-		) AS assigned_artworker,
-		pq.operator_id
-		FROM production_qc AS pq
-		LEFT JOIN orders_products AS op ON ( pq.orders_id = op.orders_id AND pq.orders_products_id = op.orders_products_id )
-		LEFT JOIN orders_products_customisations AS opc ON ( pq.orders_id = opc.orders_id AND pq.orders_products_customisations_id = opc.orders_products_customisations_id )
-		LEFT JOIN orders_customisations AS oc ON ( pq.orders_id = oc.order_id AND pq.custom_id = oc.custom_id)
-		LEFT JOIN production_qc_reasons AS pqr ON (pq.issue_id = pqr.qc_reason_id)
-		WHERE pq.date_created BETWEEN now() AND date_sub(now(), interval 5 day)
-            AND pq.deleted_at = '0000-00-00 00:00:00';
-;-- -. . -..- - / . -. - .-. -.--
-SELECT  pq.orders_id, pq.staff_id, pq.date_created, pqr.garment_reorder, pq.qc_group_id, pq.location_reported, pqr.qc_reason_class, pqr.qc_reason_text, pq.products_quantity AS qc_qty, op.orders_products_id, opc.orders_products_customisations_id, op.products_id, op.products_name, op.vendors_product_price, op.products_quantity, op.vendors_id, oc.custom_type,
-		SUBSTRING_INDEX(
-			SUBSTRING_INDEX(op.products_stock_attributes, ',', 1),
-			'-' ,- 1 ) AS colour_id,
-		SUBSTRING_INDEX(
-			SUBSTRING_INDEX( op.products_stock_attributes, ',', 2),
-			'-' ,- 1) AS size_id,
-		(	SELECT group_concat(oc2.custom_type) AS cust_cnt
-			FROM orders_products_customisations AS opc2, orders_customisations AS oc2
-			WHERE opc2.orders_products_id = pq.orders_products_id
-				AND opc2.orders_id = oc2.order_id
-				AND opc2.customisation_id = oc2.customisation_id
-		) AS cust_apps_cnt,
-		(	SELECT GROUP_CONCAT(DISTINCT pe.equipment_shortname)
-			FROM clothes2_osC.production_staff_actions AS psa, clothes2_osC.production_action_equipment AS pae, clothes2_osC.production_equipment AS pe
-			WHERE psa.orders_id = oc.order_id
-				AND psa.custom_id = oc.custom_id
-				AND psa.actions_id = pae.actions_id
-				AND pae.equipment_id = pe.equipment_id
-			GROUP BY psa.custom_id,psa.orders_id
-		) AS equipment,
-		IF((SELECT COUNT(cn.custom_names_id)
-			FROM custom_names AS cn
-			WHERE cn.custom_products_id = op.products_id
-				AND cn.custom_products_colour = colour_id
-				AND cn.custom_products_size = size_id
-				AND cn.custom_order_id = pq.orders_id
-		) > 0, 1, 0) AS names_numbes,
-		IFNULL(
-			oc.assigned_artworker,
-			(	SELECT DISTINCT cn.assigned_artworker
-				FROM custom_names AS cn
-				WHERE cn.custom_products_id = op.products_id
-					AND cn.custom_products_colour = colour_id
-					AND cn.custom_products_size = size_id
-					AND cn.custom_order_id = pq.orders_id
-			)
-		) AS assigned_artworker,
-		pq.operator_id
-		FROM production_qc AS pq
-		LEFT JOIN orders_products AS op ON ( pq.orders_id = op.orders_id AND pq.orders_products_id = op.orders_products_id )
-		LEFT JOIN orders_products_customisations AS opc ON ( pq.orders_id = opc.orders_id AND pq.orders_products_customisations_id = opc.orders_products_customisations_id )
-		LEFT JOIN orders_customisations AS oc ON ( pq.orders_id = oc.order_id AND pq.custom_id = oc.custom_id)
-		LEFT JOIN production_qc_reasons AS pqr ON (pq.issue_id = pqr.qc_reason_id)
-		WHERE  pq.deleted_at = '0000-00-00 00:00:00'
-        and custom_type = 'emb_creativeb';
-;-- -. . -..- - / . -. - .-. -.--
-SELECT  pq.orders_id, pq.staff_id, pq.date_created, pqr.garment_reorder, pq.qc_group_id, pq.location_reported, pqr.qc_reason_class, pqr.qc_reason_text, pq.products_quantity AS qc_qty, op.orders_products_id, opc.orders_products_customisations_id, op.products_id, op.products_name, op.vendors_product_price, op.products_quantity, op.vendors_id, oc.custom_type,
-		SUBSTRING_INDEX(
-			SUBSTRING_INDEX(op.products_stock_attributes, ',', 1),
-			'-' ,- 1 ) AS colour_id,
-		SUBSTRING_INDEX(
-			SUBSTRING_INDEX( op.products_stock_attributes, ',', 2),
-			'-' ,- 1) AS size_id,
-		(	SELECT group_concat(oc2.custom_type) AS cust_cnt
-			FROM orders_products_customisations AS opc2, orders_customisations AS oc2
-			WHERE opc2.orders_products_id = pq.orders_products_id
-				AND opc2.orders_id = oc2.order_id
-				AND opc2.customisation_id = oc2.customisation_id
-		) AS cust_apps_cnt,
-		(	SELECT GROUP_CONCAT(DISTINCT pe.equipment_shortname)
-			FROM clothes2_osC.production_staff_actions AS psa, clothes2_osC.production_action_equipment AS pae, clothes2_osC.production_equipment AS pe
-			WHERE psa.orders_id = oc.order_id
-				AND psa.custom_id = oc.custom_id
-				AND psa.actions_id = pae.actions_id
-				AND pae.equipment_id = pe.equipment_id
-			GROUP BY psa.custom_id,psa.orders_id
-		) AS equipment,
-		IF((SELECT COUNT(cn.custom_names_id)
-			FROM custom_names AS cn
-			WHERE cn.custom_products_id = op.products_id
-				AND cn.custom_products_colour = colour_id
-				AND cn.custom_products_size = size_id
-				AND cn.custom_order_id = pq.orders_id
-		) > 0, 1, 0) AS names_numbes,
-		IFNULL(
-			oc.assigned_artworker,
-			(	SELECT DISTINCT cn.assigned_artworker
-				FROM custom_names AS cn
-				WHERE cn.custom_products_id = op.products_id
-					AND cn.custom_products_colour = colour_id
-					AND cn.custom_products_size = size_id
-					AND cn.custom_order_id = pq.orders_id
-			)
-		) AS assigned_artworker,
-		pq.operator_id
-		FROM production_qc AS pq
-		LEFT JOIN orders_products AS op ON ( pq.orders_id = op.orders_id AND pq.orders_products_id = op.orders_products_id )
-		LEFT JOIN orders_products_customisations AS opc ON ( pq.orders_id = opc.orders_id AND pq.orders_products_customisations_id = opc.orders_products_customisations_id )
-		LEFT JOIN orders_customisations AS oc ON ( pq.orders_id = oc.order_id AND pq.custom_id = oc.custom_id)
-		LEFT JOIN production_qc_reasons AS pqr ON (pq.issue_id = pqr.qc_reason_id)
-		WHERE  pq.deleted_at = '0000-00-00 00:00:00'
-        and custom_type = '';
-;-- -. . -..- - / . -. - .-. -.--
-SELECT  pq.orders_id, pq.staff_id, pq.date_created, pqr.garment_reorder, pq.qc_group_id, pq.location_reported, pqr.qc_reason_class, pqr.qc_reason_text, pq.products_quantity AS qc_qty, op.orders_products_id, opc.orders_products_customisations_id, op.products_id, op.products_name, op.vendors_product_price, op.products_quantity, op.vendors_id, oc.custom_type,
-		SUBSTRING_INDEX(
-			SUBSTRING_INDEX(op.products_stock_attributes, ',', 1),
-			'-' ,- 1 ) AS colour_id,
-		SUBSTRING_INDEX(
-			SUBSTRING_INDEX( op.products_stock_attributes, ',', 2),
-			'-' ,- 1) AS size_id,
-		(	SELECT group_concat(oc2.custom_type) AS cust_cnt
-			FROM orders_products_customisations AS opc2, orders_customisations AS oc2
-			WHERE opc2.orders_products_id = pq.orders_products_id
-				AND opc2.orders_id = oc2.order_id
-				AND opc2.customisation_id = oc2.customisation_id
-		) AS cust_apps_cnt,
-		(	SELECT GROUP_CONCAT(DISTINCT pe.equipment_shortname)
-			FROM clothes2_osC.production_staff_actions AS psa, clothes2_osC.production_action_equipment AS pae, clothes2_osC.production_equipment AS pe
-			WHERE psa.orders_id = oc.order_id
-				AND psa.custom_id = oc.custom_id
-				AND psa.actions_id = pae.actions_id
-				AND pae.equipment_id = pe.equipment_id
-			GROUP BY psa.custom_id,psa.orders_id
-		) AS equipment,
-		IF((SELECT COUNT(cn.custom_names_id)
-			FROM custom_names AS cn
-			WHERE cn.custom_products_id = op.products_id
-				AND cn.custom_products_colour = colour_id
-				AND cn.custom_products_size = size_id
-				AND cn.custom_order_id = pq.orders_id
-		) > 0, 1, 0) AS names_numbes,
-		IFNULL(
-			oc.assigned_artworker,
-			(	SELECT DISTINCT cn.assigned_artworker
-				FROM custom_names AS cn
-				WHERE cn.custom_products_id = op.products_id
-					AND cn.custom_products_colour = colour_id
-					AND cn.custom_products_size = size_id
-					AND cn.custom_order_id = pq.orders_id
-			)
-		) AS assigned_artworker,
-		pq.operator_id
-		FROM production_qc AS pq
-		LEFT JOIN orders_products AS op ON ( pq.orders_id = op.orders_id AND pq.orders_products_id = op.orders_products_id )
-		LEFT JOIN orders_products_customisations AS opc ON ( pq.orders_id = opc.orders_id AND pq.orders_products_customisations_id = opc.orders_products_customisations_id )
-		LEFT JOIN orders_customisations AS oc ON ( pq.orders_id = oc.order_id AND pq.custom_id = oc.custom_id)
-		LEFT JOIN production_qc_reasons AS pqr ON (pq.issue_id = pqr.qc_reason_id)
-		WHERE  pq.deleted_at = '0000-00-00 00:00:00';
-;-- -. . -..- - / . -. - .-. -.--
-SELECT  pq.orders_id, pq.staff_id, pq.date_created, pqr.garment_reorder, pq.qc_group_id, pq.location_reported, pqr.qc_reason_class, pqr.qc_reason_text, pq.products_quantity AS qc_qty, op.orders_products_id, opc.orders_products_customisations_id, op.products_id, op.products_name, op.vendors_product_price, op.products_quantity, op.vendors_id, oc.custom_type,
-		SUBSTRING_INDEX(
-			SUBSTRING_INDEX(op.products_stock_attributes, ',', 1),
-			'-' ,- 1 ) AS colour_id,
-		SUBSTRING_INDEX(
-			SUBSTRING_INDEX( op.products_stock_attributes, ',', 2),
-			'-' ,- 1) AS size_id,
-		(	SELECT group_concat(oc2.custom_type) AS cust_cnt
-			FROM orders_products_customisations AS opc2, orders_customisations AS oc2
-			WHERE opc2.orders_products_id = pq.orders_products_id
-				AND opc2.orders_id = oc2.order_id
-				AND opc2.customisation_id = oc2.customisation_id
-		) AS cust_apps_cnt,
-		(	SELECT GROUP_CONCAT(DISTINCT pe.equipment_shortname)
-			FROM clothes2_osC.production_staff_actions AS psa, clothes2_osC.production_action_equipment AS pae, clothes2_osC.production_equipment AS pe
-			WHERE psa.orders_id = oc.order_id
-				AND psa.custom_id = oc.custom_id
-				AND psa.actions_id = pae.actions_id
-				AND pae.equipment_id = pe.equipment_id
-			GROUP BY psa.custom_id,psa.orders_id
-		) AS equipment,
-		IF((SELECT COUNT(cn.custom_names_id)
-			FROM custom_names AS cn
-			WHERE cn.custom_products_id = op.products_id
-				AND cn.custom_products_colour = colour_id
-				AND cn.custom_products_size = size_id
-				AND cn.custom_order_id = pq.orders_id
-		) > 0, 1, 0) AS names_numbes,
-		IFNULL(
-			oc.assigned_artworker,
-			(	SELECT DISTINCT cn.assigned_artworker
-				FROM custom_names AS cn
-				WHERE cn.custom_products_id = op.products_id
-					AND cn.custom_products_colour = colour_id
-					AND cn.custom_products_size = size_id
-					AND cn.custom_order_id = pq.orders_id
-			)
-		) AS assigned_artworker,
-		pq.operator_id
-		FROM production_qc AS pq
-		LEFT JOIN orders_products AS op ON ( pq.orders_id = op.orders_id AND pq.orders_products_id = op.orders_products_id )
-		LEFT JOIN orders_products_customisations AS opc ON ( pq.orders_id = opc.orders_id AND pq.orders_products_customisations_id = opc.orders_products_customisations_id )
-		LEFT JOIN orders_customisations AS oc ON ( pq.orders_id = oc.order_id AND pq.custom_id = oc.custom_id)
-		LEFT JOIN production_qc_reasons AS pqr ON (pq.issue_id = pqr.qc_reason_id)
-		WHERE  pq.deleted_at = '0000-00-00 00:00:00'
-order by orders_id desc;
-;-- -. . -..- - / . -. - .-. -.--
-select * from products_stock;
-;-- -. . -..- - / . -. - .-. -.--
-select * from customisations_positions;
-;-- -. . -..- - / . -. - .-. -.--
-select * from custom_positions;
-;-- -. . -..- - / . -. - .-. -.--
-select count(*) from customisation_files_perceptual_hashes;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT
-    o.customers_id, o.customers_name, o.customers_email_address,
-    o.orders_id,
-    COUNT(cf.perceptual_hash) AS files_on_order,
-	COUNT(DISTINCT cf.perceptual_hash) AS unique_files_on_order
-FROM customisation_files_perceptual_hashes as cf
-LEFT JOIN orders_customisations oc ON oc.customisation_id = cf.customisation_id
-LEFT JOIN orders o ON oc.order_id = o.orders_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and oc.customisation_id > 0
-
-  and cf.file_type > 1
-
-GROUP BY o.customers_name, o.orders_id
-HAVING unique_files_on_order <> files_on_order;
-;-- -. . -..- - / . -. - .-. -.--
-select count(*) from orders as o
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement';
-;-- -. . -..- - / . -. - .-. -.--
-select cf.id, cf.file_type, cf.perceptual_hash,
-    o.orders_id, o.orders_status, o.customers_name, o.customers_email_address,
-    oc.custom_type, oc.application_count, oc.primary_type
-from orders o
-     join orders_customisations oc on oc.order_id = o.orders_id
-     join customisation_files_perceptual_hashes cf on cf.customisation_id = oc.customisation_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-
-  and oc.customisation_id > 0
-
-and o.orders_id = 5013830
-
-  order by o.orders_id desc;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT
-    o.customers_id, o.customers_name, o.customers_email_address,
-    o.orders_id,
-    COUNT(cf.perceptual_hash) AS files_on_order,
-	COUNT(DISTINCT cf.perceptual_hash) AS unique_files_on_order
-FROM customisation_files_perceptual_hashes as cf
-LEFT JOIN orders_customisations oc ON oc.customisation_id = cf.customisation_id
-LEFT JOIN orders o ON oc.order_id = o.orders_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and oc.customisation_id > 0
-
-#   and cf.file_type > 1
-
-GROUP BY o.customers_name, o.orders_id
-HAVING unique_files_on_order <> files_on_order;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT
-    o.customers_id, o.customers_name, o.customers_email_address,
-    o.orders_id,
-    c.*,
-    COUNT(cf.perceptual_hash) AS files_on_order,
-	COUNT(DISTINCT cf.perceptual_hash) AS unique_files_on_order
-FROM customisation_files_perceptual_hashes as cf
-LEFT JOIN orders_customisations oc ON oc.customisation_id = cf.customisation_id
-LEFT JOIN customisations c on oc.customisation_id = c.customisation_id
-LEFT JOIN orders o ON oc.order_id = o.orders_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and oc.customisation_id > 0
-
-#   and cf.file_type > 1
-
-GROUP BY o.customers_name, o.orders_id
-HAVING unique_files_on_order <> files_on_order;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT
-    o.customers_id, o.customers_name, o.customers_email_address,
-    o.orders_id,
-    c.*,
-    COUNT(cf.perceptual_hash) AS files_on_order,
-	COUNT(DISTINCT cf.perceptual_hash) AS unique_files_on_order
-FROM customisation_files_perceptual_hashes as cf
-LEFT JOIN orders_customisations oc ON oc.customisation_id = cf.customisation_id
-LEFT JOIN customisations c on oc.customisation_id = c.customisation_id
-LEFT JOIN orders o ON oc.order_id = o.orders_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and oc.customisation_id > 0
-
-#   and cf.file_type > 1
-
-GROUP BY o.customers_name, o.orders_id, c.customisation_logo
-HAVING unique_files_on_order <> files_on_order;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT
-    o.customers_id, o.customers_name, o.customers_email_address,
-    o.orders_id,
-    c.*,
-    COUNT(cf.perceptual_hash) AS files_on_order,
-	COUNT(DISTINCT cf.perceptual_hash) AS unique_files_on_order
-FROM customisation_files_perceptual_hashes as cf
-LEFT JOIN orders_customisations oc ON oc.customisation_id = cf.customisation_id
-LEFT JOIN customisations c on oc.customisation_id = c.customisation_id
-LEFT JOIN orders o ON oc.order_id = o.orders_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and oc.customisation_id > 0
-
-#   and cf.file_type > 1
-
-GROUP BY o.customers_name, o.orders_id, c.customisation_logo, c.customisation_width
-HAVING unique_files_on_order <> files_on_order;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT
-    o.customers_id, o.customers_name, o.customers_email_address,
-    o.orders_id,
-    c.*,
-    COUNT(cf.perceptual_hash) AS files_on_order,
-	COUNT(DISTINCT cf.perceptual_hash) AS unique_files_on_order
-FROM customisation_files_perceptual_hashes as cf
-LEFT JOIN orders_customisations oc ON oc.customisation_id = cf.customisation_id
-LEFT JOIN customisations c on oc.customisation_id = c.customisation_id
-LEFT JOIN orders o ON oc.order_id = o.orders_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and oc.customisation_id > 0
-
-#   and cf.file_type > 1
-
-GROUP BY o.customers_name, o.orders_id, c.customisation_logo, c.customisation_width
-HAVING unique_files_on_order <> files_on_order and c.customisation_width = c.customisation_width;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT
-    o.customers_id, o.customers_name, o.customers_email_address,
-    o.orders_id,
-    c.*,
-    COUNT(cf.perceptual_hash) AS files_on_order,
-	COUNT(DISTINCT cf.perceptual_hash) AS unique_files_on_order
-FROM customisation_files_perceptual_hashes as cf
-LEFT JOIN orders_customisations oc ON oc.customisation_id = cf.customisation_id
-LEFT JOIN customisations c on oc.customisation_id = c.customisation_id
-LEFT JOIN orders o ON oc.order_id = o.orders_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and oc.customisation_id > 0
-
-#   and cf.file_type > 1
-
-GROUP BY o.customers_name, o.orders_id, c.customisation_width
-HAVING unique_files_on_order <> files_on_order and c.customisation_width = c.customisation_width;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT
-    o.customers_id, o.customers_name, o.customers_email_address,
-    o.orders_id,
-    c.*,
-    COUNT(cf.perceptual_hash) AS files_on_order,
-	COUNT(DISTINCT cf.perceptual_hash) AS unique_files_on_order
-FROM customisation_files_perceptual_hashes as cf
-LEFT JOIN orders_customisations oc ON oc.customisation_id = cf.customisation_id
-LEFT JOIN customisations c on oc.customisation_id = c.customisation_id
-LEFT JOIN orders o ON oc.order_id = o.orders_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and oc.customisation_id > 0
-
-#   and cf.file_type > 1
-
-GROUP BY o.customers_name, o.orders_id, c.customisation_logo, c.customisation_width
-HAVING unique_files_on_order <> files_on_order and c.customisation_width = c.customisation_width and c.customisation_logo <> c.customisation_logo;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT
-    o.customers_id, o.customers_name, o.customers_email_address,
-    o.orders_id,
-    c.*,
-    COUNT(cf.file_type),
-    COUNT(cf.perceptual_hash) AS files_on_order,
-	COUNT(DISTINCT cf.perceptual_hash) AS unique_files_on_order
-FROM customisation_files_perceptual_hashes as cf
-LEFT JOIN orders_customisations oc ON oc.customisation_id = cf.customisation_id
-LEFT JOIN customisations c on oc.customisation_id = c.customisation_id
-LEFT JOIN orders o ON oc.order_id = o.orders_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and oc.customisation_id > 0
-
-#   and cf.file_type > 1
-
-GROUP BY o.customers_name, o.orders_id, c.customisation_logo, c.customisation_width
-HAVING unique_files_on_order <> files_on_order and c.customisation_width = c.customisation_width;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT
-    o.customers_id, o.customers_name, o.customers_email_address,
-    o.orders_id,
-    COUNT(cf.file_type),
-    COUNT(cf.perceptual_hash) AS files_on_order,
-	COUNT(DISTINCT cf.perceptual_hash) AS unique_files_on_order
-FROM customisation_files_perceptual_hashes as cf
-LEFT JOIN orders_customisations oc ON oc.customisation_id = cf.customisation_id
-LEFT JOIN customisations c on oc.customisation_id = c.customisation_id
-LEFT JOIN orders o ON oc.order_id = o.orders_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and oc.customisation_id > 0
-
-#   and cf.file_type > 1
-
-GROUP BY o.customers_name, o.orders_id, c.customisation_logo, c.customisation_width
-HAVING unique_files_on_order <> files_on_order and c.customisation_width = c.customisation_width;
-;-- -. . -..- - / . -. - .-. -.--
-select cf.id, cf.file_type, cf.perceptual_hash,
-    o.orders_id, o.orders_status, o.customers_name, o.customers_email_address,
-    oc.custom_type, oc.application_count, oc.primary_type
-from orders o
-     join orders_customisations oc on oc.order_id = o.orders_id
-     join customisation_files_perceptual_hashes cf on cf.customisation_id = oc.customisation_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-
-  and oc.customisation_id > 0
-
-and o.orders_id = 4528494
-
-  order by o.orders_id desc;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT
-    o.customers_id, o.customers_name, o.customers_email_address,
-    o.orders_id,
-    COUNT(cf.file_type),
-    COUNT(cf.perceptual_hash) AS files_on_order,
-	COUNT(DISTINCT cf.perceptual_hash) AS unique_files_on_order
-FROM customisation_files_perceptual_hashes as cf
-LEFT JOIN orders_customisations oc ON oc.customisation_id = cf.customisation_id
-LEFT JOIN customisations c on oc.customisation_id = c.customisation_id
-LEFT JOIN orders o ON oc.order_id = o.orders_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and oc.customisation_id > 0
-  and cf.perceptual_hash > ''
-
-#   and cf.file_type > 1
-
-GROUP BY o.customers_name, o.orders_id, c.customisation_logo, c.customisation_width
-HAVING unique_files_on_order <> files_on_order and c.customisation_width = c.customisation_width;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT
-    o.customers_id, o.customers_name, o.customers_email_address,
-    o.orders_id,
-    COUNT(distinct cf.file_type),
-    COUNT(cf.perceptual_hash) AS files_on_order,
-	COUNT(DISTINCT cf.perceptual_hash) AS unique_files_on_order
-FROM customisation_files_perceptual_hashes as cf
-LEFT JOIN orders_customisations oc ON oc.customisation_id = cf.customisation_id
-LEFT JOIN customisations c on oc.customisation_id = c.customisation_id
-LEFT JOIN orders o ON oc.order_id = o.orders_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and oc.customisation_id > 0
-  and cf.perceptual_hash > ''
-
-#   and cf.file_type > 1
-
-GROUP BY o.customers_name, o.orders_id, c.customisation_logo, c.customisation_width
-HAVING unique_files_on_order <> files_on_order and c.customisation_width = c.customisation_width;
-;-- -. . -..- - / . -. - .-. -.--
-select cf.id, cf.file_type, cf.perceptual_hash,
-    o.orders_id, o.orders_status, o.customers_name, o.customers_email_address,
-    oc.custom_type, oc.application_count, oc.primary_type
-from orders o
-     join orders_customisations oc on oc.order_id = o.orders_id
-     join customisation_files_perceptual_hashes cf on cf.customisation_id = oc.customisation_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and cf.perceptual_hash > ''
-
-  and oc.customisation_id > 0
-
-and o.orders_id = 4528494
-
-  order by o.orders_id desc;
-;-- -. . -..- - / . -. - .-. -.--
-select cf.id, cf.file_type, cf.perceptual_hash,
-    o.orders_id, o.orders_status, o.customers_name, o.customers_email_address,
-    oc.custom_type, oc.application_count, oc.primary_type,
-    c.customisation_width
-from orders o
-     join orders_customisations oc on oc.order_id = o.orders_id
-     join customisations c on oc.customisation_id = c.customisation_id
-     join customisation_files_perceptual_hashes cf on cf.customisation_id = oc.customisation_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and cf.perceptual_hash > ''
-
-  and oc.customisation_id > 0
-
-and o.orders_id = 4528494
-
-  order by o.orders_id desc;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT
-    o.customers_id, o.customers_name, o.customers_email_address,
-    o.orders_id,
-    COUNT(distinct cf.file_type),
-    COUNT(cf.perceptual_hash) AS files_on_order,
-	COUNT(DISTINCT cf.perceptual_hash) AS unique_files_on_order
-FROM customisation_files_perceptual_hashes as cf
-LEFT JOIN orders_customisations oc ON oc.customisation_id = cf.customisation_id
-LEFT JOIN customisations c on oc.customisation_id = c.customisation_id
-LEFT JOIN orders o ON oc.order_id = o.orders_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and oc.customisation_id > 0
-  and cf.perceptual_hash > ''
-
-  and cf.file_type > 1
-
-GROUP BY o.customers_name, o.orders_id, c.customisation_logo, c.customisation_width
-HAVING unique_files_on_order <> files_on_order and c.customisation_width = c.customisation_width;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT
-    o.customers_id, o.customers_name, o.customers_email_address,
-    o.orders_id,
-    COUNT(distinct cf.file_type) as file_types_count,
-    COUNT(cf.perceptual_hash) AS files_on_order,
-	COUNT(DISTINCT cf.perceptual_hash) AS unique_files_on_order
-FROM customisation_files_perceptual_hashes as cf
-LEFT JOIN orders_customisations oc ON oc.customisation_id = cf.customisation_id
-LEFT JOIN customisations c on oc.customisation_id = c.customisation_id
-LEFT JOIN orders o ON oc.order_id = o.orders_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and oc.customisation_id > 0
-  and cf.perceptual_hash > ''
-
-  and cf.file_type > 1
-
-GROUP BY o.customers_name, o.orders_id, c.customisation_logo, c.customisation_width
-HAVING unique_files_on_order <> files_on_order and c.customisation_width = c.customisation_width and files_on_order > file_types_count;
-;-- -. . -..- - / . -. - .-. -.--
-select cf.id, cf.file_type, cf.perceptual_hash,
-    o.orders_id, o.orders_status, o.customers_name, o.customers_email_address,
-    oc.custom_type, oc.application_count, oc.primary_type,
-from orders o
-     join orders_customisations oc on oc.order_id = o.orders_id
-     join customisations c on oc.customisation_id = c.customisation_id
-     join customisation_files_perceptual_hashes cf on cf.customisation_id = oc.customisation_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and cf.perceptual_hash > ''
-
-  and oc.customisation_id > 0
-
-and o.orders_id = 4735045
-
-  order by o.orders_id desc;
-;-- -. . -..- - / . -. - .-. -.--
-select cf.id, cf.file_type, cf.perceptual_hash,
-    o.orders_id, o.orders_status, o.customers_name, o.customers_email_address,
-    oc.custom_type, oc.application_count, oc.primary_type
-from orders o
-     join orders_customisations oc on oc.order_id = o.orders_id
-     join customisations c on oc.customisation_id = c.customisation_id
-     join customisation_files_perceptual_hashes cf on cf.customisation_id = oc.customisation_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and cf.perceptual_hash > ''
-
-  and oc.customisation_id > 0
-
-and o.orders_id = 4735045
-
-  order by o.orders_id desc;
-;-- -. . -..- - / . -. - .-. -.--
-select cf.id, cf.file_type, cf.perceptual_hash,
-    o.orders_id, o.orders_status, o.customers_name, o.customers_email_address,
-    oc.custom_type, oc.application_count, oc.primary_type
-from orders o
-     join orders_customisations oc on oc.order_id = o.orders_id
-     join customisation_files_perceptual_hashes cf on cf.customisation_id = oc.customisation_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and cf.perceptual_hash > ''
-
-  and oc.customisation_id > 0
-
-and o.orders_id = 4735045
-
-  order by o.orders_id desc;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT
-    o.customers_id, o.customers_name, o.customers_email_address,
-    o.orders_id,
-    COUNT(distinct cf.file_type) as file_types_count,
-    COUNT(cf.perceptual_hash) AS files_on_order,
-	COUNT(DISTINCT cf.perceptual_hash) AS unique_files_on_order
-FROM customisation_files_perceptual_hashes as cf
-LEFT JOIN orders_customisations oc ON oc.customisation_id = cf.customisation_id
-LEFT JOIN customisations c on oc.customisation_id = c.customisation_id
-LEFT JOIN orders o ON oc.order_id = o.orders_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and oc.customisation_id > 0
-  and cf.perceptual_hash > ''
-
-  and cf.file_type > 1
-
-GROUP BY o.customers_name, o.orders_id, c.customisation_logo, c.customisation_width
-HAVING unique_files_on_order < files_on_order and c.customisation_width = c.customisation_width and files_on_order > file_types_count;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT
-    o.customers_id, o.customers_name, o.customers_email_address,
-    o.orders_id,
-    COUNT(distinct cf.file_type) as file_types_count,
-    COUNT(cf.perceptual_hash) AS files_on_order,
-	COUNT(DISTINCT cf.perceptual_hash) AS unique_files_on_order
-FROM customisation_files_perceptual_hashes as cf
-LEFT JOIN orders_customisations oc ON oc.customisation_id = cf.customisation_id
-LEFT JOIN customisations c on oc.customisation_id = c.customisation_id
-LEFT JOIN orders o ON oc.order_id = o.orders_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and oc.customisation_id > 0
-  and cf.perceptual_hash > ''
-
-#   and cf.file_type > 1
-
-GROUP BY o.customers_name, o.orders_id, c.customisation_logo, c.customisation_width
-HAVING unique_files_on_order < files_on_order and c.customisation_width = c.customisation_width and files_on_order > file_types_count;
-;-- -. . -..- - / . -. - .-. -.--
-select cf.id, cf.file_type, cf.perceptual_hash,
-    o.orders_id, o.orders_status, o.customers_name, o.customers_email_address,
-    oc.custom_type, oc.application_count, oc.primary_type,
-    c.customisation_width
-from orders o
-     join orders_customisations oc on oc.order_id = o.orders_id
-     join customisations c on oc.customisation_id = c.customisation_id
-     join customisation_files_perceptual_hashes cf on cf.customisation_id = oc.customisation_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and cf.perceptual_hash > ''
-
-  and oc.customisation_id > 0
-
-and o.orders_id = 4735045
-
-  order by o.orders_id desc;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT
-    o.customers_id, o.customers_name, o.customers_email_address,
-    o.orders_id,
-    COUNT(distinct cf.file_type) as file_types_count,
-    COUNT(cf.perceptual_hash) AS possible_dup_files_on_order,
-	COUNT(DISTINCT cf.perceptual_hash) AS unique_files_on_order,
-	(COUNT(cf.perceptual_hash) - COUNT(DISTINCT cf.perceptual_hash)) AS duplicate_files_on_order
-FROM customisation_files_perceptual_hashes as cf
-LEFT JOIN orders_customisations oc ON oc.customisation_id = cf.customisation_id
-LEFT JOIN customisations c on oc.customisation_id = c.customisation_id
-LEFT JOIN orders o ON oc.order_id = o.orders_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and oc.customisation_id > 0
-  and cf.perceptual_hash > ''
-
-#   and cf.file_type > 1
-
-GROUP BY o.customers_name, o.orders_id, c.customisation_logo, c.customisation_width
-HAVING unique_files_on_order < files_on_order and c.customisation_width = c.customisation_width and files_on_order > file_types_count;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT
-    o.customers_id, o.customers_name, o.customers_email_address,
-    o.orders_id,
-    COUNT(distinct cf.file_type) as file_types_count,
-    COUNT(cf.perceptual_hash) AS possible_dup_files_on_order,
-	COUNT(DISTINCT cf.perceptual_hash) AS unique_files_on_order,
-	(COUNT(cf.perceptual_hash) - COUNT(DISTINCT cf.perceptual_hash)) AS duplicate_files_on_order
-FROM customisation_files_perceptual_hashes as cf
-LEFT JOIN orders_customisations oc ON oc.customisation_id = cf.customisation_id
-LEFT JOIN customisations c on oc.customisation_id = c.customisation_id
-LEFT JOIN orders o ON oc.order_id = o.orders_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and oc.customisation_id > 0
-  and cf.perceptual_hash > ''
-
-#   and cf.file_type > 1
-
-GROUP BY o.customers_name, o.orders_id, c.customisation_logo, c.customisation_width
-HAVING unique_files_on_order < possible_dup_files_on_order and c.customisation_width = c.customisation_width and files_on_order > file_types_count;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT
-    o.customers_id, o.customers_name, o.customers_email_address,
-    o.orders_id,
-    COUNT(distinct cf.file_type) as file_types_count,
-    COUNT(cf.perceptual_hash) AS possible_dup_files_on_order,
-	COUNT(DISTINCT cf.perceptual_hash) AS unique_files_on_order,
-	(COUNT(cf.perceptual_hash) - COUNT(DISTINCT cf.perceptual_hash)) AS duplicate_files_on_order
-FROM customisation_files_perceptual_hashes as cf
-LEFT JOIN orders_customisations oc ON oc.customisation_id = cf.customisation_id
-LEFT JOIN customisations c on oc.customisation_id = c.customisation_id
-LEFT JOIN orders o ON oc.order_id = o.orders_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and oc.customisation_id > 0
-  and cf.perceptual_hash > ''
-
-#   and cf.file_type > 1
-
-GROUP BY o.customers_name, o.orders_id, c.customisation_logo, c.customisation_width
-HAVING unique_files_on_order < possible_dup_files_on_order and c.customisation_width = c.customisation_width and possible_dup_files_on_order > file_types_count;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT
-    o.customers_id, o.customers_name, o.customers_email_address,
-    o.orders_id,
-    COUNT(distinct cf.file_type) as file_types_count,
-    COUNT(cf.perceptual_hash) AS possible_dup_files_on_order,
-	COUNT(DISTINCT cf.perceptual_hash) AS unique_files_on_order,
-	(COUNT(cf.perceptual_hash) - COUNT(DISTINCT cf.perceptual_hash)) AS duplicate_files_on_order
-FROM customisation_files_perceptual_hashes as cf
-LEFT JOIN orders_customisations oc ON oc.customisation_id = cf.customisation_id
-# LEFT JOIN customisations c on oc.customisation_id = c.customisation_id
-LEFT JOIN orders o ON oc.order_id = o.orders_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and oc.customisation_id > 0
-  and cf.perceptual_hash > ''
-
-#   and cf.file_type > 1
-
-GROUP BY o.customers_name, o.orders_id#, c.customisation_logo, c.customisation_width
-HAVING unique_files_on_order < possible_dup_files_on_order and possible_dup_files_on_order > file_types_count;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT
-    o.customers_id, o.customers_name, o.customers_email_address,
-    o.orders_id,
-    COUNT(distinct cf.file_type) as file_types_count,
-    COUNT(cf.perceptual_hash) AS possible_dup_files_on_order,
-	COUNT(DISTINCT cf.perceptual_hash) AS unique_files_on_order,
-	(COUNT(cf.perceptual_hash) - COUNT(DISTINCT cf.perceptual_hash)) AS duplicate_files_on_order
-FROM customisation_files_perceptual_hashes as cf
-LEFT JOIN orders_customisations oc ON oc.customisation_id = cf.customisation_id
-# LEFT JOIN customisations c on oc.customisation_id = c.customisation_id
-LEFT JOIN orders o ON oc.order_id = o.orders_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and oc.customisation_id > 0
-  and cf.perceptual_hash > ''
-
-#   and cf.file_type > 1
-
-GROUP BY o.customers_name, o.orders_id#, c.customisation_logo, c.customisation_width
-HAVING unique_files_on_order < possible_dup_files_on_order and possible_dup_files_on_order > file_types_count and unique_files_on_order > possible_dup_files_on_order;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT
-    o.customers_id, o.customers_name, o.customers_email_address,
-    o.orders_id,
-    COUNT(distinct cf.file_type) as file_types_count,
-    COUNT(cf.perceptual_hash) AS possible_dup_files_on_order,
-	COUNT(DISTINCT cf.perceptual_hash) AS unique_files_on_order,
-	(COUNT(cf.perceptual_hash) - COUNT(DISTINCT cf.perceptual_hash)) AS duplicate_files_on_order
-FROM customisation_files_perceptual_hashes as cf
-LEFT JOIN orders_customisations oc ON oc.customisation_id = cf.customisation_id
-# LEFT JOIN customisations c on oc.customisation_id = c.customisation_id
-LEFT JOIN orders o ON oc.order_id = o.orders_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and oc.customisation_id > 0
-  and cf.perceptual_hash > ''
-
-#   and cf.file_type > 1
-
-GROUP BY o.customers_name, o.orders_id#, c.customisation_logo, c.customisation_width
-HAVING unique_files_on_order < possible_dup_files_on_order and possible_dup_files_on_order > file_types_count and possible_dup_files_on_order > file_types_count;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT
-    o.customers_id, o.customers_name, o.customers_email_address,
-    o.orders_id,
-    COUNT(distinct cf.file_type) as file_types_count,
-    COUNT(cf.perceptual_hash) AS possible_dup_files_on_order,
-	COUNT(DISTINCT cf.perceptual_hash) AS unique_files_on_order,
-	(COUNT(cf.perceptual_hash) - COUNT(DISTINCT cf.perceptual_hash)) AS duplicate_files_on_order
-FROM customisation_files_perceptual_hashes as cf
-LEFT JOIN orders_customisations oc ON oc.customisation_id = cf.customisation_id
-# LEFT JOIN customisations c on oc.customisation_id = c.customisation_id
-LEFT JOIN orders o ON oc.order_id = o.orders_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and oc.customisation_id > 0
-  and cf.perceptual_hash > ''
-
-#   and cf.file_type > 1
-
-GROUP BY o.customers_name, o.orders_id#, c.customisation_logo, c.customisation_width
-HAVING unique_files_on_order < possible_dup_files_on_order and possible_dup_files_on_order > file_types_count and possible_dup_files_on_order > file_types_count and c.customisation_width = c.customisation_width;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT
-    o.customers_id, o.customers_name, o.customers_email_address,
-    o.orders_id,
-    COUNT(distinct cf.file_type) as file_types_count,
-    COUNT(cf.perceptual_hash) AS possible_dup_files_on_order,
-	COUNT(DISTINCT cf.perceptual_hash) AS unique_files_on_order,
-	(COUNT(cf.perceptual_hash) - COUNT(DISTINCT cf.perceptual_hash)) AS duplicate_files_on_order
-FROM customisation_files_perceptual_hashes as cf
-LEFT JOIN orders_customisations oc ON oc.customisation_id = cf.customisation_id
- LEFT JOIN customisations c on oc.customisation_id = c.customisation_id
-LEFT JOIN orders o ON oc.order_id = o.orders_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and oc.customisation_id > 0
-  and cf.perceptual_hash > ''
-
-#   and cf.file_type > 1
-
-GROUP BY o.customers_name, o.orders_id, c.customisation_logo, c.customisation_width
-HAVING unique_files_on_order < possible_dup_files_on_order and possible_dup_files_on_order > file_types_count and possible_dup_files_on_order > file_types_count;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT
-    o.customers_id, o.customers_name, o.customers_email_address,
-    o.orders_id,
-    COUNT(distinct cf.file_type) as file_types_count,
-    COUNT(cf.perceptual_hash) AS possible_dup_files_on_order,
-	COUNT(DISTINCT cf.perceptual_hash) AS unique_files_on_order,
-	(COUNT(cf.perceptual_hash) - COUNT(DISTINCT cf.perceptual_hash)) AS duplicate_files_on_order,
-    count(c.customisation_width)
-FROM customisation_files_perceptual_hashes as cf
-LEFT JOIN orders_customisations oc ON oc.customisation_id = cf.customisation_id
- LEFT JOIN customisations c on oc.customisation_id = c.customisation_id
-LEFT JOIN orders o ON oc.order_id = o.orders_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and oc.customisation_id > 0
-  and cf.perceptual_hash > ''
-
-#   and cf.file_type > 1
-
-GROUP BY o.customers_name, o.orders_id
-HAVING unique_files_on_order < possible_dup_files_on_order and possible_dup_files_on_order > file_types_count and possible_dup_files_on_order > file_types_count;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT
-    o.customers_id, o.customers_name, o.customers_email_address,
-    o.orders_id,
-    COUNT(distinct cf.file_type) as file_types_count,
-    COUNT(cf.perceptual_hash) AS possible_dup_files_on_order,
-	COUNT(DISTINCT cf.perceptual_hash) AS unique_files_on_order,
-	(COUNT(cf.perceptual_hash) - COUNT(DISTINCT cf.perceptual_hash)) AS duplicate_files_on_order,
-    count(c.customisation_width) as width_count,
-    count(distinct c.customisation_width) as unique_width_count
-FROM customisation_files_perceptual_hashes as cf
-LEFT JOIN orders_customisations oc ON oc.customisation_id = cf.customisation_id
-LEFT JOIN customisations c on oc.customisation_id = c.customisation_id
-LEFT JOIN orders o ON oc.order_id = o.orders_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and oc.customisation_id > 0
-  and cf.perceptual_hash > ''
-
-#   and cf.file_type > 1
-
-GROUP BY o.customers_name, o.orders_id
-HAVING unique_files_on_order < possible_dup_files_on_order and possible_dup_files_on_order > file_types_count and possible_dup_files_on_order > file_types_count;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT
-    o.customers_id, o.customers_name, o.customers_email_address,
-    o.orders_id,
-    COUNT(distinct cf.file_type) as file_types_count,
-    COUNT(cf.perceptual_hash) AS possible_dup_files_on_order,
-	COUNT(DISTINCT cf.perceptual_hash) AS unique_files_on_order,
-	(COUNT(cf.perceptual_hash) - COUNT(DISTINCT cf.perceptual_hash)) AS duplicate_files_on_order,
-    count(c.customisation_width) as width_count,
-    count(distinct c.customisation_width) as unique_width_count
-FROM customisation_files_perceptual_hashes as cf
-LEFT JOIN orders_customisations oc ON oc.customisation_id = cf.customisation_id
-LEFT JOIN customisations c on oc.customisation_id = c.customisation_id
-LEFT JOIN orders o ON oc.order_id = o.orders_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and oc.customisation_id > 0
-  and cf.perceptual_hash > ''
-
-#   and cf.file_type > 1
-
-GROUP BY o.customers_name, o.orders_id
-HAVING unique_files_on_order < possible_dup_files_on_order
-   and possible_dup_files_on_order > file_types_count
-   and possible_dup_files_on_order > file_types_count
-   and width_count > unique_width_count;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT
-    o.customers_id, o.customers_name, o.customers_email_address,
-    o.orders_id,
-    COUNT(distinct cf.file_type) as file_types_count,
-    COUNT(cf.perceptual_hash) AS possible_dup_files_on_order,
-	COUNT(DISTINCT cf.perceptual_hash) AS unique_files_on_order,
-	(COUNT(cf.perceptual_hash) - COUNT(DISTINCT cf.perceptual_hash)) AS duplicate_files_on_order,
-    count(c.customisation_width) as width_count,
-    count(distinct c.customisation_width) as unique_width_count
-FROM customisation_files_perceptual_hashes as cf
-LEFT JOIN orders_customisations oc ON oc.customisation_id = cf.customisation_id
-LEFT JOIN customisations c on oc.customisation_id = c.customisation_id
-LEFT JOIN orders o ON oc.order_id = o.orders_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and oc.customisation_id > 0
-  and cf.perceptual_hash > ''
-
-  and cf.file_type > 1
-
-GROUP BY o.customers_name, o.orders_id
-HAVING unique_files_on_order < possible_dup_files_on_order
-   and possible_dup_files_on_order > file_types_count
-   and possible_dup_files_on_order > file_types_count
-   and width_count > unique_width_count;
-;-- -. . -..- - / . -. - .-. -.--
-select cf.id, cf.file_type, cf.perceptual_hash,
-    o.orders_id, o.orders_status, o.customers_name, o.customers_email_address,
-    oc.custom_type, oc.application_count, oc.primary_type,
-    c.customisation_width
-from orders o
-     join orders_customisations oc on oc.order_id = o.orders_id
-     join customisations c on oc.customisation_id = c.customisation_id
-     join customisation_files_perceptual_hashes cf on cf.customisation_id = oc.customisation_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and oc.customisation_id > 0
-  and cf.perceptual_hash > ''
-
-  and cf.file_type > 1
-
-and o.orders_id = 4920422
-
-  order by o.orders_id desc;
-;-- -. . -..- - / . -. - .-. -.--
-SELECT
-    o.customers_id, o.customers_name, o.customers_email_address,
-    o.orders_id,
-    COUNT(distinct cf.file_type) as file_types_count,
-    COUNT(cf.perceptual_hash) AS possible_dup_files_on_order,
-	COUNT(DISTINCT cf.perceptual_hash) AS unique_files_on_order,
-	(COUNT(cf.perceptual_hash) - COUNT(DISTINCT cf.perceptual_hash)) AS duplicate_files_on_order,
-    count(c.customisation_width) as width_count,
-    count(distinct c.customisation_width) as unique_width_count
-FROM customisation_files_perceptual_hashes as cf
-LEFT JOIN orders_customisations oc ON oc.customisation_id = cf.customisation_id
-LEFT JOIN customisations c on oc.customisation_id = c.customisation_id
-LEFT JOIN orders o ON oc.order_id = o.orders_id
-where o.mobile_order = 0
-  and o.customers_id > 0
-  and o.staff_name = ''
-  and o.payment_method <> 'replacement'
-  and oc.customisation_id > 0
-  and cf.perceptual_hash > ''
-
-  and cf.file_type > 1
-
-GROUP BY o.customers_name, o.orders_id, oc.custom_type, c.customisation_width, cf.file_type
-
-HAVING unique_files_on_order < possible_dup_files_on_order
-   and possible_dup_files_on_order > file_types_count
-   and possible_dup_files_on_order > file_types_count
-   and width_count > unique_width_count;
-;-- -. . -..- - / . -. - .-. -.--
 SELECT
     o.customers_id, o.customers_name, o.customers_email_address,
     o.orders_id,
@@ -6007,8 +4227,6 @@ and c.customisation_width = "9"
 
   order by o.orders_id desc;
 ;-- -. . -..- - / . -. - .-. -.--
-select * from orders_status;
-;-- -. . -..- - / . -. - .-. -.--
 select * from orders
 where orders_status = 0;
 ;-- -. . -..- - / . -. - .-. -.--
@@ -6317,3 +4535,998 @@ from polo_customers pc
 join polo_address_book pab on pc.customers_id = pab.customers_id
 where pc.customers_default_address_id = ''
 group by pc.customers_id;
+;-- -. . -..- - / . -. - .-. -.--
+select * from staff_info where first_name like "%Joseph%";
+;-- -. . -..- - / . -. - .-. -.--
+select * from staff_info where last_name like "%homas%";
+;-- -. . -..- - / . -. - .-. -.--
+select * from staff_info where last_name like "%marsh%";
+;-- -. . -..- - / . -. - .-. -.--
+select * from staff_info where last_name like "%Rebecca%";
+;-- -. . -..- - / . -. - .-. -.--
+Thomas;
+;-- -. . -..- - / . -. - .-. -.--
+select * from staff_info where last_name like "%Thomas%";
+;-- -. . -..- - / . -. - .-. -.--
+select * from products;
+;-- -. . -..- - / . -. - .-. -.--
+desc products;
+;-- -. . -..- - / . -. - .-. -.--
+select * from products where products_id = 3245;
+;-- -. . -..- - / . -. - .-. -.--
+desc manufacturers;
+;-- -. . -..- - / . -. - .-. -.--
+select * from staff_info where first_name like "%Rebecca%";
+;-- -. . -..- - / . -. - .-. -.--
+select staff_id, concat_ws(" ", first_name, last_name) from staff_info where first_name like "%Rebecca%";
+;-- -. . -..- - / . -. - .-. -.--
+select staff_id, concat_ws(" ", first_name, last_name) as full_name from staff_info where first_name like "%Rebecca%";
+;-- -. . -..- - / . -. - .-. -.--
+select * from brands;
+;-- -. . -..- - / . -. - .-. -.--
+select * from vendors;
+;-- -. . -..- - / . -. - .-. -.--
+select * from manufacturers_info;
+;-- -. . -..- - / . -. - .-. -.--
+select * from manufacturers;
+;-- -. . -..- - / . -. - .-. -.--
+select * from logins_users;
+;-- -. . -..- - / . -. - .-. -.--
+select * from logins_users where fullname like "%Rachel%";
+;-- -. . -..- - / . -. - .-. -.--
+select * from logins_users where fullname like "%Rachael%";
+;-- -. . -..- - / . -. - .-. -.--
+select * from logins_users WHERE fullname != '' AND department = 1 and fullname like "%Rachael%";
+;-- -. . -..- - / . -. - .-. -.--
+select * from logins_users WHERE fullname != '' AND department = 1;
+;-- -. . -..- - / . -. - .-. -.--
+select * from staff_info where first_name like "Wilkinson";
+;-- -. . -..- - / . -. - .-. -.--
+select * from staff_info where first_name like "Rachel";
+;-- -. . -..- - / . -. - .-. -.--
+select * from orders where orders_id = 5187206;
+;-- -. . -..- - / . -. - .-. -.--
+select * from products where products_id = 58093;
+;-- -. . -..- - / . -. - .-. -.--
+SELECT customisation_id
+FROM customisations
+WHERE customer_id = '4785037'
+AND customisation_name = 'FrontTheodora (Print Logo)';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT * FROM ms_products_to_categories WHERE category_id = '28389' AND store_id = '19374';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT * FROM ms_products_to_categories WHERE categories_id = '28389' AND store_id = '19374';
+;-- -. . -..- - / . -. - .-. -.--
+desc ms_products_to_categories;
+;-- -. . -..- - / . -. - .-. -.--
+SELECT customisation_id
+FROM customisations
+WHERE customer_id = '4545785037'
+AND customisation_name = 'FrontTheodora (Print Logo)';
+;-- -. . -..- - / . -. - .-. -.--
+select * from cron_log;
+;-- -. . -..- - / . -. - .-. -.--
+select * from cron_log where cron_name = 'artwork_auto_assign';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT o.orders_id, o.shipping_type, o.grouped_orders, o.staff_name, c.account_manager
+            FROM orders o
+            LEFT JOIN customers c ON o.customers_id = c.customers_id
+            WHERE o.date_first_processing > DATE_SUB(now(), INTERVAL 2 HOUR)
+            AND o.orders_status IN (2, 12, 16)
+            GROUP BY o.orders_id;
+;-- -. . -..- - / . -. - .-. -.--
+SELECT GROUP_CONCAT(DISTINCT(custom_id)) AS oc_id
+                FROM orders_customisations
+                WHERE order_id = '5189215'
+                AND assigned_artworker = ''
+                HAVING oc_id IS NOT NULL;
+;-- -. . -..- - / . -. - .-. -.--
+SELECT GROUP_CONCAT(DISTINCT(custom_id)) AS oc_id
+                FROM orders_customisations
+                WHERE
+#                       order_id = '5189215'
+                assigned_artworker = ''
+                HAVING oc_id IS NOT NULL;
+;-- -. . -..- - / . -. - .-. -.--
+SELECT DISTINCT(orders_id) AS oc_id
+                FROM orders_customisations
+                WHERE
+#                       order_id = '5189215'
+                assigned_artworker = '';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT DISTINCT(order_id) AS oc_id
+                FROM orders_customisations
+                WHERE
+#                       order_id = '5189215'
+                assigned_artworker = '';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT DISTINCT(order_id), * AS oc_id
+                FROM orders_customisations
+                WHERE
+#                       order_id = '5189215'
+                assigned_artworker = '';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT DISTINCT(order_id), *
+                FROM orders_customisations
+                WHERE
+#                       order_id = '5189215'
+                assigned_artworker = '';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT DISTINCT(order_id), custom_type
+                FROM orders_customisations
+                WHERE
+#                       order_id = '5189215'
+                assigned_artworker = '';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT DISTINCT(order_id), custom_type, assigned_artworker, assigned_artworker_date
+                FROM orders_customisations
+                WHERE
+#                       order_id = '5189215'
+                assigned_artworker = '';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT assigned_artworker, assigned_artworker_date, custom_id, order_id, custom_type, application_count, primary_type
+                FROM orders_customisations
+                WHERE
+#                       order_id = '5189215'
+                assigned_artworker = '';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT assigned_artworker, assigned_artworker_date, order_id, custom_type
+                FROM orders_customisations
+                WHERE
+#                       order_id = '5189215'
+                assigned_artworker = '';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT DISTINCT(oc.order_id), oc.custom_type, oc.assigned_artworker, oc.assigned_artworker_date, o.date_purchased
+    FROM orders_customisations oc
+    JOIN orders o on oc.order_id = o.orders_id
+    WHERE o.date_purchased < date_sub(now(), INTERVAL 4 HOUR)
+    AND oc.assigned_artworker = '';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT DISTINCT(oc.order_id), oc.custom_type, oc.assigned_artworker, oc.assigned_artworker_date, o.date_purchased
+    FROM orders_customisations oc
+    JOIN orders o on oc.order_id = o.orders_id
+    WHERE o.date_purchased BETWEEN (date_sub(now(), INTERVAL 4 HOUR), date_sub(now(), INTERVAL 4 WEEK))
+    AND oc.assigned_artworker = '';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT DISTINCT(oc.order_id), oc.custom_type, oc.assigned_artworker, oc.assigned_artworker_date, o.date_purchased
+    FROM orders_customisations oc
+    JOIN orders o on oc.order_id = o.orders_id
+    WHERE o.date_purchased BETWEEN date_sub(now(), INTERVAL 4 HOUR) AND date_sub(now(), INTERVAL 4 WEEK)
+    AND oc.assigned_artworker = '';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT DISTINCT(oc.order_id), oc.custom_type, oc.assigned_artworker, oc.assigned_artworker_date, o.date_purchased
+    FROM orders_customisations oc
+    JOIN orders o on oc.order_id = o.orders_id
+    WHERE o.date_purchased BETWEEN date_sub(now(), INTERVAL 4 HOUR) AND date_sub(now(), INTERVAL 4 DAY)
+    AND oc.assigned_artworker = '';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT DISTINCT(oc.order_id), oc.custom_type, oc.assigned_artworker, oc.assigned_artworker_date, o.date_purchased
+    FROM orders_customisations oc
+    JOIN orders o on oc.order_id = o.orders_id
+    WHERE o.date_purchased < date_sub(now(), INTERVAL 4 HOUR)
+    AND o.date_purchased > date_sub(now(), INTERVAL 4 YEAR)
+    AND oc.assigned_artworker = '';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT DISTINCT(oc.order_id), oc.custom_type, oc.assigned_artworker, oc.assigned_artworker_date, o.date_purchased
+    FROM orders_customisations oc
+    JOIN orders o on oc.order_id = o.orders_id
+    WHERE o.date_purchased < date_sub(now(), INTERVAL 4 HOUR)
+    AND o.date_purchased > date_sub(now(), INTERVAL 4 MONTH)
+    AND oc.assigned_artworker = '';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT DISTINCT(oc.order_id), oc.custom_type, oc.assigned_artworker, oc.assigned_artworker_date, o.date_purchased
+    FROM orders_customisations oc
+    JOIN orders o on oc.order_id = o.orders_id
+    WHERE o.date_purchased < date_sub(now(), INTERVAL 4 HOUR)
+    AND o.date_purchased > date_sub(now(), INTERVAL 4 WEEK)
+    AND oc.assigned_artworker = '';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT DISTINCT(oc.order_id), oc.custom_type, oc.assigned_artworker, oc.assigned_artworker_date, o.date_purchased
+    FROM orders_customisations oc
+    JOIN orders o on oc.order_id = o.orders_id
+    WHERE o.date_purchased < date_sub(now(), INTERVAL 4 HOUR)
+    AND o.date_purchased > date_sub(now(), INTERVAL 4 DAY)
+    AND oc.assigned_artworker = '';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT DISTINCT(oc.order_id), oc.custom_type, oc.assigned_artworker, oc.assigned_artworker_date, o.date_purchased
+    FROM orders_customisations oc
+    JOIN orders o on oc.order_id = o.orders_id
+    WHERE o.date_purchased < date_sub(now(), INTERVAL 1 DAY)
+    AND o.date_purchased > date_sub(now(), INTERVAL 4 DAY)
+    AND oc.assigned_artworker = '';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT DISTINCT(oc.order_id), oc.custom_type, oc.assigned_artworker, oc.assigned_artworker_date, o.date_purchased
+    FROM orders_customisations oc
+    JOIN orders o on oc.order_id = o.orders_id
+    WHERE o.date_purchased < date_sub(now(), INTERVAL 1 DAY)
+    AND o.date_purchased > date_sub(now(), INTERVAL 4 DAY)
+    AND o.orders_status IN (2, 12)
+    AND oc.assigned_artworker = '';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT DISTINCT(oc.order_id), oc.custom_type, oc.assigned_artworker, oc.assigned_artworker_date, o.date_purchased
+    FROM orders_customisations oc
+    JOIN orders o on oc.order_id = o.orders_id
+    WHERE o.date_purchased < date_sub(now(), INTERVAL 1 DAY)
+    AND o.date_purchased > date_sub(now(), INTERVAL 4 DAY)
+    AND o.orders_status IN (2, 12, 16)
+    AND oc.assigned_artworker = '';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT DISTINCT(oc.order_id), oc.custom_type, oc.assigned_artworker, oc.assigned_artworker_date, o.date_purchased
+    FROM orders_customisations oc
+    JOIN orders o on oc.order_id = o.orders_id
+    WHERE o.date_purchased < date_sub(now(), INTERVAL 1 DAY)
+    AND o.date_purchased > date_sub(now(), INTERVAL 4 WEEK)
+    AND o.orders_status IN (2, 12, 16)
+    AND oc.assigned_artworker = '';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT DISTINCT(oc.order_id), oc.custom_type, oc.assigned_artworker, oc.assigned_artworker_date, o.date_purchased
+    FROM orders_customisations oc
+    JOIN orders o on oc.order_id = o.orders_id
+    WHERE o.date_purchased < date_sub(now(), INTERVAL 1 DAY)
+    AND o.date_purchased > date_sub(now(), INTERVAL 4 MONTH)
+    AND o.orders_status IN (2, 12, 16)
+    AND oc.assigned_artworker = '';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT DISTINCT(oc.order_id), oc.custom_type, oc.assigned_artworker, oc.assigned_artworker_date, o.date_purchased
+    FROM orders_customisations oc
+    JOIN orders o on oc.order_id = o.orders_id
+    WHERE o.date_purchased < date_sub(now(), INTERVAL 1 DAY)
+    AND o.date_purchased > date_sub(now(), INTERVAL 4 YEAR)
+    AND o.orders_status IN (2, 12, 16)
+    AND oc.assigned_artworker = '';
+;-- -. . -..- - / . -. - .-. -.--
+select * from orders_status;
+;-- -. . -..- - / . -. - .-. -.--
+SELECT DISTINCT(oc.order_id), oc.custom_type, oc.assigned_artworker, oc.assigned_artworker_date, o.date_purchased, o.orders_status
+    FROM orders_customisations oc
+    JOIN orders o on oc.order_id = o.orders_id
+    WHERE o.date_purchased < date_sub(now(), INTERVAL 1 DAY)
+    AND o.date_purchased > date_sub(now(), INTERVAL 4 YEAR)
+    AND o.orders_status IN (2, 12, 16)
+    AND oc.assigned_artworker = '';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT DISTINCT(oc.order_id), oc.custom_type, oc.assigned_artworker, oc.assigned_artworker_date, o.date_purchased, o.orders_status
+    FROM orders_customisations oc
+    JOIN orders o on oc.order_id = o.orders_id
+    WHERE o.date_purchased < date_sub(now(), INTERVAL 4 HOUR)
+    AND o.date_purchased > date_sub(now(), INTERVAL 4 YEAR)
+    AND o.orders_status IN (2, 12, 16)
+    AND oc.assigned_artworker = '';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT DISTINCT(oc.order_id), oc.custom_type, oc.assigned_artworker, oc.assigned_artworker_date, o.date_purchased, o.orders_status
+    FROM orders_customisations oc
+    JOIN orders o on oc.order_id = o.orders_id
+    WHERE o.date_purchased < date_sub(now(), INTERVAL 1 HOUR)
+    AND o.date_purchased > date_sub(now(), INTERVAL 4 YEAR)
+    AND o.orders_status IN (2, 12, 16)
+    AND oc.assigned_artworker = '';
+;-- -. . -..- - / . -. - .-. -.--
+select distinct subject from tep_mail_sent;
+;-- -. . -..- - / . -. - .-. -.--
+select * from tep_mail_sent;
+;-- -. . -..- - / . -. - .-. -.--
+select * from integrity_check_notification;
+;-- -. . -..- - / . -. - .-. -.--
+select * from integrity_check_notification where check_id in (4, 24);
+;-- -. . -..- - / . -. - .-. -.--
+select * from integrity_check_notification where check_id in (4, 24) and active = 1;
+;-- -. . -..- - / . -. - .-. -.--
+select * from integrity_check_notification icn
+join staff_info si on icn.staff_id = si.staff_id
+where check_id in (4, 24) and active = 0;
+;-- -. . -..- - / . -. - .-. -.--
+desc integrity_check_notification;
+;-- -. . -..- - / . -. - .-. -.--
+select * from staff_info where first_name like "Maria";
+;-- -. . -..- - / . -. - .-. -.--
+select * from staff_info where first_name like "Jonathan";
+;-- -. . -..- - / . -. - .-. -.--
+select si.quayside_email from integrity_check_notification icn
+join staff_info si on icn.staff_id = si.staff_id
+where check_id in (4, 24) and active = 1;
+;-- -. . -..- - / . -. - .-. -.--
+select distinct si.quayside_email from integrity_check_notification icn
+join staff_info si on icn.staff_id = si.staff_id
+where check_id in (4, 24) and active = 1;
+;-- -. . -..- - / . -. - .-. -.--
+select * from integrity_check_result where check_id in (4, 24);
+;-- -. . -..- - / . -. - .-. -.--
+select * from integrity_check_result where check_id in (4, 24) order by date desc;
+;-- -. . -..- - / . -. - .-. -.--
+select * from integrity_check_result
+where check_id in (4, 24)
+and details like "%5184110%"
+order by date desc;
+;-- -. . -..- - / . -. - .-. -.--
+select * from integrity_check_result
+where check_id in (4, 24)
+and actual_value > 0
+# and details like "%5184110%"
+order by date desc;
+;-- -. . -..- - / . -. - .-. -.--
+select * from clothes2_osC.orders where orders_id = 5184110;
+;-- -. . -..- - / . -. - .-. -.--
+select date_purchased from clothes2_osC.orders where orders_id = 5184110;
+;-- -. . -..- - / . -. - .-. -.--
+select * from integrity_check_result
+where check_id in (4, 24)
+and actual_value > 0
+and date > '2020-02-16 11:20:00'
+and date < '2020-02-26 11:20:00'
+# and details like "%5184110%"
+order by date desc;
+;-- -. . -..- - / . -. - .-. -.--
+select * from integrity_check_result
+# where check_id in (4, 24)
+where check_id in (24)
+and actual_value > 0
+and date > '2020-02-16 11:20:00'
+and date < '2020-02-26 11:20:00'
+# and details like "%5184110%"
+order by date desc;
+;-- -. . -..- - / . -. - .-. -.--
+SELECT o.orders_id, o.date_first_processing, o.shipping_type
+    FROM orders o, orders_customisations oc
+    WHERE o.date_first_processing BETWEEN DATE_SUB(now(), INTERVAL 7 DAY) AND DATE_SUB(now(), INTERVAL 3 HOUR)
+    AND o.orders_status = 2
+    AND oc.order_id = o.orders_id
+    AND oc.assigned_artworker_date = '0000-00-00 00:00:00';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT o.orders_id, o.date_first_processing, o.shipping_type
+    FROM orders o, orders_customisations oc
+    WHERE o.date_first_processing BETWEEN DATE_SUB(now(), INTERVAL 7 DAY) AND DATE_SUB(now(), INTERVAL 1 MINUTE)
+    AND o.orders_status = 2
+    AND oc.order_id = o.orders_id
+    AND oc.assigned_artworker = '';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT o.orders_id, o.date_first_processing, o.shipping_type
+    FROM orders o, orders_customisations oc
+    WHERE o.date_first_processing BETWEEN DATE_SUB(now(), INTERVAL 7 DAY) AND DATE_SUB(now(), INTERVAL 3 HOUR)
+    AND o.orders_status = 2
+    AND oc.order_id = o.orders_id
+    AND oc.assigned_artworker = '';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT o.orders_id, o.date_first_processing, o.shipping_type
+    FROM orders o, orders_customisations oc
+    WHERE o.date_first_processing BETWEEN DATE_SUB(now(), INTERVAL 7 DAY) AND DATE_SUB(now(), INTERVAL 3 HOUR)
+    AND o.orders_status = 2
+    AND oc.order_id = o.orders_id;
+;-- -. . -..- - / . -. - .-. -.--
+SELECT o.orders_id, o.date_first_processing, o.shipping_type
+    FROM orders o, orders_customisations oc
+    WHERE o.date_first_processing BETWEEN DATE_SUB(now(), INTERVAL 7 DAY) AND DATE_SUB(now(), INTERVAL 3 HOUR)
+    AND o.orders_status = 2
+    AND oc.order_id = o.orders_id
+    AND o.orders_id =     5184110;
+;-- -. . -..- - / . -. - .-. -.--
+SELECT o.orders_id, o.date_first_processing, o.shipping_type, oc.assigned_artworker
+    FROM orders o, orders_customisations oc
+    WHERE o.date_first_processing BETWEEN DATE_SUB(now(), INTERVAL 7 DAY) AND DATE_SUB(now(), INTERVAL 3 HOUR)
+    AND o.orders_status = 2
+    AND oc.order_id = o.orders_id
+    AND o.orders_id =     5184110;
+;-- -. . -..- - / . -. - .-. -.--
+SELECT o.orders_id, o.date_first_processing, o.shipping_type, oc.assigned_artworker
+    FROM orders o, orders_customisations oc
+    WHERE o.date_first_processing BETWEEN DATE_SUB(now(), INTERVAL 7 WEEK) AND DATE_SUB(now(), INTERVAL 3 HOUR)
+    AND o.orders_status = 2
+    AND oc.order_id = o.orders_id
+    AND o.orders_id =     5184110;
+;-- -. . -..- - / . -. - .-. -.--
+SELECT o.orders_id, o.date_first_processing, o.shipping_type, oc.assigned_artworker
+    FROM orders o, orders_customisations oc
+    WHERE o.date_first_processing BETWEEN DATE_SUB(now(), INTERVAL 7 WEEK) AND DATE_SUB(now(), INTERVAL 3 HOUR)
+    AND o.orders_status = 2
+    AND oc.order_id = o.orders_id
+#     AND o.orders_id =     5184110
+    AND oc.assigned_artworker = '';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT o.orders_id, o.date_first_processing, o.shipping_type, oc.assigned_artworker
+    FROM orders o, orders_customisations oc
+    WHERE o.date_first_processing BETWEEN DATE_SUB(now(), INTERVAL 7 WEEK) AND DATE_SUB(now(), INTERVAL 3 HOUR)
+    AND o.orders_status = 2
+    AND oc.order_id = o.orders_id
+    AND oc.assigned_artworker = '';
+;-- -. . -..- - / . -. - .-. -.--
+SELECT o.orders_id, o.date_first_processing, o.shipping_type, oc.assigned_artworker
+    FROM orders o, orders_customisations oc
+    WHERE o.date_first_processing BETWEEN DATE_SUB(now(), INTERVAL 7 WEEK) AND DATE_SUB(now(), INTERVAL 3 HOUR)
+    AND o.orders_status = 2
+    AND oc.order_id = o.orders_id
+    AND oc.assigned_artworker_date = '0000-00-00 00:00:00';
+;-- -. . -..- - / . -. - .-. -.--
+select * from integrity_check_notification icn
+join staff_info si on icn.staff_id = si.staff_id
+where check_id in (4, 24) and active = 1;
+;-- -. . -..- - / . -. - .-. -.--
+select * from integrity_check_result
+# where check_id in (4, 24)
+where check_id in (24)
+and actual_value > 0
+and date > '2020-02-16 11:20:00'
+# and details like "%5184110%"
+order by date desc;
+;-- -. . -..- - / . -. - .-. -.--
+select * from integrity_check_result
+# where check_id in (4, 24)
+where check_id in (4,24)
+and actual_value > 0
+and date > '2020-02-16 11:20:00'
+# and details like "%5184110%"
+order by date desc;
+;-- -. . -..- - / . -. - .-. -.--
+select * from staff_info where first_name like "Sally";
+;-- -. . -..- - / . -. - .-. -.--
+select * from staff_info where first_name like "Artur";
+;-- -. . -..- - / . -. - .-. -.--
+select * from staff_info where first_name like "Kirsty";
+;-- -. . -..- - / . -. - .-. -.--
+SELECT colour_id, image_small FROM ms_product_images WHERE view_id = '1' AND product_id = '58093' AND colour_id is not null LIMIT 0,1;
+;-- -. . -..- - / . -. - .-. -.--
+SELECT colour_id, image_small FROM ms_product_images WHERE view_id = '1' AND product_id = '58093' LIMIT 0,1;
+;-- -. . -..- - / . -. - .-. -.--
+desc countries;
+;-- -. . -..- - / . -. - .-. -.--
+select * from countries where countries_iso_code_2 not in (
+'AF',
+'AX',
+'AL',
+'DZ',
+'AS',
+'AD',
+'AO',
+'AI',
+'AQ',
+'AG',
+'AR',
+'AM',
+'AW',
+'AU',
+'AT',
+'AZ',
+'BH',
+'BS',
+'BD',
+'BB',
+'BY',
+'BE',
+'BZ',
+'BJ',
+'BM',
+'BT',
+'BO',
+'BQ',
+'BA',
+'BW',
+'BV',
+'BR',
+'IO',
+'BN',
+'BG',
+'BF',
+'BI',
+'KH',
+'CM',
+'CA',
+'CV',
+'KY',
+'CF',
+'TD',
+'CL',
+'CN',
+'CX',
+'CC',
+'CO',
+'KM',
+'CG',
+'CD',
+'CK',
+'CR',
+'CI',
+'HR',
+'CU',
+'CW',
+'CY',
+'CZ',
+'DK',
+'DJ',
+'DM',
+'DO',
+'EC',
+'EG',
+'SV',
+'GQ',
+'ER',
+'EE',
+'ET',
+'FK',
+'FO',
+'FJ',
+'FI',
+'FR',
+'GF',
+'PF',
+'TF',
+'GA',
+'GM',
+'GE',
+'DE',
+'GH',
+'GI',
+'GR',
+'GL',
+'GD',
+'GP',
+'GU',
+'GT',
+'GG',
+'GN',
+'GW',
+'GY',
+'HT',
+'HM',
+'VA',
+'HN',
+'HK',
+'HU',
+'IS',
+'IN',
+'ID',
+'IR',
+'IQ',
+'IE',
+'IM',
+'IL',
+'IT',
+'JM',
+'JP',
+'JE',
+'JO',
+'KZ',
+'KE',
+'KI',
+'KP',
+'KR',
+'KW',
+'KG',
+'LA',
+'LV',
+'LB',
+'LS',
+'LR',
+'LY',
+'LI',
+'LT',
+'LU',
+'MO',
+'MK',
+'MG',
+'MW',
+'MY',
+'MV',
+'ML',
+'MT',
+'MH',
+'MQ',
+'MR',
+'MU',
+'YT',
+'MX',
+'FM',
+'MD',
+'MC',
+'MN',
+'ME',
+'MS',
+'MA',
+'MZ',
+'MM',
+'NA',
+'NR',
+'NP',
+'NL',
+'NC',
+'NZ',
+'NI',
+'NE',
+'NG',
+'NU',
+'NF',
+'MP',
+'NO',
+'OM',
+'PK',
+'PW',
+'PS',
+'PA',
+'PG',
+'PY',
+'PE',
+'PH',
+'PN',
+'PL',
+'PT',
+'PR',
+'QA',
+'RE',
+'RO',
+'RU',
+'RW',
+'BL',
+'SH',
+'KN',
+'LC',
+'MF',
+'PM',
+'VC',
+'WS',
+'SM',
+'ST',
+'SA',
+'SN',
+'RS',
+'SC',
+'SL',
+'SG',
+'SX',
+'SK',
+'SI',
+'SB',
+'SO',
+'ZA',
+'GS',
+'SS',
+'ES',
+'LK',
+'SD',
+'SR',
+'SJ',
+'SZ',
+'SE',
+'CH',
+'SY',
+'TW',
+'TJ',
+'TZ',
+'TH',
+'TL',
+'TG',
+'TK',
+'TO',
+'TT',
+'TN',
+'TR',
+'TM',
+'TC',
+'TV',
+'UG',
+'UA',
+'AE',
+'GB',
+'US',
+'UM',
+'UY',
+'UZ',
+'VU',
+'VE',
+'VN',
+'VG',
+'VI',
+'WF',
+'EH',
+'YE',
+'ZM',
+'ZW'
+
+    );
+;-- -. . -..- - / . -. - .-. -.--
+select * from countries where countries_iso_code_2 <> countries_iso_code_sagepay;
+;-- -. . -..- - / . -. - .-. -.--
+select * from countries where countries_iso_code_sagepay not in (
+'AF',
+'AX',
+'AL',
+'DZ',
+'AS',
+'AD',
+'AO',
+'AI',
+'AQ',
+'AG',
+'AR',
+'AM',
+'AW',
+'AU',
+'AT',
+'AZ',
+'BH',
+'BS',
+'BD',
+'BB',
+'BY',
+'BE',
+'BZ',
+'BJ',
+'BM',
+'BT',
+'BO',
+'BQ',
+'BA',
+'BW',
+'BV',
+'BR',
+'IO',
+'BN',
+'BG',
+'BF',
+'BI',
+'KH',
+'CM',
+'CA',
+'CV',
+'KY',
+'CF',
+'TD',
+'CL',
+'CN',
+'CX',
+'CC',
+'CO',
+'KM',
+'CG',
+'CD',
+'CK',
+'CR',
+'CI',
+'HR',
+'CU',
+'CW',
+'CY',
+'CZ',
+'DK',
+'DJ',
+'DM',
+'DO',
+'EC',
+'EG',
+'SV',
+'GQ',
+'ER',
+'EE',
+'ET',
+'FK',
+'FO',
+'FJ',
+'FI',
+'FR',
+'GF',
+'PF',
+'TF',
+'GA',
+'GM',
+'GE',
+'DE',
+'GH',
+'GI',
+'GR',
+'GL',
+'GD',
+'GP',
+'GU',
+'GT',
+'GG',
+'GN',
+'GW',
+'GY',
+'HT',
+'HM',
+'VA',
+'HN',
+'HK',
+'HU',
+'IS',
+'IN',
+'ID',
+'IR',
+'IQ',
+'IE',
+'IM',
+'IL',
+'IT',
+'JM',
+'JP',
+'JE',
+'JO',
+'KZ',
+'KE',
+'KI',
+'KP',
+'KR',
+'KW',
+'KG',
+'LA',
+'LV',
+'LB',
+'LS',
+'LR',
+'LY',
+'LI',
+'LT',
+'LU',
+'MO',
+'MK',
+'MG',
+'MW',
+'MY',
+'MV',
+'ML',
+'MT',
+'MH',
+'MQ',
+'MR',
+'MU',
+'YT',
+'MX',
+'FM',
+'MD',
+'MC',
+'MN',
+'ME',
+'MS',
+'MA',
+'MZ',
+'MM',
+'NA',
+'NR',
+'NP',
+'NL',
+'NC',
+'NZ',
+'NI',
+'NE',
+'NG',
+'NU',
+'NF',
+'MP',
+'NO',
+'OM',
+'PK',
+'PW',
+'PS',
+'PA',
+'PG',
+'PY',
+'PE',
+'PH',
+'PN',
+'PL',
+'PT',
+'PR',
+'QA',
+'RE',
+'RO',
+'RU',
+'RW',
+'BL',
+'SH',
+'KN',
+'LC',
+'MF',
+'PM',
+'VC',
+'WS',
+'SM',
+'ST',
+'SA',
+'SN',
+'RS',
+'SC',
+'SL',
+'SG',
+'SX',
+'SK',
+'SI',
+'SB',
+'SO',
+'ZA',
+'GS',
+'SS',
+'ES',
+'LK',
+'SD',
+'SR',
+'SJ',
+'SZ',
+'SE',
+'CH',
+'SY',
+'TW',
+'TJ',
+'TZ',
+'TH',
+'TL',
+'TG',
+'TK',
+'TO',
+'TT',
+'TN',
+'TR',
+'TM',
+'TC',
+'TV',
+'UG',
+'UA',
+'AE',
+'GB',
+'US',
+'UM',
+'UY',
+'UZ',
+'VU',
+'VE',
+'VN',
+'VG',
+'VI',
+'WF',
+'EH',
+'YE',
+'ZM',
+'ZW'
+);
+;-- -. . -..- - / . -. - .-. -.--
+select * from customers where customers_lastname like "hopwood";
+;-- -. . -..- - / . -. - .-. -.--
+show create table relative_config;
+;-- -. . -..- - / . -. - .-. -.--
+select * from relative_config;
+;-- -. . -..- - / . -. - .-. -.--
+select * from orders where orders_id = 5189893;
+;-- -. . -..- - / . -. - .-. -.--
+select api_partner_id from orders where orders_id = 5189893;
+;-- -. . -..- - / . -. - .-. -.--
+select * from api_partners_log where api_partner_id = 1050 limit 10;
+;-- -. . -..- - / . -. - .-. -.--
+select api_partner_id, date_purchased from orders where orders_id = 5189893;
+;-- -. . -..- - / . -. - .-. -.--
+select * from api_partners_log
+where api_partner_id = 1050
+and date_added between '2020-03-04 17:00:00' and '2020-03-04 18:00:00'
+limit 10;
+;-- -. . -..- - / . -. - .-. -.--
+select * from countries
+WHERE countries_iso_code_2 <> countries_iso_code_sagepay;
+;-- -. . -..- - / . -. - .-. -.--
+select * from countries
+WHERE countries_iso_code_2 = 'NL'
+OR countries_iso_code_3 = 'NL'
+OR countries_iso_code_sagepay = 'NL';
+;-- -. . -..- - / . -. - .-. -.--
+select countries_iso_code_sagepay from countries
+WHERE countries_iso_code_2 <> countries_iso_code_sagepay;
+;-- -. . -..- - / . -. - .-. -.--
+select countries_iso_code_sagepay from countries
+WHERE countries_iso_code_2 != countries_iso_code_sagepay;
+;-- -. . -..- - / . -. - .-. -.--
+select * from orders where delivery_country in (
+    select countries_iso_code_sagepay from countries
+    WHERE countries_iso_code_2 <> countries_iso_code_sagepay
+)
+and customers_id = 0;
+;-- -. . -..- - / . -. - .-. -.--
+select * from orders
+where delivery_country in (
+    select countries_iso_code_sagepay from countries
+    WHERE countries_iso_code_2 <> countries_iso_code_sagepay
+)
+or customers_country in (
+    select countries_iso_code_sagepay from countries
+    WHERE countries_iso_code_2 <> countries_iso_code_sagepay
+)
+or billing_country in (
+    select countries_iso_code_sagepay from countries
+    WHERE countries_iso_code_2 <> countries_iso_code_sagepay
+)
+and customers_id = 0;
+;-- -. . -..- - / . -. - .-. -.--
+select * from countries where countries_iso_code_2 <> countries_iso_code_sagepay
+order by countries_name asc;

@@ -4,31 +4,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9421004d-720a-4c29-a25c-2696146ab5f9/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="197" column="24" lean-forward="true" selection-start-line="197" selection-start-column="24" selection-end-line="197" selection-end-column="24" />
+            <state relative-caret-position="238">
+              <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/customisation_files_for_2019.sql">
-          <provider selected="true" editor-type-id="LargeFileEditorProvider">
-            <state caret-page-number="0" caret-page-symbol-offset="2506" />
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9f393b1c-e49d-48c9-ab59-6ce0df918280/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            <state>
+              <caret column="51" selection-start-column="51" selection-end-column="51" />
               <folding>
                 <element signature="e#69#76#0" expanded="true" />
                 <element signature="e#139#146#0" expanded="true" />
-                <element signature="e#218#225#0" expanded="true" />
-                <element signature="e#288#295#0" expanded="true" />
-                <element signature="e#368#375#0" expanded="true" />
-                <element signature="e#494#501#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -37,8 +26,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/80950f4f-f798-4b81-a0fe-e1df841a2495/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+            <state>
+              <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+              <folding>
+                <element signature="e#648#655#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -54,6 +46,9 @@
       <find>final</find>
       <find>ci.</find>
       <find>customisation</find>
+      <find>concat_ws</find>
+      <find>brands</find>
+      <find>is not n</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -112,6 +107,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="2560" height="1380" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Database" order="0" visible="true" weight="0.19053301" />
       <window_info id="Favorites" order="1" side_tool="true" />
@@ -122,10 +118,10 @@
       <window_info anchor="bottom" id="TODO" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="5" />
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" weight="0.36635944" />
-      <window_info active="true" anchor="bottom" id="Services" order="7" visible="true" weight="0.4956245" />
+      <window_info active="true" anchor="bottom" id="Services" order="7" visible="true" weight="0.3638535" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Debug" order="9" />
-      <window_info anchor="right" content_ui="combo" id="Project" order="0" visible="true" weight="0.11972951" />
+      <window_info anchor="right" content_ui="combo" id="Project" order="0" visible="true" weight="0.13922037" />
       <window_info anchor="right" id="Structure" order="1" side_tool="true" weight="0.25" />
     </layout>
   </component>
@@ -451,28 +447,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/80950f4f-f798-4b81-a0fe-e1df841a2495/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9f393b1c-e49d-48c9-ab59-6ce0df918280/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#69#76#0" expanded="true" />
-            <element signature="e#139#146#0" expanded="true" />
-            <element signature="e#218#225#0" expanded="true" />
-            <element signature="e#288#295#0" expanded="true" />
-            <element signature="e#368#375#0" expanded="true" />
-            <element signature="e#494#501#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/customisation_files_for_2019.sql">
       <provider selected="true" editor-type-id="LargeFileEditorProvider">
         <state caret-page-number="0" caret-page-symbol-offset="2506" />
@@ -480,8 +454,29 @@
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9421004d-720a-4c29-a25c-2696146ab5f9/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="197" column="24" lean-forward="true" selection-start-line="197" selection-start-column="24" selection-end-line="197" selection-end-column="24" />
+        <state relative-caret-position="238">
+          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9f393b1c-e49d-48c9-ab59-6ce0df918280/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="51" selection-start-column="51" selection-end-column="51" />
+          <folding>
+            <element signature="e#69#76#0" expanded="true" />
+            <element signature="e#139#146#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/80950f4f-f798-4b81-a0fe-e1df841a2495/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+          <folding>
+            <element signature="e#648#655#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
