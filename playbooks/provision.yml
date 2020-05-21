@@ -32,7 +32,7 @@
     - opsjono.phpstorm
     - opsjono.datagrip
     - opsjono.mysql_workbench
-    - opsjono.mjml
+#    - opsjono.mjml
     - opsjono.postman
     - opsjono.skype
     - opsjono.docker
@@ -42,8 +42,8 @@
     - azavea.terraform
     - ghyde.virtualbox
     - stefangweichinger.ansible-rclone
-    - geerlingguy.apache
-    - geerlingguy.redis
-    - geerlingguy.php
+#    - geerlingguy.apache
+#    - geerlingguy.redis
+#    - geerlingguy.php
     - role: geerlingguy.mysql
       become: true
