@@ -1,0 +1,5 @@
+---
+- name: Install packages required for L2TP-IPSec VPN connections
+  dnf:
+    name: ['strongswan', 'xl2tpd', 'NetworkManager-l2tp', 'NetworkManager-l2tp-gnome']
+    state: latest

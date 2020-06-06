@@ -5,6 +5,11 @@
     src: fedora-docker-ce.repo.j2
     dest: /etc/yum.repos.d/fedora-docker-ce.repo
 
+- name: Remove Podman-docker
+  dnf:
+    name: ['podman', 'podman-docker']
+    state: removed
+
 - name: Install Docker CE, Docker CLI and Containerd.io
   dnf:
     name: ['docker-ce', 'docker-ce-cli', 'containerd.io', 'docker-compose']
