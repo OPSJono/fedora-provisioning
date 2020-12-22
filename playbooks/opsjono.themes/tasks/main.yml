@@ -18,3 +18,4 @@
   shell: |
     mkdir -p /home/{{ ansible_user }}/Pictures/wallpapers
     cp -R opsjono.themes/files/* /home/{{ ansible_user }}/Pictures/wallpapers/
+    chown {{ ansible_user }}:{{ ansible_user }} -R /home/{{ ansible_user }}/Pictures/wallpapers
