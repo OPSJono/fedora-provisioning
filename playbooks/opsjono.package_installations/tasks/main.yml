@@ -75,12 +75,6 @@
     name: "{{ unwanted_packages }}"
     state: absent
 
-- name: Install SCSS ruby Gem
-  gem:
-    name: scss
-    state: latest
-    user_install: no
-
 - name: Open NFS ports in firewall for Vagrant (with firewall-cmd in command module)
   command: "{{ item }}"
   with_items:
