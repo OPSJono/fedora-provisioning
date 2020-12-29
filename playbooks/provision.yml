@@ -26,21 +26,21 @@
     - ansible_distribution_major_version: '8'
 
   roles:
-    - opsjono.package_installations # done
-    - opsjono.themes # done
-#    - opsjono.discord # Not needed
-    - opsjono.gitkraken # done
-    - opsjono.phpstorm # done
-    - opsjono.datagrip # done
-    - opsjono.mysql_workbench # done
-    - opsjono.postman # done
-    #- opsjono.skype # Not needed
-    - opsjono.docker # done
-    - opsjono.keybase # done
-    #- opsjono.spotify # Not needed
-    - opsjono.vpn # done
-    - opsjono.slack # done
+    - opsjono.package_installations
+    - opsjono.themes
+    - opsjono.gitkraken
+    - opsjono.phpstorm
+    - opsjono.datagrip
+    - opsjono.mysql_workbench
+    - opsjono.postman
+    - opsjono.docker
+    - opsjono.keybase
+    - opsjono.vpn
+    - opsjono.slack
 
+#    - opsjono.discord
+#    - opsjono.skype
+#    - opsjono.spotify
 #    - opsjono.mjml
 #    - azavea.terraform
 #    - ghyde.virtualbox
