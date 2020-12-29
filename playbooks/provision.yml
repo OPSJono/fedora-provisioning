@@ -18,6 +18,7 @@
       prompt: "Sudo password"
       private: yes
   vars:
+    - ansible_user: "{{ lookup('env','USER') }}"
     - ansible_os_family: 'RedHat'
     - ansible_architecture: 'x86_64'
     - ansible_distribution_version: '10.04'
@@ -27,19 +28,19 @@
   roles:
     - opsjono.package_installations
     - opsjono.themes
-    - opsjono.discord
     - opsjono.gitkraken
     - opsjono.phpstorm
     - opsjono.datagrip
     - opsjono.mysql_workbench
     - opsjono.postman
-    - opsjono.skype
     - opsjono.docker
     - opsjono.keybase
-    - opsjono.spotify
     - opsjono.vpn
-    - avnes.slack
+    - opsjono.slack
 
+#    - opsjono.discord
+#    - opsjono.skype
+#    - opsjono.spotify
 #    - opsjono.mjml
 #    - azavea.terraform
 #    - ghyde.virtualbox

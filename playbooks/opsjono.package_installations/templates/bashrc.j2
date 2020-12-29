@@ -9,13 +9,45 @@ fi
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 # Env vars to allow Ansible to run Deployments in AWS
 export ANSIBLE_DEPLOYMENT_USER=jonathanm
 export ANSIBLE_SSH_ARGS='-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o AddKeysToAgent=no'
 export ANSIBLE_PIPELINING=True
 export ANSIBLE_HOST_KEY_CHECKING=False
+export CIRCLE_CI_TOKEN=xxx
+export SLACK_WEBHOOK='xxx'
+
+export SH_QUAYSIDE_DEPLOYMENTS_AWS_KEY='xxx'
+export SH_QUAYSIDE_DEPLOYMENTS_AWS_SECRET='xxx'
 
 function homestead() {
     ( cd ~/Homestead && vagrant $* )
+}
+
+phpco() { docker run --init -v $PWD:/mnt/src:cached --rm -u "$(id -u):$(id -g)" frbit/phpco:latest $@; return $?; }
+
+awslogin() {
+aws ecr get-login --no-include-email | bash
+}
+
+ccAwsLogin() {
+aws --profile=ecr-test ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin xxx.dkr.ecr.eu-west-1.amazonaws.com
+}
+
+ccQtagWebStagingBuild() {
+docker build --build-arg new_relic_licence=xxx --build-arg new_relic_appname="Qtag Staging" -f .docker/php/Dockerfile -t xxx.dkr.ecr.eu-west-1.amazonaws.com/qtag-web:staging .
+docker push xxx.dkr.ecr.eu-west-1.amazonaws.com/qtag-web:staging
+}
+
+ccQtagCronStagingBuild() {
+docker build --build-arg new_relic_licence=xxx --build-arg new_relic_appname="Qtag Staging" --build-arg env="staging" -f .docker/cron/Dockerfile -t xxx.dkr.ecr.eu-west-1.amazonaws.com/qtag-cron:staging .
+docker push xxx.dkr.ecr.eu-west-1.amazonaws.com/qtag-cron:staging
+}
+
+ccMobileWebStagingBuild() {
+docker build --build-arg new_relic_licence=xxx --build-arg new_relic_appname="C2O Mobile Staging" -f .docker/php/Dockerfile -t xxx.dkr.ecr.eu-west-1.amazonaws.com/c2o-mobile:staging .
+docker push xxx.dkr.ecr.eu-west-1.amazonaws.com/c2o-mobile:staging
 }
