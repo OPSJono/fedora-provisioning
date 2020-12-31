@@ -1,0 +1,27 @@
+---
+
+- name: Install nginx
+  dnf:
+    name: nginx
+    state: latest
+
+- name: Copy docker.conf into place
+  template:
+    src: docker.conf.j2
+    dest: /etc/nginx/conf.d/docker.conf
+    mode: 0775
+
+- name: Remove httpd
+  dnf:
+    name: httpd
+    state: absent
+
+- name: Set httpd_can_network_connect to true in SELinux (required for nginx to use proxy_pass)
+  command: setsebool -P httpd_can_network_connect 1
+  become: true
+  become_user: root
+
+- name: restart nginx
+  service:
+    name: nginx
+    state: restarted

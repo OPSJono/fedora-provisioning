@@ -34,6 +34,7 @@
     - opsjono.mysql_workbench
     - opsjono.postman
     - opsjono.docker
+    - opsjono.nginx
     - opsjono.keybase
     - opsjono.vpn
     - opsjono.slack

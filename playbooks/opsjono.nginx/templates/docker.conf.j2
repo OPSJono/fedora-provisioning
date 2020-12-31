@@ -1,0 +1,89 @@
+# /etc/nginx/conf.d/docker.conf
+
+client_max_body_size 1G;
+client_body_timeout 120s;
+client_body_buffer_size 16k;
+
+# Personal sites
+server {
+  listen       filezone.docker;
+  server_name  filezone.docker;
+  location / {
+    proxy_set_header Host $host;
+    proxy_pass http://127.0.0.1:8090;
+  }
+}
+
+server {
+  listen       fz-react.docker;
+  server_name  fz-react.docker;
+  location / {
+    proxy_set_header Host $host;
+    proxy_pass http://127.0.0.1:3001;
+  }
+}
+
+#c2o sites
+
+server {
+  listen       qtag.docker;
+  server_name  qtag.docker;
+  location / {
+    proxy_set_header Host $host;
+    proxy_pass http://127.0.0.1:5050;
+  }
+}
+
+server {
+  listen       c2o-mobile.docker;
+  server_name  c2o-mobile.docker c2o-mobile.docker.au c2o-mobile.docker.us c2o-mobile.docker.uk c2o-mobile.docker.ie;
+  location / {
+      proxy_set_header Host $host;
+      proxy_pass http://127.0.0.1:4020;
+  }
+}
+
+server {
+  listen       c2o.docker;
+  server_name  c2o.docker c2o.docker.au c2o.docker.ie c2o.docker.us;
+  location / {
+    proxy_set_header Host $host;
+    proxy_pass http://127.0.0.1:4040;
+  }
+}
+
+server {
+  listen       expenses.docker;
+  server_name  expenses.docker;
+  location / {
+    proxy_set_header Host $host;
+    proxy_pass http://127.0.0.1:8050;
+  }
+}
+
+server {
+  listen       api.docker;
+  server_name  api.docker;
+  location / {
+    proxy_set_header Host $host;
+    proxy_pass http://127.0.0.1:8010;
+  }
+}
+
+server {
+  listen       ops.docker;
+  server_name  ops.docker;
+  location / {
+    proxy_set_header Host $host;
+    proxy_pass http://127.0.0.1:8011;
+  }
+}
+
+server {
+  listen       analytics.docker;
+  server_name  analytics.docker;
+  location / {
+    proxy_set_header Host $host;
+    proxy_pass http://127.0.0.1:8012;
+  }
+}
