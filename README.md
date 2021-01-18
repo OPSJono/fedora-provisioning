@@ -1,6 +1,25 @@
 # fedora-provisioning
 Repo for holding the Ansible scripts used to provision my local machine.
 
+VMWare Workstation Player (15)
+=====
+If running inside of VMWare Workstation, the following additions are required to be added to the `.vmx` file:
+
+* Additional (fwd/back) mouse buttons support: 
+```
+usb.generic.allowHID = "TRUE"
+mouse.vusb.enable = "TRUE"
+mouse.vusb.useBasicMouse = "FALSE"
+```
+
+* Sound device support:
+```
+sound.present = "TRUE"
+sound.filename = "-1"
+sound.autodetect = "TRUE"
+sound.virtualDev = "hdaudio"
+```
+
 Usage
 =====
 ```

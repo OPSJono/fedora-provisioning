@@ -14,6 +14,7 @@ common_packages:
   - xclip
   - remmina
   - openssh-askpass
+  - gimp
 
   ## Vagrant and libvirt related
   - qemu
