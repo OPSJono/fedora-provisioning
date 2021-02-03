@@ -20,6 +20,21 @@ sound.autodetect = "TRUE"
 sound.virtualDev = "hdaudio"
 ```
 
+* Switch to use Xorg to get better compatibility with open-vm-tools:
+
+Open `/etc/gdm/custom.conf` and uncomment the line:
+```
+WaylandEnable=false
+```
+
+Add the following line to the `[daemon]` section:
+```
+DefaultSession=gnome-xorg.desktop
+```
+Save the `custom.conf` file.
+
+Logout or reboot to enter the new session.
+
 Usage
 =====
 ```
