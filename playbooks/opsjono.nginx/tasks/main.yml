@@ -11,6 +11,12 @@
     dest: /etc/nginx/conf.d/docker.conf
     mode: 0775
 
+- name: Copy /etc/hosts into place
+  template:
+    src: etc-hosts.j2
+    dest: /etc/hosts
+    mode: 0775
+
 - name: Remove httpd
   dnf:
     name: httpd
