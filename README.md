@@ -35,6 +35,12 @@ Save the `custom.conf` file.
 
 Logout or reboot to enter the new session.
 
+* If you get a warning on power-up about poweron scripts failing then add this:
+```
+toolScripts.afterPowerOn = "FALSE"
+```
+To the vmx file.
+
 Usage
 =====
 ```

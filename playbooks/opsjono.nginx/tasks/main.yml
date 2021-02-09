@@ -27,7 +27,8 @@
   become: true
   become_user: root
 
-- name: restart nginx
-  service:
+- name: Enable and Restart nginx
+  systemd:
     name: nginx
+    enabled: yes
     state: restarted
