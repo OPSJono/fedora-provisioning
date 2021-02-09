@@ -1,10 +1,9 @@
 ---
-#// Add flash support from here: https://www.if-not-true-then-false.com/2010/install-adobe-flash-player-10-on-fedora-centos-red-hat-rhel/
 
-- name: Copy Bashrc into place
+- name: Copy base bash helper into place
   template:
-    src: "bashrc.j2"
-    dest: "/home/{{ ansible_user }}/.bashrc"
+    src: "bash_base.j2"
+    dest: "/home/{{ ansible_user }}/.bash_base"
 
 - name: Copy Bash Profile into place
   template:
