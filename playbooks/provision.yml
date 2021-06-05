@@ -39,13 +39,18 @@
     - opsjono.vpn
     - opsjono.slack
 
+    - opsjono.spotify
+    - opsjono.ssh
+    - opsjono.php-cs-fixer
+#    - opsjono.nvidia
+
 #    - opsjono.discord
 #    - opsjono.skype
-#    - opsjono.spotify
 #    - opsjono.mjml
 #    - azavea.terraform
 #    - ghyde.virtualbox
 #    - stefangweichinger.ansible-rclone
+
 #    - geerlingguy.apache
 #    - geerlingguy.redis
 #    - geerlingguy.php

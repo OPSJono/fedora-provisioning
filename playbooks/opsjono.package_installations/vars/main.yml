@@ -17,9 +17,6 @@ common_packages:
   - gimp
 
   ## Vagrant and libvirt related
-  - qemu
-  - libvirt
-  - libvirt-devel
   - ruby-devel
   - gcc
   - libxslt-devel
@@ -40,8 +37,6 @@ common_packages:
   - expect
   # Used to configure firewall rules
   - iptables
-  # Ensures the server's clock is set properly
-  - ntp
   # Required for MJML
   - npm
 

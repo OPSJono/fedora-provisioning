@@ -1,0 +1,5 @@
+---
+- name: Install PHP CS Fixer
+  dnf:
+    name: ['php-cs-fixer']
+    state: latest

@@ -1,0 +1,5 @@
+---
+- name: Copy the SSH client settings into place
+  template:
+    src: 10-custom.conf.j2
+    dest: /etc/ssh/ssh_config.d/10-custom.conf

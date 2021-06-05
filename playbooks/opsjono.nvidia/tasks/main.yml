@@ -1,0 +1,11 @@
+---
+# @see https://negativo17.org/nvidia-driver/#Nvidia_drivers
+- name: Add the Negativo17 Nvidia repo
+  template:
+    src: fedora-nvidia.repo.j2
+    dest: /etc/yum.repos.d/fedora-nvidia.repo
+
+- name: Install Nvidia drivers and nvidia-settings
+  dnf:
+    name: ['nvidia-drivers', 'nvidia-settings']
+    state: latest
