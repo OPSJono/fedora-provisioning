@@ -46,6 +46,7 @@ common_packages:
   - ffmpeg-libs
   - fuse-exfat
   - gnome-tweak-tool
+  - gnome-extensions-app
   - vlc
   - vlc-extras
 
