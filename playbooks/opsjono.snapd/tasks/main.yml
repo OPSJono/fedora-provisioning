@@ -1,0 +1,17 @@
+---
+- name: Install Snapd
+  dnf:
+    name: ['snapd']
+    state: latest
+
+- name: Set symlink for legacy snapd compatibility
+  file:
+    src: /var/lib/snapd/snap
+    dest: /snap
+    state: link
+
+- name: Install K6
+  snap:
+    name:
+      - k6
+    state: present

@@ -41,6 +41,7 @@
 
     - opsjono.spotify
     - opsjono.ssh
+    - opsjono.snapd
     - opsjono.php-cs-fixer
 #    - opsjono.nvidia
 
