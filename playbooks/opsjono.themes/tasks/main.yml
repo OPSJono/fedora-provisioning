@@ -1,9 +1,4 @@
 ---
-- name: Add the Moka Icon repo
-  template:
-    src: moka-icon-theme.repo.j2
-    dest: /etc/yum.repos.d/moka-icon-theme.repo
-
 - name: Add the Papirus Icon repo
   template:
     src: papirus-icon-theme.repo.j2
