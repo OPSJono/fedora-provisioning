@@ -1,6 +1,31 @@
 # fedora-provisioning
 Repo for holding the Ansible scripts used to provision my local machine.
 
+Xdebug configuration notes
+=====
+Add an entry to your `/etc/hosts` file:
+```
+172.17.0.1	host.docker.internal
+```
+
+### PHPStorm: 
+PHP -> Servers:
+* Use the domain name and port
+
+PHP -> Debug:
+* Set port to 9003  
+
+Uncheck:
+* "break at first line"  
+* both "force break at first line"  
+
+Run/Debug configurations:
+* Create new "Docker-compose",  
+* Choose the docker-compose file for the repo  
+
+Choose the new configuration in the top right,  
+click "start listening"
+
 VMWare Workstation Player (15)
 =====
 If running inside of VMWare Workstation, the following additions are required to be added to the `.vmx` file:
