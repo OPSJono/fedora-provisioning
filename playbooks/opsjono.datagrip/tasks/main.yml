@@ -31,13 +31,6 @@
     - datagrip_override_available_version is defined
     - datagrip_override_available_major_version is defined
 
-#- name: Debug JSON varialbes
-#  debug:
-#    msg:
-#    - "{{ get_datagrip_available_version }}"
-#    - "{{ get_datagrip_available_url }}"
-#    - "{{ get_datagrip_available_build }}"
-
 - name: reset facts
   set_fact:
     datagrip_available_version: "{{ get_datagrip_available_version }}"
@@ -45,13 +38,6 @@
     datagrip_available_build: "{{ get_datagrip_available_build }}"
   when:
     - ci_testing is not defined
-
-#- name: debug datagrip variables
-#  debug:
-#    msg:
-#    - "Verison: {{ datagrip_available_version }}"
-#    - "URL: {{ datagrip_available_url }}"
-#    - "Build path: {{ datagrip_build_path }}"
 
 - name: Check if datagrip is already installed
   stat:
@@ -79,13 +65,6 @@
     datagrip_found_build_version: "{{ lookup('file', datagrip_build_path) }}"
   when:
     - datagrip_installed_build_version_available == true
-
-#- name: Debug build versions
-#  debug:
-#    msg:
-#      - "Currently installed build version: {{ datagrip_found_build_version }}"
-#      - "Available build version: DG-{{ datagrip_available_build }}"
-#      - "ansible_user: {{ ansible_user }}"
 
 - name: Check installed version is not the same as currently installed
   set_fact:
@@ -175,8 +154,8 @@
 
 - name: Copy Datagrip preferences to home folder
   shell: |
-    mkdir -p /home/{{ ansible_user }}/.DataGrip{{ get_datagrip_major_version }}/config
-    cp -R opsjono.datagrip/files/preferences/* /home/{{ ansible_user }}/.DataGrip{{ get_datagrip_major_version }}
+    mkdir -p /home/{{ ansible_user }}/.config/JetBrains/DataGrip{{ get_datagrip_major_version }}
+    cp -R opsjono.datagrip/files/preferences/config/* /home/{{ ansible_user }}/.config/JetBrains/DataGrip{{ get_datagrip_major_version }}
   become: true
   become_user: "{{ ansible_user }}"
   when:

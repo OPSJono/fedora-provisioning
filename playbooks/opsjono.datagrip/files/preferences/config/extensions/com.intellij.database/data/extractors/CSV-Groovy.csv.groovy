@@ -3,7 +3,7 @@
  *   COLUMNS     List<DataColumn>
  *   ROWS        Iterable<DataRow>
  *   OUT         { append() }
- *   FORMATTER   { format(row, col); formatValue(Object, col) }
+ *   FORMATTER   { format(row, col); formatValue(Object, col); getTypeName(Object, col); isStringLiteral(Object, col); }
  *   TRANSPOSED  Boolean
  * plus ALL_COLUMNS, TABLE, DIALECT
  *
