@@ -1,0 +1,9 @@
+<application>
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="3.250.19.37" id="68fa27cd-fb5c-4077-86ea-7a7a4b79fb88" keyPath="$USER_HOME$/.ssh/quaysidegroup_staging_id_rsa" port="22" customName="1: Staging" nameFormat="CUSTOM" username="quaysidegroup">
+        <option name="customName" value="1: Staging" />
+      </sshConfig>
+    </configs>
+  </component>
+</application>

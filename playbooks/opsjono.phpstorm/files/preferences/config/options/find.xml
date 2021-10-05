@@ -13,11 +13,15 @@
     <mask>*.module</mask>
     <mask>*.phtml</mask>
     <mask>*.scss</mask>
-    <mask>*.js</mask>
-    <mask>*.yml</mask>
     <mask>*.blade.php</mask>
-    <mask>*.php</mask>
     <mask>.git*</mask>
     <mask>.env</mask>
+    <mask>*.yml</mask>
+    <mask>24h*</mask>
+    <mask>hour*</mask>
+    <mask>*.test.js</mask>
+    <mask>Dockerfile</mask>
+    <mask>*.js</mask>
+    <mask>*.php</mask>
   </component>
 </application>

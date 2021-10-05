@@ -111,6 +111,7 @@
     <location key="DiffContextDialog.1920.0.2560.1440" x="2161" y="124" />
     <location key="find.popup.1280.0.1280.1024" x="1491" y="33" />
     <location key="find.popup.0.0.1280.1024" x="288" y="98" />
+    <location key="find.popup.2560.0.2560.1440" x="3592" y="167" />
     <size key="FileChooserDialogImpl.0.0.1920.1080" width="426" height="490" />
     <size key="SettingsEditor.0.0.1920.1080" width="1208" height="925" />
     <size key="findTextDialog.0.0.3840.1080" width="965" height="561" />
@@ -233,9 +234,22 @@
     <size key="GridCell.Tab.0.center.0.0.2560.1440" width="2514" height="386" />
     <size key="GridCell.Tab.0.right.0.0.2560.1440" width="2514" height="386" />
     <size key="GridCell.Tab.0.bottom.0.0.2560.1440" width="2514" height="386" />
+    <size key="find.popup.2560.0.2560.1440" width="1160" height="804" />
+    <size key="GridCell.Tab.0.left.2560.0.2560.1440" width="2514" height="399" />
+    <size key="GridCell.Tab.0.center.2560.0.2560.1440" width="2514" height="399" />
+    <size key="GridCell.Tab.0.right.2560.0.2560.1440" width="2514" height="399" />
+    <size key="GridCell.Tab.0.bottom.2560.0.2560.1440" width="2514" height="399" />
+    <size key="GridCell.Tab.1.left.2560.0.2560.1440" width="2514" height="511" />
+    <size key="GridCell.Tab.1.center.2560.0.2560.1440" width="2514" height="511" />
+    <size key="GridCell.Tab.1.right.2560.0.2560.1440" width="2514" height="511" />
+    <size key="GridCell.Tab.1.bottom.2560.0.2560.1440" width="2514" height="511" />
+    <size key="GridCell.Tab.2.left.2560.0.2560.1440" width="2514" height="511" />
+    <size key="GridCell.Tab.2.center.2560.0.2560.1440" width="2514" height="511" />
+    <size key="GridCell.Tab.2.right.2560.0.2560.1440" width="2514" height="511" />
+    <size key="GridCell.Tab.2.bottom.2560.0.2560.1440" width="2514" height="511" />
   </component>
   <component name="WindowManager">
-    <frame x="1426" y="27" width="1094" height="880" extendedState="6" />
+    <frame x="2560" y="32" width="2560" height="1376" extendedState="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -252,18 +266,22 @@
     </layout>
   </component>
   <component name="WindowStateApplicationService">
-    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog" />
-    <state x="124" y="339" width="1722" height="617" key="DiffContextDialog/0.0.1920.1080/1920.0.1920.1080" />
-    <state x="124" y="339" width="1722" height="617" key="DiffContextDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" />
-    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog/1280.0.1920.1080/0.0.1280.1024" />
-    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog/1280.0.1920.1080/0.0.1280.1024@1280.0.1920.1080" />
-    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog/1920.0.1920.1080/0.0.1920.1080" />
-    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" />
-    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog/2560.0.1920.1080/0.0.2560.1440" />
-    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog/2560.0.1920.1080/0.0.2560.1440@0.0.2560.1440" />
-    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog/2560.1440/1920.1080" />
-    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog/2560.1440/1920.1080/1920.1080" />
-    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog@1920.1080" />
-    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog@2560.1440" />
+    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog" timestamp="1630330121725" />
+    <state x="124" y="339" width="1722" height="617" key="DiffContextDialog/0.0.1920.1080/1920.0.1920.1080" timestamp="1630330121725" />
+    <state x="124" y="339" width="1722" height="617" key="DiffContextDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1630330121725" />
+    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog/1280.0.1920.1080/0.0.1280.1024" timestamp="1630330121725" />
+    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog/1280.0.1920.1080/0.0.1280.1024@1280.0.1920.1080" timestamp="1630330121725" />
+    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog/1920.0.1920.1080/0.0.1920.1080" timestamp="1630330121725" />
+    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1630330121725" />
+    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog/2560.0.1920.1080/0.0.2560.1440" timestamp="1630330121725" />
+    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog/2560.0.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1630330121725" />
+    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog/2560.1440/1920.1080" timestamp="1630330121725" />
+    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog/2560.1440/1920.1080/1920.1080" timestamp="1630330121725" />
+    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog@1920.1080" timestamp="1630330121725" />
+    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog@2560.1440" timestamp="1630330121725" />
+    <state x="3623" y="350" key="VCS.ChangeListViewerDialog" timestamp="1630330121727">
+      <screen x="2560" y="0" width="2560" height="1440" />
+    </state>
+    <state x="3623" y="350" key="VCS.ChangeListViewerDialog/2560.0.2560.1440/0.32.2560.1376/5120.0.2560.1440" timestamp="1630330121727" />
   </component>
 </application>

@@ -1,0 +1,15 @@
+<application>
+  <component name="ProfilerRunConfigurations">
+    <profilerRunConfigurations>
+      <item configurationTypeId="com.perl5.profiler.nytprof">
+        <PerlProfilerConfigurationState name="NYTProf">
+          <option name="optimizerDisabled" value="false" />
+          <option name="startupMode" value="BEGIN" />
+        </PerlProfilerConfigurationState>
+      </item>
+    </profilerRunConfigurations>
+    <knownConfigurationTypes>
+      <id>com.perl5.profiler.nytprof</id>
+    </knownConfigurationTypes>
+  </component>
+</application>

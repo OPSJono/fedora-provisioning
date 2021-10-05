@@ -175,14 +175,9 @@
 
 - name: Copy PhpStorm preferences to home folder
   shell: |
-    mkdir -p /home/{{ ansible_user }}/.PhpStorm{{ get_phpstorm_major_version }}/config
-    cp -R opsjono.phpstorm/files/preferences/* /home/{{ ansible_user }}/.PhpStorm{{ get_phpstorm_major_version }}
+    mkdir -p /home/{{ ansible_user }}/.config/JetBrains/PhpStorm{{ get_phpstorm_major_version }}
+    cp -R opsjono.phpstorm/files/preferences/config/* /home/{{ ansible_user }}/.config/JetBrains/PhpStorm{{ get_phpstorm_major_version }}
   become: true
   become_user: "{{ ansible_user }}"
   when:
     - phpstorm_can_be_installed == true
-
-      #- name: Install ilsap PhpStorm Licence Server
-      #  npm:
-      #    name: ilsap
-      #    global: yes

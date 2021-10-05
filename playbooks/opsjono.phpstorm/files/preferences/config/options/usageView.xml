@@ -1,0 +1,8 @@
+<application>
+  <component name="PhpThisOrSelfImportFilteringUsageSetting">
+    <option name="SHOW_THIS_OR_SELF_REFERENCES" value="true" />
+  </component>
+  <component name="UsageViewSettings">
+    <option name="IS_EXPANDED" value="true" />
+  </component>
+</application>
