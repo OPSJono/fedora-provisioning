@@ -37,7 +37,6 @@ common_packages:
   - expect
   # Used to configure firewall rules
   - iptables
-  # Required for MJML
   - npm
 
 #  - steam
@@ -49,9 +48,6 @@ common_packages:
   - gnome-extensions-app
   - vlc
   - vlc-extras
-
-  # snap package manager (for gitkraken)
-  # - snapd
 
 
 unwanted_packages:

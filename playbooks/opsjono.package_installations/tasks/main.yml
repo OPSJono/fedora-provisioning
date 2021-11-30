@@ -69,13 +69,14 @@
     name: "google-chrome-stable"
     state: latest
 
-- name: Install NPM Packages for API Mocking in React projects
+- name: Install global NPM Packages
   npm:
     global: yes
     name: "{{ item }}"
   with_items:
     - open-api-mocker
     - forever
+    - ngrok
 
 - name: Remove unwanted packaged
   dnf:
