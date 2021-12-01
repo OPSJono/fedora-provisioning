@@ -88,6 +88,16 @@ sudo vim /etc/fstab
 //innovedxen/shared/    /mnt/shared     cifs    vers=1.0,uid=1000,gid=1000,sec=ntlm,user=jonathan,password= 0 0
 ```
 
+### Thunderbird notes
+Errors re: `Processing message failed. Status: 80004005`  
+**Do not use the Gmail plugins.**  
+* Instead add the calendar using the public URL (in iCal format).  
+* Edit -> Preferences -> Calendar -> Reminders -> Show missed reminders = false  
+* Calendar -> Right click -> properties -> Prefer client-side email scheduling = true
+
+Sources:
+* https://help.nextcloud.com/t/error-when-accepting-a-calendar-invite-on-thunderbird/65117
+* https://superuser.com/a/1212160
 
 VFIO GPU Passthrough
 ====================
