@@ -1,3 +1,4 @@
+ 
 #3.4.1
 
 #[gtk-about]
@@ -14,14 +15,14 @@ Container=_MainDock_
 sep_display=
 
 #s[Default] Launcher's name:
-Name=Videos
+Name=
 
 #S+[Default] Image's name or path:
-Icon = totem.svg
+Icon=
 
 #s[Default] Command to launch on click:
 #{Example: nautilus --no-desktop, gedit, etc. You can even enter a shortkey, e.g. <Alt>F1, <Ctrl>c,  <Ctrl>v, etc}
-Exec=totem
+Exec=
 
 
 #X[Extra parameters]
@@ -43,8 +44,8 @@ Terminal=false
 ShowOnViewport=0
 
 #f[0;100] Order you want for this launcher among the others:
-Order=7.9560546875
+Order=17.965675726532936
 
 Icon Type=0
 Type=Application
-Origin=/usr/share/applications/org.gnome.Totem.desktop
+Origin=/usr/share/applications/mozilla-thunderbird.desktop

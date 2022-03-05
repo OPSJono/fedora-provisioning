@@ -1,3 +1,4 @@
+ 
 #3.4.1
 
 #[gtk-about]
@@ -20,7 +21,7 @@ Icon=
 #X[Extra parameters]
 frame_extra=
 #f[0;100] Order you want for this launcher among the others:
-Order=17.862702906131744
+Order=17.982837863266468
 
 Icon Type=2
 Type=Separator
