@@ -4,7 +4,12 @@
     src: papirus-icon-theme.repo.j2
     dest: /etc/yum.repos.d/papirus-icon-theme.repo
 
-- name: Install themes and icons
+# TODO: Download & Install Mac shell theme.
+# TODO: Install mac cursor themes to the icons directory.
+# TODO: PHPStorm is available via FlatPak now? - Would be better than manually downloading? - Flatpak may allow it to become a proper launcher on the dock?
+# TODO: Gnome extensions to move clock the right, move notification, de-annoy the "app is ready" notifications, top bar transparency (27%), hide dash in overview?
+# TODO: Chrome "launchers" in the dock open as new icons for each window. @see https://glx-dock.org/bg_topic.php?t=8984
+- name: Install Arc themes, papirus & mac icons
   dnf:
     name: ['arc-theme', 'papirus-icon-theme', 'la-capitaine-icon-theme']
     state: latest
