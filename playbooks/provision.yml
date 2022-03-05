@@ -28,10 +28,10 @@
   roles:
     - opsjono.package_installations
     - opsjono.themes
+    - opsjono.cairo-dock
     - opsjono.gitkraken
     - opsjono.phpstorm
     - opsjono.datagrip
-      #    - opsjono.mysql_workbench
     - opsjono.postman
     - opsjono.docker
     - opsjono.nginx
@@ -44,16 +44,6 @@
     - opsjono.snapd
     - opsjono.php-cs-fixer
 #    - opsjono.nvidia
-
 #    - opsjono.discord
-#    - opsjono.skype
 #    - opsjono.mjml
-#    - azavea.terraform
-#    - ghyde.virtualbox
 #    - stefangweichinger.ansible-rclone
-
-#    - geerlingguy.apache
-#    - geerlingguy.redis
-#    - geerlingguy.php
-#    - role: geerlingguy.mysql
-#      become: true

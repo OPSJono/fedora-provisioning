@@ -1,0 +1,11 @@
+---
+- name: Install Cairo Dock
+  dnf:
+    name: ['cairo-dock']
+    state: latest
+
+- name: Copy MacOS Dock theme to user's directory.
+  shell: |
+    mkdir -p /home/{{ ansible_user }}/.config/cairo-dock/themes/
+    cp -R opsjono.cairo-dock/files/mcOS-BS-Dark /home/{{ ansible_user }}/.config/cairo-dock/themes/
+    chown {{ ansible_user }}:{{ ansible_user }} -R /home/{{ ansible_user }}/.config/cairo-dock/themes/
