@@ -31,7 +31,7 @@
     - opsjono.gitkraken
     - opsjono.phpstorm
     - opsjono.datagrip
-    - opsjono.mysql_workbench
+      #    - opsjono.mysql_workbench
     - opsjono.postman
     - opsjono.docker
     - opsjono.nginx

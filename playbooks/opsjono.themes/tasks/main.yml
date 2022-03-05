@@ -6,7 +6,7 @@
 
 - name: Install themes and icons
   dnf:
-    name: ['arc-theme', 'papirus-icon-theme', 'moka-icon-theme']
+    name: ['arc-theme', 'papirus-icon-theme', 'la-capitaine-icon-theme']
     state: latest
 
 - name: Copy background images to pictures folder.
