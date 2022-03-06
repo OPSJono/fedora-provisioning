@@ -1,0 +1,13 @@
+---
+## @see https://medium.com/@ankurloriya/install-gnome-extension-using-command-line-736199be1cda
+# TODO: Gnome extensions to move clock the right, move notification, de-annoy the "app is ready" notifications, hide dash in overview.
+- name: Install Gnome extensions
+  copy:
+    src: "opsjono.gnome-extensions/files/"
+    dest: "/usr/share/gnome-shell/extensions/"
+  become: true
+  become_user: root
+
+- name: Activate gnome extensions
+  command: "gnome-shell-extension-tool -e {{ item }}"
+  with_items: "{{ extension_uuids }}"

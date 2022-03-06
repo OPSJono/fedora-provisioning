@@ -27,8 +27,9 @@
 
   roles:
 #    - opsjono.package_installations
-    - opsjono.themes
+#    - opsjono.themes
 #    - opsjono.cairo-dock
+    - opsjono.gnome-extensions
 #    - opsjono.gitkraken
 #    - opsjono.phpstorm
 #    - opsjono.datagrip
