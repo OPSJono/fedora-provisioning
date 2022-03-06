@@ -27,11 +27,11 @@
 
   roles:
 #    - opsjono.package_installations
-    - opsjono.themes
+#    - opsjono.themes
 #    - opsjono.cairo-dock
 #    - opsjono.gitkraken
-#    - opsjono.phpstorm
-#    - opsjono.datagrip
+    - opsjono.phpstorm
+    - opsjono.datagrip
 #    - opsjono.postman
 #    - opsjono.docker
 #    - opsjono.nginx

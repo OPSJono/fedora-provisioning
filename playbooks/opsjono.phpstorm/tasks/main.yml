@@ -60,22 +60,10 @@
   become: true
   become_user: "{{ ansible_user }}"
 
-- name: List all PHPStorm preference files
-  find:
-    paths: "opsjono.phpstorm/files/preferences/"
-    recurse: yes
-  register: found_files
-
-- name: Save those preference files to a loopable variable
-  set_fact:
-    preference_files:
-      - "{{ found_files.files | map(attribute='path') }}"
-
 - name: Copy personal preferences to the PhpStorm directory
   copy:
-    src: "{{ item }}"
+    src: "opsjono.phpstorm/files/preferences/"
     dest: "/home/{{ ansible_user }}/.config/JetBrains/PhpStorm{{ phpstorm_version }}/"
     owner: "{{ ansible_user }}"
     group: "{{ ansible_user }}"
-  with_items:
-    - "{{ preference_files[0] }}"
+    directory_mode: true

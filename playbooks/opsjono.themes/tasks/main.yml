@@ -5,7 +5,6 @@
     dest: /etc/yum.repos.d/papirus-icon-theme.repo
 
 # TODO: Download & Install Mac shell theme.
-# TODO: Install mac cursor themes to the icons directory.
 # TODO: Gnome extensions to move clock the right, move notification, de-annoy the "app is ready" notifications, top bar transparency (27%), hide dash in overview?
 - name: Install Arc themes, papirus & mac icons
   dnf:
@@ -26,9 +25,27 @@
 
 - include_tasks: copy-files.yml
 
-- name: Set variables for icons
+- name: Set variables for mac icons
   set_fact:
     files_from: "opsjono.themes/files/pictures/icons"
     files_to: "/home/{{ ansible_user }}/Pictures/icons"
 
 - include_tasks: copy-files.yml
+
+- name: Install the mac cursor theme
+  copy:
+    src: "opsjono.themes/files/cursors/McMojave-cursors/"
+    dest: "/home/{{ ansible_user }}/.icons/McMojave-cursors/"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: 0775
+    directory_mode: true
+
+- name: Install the mac font LucidaGrande
+  copy:
+    src: "opsjono.themes/files/fonts/"
+    desc: "/home/{{ ansible_user }}/.local/share/fonts/"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: 0775
+    directory_mode: true
