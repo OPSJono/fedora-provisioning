@@ -12,8 +12,78 @@
     name: ['arc-theme', 'papirus-icon-theme', 'la-capitaine-icon-theme']
     state: latest
 
-- name: Copy background images to pictures folder.
-  shell: |
-    mkdir -p /home/{{ ansible_user }}/Pictures/wallpapers
-    cp -R opsjono.themes/files/* /home/{{ ansible_user }}/Pictures/wallpapers/
-    chown {{ ansible_user }}:{{ ansible_user }} -R /home/{{ ansible_user }}/Pictures/wallpapers
+# TODO: DRY up these repeating blocks.
+- name: Ensure folders exists for icons & wallpapers
+  file:
+    path: "{{ item }}"
+    state: directory
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: 0775
+  with_items:
+    - "/home/{{ ansible_user }}/Pictures/wallpapers/mac"
+    - "/home/{{ ansible_user }}/Pictures/wallpapers/fedora"
+    - "/home/{{ ansible_user }}/Pictures/icons"
+
+- name: List all generic wallpaper files
+  find:
+    paths: "opsjono.themes/files/pictures/wallpapers/fedora"
+    recurse: yes
+  register: found_files
+
+- name: Save those files to a loopable variable
+  set_fact:
+    preference_files:
+      - "{{ found_files.files | map(attribute='path') }}"
+
+- name: Copy files to the Pictures directory
+  copy:
+    src: "{{ item }}"
+    dest: "/home/{{ ansible_user }}/Pictures/wallpapers/fedora"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: 0775
+  with_items:
+    - "{{ preference_files[0] }}"
+
+- name: List all mac wallpaper files
+  find:
+    paths: "opsjono.themes/files/pictures/wallpapers/mac"
+    recurse: yes
+  register: found_files
+
+- name: Save those files to a loopable variable
+  set_fact:
+    preference_files:
+      - "{{ found_files.files | map(attribute='path') }}"
+
+- name: Copy files to the Pictures directory
+  copy:
+    src: "{{ item }}"
+    dest: "/home/{{ ansible_user }}/Pictures/wallpapers/mac"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: 0775
+  with_items:
+    - "{{ preference_files[0] }}"
+
+- name: List all icon files
+  find:
+    paths: "opsjono.themes/files/pictures/icons"
+    recurse: yes
+  register: found_files
+
+- name: Save those files to a loopable variable
+  set_fact:
+    preference_files:
+      - "{{ found_files.files | map(attribute='path') }}"
+
+- name: Copy files to the Pictures directory
+  copy:
+    src: "{{ item }}"
+    dest: "/home/{{ ansible_user }}/Pictures/icons"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: 0775
+  with_items:
+    - "{{ preference_files[0] }}"
