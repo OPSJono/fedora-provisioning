@@ -12,14 +12,14 @@
     datagrip_installed: true
   when: output.stdout | join('') is search(datagrip_package_name)
 
-- name: Install DataGrip using Flakpak (via Shell) if it isn't installed already
+- name: Install DataGrip using Flakpak (via Shell) if it isn't installed already (Takes a while)
   shell: |
     flatpak install {{ datagrip_package_name }} -y > /dev/null 2>&1
   become: true
   become_user: root
   when: datagrip_installed != true
 
-- name: Update DataGrip using Flakpak (via Shell) if it is already installed
+- name: Update DataGrip using Flakpak (via Shell) if it is already installed (May take a while)
   shell: |
     flatpak update {{ datagrip_package_name }} -y > /dev/null 2>&1
   become: true

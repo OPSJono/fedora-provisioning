@@ -12,14 +12,14 @@
     phpstorm_installed: true
   when: output.stdout | join('') is search(phpstorm_package_name)
 
-- name: Install PHPStorm using Flakpak (via Shell) if it isn't installed already
+- name: Install PHPStorm using Flakpak (via Shell) if it isn't installed already (Takes a while)
   shell: |
     flatpak install {{ phpstorm_package_name }} -y > /dev/null 2>&1
   become: true
   become_user: root
   when: phpstorm_installed != true
 
-- name: Update PHPStorm using Flakpak (via Shell) if it is already installed
+- name: Update PHPStorm using Flakpak (via Shell) if it is already installed (May take a while)
   shell: |
     flatpak update {{ phpstorm_package_name }} -y > /dev/null 2>&1
   become: true

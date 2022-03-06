@@ -4,12 +4,32 @@
     src: papirus-icon-theme.repo.j2
     dest: /etc/yum.repos.d/papirus-icon-theme.repo
 
-# TODO: Download & Install Mac shell theme.
 # TODO: Gnome extensions to move clock the right, move notification, de-annoy the "app is ready" notifications, top bar transparency (27%), hide dash in overview?
 - name: Install Arc themes, papirus & mac icons
   dnf:
     name: ['arc-theme', 'papirus-icon-theme', 'la-capitaine-icon-theme']
     state: latest
+
+- name: Ensure the theme folders exist
+  file:
+    path: "{{ item }}"
+    state: directory
+    owner: root
+    group: root
+    mode: 0775
+  become: true
+  become_user: root
+  with_items:
+    - "/usr/share/themes"
+    - "/usr/share/themes/WhiteSur-dark"
+    - "/usr/share/themes/WhiteSur-dark-solid"
+
+- name: Install Gnome Mac themes (takes a few minutes)
+  copy:
+    src: "opsjono.themes/files/shell-themes/"
+    dest: "/usr/share/themes/"
+  become: true
+  become_user: root
 
 - name: Set variables for fedora wallpapers
   set_fact:
