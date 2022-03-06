@@ -1,8 +1,0 @@
-github.cweijan.test-theme
-org.intellij.plugins.hcl
-org.jetbrains.plugins.rest
-ru.adelf.idea.dotenv
-com.jetbrains.codeWithMe
-com.intellij.ideolog
-intellij.prettierJS
-io.github.donkirkby.livepycharm

@@ -1,6 +1,0 @@
-com.jetbrains.php.drupal
-com.jetbrains.php.joomla
-com.jetbrains.php.wordPress
-com.intellij.database
-com.intellij.phing
-com.perl5

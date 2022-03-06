@@ -26,23 +26,23 @@
     - ansible_distribution_major_version: '8'
 
   roles:
-    - opsjono.package_installations
-    - opsjono.themes
-    - opsjono.cairo-dock
-    - opsjono.gitkraken
+#    - opsjono.package_installations
+#    - opsjono.themes
+#    - opsjono.cairo-dock
+#    - opsjono.gitkraken
     - opsjono.phpstorm
-    - opsjono.datagrip
-    - opsjono.postman
-    - opsjono.docker
-    - opsjono.nginx
-    - opsjono.keybase
-    - opsjono.vpn
-    - opsjono.slack
+#    - opsjono.datagrip
+#    - opsjono.postman
+#    - opsjono.docker
+#    - opsjono.nginx
+#    - opsjono.keybase
+#    - opsjono.vpn
+#    - opsjono.slack
 
-    - opsjono.spotify
-    - opsjono.ssh
-    - opsjono.snapd
-    - opsjono.php-cs-fixer
+#    - opsjono.spotify
+#    - opsjono.ssh
+#    - opsjono.snapd
+#    - opsjono.php-cs-fixer
 #    - opsjono.nvidia
 #    - opsjono.discord
 #    - opsjono.mjml

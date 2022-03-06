@@ -1,0 +1,6 @@
+<application>
+  <component name="NodeJsLocalInterpreterManager">
+    <local-interpreter path="/usr/bin/nodejs" />
+    <local-interpreter path="/usr/bin/tsc" />
+  </component>
+</application>

@@ -1,0 +1,17 @@
+<application>
+  <component name="Trusted.Paths">
+    <option name="TRUSTED_PROJECT_PATHS">
+      <map>
+        <entry key="$USER_HOME$/code/personal/docker-qs" value="true" />
+        <entry key="$USER_HOME$/code/personal/fedora-provisioning" value="true" />
+      </map>
+    </option>
+  </component>
+  <component name="Trusted.Paths.Settings">
+    <option name="TRUSTED_PATHS">
+      <list>
+        <option value="$USER_HOME$/code/personal" />
+      </list>
+    </option>
+  </component>
+</application>

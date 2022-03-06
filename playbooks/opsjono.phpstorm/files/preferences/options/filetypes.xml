@@ -1,0 +1,32 @@
+<application>
+  <component name="FileTypeManager" version="18">
+    <extensionMap>
+      <mapping pattern="ApplicationChargeValidation" type="AUTO_DETECTED" />
+      <mapping pattern="crontab" type="AUTO_DETECTED" />
+      <mapping pattern="24h-part-1" type="AUTO_DETECTED" />
+      <mapping pattern=".dockerignore" type="GitIgnore file" />
+      <mapping pattern="Dockerfile_old" type="PLAIN_TEXT" />
+      <mapping pattern="simong" type="PLAIN_TEXT" />
+      <mapping pattern="hour-part-4" type="PLAIN_TEXT" />
+      <mapping pattern="hour-part-3" type="PLAIN_TEXT" />
+      <mapping pattern="monitrc" type="PLAIN_TEXT" />
+      <mapping pattern=".gitkeep" type="PLAIN_TEXT" />
+      <mapping pattern="memory" type="PLAIN_TEXT" />
+      <mapping pattern="jonathanm" type="PLAIN_TEXT" />
+      <mapping pattern=".env.demo" type="PLAIN_TEXT" />
+      <mapping pattern="Vagrantfile" type="PLAIN_TEXT" />
+      <mapping pattern="cpus" type="PLAIN_TEXT" />
+      <mapping pattern="./ci/custapi.sqlite" type="PLAIN_TEXT" />
+      <mapping ext="tmp" type="PLAIN_TEXT" />
+      <mapping ext="ttf" type="PLAIN_TEXT" />
+      <mapping ext="sqlite" type="PLAIN_TEXT" />
+      <mapping ext="raw" type="PLAIN_TEXT" />
+      <mapping ext="package_installations" type="PLAIN_TEXT" />
+      <mapping ext="j2" type="PLAIN_TEXT" />
+      <mapping pattern="_htaccess*" type="htaccess" />
+      <removed_mapping pattern=".dockerignore" approved="true" type="Twig" />
+      <removed_mapping pattern=".env.production" approved="true" type="PLAIN_TEXT" />
+      <mapping pattern=".env.production" type=".env file" />
+    </extensionMap>
+  </component>
+</application>

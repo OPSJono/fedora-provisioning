@@ -4,6 +4,7 @@
     name: ['cairo-dock']
     state: latest
 
+## TODO: Update cairo-dock preferences.
 - name: Copy MacOS Dock theme to user's directory.
   shell: |
     mkdir -p /home/{{ ansible_user }}/.config/cairo-dock/themes/

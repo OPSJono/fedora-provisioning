@@ -1,0 +1,89 @@
+com.intellij|null
+tanvd.grazi|null
+org.jetbrains.settingsRepository|IDE Settings
+org.jetbrains.plugins.yaml|Languages
+org.jetbrains.plugins.wsl.fs|null
+org.jetbrains.plugins.textmate|Other Tools
+org.jetbrains.plugins.terminal|Other Tools
+org.jetbrains.plugins.rest|null
+org.jetbrains.plugins.localization|Languages
+org.jetbrains.plugins.emojipicker|Other Tools
+org.intellij.qodana|null
+org.editorconfig.editorconfigjetbrains|Other Tools
+hunspell|Spellchecker
+hg4idea|Version Controls
+com.jetbrains.sh|Languages
+com.jetbrains.projector.libs|null
+org.jetbrains.plugins.remote-run|null
+org.jetbrains.plugins.vagrant|Deployment
+com.jetbrains.plugins.webDeployment|Deployment
+com.jetbrains.plugins.ini4idea|Languages
+com.jetbrains.gateway|Remote Development
+com.jetbrains.gateway.terminal|null
+com.jetbrains.codeWithMe|null
+org.jetbrains.plugins.haml|Template Languages
+com.intellij.plugins.watcher|null
+com.jetbrains.restClient|Other Tools
+com.intellij.diagram|Other Tools
+com.intellij.copyright|Other Tools
+com.intellij.platform.images|null
+com.intellij.css|Style Sheets
+org.jetbrains.plugins.sass|Style Sheets
+org.jetbrains.plugins.less|Style Sheets
+com.intellij.configurationScript|null
+com.intellij.completion.ml.ranking|Other Tools
+com.intellij.apacheConfig|Languages
+com.intellij.CloudConfig|IDE Settings
+com.jetbrains.performancePlugin|Other Tools
+intellij.indexing.shared.core|null
+com.jetbrains.performancePlugin.dynamicPlugins|null
+XPathView|HTML and XML
+org.intellij.intelliLang|Other Tools
+org.intellij.plugins.markdown|Languages
+gherkin|Languages
+com.intellij.tasks|Other Tools
+com.intellij.tasks.timeTracking|Other Tools
+W3Validators|Style Sheets
+Subversion|Version Controls
+Remote Development Server|null
+Refactor-X|HTML and XML
+PerforceDirectPlugin|Version Controls
+HtmlTools|HTML and XML
+org.jetbrains.plugins.github|Version Controls
+Git4Idea|Version Controls
+intellij.indexing.shared|null
+com.jetbrains.php|Languages
+org.jetbrains.plugins.phpstorm-remote-interpreter|PHP Tools
+com.jetbrains.twig|Template Languages
+com.jetbrains.php.workshop|Other Tools
+com.jetbrains.php.phpspec|Test Tools
+com.jetbrains.php.framework|Other Tools
+com.jetbrains.php.wordPress|PHP Frameworks
+com.jetbrains.php.dql|Languages
+com.jetbrains.php.blade|Template Languages
+com.jetbrains.php.behat|Test Tools
+com.jetbrains.php.codeception|Test Tools
+com.jetbrains.php.architecture|Languages
+com.intellij.php.tools.quality.phpstan|Other Tools
+com.intellij.php.psalm|Other Tools
+com.intellij.php.phpt|Languages
+com.intellij.php.markdown|null
+com.intellij.php.grazie|null
+com.intellij.phing|Build Tools
+com.intellij.swagger|Microservices
+JavaScriptDebugger|JavaScript Frameworks and Tools
+org.jetbrains.plugins.vue|JavaScript Frameworks and Tools
+JavaScript|JavaScript Frameworks and Tools
+tslint|JavaScript Frameworks and Tools
+com.jetbrains.php.drupal|PHP Frameworks
+com.intellij.tailwindcss|Style Sheets
+com.intellij.database|Database
+com.jetbrains.php.joomla|PHP Frameworks
+NodeJS|JavaScript Frameworks and Tools
+JSIntentionPowerPack|JavaScript Frameworks and Tools
+org.coffeescript|JavaScript Frameworks and Tools
+com.jetbrains.changeReminder|Version Controls
+com.intellij.searcheverywhere.ml|null
+Docker|Deployment
+org.jetbrains.plugins.phpstorm-docker|PHP Tools
+AngularJS|JavaScript Frameworks and Tools
