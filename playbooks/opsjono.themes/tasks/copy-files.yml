@@ -1,0 +1,29 @@
+---
+- name: Ensure destination folders exists
+  file:
+    path: "{{ files_to }}"
+    state: directory
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: 0775
+
+- name: List all files to copy
+  find:
+    paths: "{{ files_from }}"
+    recurse: yes
+  register: found_files
+
+- name: Save files to a loopable variable
+  set_fact:
+    files_array:
+      - "{{ found_files.files | map(attribute='path') }}"
+
+- name: Copy files to the destination directory
+  copy:
+    src: "{{ item }}"
+    dest: "{{ files_to }}"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: 0775
+  with_items:
+    - "{{ files_array[0] }}"
