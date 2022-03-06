@@ -1,1 +1,0 @@
-select * from custom_colours where custom_colours_type = 0 order by custom_colours_name;

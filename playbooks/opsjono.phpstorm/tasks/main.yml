@@ -26,6 +26,14 @@
   become_user: root
   when: phpstorm_installed == true
 
+- name: Ensure directory for the icon exists
+  file:
+    path: /opt/phpstorm
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: 0775
+    state: directory
+
 - name: Copy PhpStorm icon into place
   copy:
     src: icon.png
@@ -71,5 +79,3 @@
     group: "{{ ansible_user }}"
   with_items:
     - "{{ preference_files[0] }}"
-
-## TODO: Copy these changes to the DataGrip playbook too.

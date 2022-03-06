@@ -1,4 +1,0 @@
-update categories_description set categories_name = 'workwear' where categories_id = 29;
-
-INSERT INTO clothes2_osC.configuration (configuration_title, configuration_key, configuration_value, configuration_description, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('Trustpilot Rating', 'TRUSTPILOT_RATING_VALUE', '5', 'Set the Trustpilot rating', 1, 1, '2018-01-17 14:20:02', '0000-00-00 00:00:00', null, null) ON DUPLICATE KEY UPDATE configuration_key = 'TRUSTPILOT_RATING_VALUE';
-INSERT INTO clothes2_osC.configuration (configuration_title, configuration_key, configuration_value, configuration_description, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('TrustPilot review count', 'TRUSTPILOT_REVIEW_COUNT', '16,000+', 'Set the TrustPilot review count', 1, 1, null, '0000-00-00 00:00:00', null, null) ON DUPLICATE KEY UPDATE configuration_key = 'TRUSTPILOT_REVIEW_COUNT';
