@@ -2745,7 +2745,9 @@ StEntry StLabel.hint-text {
 }
 
 #panel .panel-button .app-menu-icon {
-  -st-icon-style: symbolic;
+  /*-st-icon-style: symbolic;*/
+  /** Custom override to the current application icon to restore colur */
+  -st-icon-style: regular;
 }
 
 #panel .panel-button#panelActivities {
