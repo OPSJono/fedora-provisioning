@@ -1,0 +1,32 @@
+<application>
+  <component name="RecentProjectsManager">
+    <option name="additionalInfo">
+      <map>
+        <entry key="$APPLICATION_CONFIG_DIR$/projects/default">
+          <value>
+            <RecentProjectMetaInfo frameTitle="console_1 [Production Read Only]" projectWorkspaceId="1tXYOLERxHM5B3Ktw2ajGwG2sW5">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="DB-211.7442.38" />
+              <option name="buildTimestamp" value="1622460412172" />
+              <frame x="2560" y="32" width="2560" height="1376" extendedState="6" />
+              <option name="productionCode" value="DB" />
+              <option name="projectOpenTimestamp" value="1622916868343" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/DataGripProjects/default">
+          <value>
+            <RecentProjectMetaInfo frameTitle="console_2 [Production [Read Write]]" opened="true" projectWorkspaceId="1z6FereSLJWRGtxoKybKPATaF1m">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="DB-212.5457.41" />
+              <option name="buildTimestamp" value="1633639877609" />
+              <frame x="0" y="32" width="2560" height="1376" extendedState="6" />
+              <option name="productionCode" value="DB" />
+              <option name="projectOpenTimestamp" value="1635753375167" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</application>
