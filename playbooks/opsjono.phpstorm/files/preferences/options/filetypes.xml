@@ -22,8 +22,10 @@
       <mapping ext="ttf" type="PLAIN_TEXT" />
       <mapping ext="sqlite" type="PLAIN_TEXT" />
       <mapping ext="raw" type="PLAIN_TEXT" />
+      <mapping ext="license" type="PLAIN_TEXT" />
       <mapping ext="package_installations" type="PLAIN_TEXT" />
       <mapping ext="j2" type="PLAIN_TEXT" />
+      <mapping ext="db" type="PLAIN_TEXT" />
       <mapping pattern="_htaccess*" type="htaccess" />
       <removed_mapping pattern=".dockerignore" approved="true" type="Twig" />
       <removed_mapping pattern=".env.production" approved="true" type="PLAIN_TEXT" />

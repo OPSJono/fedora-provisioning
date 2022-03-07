@@ -1,0 +1,16 @@
+!.gitignore
+# Files
+files/preferences/datagrip.key
+files/preferences/plugin_PCWMP.license
+files/preferences/port
+files/preferences/port.lock
+files/preferences/user.web.token
+files/preferences/disabled_plugins.txt
+
+# Folders
+files/preferences/consoles
+files/preferences/javascript
+files/preferences/tasks
+files/preferences/scratches
+files/preferences/ssl
+files/preferences/workspace

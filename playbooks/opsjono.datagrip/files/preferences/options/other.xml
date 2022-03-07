@@ -41,7 +41,7 @@
     <property name="evlsprt3.193" value="18" />
     <property name="evlsprt3.211" value="11" />
     <property name="file.chooser.recent.files" value="$USER_HOME$/code/c2o/customisation-api/ci/custapi.sqlite&#10;/home/jonathan/code/c2o/db-purge/slow_query_logs/test.sql&#10;/home/jonathan/code/c2o/db-purge/slow_query_logs/sql/hour-part-1.sql&#10;/home/jonathan/code/c2o/db-purge/slow_query_logs/hour-part-1.sql&#10;/home/jonathan/code/c2o/db-purge/slow_query_logs/output.sql&#10;/home/jonathan/Documents/Slow Query Logs/output-new.sql&#10;/home/jonathan/Documents/csv_exports&#10;/home/jonathan/.ssh/jmarshall_ec2_production_id_rsa&#10;/home/jonathan/.ssh/jmarshall_ec2_staging_id_rsa&#10;/home/jonathan/.ssh/sh_aws_staging_id_rsa&#10;/home/jonathan/.ssh/sh_aws_prod_id_rsa&#10;/home/jonathan/.ssh/rds_aws_staging.ppk&#10;/home/jonathan/customisation_files_for_2019.sql&#10;/home/jonathan&#10;/home/jonathan/customisation_files_for_2019.csv&#10;/home/jonathan/code/c2o/customisation-api/customisation_api_test_db.sql&#10;/home/jonathan/Downloads/Long.Day.Got.Longer.json&#10;/home/jonathan/Documents&#10;/home/jonathan/Documents/vendor_sku_id_matrix.csv" />
-    <property name="file.gist.reindex.count" value="3650" />
+    <property name="file.gist.reindex.count" value="3667" />
     <property name="fileTypeChangedCounter" value="178" />
     <property name="fileTypeDetectors" value="com.intellij.database.vfs.DbStorageFileType$Detector:com.intellij.ide.scratch.ScratchFileServiceImpl$Detector:org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector" />
     <property name="got.it.tooltip.database.schema.control.got.it" value="1" />

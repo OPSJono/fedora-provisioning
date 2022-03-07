@@ -1,7 +1,7 @@
 <application>
   <component name="ActionsLocalSummary">
     <e n="$Copy">
-      <i c="396" l="1646229117362" />
+      <i c="399" l="1646647531268" />
     </e>
     <e n="$Delete">
       <i c="66" l="1646123231466" />
@@ -13,7 +13,7 @@
       <i c="59" l="1643376497575" />
     </e>
     <e n="$SelectAll">
-      <i c="108" l="1644929878594" />
+      <i c="109" l="1646649936887" />
     </e>
     <e n="$Undo">
       <i c="723" l="1646228421316" />
@@ -31,7 +31,7 @@
       <i c="6" l="1625054210092" />
     </e>
     <e n="Console.Jdbc.Execute">
-      <i c="2266" l="1646319985438" />
+      <i c="2278" l="1646647917614" />
     </e>
     <e n="Console.Jdbc.Terminate">
       <i c="40" l="1644222747903" />
@@ -100,22 +100,22 @@
       <i c="4" l="1625049246547" />
     </e>
     <e n="EditorBackSpace">
-      <i c="3074" l="1646329224405" />
+      <i c="3128" l="1646647924932" />
     </e>
     <e n="EditorChooseLookupItem">
-      <i c="1167" l="1646319403813" />
+      <i c="1176" l="1646647662100" />
     </e>
     <e n="EditorChooseLookupItemReplace">
       <i c="1" l="1645612287319" />
     </e>
     <e n="EditorCopy">
-      <i c="697" l="1646319456605" />
+      <i c="704" l="1646647957884" />
     </e>
     <e n="EditorCut">
       <i c="85" l="1645799639130" />
     </e>
     <e n="EditorDelete">
-      <i c="635" l="1646319437205" />
+      <i c="643" l="1646647921703" />
     </e>
     <e n="EditorDeleteToWordEnd">
       <i c="42" l="1645796899692" />
@@ -124,40 +124,40 @@
       <i c="25" l="1631701712052" />
     </e>
     <e n="EditorDown">
-      <i c="1931" l="1646319980206" />
+      <i c="1941" l="1646647595983" />
     </e>
     <e n="EditorDownWithSelection">
-      <i c="202" l="1646319448390" />
+      <i c="203" l="1646647704982" />
     </e>
     <e n="EditorDuplicate">
-      <i c="127" l="1646228275417" />
+      <i c="132" l="1646647616493" />
     </e>
     <e n="EditorEnter">
-      <i c="1543" l="1646319400657" />
+      <i c="1560" l="1646647651378" />
     </e>
     <e n="EditorEscape">
-      <i c="206" l="1646228265434" />
+      <i c="209" l="1646647481243" />
     </e>
     <e n="EditorIndentSelection">
-      <i c="37" l="1646223763141" />
+      <i c="38" l="1646647495666" />
     </e>
     <e n="EditorLeft">
-      <i c="1803" l="1646319411018" />
+      <i c="1835" l="1646647675247" />
     </e>
     <e n="EditorLeftWithSelection">
       <i c="357" l="1646223621097" />
     </e>
     <e n="EditorLineEnd">
-      <i c="527" l="1646223608904" />
+      <i c="534" l="1646647674486" />
     </e>
     <e n="EditorLineEndWithSelection">
-      <i c="129" l="1646223762184" />
+      <i c="130" l="1646647924533" />
     </e>
     <e n="EditorLineStart">
-      <i c="364" l="1646319436947" />
+      <i c="365" l="1646647471462" />
     </e>
     <e n="EditorLineStartWithSelection">
-      <i c="319" l="1646319450235" />
+      <i c="320" l="1646647500975" />
     </e>
     <e n="EditorMoveToPageBottom">
       <i c="3" l="1629793007859" />
@@ -169,10 +169,10 @@
       <i c="2" l="1629793008530" />
     </e>
     <e n="EditorNextWord">
-      <i c="1001" l="1646223771502" />
+      <i c="1019" l="1646647474594" />
     </e>
     <e n="EditorNextWordWithSelection">
-      <i c="365" l="1646228280492" />
+      <i c="368" l="1646647461259" />
     </e>
     <e n="EditorPageDown">
       <i c="87" l="1645434632010" />
@@ -187,7 +187,7 @@
       <i c="88" l="1644308848830" />
     </e>
     <e n="EditorPaste">
-      <i c="1288" l="1646319843017" />
+      <i c="1298" l="1646647916082" />
     </e>
     <e n="EditorPasteFromX11">
       <i c="14" l="1644931198781" />
@@ -196,16 +196,16 @@
       <i c="1" l="1624959909787" />
     </e>
     <e n="EditorPreviousWord">
-      <i c="1015" l="1646223759546" />
+      <i c="1022" l="1646647561384" />
     </e>
     <e n="EditorPreviousWordWithSelection">
-      <i c="676" l="1646228271796" />
+      <i c="679" l="1646647596748" />
     </e>
     <e n="EditorRight">
-      <i c="998" l="1646223773439" />
+      <i c="1009" l="1646647561754" />
     </e>
     <e n="EditorRightWithSelection">
-      <i c="157" l="1646223772599" />
+      <i c="159" l="1646647475640" />
     </e>
     <e n="EditorScrollUp">
       <i c="1" l="1625220935179" />
@@ -214,7 +214,7 @@
       <i c="5" l="1636975056239" />
     </e>
     <e n="EditorTab">
-      <i c="123" l="1643385207504" />
+      <i c="125" l="1646647556668" />
     </e>
     <e n="EditorTextEnd">
       <i c="1" l="1624955400487" />
@@ -229,16 +229,16 @@
       <i c="2" l="1624959352359" />
     </e>
     <e n="EditorToggleCase">
-      <i c="34" l="1646223773099" />
+      <i c="35" l="1646647497627" />
     </e>
     <e n="EditorToggleInsertState">
       <i c="6" l="1644321903246" />
     </e>
     <e n="EditorUnindentSelection">
-      <i c="210" l="1645796897329" />
+      <i c="228" l="1646647556452" />
     </e>
     <e n="EditorUp">
-      <i c="1396" l="1646228282714" />
+      <i c="1401" l="1646647652144" />
     </e>
     <e n="EditorUpWithSelection">
       <i c="416" l="1646319448052" />
@@ -301,13 +301,13 @@
       <i c="13" l="1643209696293" />
     </e>
     <e n="SaveAll">
-      <i c="145" l="1645796938460" />
+      <i c="147" l="1646647925706" />
     </e>
     <e n="SearchEverywhere">
       <i c="3" l="1641892386694" />
     </e>
     <e n="SelectNextOccurrence">
-      <i c="2083" l="1646223756688" />
+      <i c="2098" l="1646647477576" />
     </e>
     <e n="Session.Close">
       <i c="1" l="1639145218982" />
@@ -319,7 +319,7 @@
       <i c="1" l="1631179036272" />
     </e>
     <e n="ShowSettings">
-      <i c="4" l="1640161220006" />
+      <i c="5" l="1646649931203" />
     </e>
     <e n="ShowUmlDiagram">
       <i c="1" l="1629792601230" />
@@ -358,7 +358,7 @@
       <i c="1" l="1629796793089" />
     </e>
     <e n="UnselectPreviousOccurrence">
-      <i c="20" l="1645798115084" />
+      <i c="21" l="1646647478228" />
     </e>
     <e n="ViewSource">
       <i c="1" l="1643026591316" />
@@ -368,6 +368,12 @@
     </e>
     <e n="WelcomeScreen.OpenDirectoryProject">
       <i c="1" l="1635753336921" />
+    </e>
+    <e n="com.intellij.application.options.schemes.AbstractSchemeActions$RenameAction">
+      <i c="1" l="1646649935991" />
+    </e>
+    <e n="com.intellij.application.options.schemes.AbstractSchemesPanel$ShowSchemesActionsListAction">
+      <i c="1" l="1646649935160" />
     </e>
     <e n="com.intellij.codeInsight.documentation.DocumentationComponent$MyGearActionGroup">
       <i c="1" l="1626333919743" />
@@ -431,6 +437,9 @@
     </e>
     <e n="com.intellij.openapi.keymap.impl.ui.KeymapPanel$AddKeyboardShortcutAction">
       <i c="1" l="1629810895077" />
+    </e>
+    <e n="com.intellij.openapi.keymap.impl.ui.KeymapPanel$RemoveShortcutAction">
+      <i c="1" l="1646649947232" />
     </e>
     <e n="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
       <i c="5" l="1641892387605" />

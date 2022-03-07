@@ -262,11 +262,11 @@
     <frame x="0" y="32" width="2560" height="1376" extendedState="6" />
   </component>
   <component name="WindowStateApplicationService">
-    <state width="1060" height="128" key="ShowUsagesActions.dimensionServiceKey" timestamp="1646237121510">
+    <state width="1060" height="128" key="ShowUsagesActions.dimensionServiceKey" timestamp="1646647380463">
       <screen x="0" y="32" width="2560" height="1016" />
     </state>
     <state width="795" height="266" key="ShowUsagesActions.dimensionServiceKey/0.32.1920.1016" timestamp="1645095176872" />
-    <state width="1060" height="128" key="ShowUsagesActions.dimensionServiceKey/0.32.2560.1016/2560.0.1920.1080" timestamp="1646237121510" />
+    <state width="1060" height="128" key="ShowUsagesActions.dimensionServiceKey/0.32.2560.1016/2560.0.1920.1080" timestamp="1646647380463" />
     <state width="1060" height="588" key="ShowUsagesActions.dimensionServiceKey/2560.0.2560.1440/0.32.2560.1376/5120.0.2560.1440" timestamp="1638971509822" />
   </component>
 </application>

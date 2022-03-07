@@ -1,4 +1,4 @@
-<keymap version="1" name="Default for GNOME copy" parent="Default for GNOME">
+<keymap version="1" name="Marshall Custom" parent="Default for GNOME">
   <action id="ChangesView.UnshelveSilently" />
   <action id="CloseAllEditorsButActive">
     <keyboard-shortcut first-keystroke="ctrl alt w" />
@@ -10,6 +10,9 @@
   <action id="Diff.FocusOppositePane" />
   <action id="Diff.FocusOppositePaneAndScroll" />
   <action id="EditorSelectWord" />
+  <action id="EditorToggleCase">
+    <keyboard-shortcut first-keystroke="alt u" />
+  </action>
   <action id="EditorUnSelectWord" />
   <action id="Git.ResolveConflicts">
     <keyboard-shortcut first-keystroke="ctrl alt r" />

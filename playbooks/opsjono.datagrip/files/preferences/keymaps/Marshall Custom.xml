@@ -1,4 +1,4 @@
-<keymap version="1" name="GNOME copy" parent="Default for GNOME">
+<keymap version="1" name="Marshall Custom" parent="Default for GNOME">
   <action id="CloseContent">
     <keyboard-shortcut first-keystroke="ctrl f4" />
     <keyboard-shortcut first-keystroke="ctrl w" />
@@ -7,7 +7,6 @@
   <action id="Diff.FocusOppositePaneAndScroll" />
   <action id="EditorSelectWord" />
   <action id="EditorToggleCase">
-    <keyboard-shortcut first-keystroke="shift ctrl u" />
     <keyboard-shortcut first-keystroke="alt u" />
   </action>
   <action id="NextTab">

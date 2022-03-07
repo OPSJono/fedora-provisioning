@@ -303,7 +303,7 @@
     <property name="JestJavaScriptTestRunnerSupport.hidePassedTests" value="false" />
     <property name="JestJavaScriptTestRunnerSupport.scrollToSource" value="true" />
     <property name="JestJavaScriptTestRunnerSupport.selectFirtsDefect" value="true" />
-    <property name="KEYMAP" value="cursor&#10;resize&#10;upload&#10;deploy&#10;close" />
+    <property name="KEYMAP" value="toggle case&#10;cursor&#10;resize&#10;upload&#10;deploy" />
     <property name="LayoutCode.optimizeImports" value="false" />
     <property name="LayoutCode.processChangedText" value="false" />
     <property name="LayoutCode.rearrangeEntriesPHP" value="false" />
@@ -332,7 +332,7 @@
     <property name="evlsprt3.211" value="16" />
     <property name="file.chooser.recent.files" value="$USER_HOME$/code/c2o/ubuntu-imagick-base-image&#10;/home/jonathan/code/c2o/cropperjs&#10;/home/jonathan/code/c2o/plp&#10;/home/jonathan/.ssh/quaysidegroup_production_id_rsa&#10;/home/jonathan/.ssh/jmarshall_ec2_production_id_rsa&#10;/home/jonathan/code/c2o/laravel-test&#10;/home/jonathan/code/c2o/dev-test&#10;/home/jonathan/code/c2o/c2o-mobile&#10;/home/jonathan/code/c2o/payment-service&#10;/home/jonathan/code/c2o/oms&#10;/home/jonathan/code/c2o/snow&#10;/home/jonathan/code/c2o/customisation-preview/package.json&#10;/home/jonathan/code/c2o/customisation-preview&#10;/home/jonathan/code/c2o/customisation-app/jest.config.js&#10;/home/jonathan/code/c2o/customisation-app/package.json&#10;/home/jonathan/code/c2o/customisation-app&#10;/home/jonathan/code/c2o/c2o-elements/package.json&#10;/home/jonathan/code/c2o/c2o-elements&#10;/home/jonathan/code/c2o/admin-api&#10;/home/jonathan/code/c2o/c2omobile/docker-compose.yaml&#10;/home/jonathan/code/personal/martin-lifeworks-assessment&#10;/home/jonathan/code/c2o/imprintnext&#10;/home/jonathan/code/personal/paulm-pygame&#10;/home/jonathan/code/c2o/qt-e2e&#10;/home/jonathan/code/c2o/analytics&#10;/home/jonathan/code/c2o/c2o-m-e2e&#10;/home/jonathan/code/c2o/application-charge-validator&#10;/home/jonathan/code/c2o/charity-validator&#10;/home/jonathan/code/c2o/back-office-ui/node_modules/prettier&#10;/home/jonathan/code/c2o/back-office-ui" />
     <property name="file.gist.reindex.count" value="54713" />
-    <property name="fileTypeChangedCounter" value="50" />
+    <property name="fileTypeChangedCounter" value="52" />
     <property name="fileTypeDetectors" value="com.intellij.database.vfs.DbStorageFileType$Detector:com.intellij.ide.scratch.ScratchFileServiceImpl$Detector:com.intellij.javascript.debugger.sourcemap.SourceMapFileType$MyFileTypeDetector:com.jetbrains.nodejs.util.NodeFileTypeDetector$JavaScriptFileTypeDetector:com.jetbrains.nodejs.util.NodeFileTypeDetector$TypeScriptFileTypeDetector:org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector" />
     <property name="find.popup.splitter" value="0.6192017" />
     <property name="got.it.tooltip.builtin.web.server.reload.on.save" value="1" />

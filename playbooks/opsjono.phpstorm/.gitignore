@@ -1,0 +1,16 @@
+!.gitignore
+# Files
+files/preferences/phpstorm.key
+files/preferences/phpstorm100.key
+files/preferences/phpstorm110.key
+files/preferences/plugin_PCWMP.license
+files/preferences/port
+files/preferences/port.lock
+files/preferences/user.web.token
+
+# Folders
+files/preferences/consoles
+files/preferences/javascript
+files/preferences/tasks
+files/preferences/ssl
+files/preferences/workspace
