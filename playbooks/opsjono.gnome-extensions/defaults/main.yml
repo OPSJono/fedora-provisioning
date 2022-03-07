@@ -4,3 +4,4 @@ extension_uuids:
   - "Move_Clock@rmy.pobox.com" # Move clock from centre to right of top bar
   - "noannoyance@daase.net" # Remove the "window is ready" notifications
   - "notification-position@drugo.dev" # Move notification position to the top right of the screen
+  - "dash-to-dock@micxgx.gmail.com" # Convert the overview dash to a dock (so it can be hidden)
