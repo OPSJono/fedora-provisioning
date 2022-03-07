@@ -5,3 +5,4 @@ extension_uuids:
   - "noannoyance@daase.net" # Remove the "window is ready" notifications
   - "notification-position@drugo.dev" # Move notification position to the top right of the screen
   - "dash-to-dock@micxgx.gmail.com" # Convert the overview dash to a dock (so it can be hidden)
+  - "blur-my-shell@aunetx" # Blur, in settings enable for Dash and Overview only.
