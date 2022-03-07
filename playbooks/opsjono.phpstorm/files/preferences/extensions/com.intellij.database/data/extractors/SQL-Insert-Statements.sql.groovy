@@ -1,5 +1,20 @@
+/*
+ * Available context bindings:
+ *   COLUMNS     List<DataColumn>
+ *   ROWS        Iterable<DataRow>
+ *   OUT         { append() }
+ *   FORMATTER   { format(row, col); formatValue(Object, col); getTypeName(Object, col); isStringLiteral(Object, col); }
+ *   TRANSPOSED  Boolean
+ * plus ALL_COLUMNS, TABLE, DIALECT
+ *
+ * where:
+ *   DataRow     { rowNumber(); first(); last(); data(): List<Object>; value(column): Object }
+ *   DataColumn  { columnNumber(), name() }
+ */
+
 SEP = ", "
 QUOTE     = "\'"
+STRING_PREFIX = DIALECT.getDbms().isMicrosoft() ? "N" : ""
 NEWLINE   = System.getProperty("line.separator")
 
 KEYWORDS_LOWERCASE = com.intellij.database.util.DbSqlUtil.areKeywordsLowerCase(PROJECT)
@@ -20,11 +35,13 @@ def record(columns, dataRow) {
     OUT.append(KW_VALUES)
     columns.eachWithIndex { column, idx ->
         def value = dataRow.value(column)
-        def skipQuote = value.toString().isNumber() || value == null
-        def stringValue = value != null ? FORMATTER.format(dataRow, column) : KW_NULL
-        if (DIALECT.getDbms().isMysql()) stringValue = stringValue.replace("\\", "\\\\")
-        OUT.append(skipQuote ? "": QUOTE).append(stringValue.replace(QUOTE, QUOTE + QUOTE))
-           .append(skipQuote ? "": QUOTE).append(idx != columns.size() - 1 ? SEP : "")
+        def stringValue = value == null ? KW_NULL : FORMATTER.formatValue(value, column)
+        def isStringLiteral = value != null && FORMATTER.isStringLiteral(value, column)
+        if (isStringLiteral && DIALECT.getDbms().isMysql()) stringValue = stringValue.replace("\\", "\\\\")
+        OUT.append(isStringLiteral ? (STRING_PREFIX + QUOTE) : "")
+          .append(isStringLiteral ? stringValue.replace(QUOTE, QUOTE + QUOTE) : stringValue)
+          .append(isStringLiteral ? QUOTE : "")
+          .append(idx != columns.size() - 1 ? SEP : "")
     }
     OUT.append(");").append(NEWLINE)
 }

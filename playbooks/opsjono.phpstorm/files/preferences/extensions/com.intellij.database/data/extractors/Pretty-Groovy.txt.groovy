@@ -5,7 +5,7 @@ import com.intellij.openapi.util.text.StringUtil
  *   COLUMNS     List<DataColumn>
  *   ROWS        Iterable<DataRow>
  *   OUT         { append() }
- *   FORMATTER   { format(row, col); formatValue(Object, col) }
+ *   FORMATTER   { format(row, col); formatValue(Object, col); getTypeName(Object, col); isStringLiteral(Object, col); }
  *   TRANSPOSED  Boolean
  * plus ALL_COLUMNS, TABLE, DIALECT
  *
@@ -70,12 +70,11 @@ def printRows() {
   if (calcWidth) {
     rows = new ArrayList<>()
     def widths = new int[COLUMNS.size()]
-    COLUMNS.each { column -> widths[column.columnNumber()] = column.name().length() }
+    COLUMNS.eachWithIndex { column, idx -> widths[idx] = column.name().length() }
     ROWS.each { row ->
-      def rowValues = COLUMNS.collect { col ->
+      def rowValues = COLUMNS.withIndex().collect { col, idx ->
         def value = FORMATTER.format(row, col)
-        def colNum = col.columnNumber()
-        widths[colNum] = Math.max(widths[colNum], value.length())
+        widths[idx] = Math.max(widths[idx], value.length())
         value
       }
       rows.add(rowValues)

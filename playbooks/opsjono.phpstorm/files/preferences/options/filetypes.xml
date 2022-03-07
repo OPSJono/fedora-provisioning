@@ -1,6 +1,7 @@
 <application>
   <component name="FileTypeManager" version="18">
     <extensionMap>
+      <mapping pattern=".env.production" type=".env file" />
       <mapping pattern="ApplicationChargeValidation" type="AUTO_DETECTED" />
       <mapping pattern="crontab" type="AUTO_DETECTED" />
       <mapping pattern="24h-part-1" type="AUTO_DETECTED" />
@@ -26,7 +27,6 @@
       <mapping pattern="_htaccess*" type="htaccess" />
       <removed_mapping pattern=".dockerignore" approved="true" type="Twig" />
       <removed_mapping pattern=".env.production" approved="true" type="PLAIN_TEXT" />
-      <mapping pattern=".env.production" type=".env file" />
     </extensionMap>
   </component>
 </application>

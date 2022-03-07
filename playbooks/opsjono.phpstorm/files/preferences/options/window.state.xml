@@ -69,7 +69,7 @@
     <location key="#Inspections.0.0.2560.1440" x="915" y="369" />
     <location key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate.0.0.2560.1440" x="1055" y="580" />
     <location key="#com.intellij.fileTypes.FileTypeChooser.0.0.2560.1440" x="975" y="491" />
-    <location key="find.popup.0.0.2560.1440" x="931" y="424" />
+    <location key="find.popup.0.0.2560.1440" x="1109" y="309" />
     <location key="find.popup.0.0.4480.1440" x="804" y="33" />
     <location key="FileChooserDialogImpl.0.0.4480.1440" x="1063" y="484" />
     <location key="VCS.ChangeListViewerDialog.0.0.4480.1440" x="1050" y="386" />
@@ -86,7 +86,7 @@
     <location key="SettingsEditor.0.0.4480.1440" x="756" y="385" />
     <location key="#com.intellij.fileTypes.FileTypeChooser.0.0.4480.1440" x="983" y="521" />
     <location key="#com.intellij.fileTypes.FileTypeChooser.0.0.1920.1080" x="594" y="342" />
-    <location key="find.popup.0.0.1920.1080" x="612" y="161" />
+    <location key="find.popup.0.0.1920.1080" x="1086" y="293" />
     <location key="#com.intellij.ide.actions.ChooseComponentsToExportDialog.0.0.1920.1080" x="679" y="383" />
     <location key="WELCOME_SCREEN.0.0.2560.1440" x="1279" y="592" />
     <location key="find.popup.1920.0.2560.1440" x="2885" y="368" />
@@ -112,6 +112,7 @@
     <location key="find.popup.1280.0.1280.1024" x="1491" y="33" />
     <location key="find.popup.0.0.1280.1024" x="288" y="98" />
     <location key="find.popup.2560.0.2560.1440" x="3592" y="167" />
+    <location key="find.popup.2560.0.1920.1080" x="3334" y="125" />
     <size key="FileChooserDialogImpl.0.0.1920.1080" width="426" height="490" />
     <size key="SettingsEditor.0.0.1920.1080" width="1208" height="925" />
     <size key="findTextDialog.0.0.3840.1080" width="965" height="561" />
@@ -140,10 +141,10 @@
     <size key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog.0.0.1920.1080" width="1912" height="992" />
     <size key="#PHP.0.0.1920.1080" width="627" height="707" />
     <size key="#com.jetbrains.php.debug.validation.PhpWebServerValidationDialog#.0.0.1920.1080" width="560" height="399" />
-    <size key="GridCell.Tab.0.left.0.0.1920.1080" width="1920" height="311" />
-    <size key="GridCell.Tab.0.center.0.0.1920.1080" width="1920" height="311" />
-    <size key="GridCell.Tab.0.right.0.0.1920.1080" width="1920" height="311" />
-    <size key="GridCell.Tab.0.bottom.0.0.1920.1080" width="1920" height="311" />
+    <size key="GridCell.Tab.0.left.0.0.1920.1080" width="1874" height="297" />
+    <size key="GridCell.Tab.0.center.0.0.1920.1080" width="1874" height="297" />
+    <size key="GridCell.Tab.0.right.0.0.1920.1080" width="1874" height="297" />
+    <size key="GridCell.Tab.0.bottom.0.0.1920.1080" width="1874" height="297" />
     <size key="GridCell.Tab.1.left.0.0.1920.1080" width="1920" height="311" />
     <size key="GridCell.Tab.1.center.0.0.1920.1080" width="1920" height="311" />
     <size key="GridCell.Tab.1.right.0.0.1920.1080" width="1920" height="311" />
@@ -188,7 +189,7 @@
     <size key="#Inspections.0.0.2560.1440" width="722" height="658" />
     <size key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate.0.0.2560.1440" width="441" height="236" />
     <size key="#com.intellij.fileTypes.FileTypeChooser.0.0.2560.1440" width="728" height="410" />
-    <size key="find.popup.0.0.2560.1440" width="698" height="586" />
+    <size key="find.popup.0.0.2560.1440" width="820" height="604" />
     <size key="find.popup.0.0.4480.1440" width="946" height="1081" />
     <size key="FileChooserDialogImpl.0.0.4480.1440" width="424" height="498" />
     <size key="VCS.ChangeListViewerDialog.0.0.4480.1440" width="450" height="695" />
@@ -204,7 +205,7 @@
     <size key="RollbackChangesDialog.0.0.4480.1440" width="551" height="665" />
     <size key="SettingsEditor.0.0.4480.1440" width="1037" height="696" />
     <size key="#com.intellij.fileTypes.FileTypeChooser.0.0.4480.1440" width="627" height="424" />
-    <size key="find.popup.0.0.1920.1080" width="831" height="536" />
+    <size key="find.popup.0.0.1920.1080" width="670" height="594" />
     <size key="#com.intellij.ide.actions.ChooseComponentsToExportDialog.0.0.1920.1080" width="552" height="341" />
     <size key="find.popup.1920.0.2560.1440" width="1370" height="693" />
     <size key="search.everywhere.popup.1920.0.2560.1440" width="672" height="678" />
@@ -230,15 +231,15 @@
     <size key="GridCell.Tab.0.right.0.0.1280.1024" width="843" height="249" />
     <size key="GridCell.Tab.0.bottom.0.0.1280.1024" width="843" height="249" />
     <size key="find.popup.0.0.1280.1024" width="899" height="819" />
-    <size key="GridCell.Tab.0.left.0.0.2560.1440" width="2514" height="386" />
-    <size key="GridCell.Tab.0.center.0.0.2560.1440" width="2514" height="386" />
-    <size key="GridCell.Tab.0.right.0.0.2560.1440" width="2514" height="386" />
-    <size key="GridCell.Tab.0.bottom.0.0.2560.1440" width="2514" height="386" />
-    <size key="find.popup.2560.0.2560.1440" width="1160" height="804" />
-    <size key="GridCell.Tab.0.left.2560.0.2560.1440" width="2514" height="399" />
-    <size key="GridCell.Tab.0.center.2560.0.2560.1440" width="2514" height="399" />
-    <size key="GridCell.Tab.0.right.2560.0.2560.1440" width="2514" height="399" />
-    <size key="GridCell.Tab.0.bottom.2560.0.2560.1440" width="2514" height="399" />
+    <size key="GridCell.Tab.0.left.0.0.2560.1440" width="2514" height="416" />
+    <size key="GridCell.Tab.0.center.0.0.2560.1440" width="2514" height="416" />
+    <size key="GridCell.Tab.0.right.0.0.2560.1440" width="2514" height="416" />
+    <size key="GridCell.Tab.0.bottom.0.0.2560.1440" width="2514" height="416" />
+    <size key="find.popup.2560.0.2560.1440" width="670" height="594" />
+    <size key="GridCell.Tab.0.left.2560.0.2560.1440" width="2514" height="416" />
+    <size key="GridCell.Tab.0.center.2560.0.2560.1440" width="2514" height="416" />
+    <size key="GridCell.Tab.0.right.2560.0.2560.1440" width="2514" height="416" />
+    <size key="GridCell.Tab.0.bottom.2560.0.2560.1440" width="2514" height="416" />
     <size key="GridCell.Tab.1.left.2560.0.2560.1440" width="2514" height="511" />
     <size key="GridCell.Tab.1.center.2560.0.2560.1440" width="2514" height="511" />
     <size key="GridCell.Tab.1.right.2560.0.2560.1440" width="2514" height="511" />
@@ -247,41 +248,25 @@
     <size key="GridCell.Tab.2.center.2560.0.2560.1440" width="2514" height="511" />
     <size key="GridCell.Tab.2.right.2560.0.2560.1440" width="2514" height="511" />
     <size key="GridCell.Tab.2.bottom.2560.0.2560.1440" width="2514" height="511" />
+    <size key="find.popup.2560.0.1920.1080" width="561" height="570" />
+    <size key="GridCell.Tab.1.left.0.0.2560.1440" width="2514" height="416" />
+    <size key="GridCell.Tab.1.center.0.0.2560.1440" width="2514" height="416" />
+    <size key="GridCell.Tab.1.right.0.0.2560.1440" width="2514" height="416" />
+    <size key="GridCell.Tab.1.bottom.0.0.2560.1440" width="2514" height="416" />
+    <size key="GridCell.Tab.2.left.0.0.2560.1440" width="2514" height="416" />
+    <size key="GridCell.Tab.2.center.0.0.2560.1440" width="2514" height="416" />
+    <size key="GridCell.Tab.2.right.0.0.2560.1440" width="2514" height="416" />
+    <size key="GridCell.Tab.2.bottom.0.0.2560.1440" width="2514" height="416" />
   </component>
   <component name="WindowManager">
-    <frame x="0" y="32" width="1920" height="958" extendedState="6" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
+    <frame x="0" y="32" width="2560" height="1376" extendedState="6" />
   </component>
   <component name="WindowStateApplicationService">
-    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog" timestamp="1630330121725" />
-    <state x="124" y="339" width="1722" height="617" key="DiffContextDialog/0.0.1920.1080/1920.0.1920.1080" timestamp="1630330121725" />
-    <state x="124" y="339" width="1722" height="617" key="DiffContextDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1630330121725" />
-    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog/1280.0.1920.1080/0.0.1280.1024" timestamp="1630330121725" />
-    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog/1280.0.1920.1080/0.0.1280.1024@1280.0.1920.1080" timestamp="1630330121725" />
-    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog/1920.0.1920.1080/0.0.1920.1080" timestamp="1630330121725" />
-    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1630330121725" />
-    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog/2560.0.1920.1080/0.0.2560.1440" timestamp="1630330121725" />
-    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog/2560.0.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1630330121725" />
-    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog/2560.1440/1920.1080" timestamp="1630330121725" />
-    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog/2560.1440/1920.1080/1920.1080" timestamp="1630330121725" />
-    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog@1920.1080" timestamp="1630330121725" />
-    <state x="99" y="125" width="1722" height="799" key="DiffContextDialog@2560.1440" timestamp="1630330121725" />
-    <state x="3623" y="350" key="VCS.ChangeListViewerDialog" timestamp="1630330121727">
-      <screen x="2560" y="0" width="2560" height="1440" />
+    <state width="1060" height="128" key="ShowUsagesActions.dimensionServiceKey" timestamp="1646237121510">
+      <screen x="0" y="32" width="2560" height="1016" />
     </state>
-    <state x="3623" y="350" key="VCS.ChangeListViewerDialog/2560.0.2560.1440/0.32.2560.1376/5120.0.2560.1440" timestamp="1630330121727" />
+    <state width="795" height="266" key="ShowUsagesActions.dimensionServiceKey/0.32.1920.1016" timestamp="1645095176872" />
+    <state width="1060" height="128" key="ShowUsagesActions.dimensionServiceKey/0.32.2560.1016/2560.0.1920.1080" timestamp="1646237121510" />
+    <state width="1060" height="588" key="ShowUsagesActions.dimensionServiceKey/2560.0.2560.1440/0.32.2560.1376/5120.0.2560.1440" timestamp="1638971509822" />
   </component>
 </application>

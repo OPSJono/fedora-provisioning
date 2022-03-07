@@ -511,6 +511,14 @@
             url="https://cache-redirector.jetbrains.com/download.jetbrains.com/idea/jdbc-drivers/MSSQL/9/sqlserver9-win-auth.jar" md5=""/>
       <item type="license" name="sqlserver9-license.txt" url="https://cache-redirector.jetbrains.com/download.jetbrains.com/idea/jdbc-drivers/MSSQL/9/license.txt" md5=""/>
     </version>
+    <version version="9.4.0">
+      <item name="mssql-jdbc-9.4.0.jre8.jar"
+            url="https://cache-redirector.jetbrains.com/download.jetbrains.com/idea/jdbc-drivers/MSSQL/9/mssql-jdbc-9.4.0.jre8.jar"
+            md5=""/>
+      <item os="win" type="native" name="sqlserver-win-auth.jar"
+            url="https://cache-redirector.jetbrains.com/download.jetbrains.com/idea/jdbc-drivers/MSSQL/9/sqlserver94-win-auth.jar" md5=""/>
+      <item type="license" name="sqlserver9-license.txt" url="https://cache-redirector.jetbrains.com/download.jetbrains.com/idea/jdbc-drivers/MSSQL/9/license.txt" md5=""/>
+    </version>
   </artifact>
 
   <artifact name="Redshift">
@@ -618,6 +626,14 @@
     <version version="2.0.0.5">
       <item name="redshift-jdbc42-2.0.0.5.jar"
             url="https://cache-redirector.jetbrains.com/download.jetbrains.com/idea/jdbc-drivers/Redshift/redshift-jdbc42-2.0.0.5.jar"
+            md5=""/>
+      <item type="license" name="amazon-redshift-jdbc-driver-license-agreement.txt"
+            url="https://cache-redirector.jetbrains.com/download.jetbrains.com/idea/jdbc-drivers/Redshift/license2.txt"
+            md5=""/>
+    </version>
+    <version version="2.1.0.1">
+      <item name="redshift-jdbc42-2.1.0.1.jar"
+            url="https://cache-redirector.jetbrains.com/download.jetbrains.com/idea/jdbc-drivers/Redshift/redshift-jdbc42-2.1.0.1.jar"
             md5=""/>
       <item type="license" name="amazon-redshift-jdbc-driver-license-agreement.txt"
             url="https://cache-redirector.jetbrains.com/download.jetbrains.com/idea/jdbc-drivers/Redshift/license2.txt"
@@ -892,6 +908,21 @@
       <item type="license" name="mongodb-license.txt" url="https://cache-redirector.jetbrains.com/download.jetbrains.com/idea/jdbc-drivers/MongoDB/mongodb-license.txt"
             md5=""/>
     </version>
+    <version version="1.12">
+      <item name="mongo-jdbc-standalone-1.12.jar"
+            url="https://cache-redirector.jetbrains.com/download.jetbrains.com/idea/jdbc-drivers/MongoDB/1.12/mongo-jdbc-standalone-1.12.jar"
+            md5=""/>
+      <item type="license" name="mongodb-license.txt" url="https://cache-redirector.jetbrains.com/download.jetbrains.com/idea/jdbc-drivers/MongoDB/mongodb-license.txt"
+            md5=""/>
+    </version>
+    <version version="1.13">
+      <item name="mongo-jdbc-standalone-1.13.jar"
+            url="https://cache-redirector.jetbrains.com/download.jetbrains.com/idea/jdbc-drivers/MongoDB/1.13/mongo-jdbc-standalone-1.13.jar"
+            md5=""/>
+      <item type="license" name="mongodb-license.txt"
+            url="https://cache-redirector.jetbrains.com/download.jetbrains.com/idea/jdbc-drivers/MongoDB/mongodb-license.txt"
+            md5=""/>
+    </version>
   </artifact>
   <artifact name="Couchbase">
     <version version="0.4">
@@ -922,12 +953,22 @@
     <version version="1.8.1">
       <item type="maven" url="com.microsoft.azure:msal4j:1.8.1"/>
     </version>
+    <version version="1.10.1">
+      <item type="maven" url="com.microsoft.azure:msal4j:1.10.1"/>
+    </version>
+    <version version="1.11.0">
+      <item type="maven" url="com.microsoft.azure:msal4j:1.11.0"/>
+    </version>
   </artifact>
 
   <artifact name="junixsocket-mysql">
     <version version="2.3.2">
       <item type="maven" url="com.kohlschutter.junixsocket:junixsocket-mysql:2.3.2"/>
       <item type="maven" url="com.kohlschutter.junixsocket:junixsocket-native-common:2.3.2"/>
+    </version>
+    <version version="2.4.0">
+      <item type="maven" url="com.kohlschutter.junixsocket:junixsocket-mysql:2.4.0"/>
+      <item type="maven" url="com.kohlschutter.junixsocket:junixsocket-native-common:2.4.0"/>
     </version>
   </artifact>
 
@@ -1037,6 +1078,12 @@
     </version>
   </artifact>
 
+  <artifact name="YugabyteDB">
+    <version version="42.3.0">
+      <item type="maven" url="com.yugabyte:jdbc-yugabytedb:42.3.0"/>
+    </version>
+  </artifact>
+
   <artifact name="Informix">
     <version version="4.10">
       <item url="https://cache-redirector.jetbrains.com/download.jetbrains.com/idea/jdbc-drivers/Informix/ifxjdbc.jar"/>
@@ -1077,6 +1124,12 @@
     </version>
     <version version="1.2.16">
       <item type="pack" url="https://storage.googleapis.com/simba-bq-release/jdbc/SimbaJDBCDriverforGoogleBigQuery42_1.2.16.1020.zip"/>
+    </version>
+  </artifact>
+
+  <artifact name="jna-platform">
+    <version version="5.8.0">
+      <item type="maven" url="net.java.dev.jna:jna-platform:5.8.0"/>
     </version>
   </artifact>
 </artifacts>

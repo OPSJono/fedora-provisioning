@@ -3,16 +3,6 @@
     <option name="customScope" value="All Places" />
     <option name="defaultScopeName" value="All Places" />
     <option name="SEARCH_SCOPE" value="All Places" />
-    <mask>*.css</mask>
-    <mask>*.html</mask>
-    <mask>*.xml</mask>
-    <mask>*.inc</mask>
-    <mask>*.hphp</mask>
-    <mask>*.php4</mask>
-    <mask>*.php5</mask>
-    <mask>*.module</mask>
-    <mask>*.phtml</mask>
-    <mask>*.scss</mask>
     <mask>*.blade.php</mask>
     <mask>.git*</mask>
     <mask>.env</mask>
@@ -21,7 +11,21 @@
     <mask>hour*</mask>
     <mask>*.test.js</mask>
     <mask>Dockerfile</mask>
+    <mask>*.stories.js</mask>
+    <mask>*.json</mask>
     <mask>*.js</mask>
+    <mask>*.twig</mask>
+    <mask>*.scss</mask>
+    <mask>*.css</mask>
+    <mask>*.html</mask>
+    <mask>*.xml</mask>
+    <mask>*.php4</mask>
+    <mask>*.phtml</mask>
+    <mask>*.php5</mask>
+    <mask>*.ctp</mask>
+    <mask>*.hphp</mask>
+    <mask>*.module</mask>
+    <mask>*.inc</mask>
     <mask>*.php</mask>
   </component>
 </application>

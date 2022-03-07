@@ -38,18 +38,6 @@
             </RecentProjectMetaInfo>
           </value>
         </entry>
-        <entry key="$USER_HOME$/code/c2o/application-charge-validator">
-          <value>
-            <RecentProjectMetaInfo frameTitle="application-charge-validator – bootstrap.php" projectWorkspaceId="1vqe8RvyAys2JBAgVPVJgvSeczl">
-              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PS-211.7442.50" />
-              <option name="buildTimestamp" value="1622637267017" />
-              <frame x="2560" y="32" width="2560" height="1376" extendedState="6" />
-              <option name="productionCode" value="PS" />
-              <option name="projectOpenTimestamp" value="1627911996964" />
-            </RecentProjectMetaInfo>
-          </value>
-        </entry>
         <entry key="$USER_HOME$/code/c2o/qt-e2e">
           <value>
             <RecentProjectMetaInfo frameTitle="qt-e2e – Login.js" projectWorkspaceId="1thoVlJrdzMRtx1cUQqEelTTa6I">
@@ -98,18 +86,6 @@
             </RecentProjectMetaInfo>
           </value>
         </entry>
-        <entry key="$USER_HOME$/code/c2o/admin-api">
-          <value>
-            <RecentProjectMetaInfo frameTitle="admin-api" projectWorkspaceId="1wx1j777uNaWmt73euJnyHs1k4o">
-              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PS-211.7442.50" />
-              <option name="buildTimestamp" value="1622637248183" />
-              <frame x="2560" y="32" width="2560" height="1376" extendedState="6" />
-              <option name="productionCode" value="PS" />
-              <option name="projectOpenTimestamp" value="1629385560452" />
-            </RecentProjectMetaInfo>
-          </value>
-        </entry>
         <entry key="$USER_HOME$/code/c2o/qs-schema-changes">
           <value>
             <RecentProjectMetaInfo frameTitle="qs-schema-changes – 15-sales-data-apps-by-department.sql" projectWorkspaceId="1tcYnukRt0sxne4mxZi6gh3Psqv">
@@ -119,30 +95,6 @@
               <frame x="2560" y="32" width="2560" height="1376" extendedState="6" />
               <option name="productionCode" value="PS" />
               <option name="projectOpenTimestamp" value="1629817636039" />
-            </RecentProjectMetaInfo>
-          </value>
-        </entry>
-        <entry key="$USER_HOME$/code/c2o/customisation-preview">
-          <value>
-            <RecentProjectMetaInfo frameTitle="customisation-preview – app/index.js" projectWorkspaceId="1xwwR1yZI6PTb3aHzqi2AzbGNgw">
-              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PS-211.7442.50" />
-              <option name="buildTimestamp" value="1622637296855" />
-              <frame x="2560" y="32" width="2560" height="1376" extendedState="6" />
-              <option name="productionCode" value="PS" />
-              <option name="projectOpenTimestamp" value="1631286295980" />
-            </RecentProjectMetaInfo>
-          </value>
-        </entry>
-        <entry key="$USER_HOME$/code/c2o/snow">
-          <value>
-            <RecentProjectMetaInfo frameTitle="snow – StockController.php" projectWorkspaceId="1y55FuyJ6mh7wHBinvkfQxMFcKC">
-              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PS-211.7442.50" />
-              <option name="buildTimestamp" value="1622637298091" />
-              <frame x="2560" y="32" width="2560" height="1376" extendedState="6" />
-              <option name="productionCode" value="PS" />
-              <option name="projectOpenTimestamp" value="1631528507689" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
@@ -170,18 +122,6 @@
             </RecentProjectMetaInfo>
           </value>
         </entry>
-        <entry key="$USER_HOME$/code/c2o/oms">
-          <value>
-            <RecentProjectMetaInfo frameTitle="oms – docker-compose.yml" projectWorkspaceId="1yUu1j6pu4IwTKSk3CoiJfumZzn">
-              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PS-211.7442.50" />
-              <option name="buildTimestamp" value="1622637246891" />
-              <frame x="2560" y="32" width="2560" height="1376" extendedState="6" />
-              <option name="productionCode" value="PS" />
-              <option name="projectOpenTimestamp" value="1632318312633" />
-            </RecentProjectMetaInfo>
-          </value>
-        </entry>
         <entry key="$USER_HOME$/code/c2o/payment-service">
           <value>
             <RecentProjectMetaInfo frameTitle="payment-service – docker-compose.yml" projectWorkspaceId="1yUuvtALJ7Zyjr5DS8uyNmShK9v">
@@ -191,42 +131,6 @@
               <frame x="2560" y="32" width="2560" height="1376" extendedState="6" />
               <option name="productionCode" value="PS" />
               <option name="projectOpenTimestamp" value="1632318721186" />
-            </RecentProjectMetaInfo>
-          </value>
-        </entry>
-        <entry key="$USER_HOME$/code/c2o/ams">
-          <value>
-            <RecentProjectMetaInfo frameTitle="ams – docker-compose.yml" projectWorkspaceId="1v54vDx27aR9fpwhzZ0g8Rbndq6">
-              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PS-211.7442.50" />
-              <option name="buildTimestamp" value="1622637246891" />
-              <frame x="2560" y="32" width="2560" height="1376" extendedState="6" />
-              <option name="productionCode" value="PS" />
-              <option name="projectOpenTimestamp" value="1632320787067" />
-            </RecentProjectMetaInfo>
-          </value>
-        </entry>
-        <entry key="$USER_HOME$/code/c2o/qs">
-          <value>
-            <RecentProjectMetaInfo frameTitle="qs – commercial_invoice.php" projectWorkspaceId="1tnRt4cVjftLOhZF7fptu8YYmc7">
-              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PS-211.7442.50" />
-              <option name="buildTimestamp" value="1622637247793" />
-              <frame x="2560" y="32" width="2560" height="1376" extendedState="6" />
-              <option name="productionCode" value="PS" />
-              <option name="projectOpenTimestamp" value="1632467588169" />
-            </RecentProjectMetaInfo>
-          </value>
-        </entry>
-        <entry key="$USER_HOME$/code/c2o/customisation-api">
-          <value>
-            <RecentProjectMetaInfo frameTitle="customisation-api – Dockerfile" projectWorkspaceId="1v1W4rZGR3ZviMG0rU0r1XM8DFn">
-              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PS-211.7442.50" />
-              <option name="buildTimestamp" value="1622637262144" />
-              <frame x="2560" y="32" width="2560" height="1376" extendedState="6" />
-              <option name="productionCode" value="PS" />
-              <option name="projectOpenTimestamp" value="1632495530411" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
@@ -242,111 +146,255 @@
             </RecentProjectMetaInfo>
           </value>
         </entry>
-        <entry key="$USER_HOME$/code/c2o/customisation-app">
+        <entry key="$USER_HOME$/code/c2o/dev-test">
           <value>
-            <RecentProjectMetaInfo frameTitle="customisation-app – config.yml" projectWorkspaceId="1xZfBK8Bs2WTggvMbRtfJP9xRqx">
+            <RecentProjectMetaInfo frameTitle="dev-test – RouteServiceProvider.php" projectWorkspaceId="20j4zukJEp1ftg39lxv9HbYKhIu">
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PS-211.7442.50" />
-              <option name="buildTimestamp" value="1622637254613" />
+              <option name="build" value="PS-212.5457.49" />
+              <option name="buildTimestamp" value="1634128742188" />
               <frame x="2560" y="32" width="2560" height="1376" extendedState="6" />
               <option name="productionCode" value="PS" />
-              <option name="projectOpenTimestamp" value="1633417997120" />
+              <option name="projectOpenTimestamp" value="1636618803794" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/c2o/laravel-test">
+          <value>
+            <RecentProjectMetaInfo frameTitle="laravel-test – RouteServiceProvider.php" projectWorkspaceId="20lUDnwB7V73AkP9BzVYY9wOINs">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-212.5457.49" />
+              <option name="buildTimestamp" value="1634128742188" />
+              <frame x="2560" y="32" width="2560" height="1376" extendedState="6" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1636621612591" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/c2o/admin-api">
+          <value>
+            <RecentProjectMetaInfo frameTitle="admin-api – ShippingTypeCollection.php" projectWorkspaceId="22EKcfr6zhktAyml4h9YFBAgOvr">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-212.5457.49" />
+              <option name="buildTimestamp" value="1634128768146" />
+              <frame x="0" y="32" width="1920" height="1016" extendedState="6" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1639403398804" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/c2o/snow">
+          <value>
+            <RecentProjectMetaInfo frameTitle="snow – .env" projectWorkspaceId="20zcEE7LsRDHUckvRlelRKlnnaA">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-212.5457.49" />
+              <option name="buildTimestamp" value="1634128796961" />
+              <frame x="725" y="0" width="1910" height="786" extendedState="6" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1641909476850" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/c2o/cropperjs">
+          <value>
+            <RecentProjectMetaInfo frameTitle="cropperjs – render.js" projectWorkspaceId="23uo1nWhp2kHfQaK1ZV9iu9BQ4Z">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-212.5457.49" />
+              <option name="buildTimestamp" value="1634128752180" />
+              <frame x="0" y="32" width="2560" height="1376" extendedState="6" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1642593120037" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/c2o/ams">
+          <value>
+            <RecentProjectMetaInfo frameTitle="ams – OrderEventProcessController.php" projectWorkspaceId="23xOpHpb8AORZzFGxxvQOh2zZUA">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-212.5457.49" />
+              <option name="buildTimestamp" value="1634128768250" />
+              <frame x="725" y="0" width="1910" height="786" extendedState="6" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1642675518609" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/c2o/plp">
+          <value>
+            <RecentProjectMetaInfo frameTitle="plp – config.yml" projectWorkspaceId="23uUlNuQVR0jyp634kTfPCkJKqt">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-212.5457.49" />
+              <option name="buildTimestamp" value="1634128754120" />
+              <frame x="0" y="32" width="2560" height="1376" extendedState="6" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1642754083011" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/c2o/customisation-preview">
+          <value>
+            <RecentProjectMetaInfo frameTitle="customisation-preview – flatPreview/index.js" projectWorkspaceId="20MK2fdVCgqCZmR2BEdVqzWssOF">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-212.5457.49" />
+              <option name="buildTimestamp" value="1634128768961" />
+              <frame x="0" y="32" width="2560" height="1376" extendedState="6" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1643973287877" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/c2o/application-charge-validator">
+          <value>
+            <RecentProjectMetaInfo frameTitle="application-charge-validator – Dockerfile" projectWorkspaceId="24eT9r2IrA9DqW7XvaTYRLN5NJW">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-212.5457.49" />
+              <option name="buildTimestamp" value="1634128768961" />
+              <frame x="725" y="0" width="1910" height="786" extendedState="6" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1643989926783" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/c2o/ubuntu-imagick-base-image">
+          <value>
+            <RecentProjectMetaInfo frameTitle="ubuntu-imagick-base-image – Dockerfile" projectWorkspaceId="24eEKUe9gmF4u3ZH1OMztESWxxz">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-212.5457.49" />
+              <option name="buildTimestamp" value="1634128771306" />
+              <frame x="0" y="32" width="2560" height="1376" extendedState="6" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1644241988652" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/c2o/oms">
+          <value>
+            <RecentProjectMetaInfo frameTitle="oms – Warehousing/OrderController.php" projectWorkspaceId="22EJWyBqfRZcYZkJu0NJso3dFqX">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-212.5457.49" />
+              <option name="buildTimestamp" value="1634128741946" />
+              <frame x="0" y="32" width="2560" height="1376" extendedState="6" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1644915533368" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/c2o/qs">
+          <value>
+            <RecentProjectMetaInfo frameTitle="qs – .env" projectWorkspaceId="20dQ54gr87Z3LwkuiqnRqaL0M3z">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-212.5457.49" />
+              <option name="buildTimestamp" value="1634128741946" />
+              <frame x="0" y="32" width="2560" height="1376" extendedState="6" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1644916301016" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="$USER_HOME$/code/c2o/c2o-elements">
           <value>
-            <RecentProjectMetaInfo frameTitle="c2o-elements – package.json" projectWorkspaceId="1wM3DaprytS0ZHe2cqdTn28eZrk">
+            <RecentProjectMetaInfo frameTitle="c2o-elements – package.json" projectWorkspaceId="20M5RFIwBwpuDsdBhuKYRRz70n0">
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PS-211.7442.50" />
-              <option name="buildTimestamp" value="1622637254613" />
-              <frame x="2560" y="32" width="2560" height="1376" extendedState="6" />
+              <option name="build" value="PS-212.5457.49" />
+              <option name="buildTimestamp" value="1634128754819" />
+              <frame x="0" y="32" width="1920" height="1016" extendedState="6" />
               <option name="productionCode" value="PS" />
-              <option name="projectOpenTimestamp" value="1633422274171" />
+              <option name="projectOpenTimestamp" value="1645092064799" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
-        <entry key="$USER_HOME$/code/c2o/qtag">
+        <entry key="$USER_HOME$/code/c2o/customisation-app">
           <value>
-            <RecentProjectMetaInfo frameTitle="qtag – qtag-cron-staging" projectWorkspaceId="1tc83KBk64u0JKvdVGfosfsUlES">
+            <RecentProjectMetaInfo frameTitle="customisation-app – MainCustomisations/index.js" projectWorkspaceId="20JPwThbOS4IiZKNB5OoYOBmipk">
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PS-211.7442.50" />
-              <option name="buildTimestamp" value="1622637254613" />
-              <frame x="2560" y="32" width="2560" height="1376" extendedState="6" />
+              <option name="build" value="PS-212.5457.49" />
+              <option name="buildTimestamp" value="1634128790292" />
+              <frame x="0" y="32" width="2560" height="1376" extendedState="6" />
               <option name="productionCode" value="PS" />
-              <option name="projectOpenTimestamp" value="1633422279637" />
+              <option name="projectOpenTimestamp" value="1645644392184" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="$USER_HOME$/code/c2o/c2o-m-e2e">
           <value>
-            <RecentProjectMetaInfo frameTitle="c2o-m-e2e – .env" projectWorkspaceId="1vr0rBwjaTn6jQNy0noQPObjUAj">
+            <RecentProjectMetaInfo frameTitle="c2o-m-e2e – navigate.js" projectWorkspaceId="20JufYn2Xt5CeyxeKkL5Fs49Axb">
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PS-211.7442.50" />
-              <option name="buildTimestamp" value="1622637254613" />
-              <frame x="2560" y="32" width="2560" height="1376" extendedState="6" />
+              <option name="build" value="PS-212.5457.49" />
+              <option name="buildTimestamp" value="1634128779956" />
+              <frame x="0" y="32" width="2560" height="1376" extendedState="6" />
               <option name="productionCode" value="PS" />
-              <option name="projectOpenTimestamp" value="1633423372461" />
+              <option name="projectOpenTimestamp" value="1646149293247" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/c2o/c2o-mobile">
+          <value>
+            <RecentProjectMetaInfo frameTitle="c2o-mobile – product.php" projectWorkspaceId="20JKaaEzRKpWDFVN7wRhLaGoVFp">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-212.5457.49" />
+              <option name="buildTimestamp" value="1634128779956" />
+              <frame x="0" y="32" width="2560" height="1376" extendedState="6" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1646238189410" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="$USER_HOME$/code/c2o/c2o-e2e">
           <value>
-            <RecentProjectMetaInfo frameTitle="c2o-e2e – package.json" projectWorkspaceId="1thrmGSVUsGICYI46GDVxFo9UsM">
+            <RecentProjectMetaInfo frameTitle="c2o-e2e – .env" projectWorkspaceId="20MdTaIbMUzyuvpxMXxGwmnIJ9h">
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PS-211.7442.50" />
-              <option name="buildTimestamp" value="1622637254613" />
-              <frame x="2560" y="32" width="2560" height="1376" extendedState="6" />
+              <option name="build" value="PS-212.5457.49" />
+              <option name="buildTimestamp" value="1634128779956" />
+              <frame x="0" y="32" width="2560" height="1376" extendedState="6" />
               <option name="productionCode" value="PS" />
-              <option name="projectOpenTimestamp" value="1633423379896" />
+              <option name="projectOpenTimestamp" value="1646235034454" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/code/c2o/qtag">
+          <value>
+            <RecentProjectMetaInfo frameTitle="qtag – .env" projectWorkspaceId="210OyLcvfkdCEMa6JbRRfohG4V9">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PS-212.5457.49" />
+              <option name="buildTimestamp" value="1634128788929" />
+              <frame x="0" y="32" width="2560" height="1376" extendedState="6" />
+              <option name="productionCode" value="PS" />
+              <option name="projectOpenTimestamp" value="1646391014846" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="$USER_HOME$/code/c2o/c2o">
           <value>
-            <RecentProjectMetaInfo frameTitle="c2o – header_nav_menu.php" projectWorkspaceId="1u6zf3WUImpsBX7Vg9IIfPedYcJ">
+            <RecentProjectMetaInfo frameTitle="c2o – pdp.twig" opened="true" projectWorkspaceId="1z6Din47kFgxVu8rgkvqKT1dnyW">
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PS-211.7442.50" />
-              <option name="buildTimestamp" value="1622637254613" />
-              <frame x="2560" y="32" width="2560" height="1376" extendedState="6" />
+              <option name="build" value="PS-212.5457.49" />
+              <option name="buildTimestamp" value="1634128788929" />
+              <frame x="0" y="32" width="2560" height="1376" extendedState="6" />
               <option name="productionCode" value="PS" />
-              <option name="projectOpenTimestamp" value="1633423380991" />
+              <option name="projectOpenTimestamp" value="1646646742671" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
-        <entry key="$USER_HOME$/code/c2o/c2omobile">
+        <entry key="$USER_HOME$/code/c2o/customisation-api">
           <value>
-            <RecentProjectMetaInfo frameTitle="c2omobile – SessionData.php" projectWorkspaceId="1tcWLkjSeVDZ1fh8x8c6IX1TG4C">
+            <RecentProjectMetaInfo frameTitle="customisation-api – .env" projectWorkspaceId="20JXKtsIddRnbNGLlzi6mWV0iH6">
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PS-211.7442.50" />
-              <option name="buildTimestamp" value="1622637254613" />
-              <frame x="2560" y="32" width="2560" height="1376" extendedState="6" />
+              <option name="build" value="PS-212.5457.49" />
+              <option name="buildTimestamp" value="1634128775753" />
+              <frame x="0" y="32" width="2560" height="1376" extendedState="6" />
               <option name="productionCode" value="PS" />
-              <option name="projectOpenTimestamp" value="1633452727864" />
-            </RecentProjectMetaInfo>
-          </value>
-        </entry>
-        <entry key="$USER_HOME$/code/personal/docker-qs">
-          <value>
-            <RecentProjectMetaInfo frameTitle="docker-qs" projectWorkspaceId="25ydLRsLaD3KatXaM6g0GN7UWjf">
-              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PS-213.6777.58" />
-              <option name="buildTimestamp" value="1643632812397" />
-              <frame x="0" y="32" width="1920" height="958" extendedState="6" />
-              <option name="productionCode" value="PS" />
-              <option name="projectOpenTimestamp" value="1646561176225" />
+              <option name="projectOpenTimestamp" value="1646644812726" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="$USER_HOME$/code/personal/fedora-provisioning">
           <value>
-            <RecentProjectMetaInfo frameTitle="fedora-provisioning – opsjono.phpstorm/tasks/main.yml" opened="true" projectWorkspaceId="1TqkRYk269oyPsoMOHrfcRsE6Sj">
+            <RecentProjectMetaInfo frameTitle="fedora-provisioning – etc-hosts.j2" opened="true" projectWorkspaceId="1z6DDkW0nkGfoeNizFFhVYZNhax">
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PS-213.6777.58" />
-              <option name="buildTimestamp" value="1643632812397" />
-              <frame x="0" y="32" width="1920" height="958" extendedState="6" />
+              <option name="build" value="PS-212.5457.49" />
+              <option name="buildTimestamp" value="1634128775753" />
+              <frame x="2560" y="0" width="1920" height="1048" extendedState="6" />
               <option name="productionCode" value="PS" />
-              <option name="projectOpenTimestamp" value="1646561185091" />
+              <option name="projectOpenTimestamp" value="1646646742671" />
             </RecentProjectMetaInfo>
           </value>
         </entry>

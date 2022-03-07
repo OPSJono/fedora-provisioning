@@ -2,21 +2,13 @@
   <component name="CvsApplicationLevelConfiguration">
     <option name="PATH_TO_PASSWORD_FILE" value="$userdir/.cvspass" />
   </component>
-  <component name="DynamicPluginEnabler">
-    <trackers>
-      <map>
-        <entry key="1TqkRYk269oyPsoMOHrfcRsE6Sj">
-          <value>
-            <ProjectPluginTracker />
-          </value>
-        </entry>
-        <entry key="25ydLRsLaD3KatXaM6g0GN7UWjf">
-          <value>
-            <ProjectPluginTracker />
-          </value>
-        </entry>
-      </map>
-    </trackers>
+  <component name="NodeJsLocalInterpreters">
+    <local-interpreter path="/usr/bin/nodejs">
+      <version-cache version="4.2.6" last-modified="1463787647000" />
+    </local-interpreter>
+    <local-interpreter path="/usr/bin/tsc">
+      <version-cache last-modified="1452208678000" />
+    </local-interpreter>
   </component>
   <component name="NodeLocalInterpreterManager">
     <node-interpreter path="/usr/bin/nodejs" version="4.2.6" last-modified="1463787647000" />
@@ -182,11 +174,116 @@
             <ProjectPluginTracker />
           </value>
         </entry>
+        <entry key="1z6DDkW0nkGfoeNizFFhVYZNhax">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1z6Din47kFgxVu8rgkvqKT1dnyW">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="20JKaaEzRKpWDFVN7wRhLaGoVFp">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="20JPwThbOS4IiZKNB5OoYOBmipk">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="20JXKtsIddRnbNGLlzi6mWV0iH6">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="20JufYn2Xt5CeyxeKkL5Fs49Axb">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="20M5RFIwBwpuDsdBhuKYRRz70n0">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="20MK2fdVCgqCZmR2BEdVqzWssOF">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="20MdTaIbMUzyuvpxMXxGwmnIJ9h">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="20dQ54gr87Z3LwkuiqnRqaL0M3z">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="20j4zukJEp1ftg39lxv9HbYKhIu">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="20lUDnwB7V73AkP9BzVYY9wOINs">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="20zcEE7LsRDHUckvRlelRKlnnaA">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="210OyLcvfkdCEMa6JbRRfohG4V9">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="22EJWyBqfRZcYZkJu0NJso3dFqX">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="22EKcfr6zhktAyml4h9YFBAgOvr">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="23uUlNuQVR0jyp634kTfPCkJKqt">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="23uo1nWhp2kHfQaK1ZV9iu9BQ4Z">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="23xOpHpb8AORZzFGxxvQOh2zZUA">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="24eEKUe9gmF4u3ZH1OMztESWxxz">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="24eT9r2IrA9DqW7XvaTYRLN5NJW">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
       </map>
     </trackers>
   </component>
   <component name="PropertiesComponent">
-    <property name="CWM_LOGGING_VERSION" value="1" />
+    <property name="ColorChooser.RecentColors" value="192-0-0-255,,,95-0-0-255" />
     <property name="CommitChangeListDialog.DETAILS_SPLITTER_PROPORTION_2" value="0.74761903" />
     <property name="CommitChangeListDialog.SPLITTER_PROPORTION_2" value="0.55573" />
     <property name="Copy.OpenInEditor" value="false" />
@@ -196,12 +293,12 @@
     <property name="ExpandRunDashboardTypesPanel" value="false" />
     <property name="FileTemplates.SelectedTemplate" value="HTML File" />
     <property name="FindSplitterProportion" value="0.32995194" />
-    <property name="INSPECTION_FILTER_HISTORY" value="html5&#10;unresolve&#10;MySql" />
-    <property name="InstalledPluginsSearchHistory" value="python&#10;cron&#10;run on save&#10;run on sa&#10;run on s" />
+    <property name="INSPECTION_FILTER_HISTORY" value="css&#10;resolve&#10;url&#10;html5&#10;unresolve&#10;MySql" />
+    <property name="InstalledPluginsSearchHistory" value=".env.cr&#10;prettier&#10;pretti&#10;prett&#10;pre" />
     <property name="JSHintOptionsTreeView.TREE_SCROLL_BAR_HORIZONTAL" value="18" />
     <property name="JSHintOptionsTreeView.TREE_SCROLL_BAR_VERTICAL" value="1675" />
     <property name="JSHintOptionsTreeView.TREE_SELECTED_NODE_ID" value="1" />
-    <property name="JestJavaScriptTestRunner.Splitter.Proportion" value="0.22937626" />
+    <property name="JestJavaScriptTestRunner.Splitter.Proportion" value="0.30663985" />
     <property name="JestJavaScriptTestRunnerSupport.hideIgnoredTests" value="true" />
     <property name="JestJavaScriptTestRunnerSupport.hidePassedTests" value="false" />
     <property name="JestJavaScriptTestRunnerSupport.scrollToSource" value="true" />
@@ -210,52 +307,64 @@
     <property name="LayoutCode.optimizeImports" value="false" />
     <property name="LayoutCode.processChangedText" value="false" />
     <property name="LayoutCode.rearrangeEntriesPHP" value="false" />
-    <property name="MarketplacePluginsSearchHistory" value="python&#10;cron&#10;crontab&#10;Prettier&#10;yaml" />
+    <property name="Markdown Split EditorLayout" value="Editor and Preview" />
+    <property name="MarketplacePluginsSearchHistory" value="string man&#10;string&#10;prettier&#10;atom&#10;python" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="NextRunPlatformUpdateBuild" value="PS-212.5712.51/2021.2.4" />
+    <property name="NextRunPlatformUpdateVersion" value="2021.2.4" />
     <property name="OpenOrAttachDialog.OpenMode" value="new" />
     <property name="PLUGIN_FILTER" value="file&#10;scss" />
     <property name="PhpStorm.InitialConfiguration" value="true" />
     <property name="PhpStorm.dumbRunEnabled" value="true" />
     <property name="PhpStorm.initialConfigurationShown" value="true" />
+    <property name="PluginConfigurable.selectionTab" value="1" />
     <property name="ProjectStructure.SecondLevelElements" value="0.2352415" />
     <property name="SHELLCHECK.PATH" value="$APPLICATION_PLUGINS_DIR$/Shell Script/shellcheck" />
     <property name="SHFMT.PATH" value="$APPLICATION_PLUGINS_DIR$/Shell Script/shfmt" />
-    <property name="SettingsSearchHistory" value="file ex&#10;docker&#10;xdebug&#10;ide key&#10;Servers" />
+    <property name="SettingsSearchHistory" value="twig&#10;upload to&#10;prettier&#10;file ex&#10;docker" />
     <property name="SplitFileEditor.Proportion" value="0.5690464" />
-    <property name="TextEditorWithPreview.SplitterProportionKey" value="0.6957447" />
-    <property name="appcds.runOnSecondStart" value="PS-213.6777.58-474c30a8e12fe4d315b6f5b10b767d81771af349625bcdac15e06369eebd3b56" />
-    <property name="bundled.plugins.list.saved.version" value="PS-213.6777.58" />
+    <property name="SqlStructureView.filterD.file.structure.state" value="true" />
+    <property name="TextEditorWithPreview.SplitterProportionKey" value="0.5760986" />
+    <property name="appcds.runOnSecondStart" value="PS-212.5457.49-9c6a3a2e8b3fd97945f00f795167e78444c44e996e9b91e555c2207be7703e43" />
     <property name="clt.was.used.run.anything.ui" value="true" />
     <property name="disable.forced.soft.wraps.notification" value="true" />
     <property name="evlsprt3.193" value="13" />
     <property name="evlsprt3.211" value="16" />
-    <property name="file.chooser.recent.files" value="$USER_HOME$/code/personal/docker-qs&#10;/home/jonathan/code/c2o/payment-service&#10;/home/jonathan/code/c2o/oms&#10;/home/jonathan/code/c2o/snow&#10;/home/jonathan/code/c2o/customisation-preview/package.json&#10;/home/jonathan/code/c2o/customisation-preview&#10;/home/jonathan/code/c2o/customisation-app/jest.config.js&#10;/home/jonathan/code/c2o/customisation-app/package.json&#10;/home/jonathan/code/c2o/customisation-app&#10;/home/jonathan/code/c2o/c2o-elements/package.json&#10;/home/jonathan/code/c2o/c2o-elements&#10;/home/jonathan/code/c2o/admin-api&#10;/home/jonathan/code/c2o/c2omobile/docker-compose.yaml&#10;/home/jonathan/code/personal/martin-lifeworks-assessment&#10;/home/jonathan/code/c2o/imprintnext&#10;/home/jonathan/code/personal/paulm-pygame&#10;/home/jonathan/code/c2o/qt-e2e&#10;/home/jonathan/code/c2o/analytics&#10;/home/jonathan/code/c2o/c2o-m-e2e&#10;/home/jonathan/code/c2o/application-charge-validator&#10;/home/jonathan/code/c2o/charity-validator&#10;/home/jonathan/code/c2o/back-office-ui/node_modules/prettier&#10;/home/jonathan/code/c2o/back-office-ui&#10;/home/jonathan/code/c2o/ams&#10;/home/jonathan/code/c2o/customisation-api&#10;/home/jonathan/.ssh/quaysidegroup_staging_id_rsa&#10;/home/jonathan/code/c2o/db-purge&#10;/home/jonathan/code/c2o/c2o&#10;/home/jonathan/code/c2o/c2o-e2e&#10;/home/jonathan/code/c2o/qs-schema-changes" />
-    <property name="file.gist.reindex.count" value="53970" />
+    <property name="file.chooser.recent.files" value="$USER_HOME$/code/c2o/ubuntu-imagick-base-image&#10;/home/jonathan/code/c2o/cropperjs&#10;/home/jonathan/code/c2o/plp&#10;/home/jonathan/.ssh/quaysidegroup_production_id_rsa&#10;/home/jonathan/.ssh/jmarshall_ec2_production_id_rsa&#10;/home/jonathan/code/c2o/laravel-test&#10;/home/jonathan/code/c2o/dev-test&#10;/home/jonathan/code/c2o/c2o-mobile&#10;/home/jonathan/code/c2o/payment-service&#10;/home/jonathan/code/c2o/oms&#10;/home/jonathan/code/c2o/snow&#10;/home/jonathan/code/c2o/customisation-preview/package.json&#10;/home/jonathan/code/c2o/customisation-preview&#10;/home/jonathan/code/c2o/customisation-app/jest.config.js&#10;/home/jonathan/code/c2o/customisation-app/package.json&#10;/home/jonathan/code/c2o/customisation-app&#10;/home/jonathan/code/c2o/c2o-elements/package.json&#10;/home/jonathan/code/c2o/c2o-elements&#10;/home/jonathan/code/c2o/admin-api&#10;/home/jonathan/code/c2o/c2omobile/docker-compose.yaml&#10;/home/jonathan/code/personal/martin-lifeworks-assessment&#10;/home/jonathan/code/c2o/imprintnext&#10;/home/jonathan/code/personal/paulm-pygame&#10;/home/jonathan/code/c2o/qt-e2e&#10;/home/jonathan/code/c2o/analytics&#10;/home/jonathan/code/c2o/c2o-m-e2e&#10;/home/jonathan/code/c2o/application-charge-validator&#10;/home/jonathan/code/c2o/charity-validator&#10;/home/jonathan/code/c2o/back-office-ui/node_modules/prettier&#10;/home/jonathan/code/c2o/back-office-ui" />
+    <property name="file.gist.reindex.count" value="54713" />
     <property name="fileTypeChangedCounter" value="50" />
-    <property name="fileTypeDetectors" value="com.intellij.database.vfs.DbStorageFileType$Detector:com.intellij.docker.dockerFile.DockerFileTypeDetector:com.intellij.ide.scratch.ScratchFileServiceImpl$Detector:com.intellij.javascript.debugger.sourcemap.SourceMapFileType$MyFileTypeDetector:com.jetbrains.nodejs.util.NodeFileTypeDetector$JavaScriptFileTypeDetector:com.jetbrains.nodejs.util.NodeFileTypeDetector$TypeScriptFileTypeDetector:org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector" />
+    <property name="fileTypeDetectors" value="com.intellij.database.vfs.DbStorageFileType$Detector:com.intellij.ide.scratch.ScratchFileServiceImpl$Detector:com.intellij.javascript.debugger.sourcemap.SourceMapFileType$MyFileTypeDetector:com.jetbrains.nodejs.util.NodeFileTypeDetector$JavaScriptFileTypeDetector:com.jetbrains.nodejs.util.NodeFileTypeDetector$TypeScriptFileTypeDetector:org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector" />
     <property name="find.popup.splitter" value="0.6192017" />
+    <property name="got.it.tooltip.builtin.web.server.reload.on.save" value="1" />
     <property name="got.it.tooltip.cwm.invitation.notification" value="1" />
+    <property name="got.it.tooltip.database.schema.control.got.it" value="1" />
     <property name="got.it.tooltip.reader.mode.got.it" value="1" />
-    <property name="ide.updates.previous.build.number" value="PS-211.7442.50" />
+    <property name="got.it.tooltip.web.preview.reload.on.save" value="1" />
+    <property name="ide.updates.previous.build.number" value="PS-212.5457.49" />
+    <property name="ide.updates.whats.new.shown.for" value="212" />
     <property name="input.method.disabler.muted" value="true" />
     <property name="js.rename.search.for.text.occurrences" value="false" />
     <property name="js.rename.search.in.comments" value="false" />
     <property name="large.file.editor.notification.disabled" value="true" />
     <property name="lastTip" value="1" />
-    <property name="last_opened_file_path" value="$USER_HOME$/.ssh/quaysidegroup_staging_id_rsa" />
+    <property name="last_opened_file_path" value="$USER_HOME$/.ssh/quaysidegroup_production_id_rsa" />
     <property name="log.file.format.editor.notification.disabled" value="true" />
+    <property name="log.trace.categories" value="#com.jetbrains.rdserver.requests&#10;#com.jetbrains.rd.ide.document&#10;#com.jetbrains.rdserver.document&#10;#com.jetbrains.rdserver.editors&#10;#com.jetbrains.rdserver.actions&#10;#com.jetbrains.rdserver.permissions" />
     <property name="perl.last.update.timestamp" value="1583325283049" />
-    <property name="registry.to.advanced.settings.migration.build" value="PS-213.6777.58" />
-    <property name="selected.color.option.type" value="LINE_FULL_COVERAGE" />
+    <property name="registry.to.advanced.settings.migration.build" value="PS-212.5457.49" />
+    <property name="selected.color.option.type" value="TWIG_IDENTIFIER" />
     <property name="settings.code.style.selected.tab.MySQL" value="Case" />
     <property name="settings.code.style.selected.tab.PHP" value="Wrapping and Braces" />
     <property name="tasks.pass.word.conversion.enforced" value="true" />
     <property name="toolwindow.stripes.buttons.info.shown" value="true" />
-    <property name="ts.lib.d.ts.version" value="4.5.4" />
+    <property name="ts.lib.d.ts.version" value="4.3.5" />
   </component>
   <component name="TerminalCommandHistoryManager">
     <command-history-files>
-      <command-history-file filename="customisation-app-history" project-path="$USER_HOME$/code/c2o/customisation-app" last-access-time="1632484034779" />
+      <command-history-file filename="c2o-mobile-history" project-path="$USER_HOME$/code/c2o/c2o-mobile" last-access-time="1636100841435" />
     </command-history-files>
+  </component>
+  <component name="ToolbarSettingsService">
+    <option name="NEW_TOOLBAR_SETTINGS" value="OLD_NAVBAR" />
   </component>
 </application>

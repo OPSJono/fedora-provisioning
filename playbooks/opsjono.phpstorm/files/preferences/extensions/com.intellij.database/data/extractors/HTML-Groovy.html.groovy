@@ -3,7 +3,7 @@
  *   COLUMNS     List<DataColumn>
  *   ROWS        Iterable<DataRow>
  *   OUT         { append() }
- *   FORMATTER   { format(row, col); formatValue(Object, col) }
+ *   FORMATTER   { format(row, col); formatValue(Object, col); getTypeName(Object, col); isStringLiteral(Object, col); }
  *   TRANSPOSED  Boolean
  * plus ALL_COLUMNS, TABLE, DIALECT
  *
@@ -16,11 +16,15 @@ import static com.intellij.openapi.util.text.StringUtil.escapeXmlEntities
 
 NEWLINE = System.getProperty("line.separator")
 
+def HTML_PATTERN = ~"<.+>"
+
 def printRow = { values, tag, valueToString ->
   OUT.append("$NEWLINE<tr>$NEWLINE")
   values.each {
     def str = valueToString(it)
-    def escaped = escapeXmlEntities((str as String).replaceAll("\\t|\\b|\\f", "")).replaceAll("\\r|\\n|\\r\\n", "<br/>")
+    def escaped = str ==~ HTML_PATTERN
+      ? str
+      : escapeXmlEntities((str as String).replaceAll("\\t|\\b|\\f", "")).replaceAll("\\r|\\n|\\r\\n", "<br/>")
     OUT.append("  <$tag>$escaped</$tag>$NEWLINE")
   }
   OUT.append("</tr>")
@@ -31,6 +35,7 @@ OUT.append(
 <html>
   <head>
     <title></title>
+    <meta charset="UTF-8">
   </head>
 <body>
 <table border="1" style="border-collapse:collapse">""")
