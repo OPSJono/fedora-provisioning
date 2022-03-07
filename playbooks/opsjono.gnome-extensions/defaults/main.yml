@@ -1,3 +1,6 @@
 ---
 extension_uuids:
   - "user-theme@gnome-shell-extensions.gcampax.github.com" # Enable Shell themes
+  - "Move_Clock@rmy.pobox.com" # Move clock from centre to right of top bar
+  - "noannoyance@daase.net" # Remove the "window is ready" notifications
+  - "notification-position@drugo.dev" # Move notification position to the top right of the screen
