@@ -1,0 +1,19 @@
+---
+- name: Install Cronie
+  dnf:
+    name: ['cronie']
+    state: latest
+
+- name: Copy the user crontab into place
+  template:
+    src: crontab.j2
+    dest: "/var/spool/cron/{{ ansible_user }}"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: 0775
+
+- name: Make sure the Docker service is running and enabled on boot.
+  service:
+    name: crond
+    state: started
+    enabled: yes
