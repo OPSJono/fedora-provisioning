@@ -21,6 +21,24 @@
     append: true
     groups: "docker"
 
+# @see https://docs.docker.com/compose/cli-command/#install-on-linux
+- name: Ensure the Docker CLI plugins directory exists/
+  file:
+    path: "/usr/local/lib/docker/cli-plugins"
+    state: directory
+  become: true
+  become_user: root
+
+- name: Ensure the Docker CLI plugins directory exists/
+  get_url:
+    url: "https://github.com/docker/compose/releases/download/v2.2.3/docker-compose-linux-x86_64"
+    dest: "/usr/local/lib/docker/cli-plugins/docker-compose"
+    owner: root
+    group: root
+    mode: 0775
+  become: true
+  become_user: root
+
 - name: Make sure the Docker service is running and enabled on boot.
   service:
     name: docker
