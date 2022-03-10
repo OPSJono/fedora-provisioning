@@ -1,0 +1,12 @@
+{
+  "description": "Hide the dash from the activities overview.",
+  "name": "Hide Dash 40+",
+  "shell-version": [
+    "40",
+    "41"
+  ],
+  "url": "https://github.com/Edenhofer/Minimalism-Gnome-Shell",
+  "uuid": "hide-dash@opsjono.github.com",
+  "original-author": "Jonathan Marshall",
+  "version": 1
+}

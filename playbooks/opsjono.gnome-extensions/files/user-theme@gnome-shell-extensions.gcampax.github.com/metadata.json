@@ -9,6 +9,7 @@
   ],
   "settings-schema": "org.gnome.shell.extensions.user-theme",
   "shell-version": [
+    "40",
     "41"
   ],
   "url": "https://gitlab.gnome.org/GNOME/gnome-shell-extensions",
