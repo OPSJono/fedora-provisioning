@@ -62,11 +62,11 @@ server {
 }
 
 server {
-  listen       api.docker;
-  server_name  api.docker;
+  listen       admin-api.docker;
+  server_name  admin-api.docker;
   location / {
     proxy_set_header Host $host;
-    proxy_pass http://127.0.0.1:8010;
+    proxy_pass http://127.0.0.1:8016;
   }
 }
 
