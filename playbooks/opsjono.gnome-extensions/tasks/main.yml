@@ -1,6 +1,5 @@
 ---
 ## @see https://medium.com/@ankurloriya/install-gnome-extension-using-command-line-736199be1cda
-# TODO: Hide dash in overview or store & copy gnome-dash settings.
 - name: Install Gnome extensions
   copy:
     src: "opsjono.gnome-extensions/files/"

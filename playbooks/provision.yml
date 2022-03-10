@@ -3,10 +3,12 @@
   name: Provision
   gather_facts: no
   pre_tasks:
+    # TODO: Remove python2 usage and swap to python3 for everything
     - name: install python 2
       raw: test -e /usr/bin/python || (sudo dnf update -y && sudo dnf install -y python python-dnf)
       changed_when: False
 
+    # TODO: Python2 warning
     - name: get the username running the playbook
       become: false
       local_action: command whoami
@@ -27,10 +29,10 @@
 
   roles:
 #    - opsjono.package_installations
-#    - opsjono.themes
+    - opsjono.themes
 #    - opsjono.cairo-dock
 #    - opsjono.crontab
-    - opsjono.gnome-extensions
+#    - opsjono.gnome-extensions
 #    - opsjono.gitkraken
 #    - opsjono.phpstorm
 #    - opsjono.datagrip

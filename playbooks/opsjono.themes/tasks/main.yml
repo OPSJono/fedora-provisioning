@@ -53,11 +53,3 @@
     dest: "/usr/share/icons/McMojave-cursors/"
   become: true
   become_user: root
-
-# TODO: Find a new font?
-- name: Install the mac font LucidaGrande
-  copy:
-    src: "opsjono.themes/files/fonts/"
-    dest: "/usr/share/fonts/"
-  become: true
-  become_user: root
