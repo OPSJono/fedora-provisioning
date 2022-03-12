@@ -52,7 +52,7 @@
 
 - name: Ensure PhpStorm preferences folder exists
   file:
-    path: "/home/{{ ansible_user }}/.config/JetBrains/PhpStorm{{ phpstorm_version }}"
+    path: "/home/{{ ansible_user }}/.var/app/com.jetbrains.PhpStorm/config/JetBrains/PhpStorm{{ phpstorm_version }}"
     state: directory
     owner: "{{ ansible_user }}"
     group: "{{ ansible_user }}"
@@ -63,7 +63,14 @@
 - name: Copy personal preferences to the PhpStorm directory
   copy:
     src: "opsjono.phpstorm/files/preferences/"
-    dest: "/home/{{ ansible_user }}/.config/JetBrains/PhpStorm{{ phpstorm_version }}/"
+    dest: "/home/{{ ansible_user }}/.var/app/com.jetbrains.PhpStorm/config/JetBrains/PhpStorm{{ phpstorm_version }}/"
     owner: "{{ ansible_user }}"
     group: "{{ ansible_user }}"
+    mode: 0775
     directory_mode: true
+
+- name: Set permissions on PhpStorm preferences directory
+  shell: |
+    chmod -R 775 "/home/{{ ansible_user }}/.var/app/com.jetbrains.PhpStorm/config/JetBrains/PhpStorm{{ phpstorm_version }}/"
+  become: true
+  become_user: "{{ ansible_user }}"
