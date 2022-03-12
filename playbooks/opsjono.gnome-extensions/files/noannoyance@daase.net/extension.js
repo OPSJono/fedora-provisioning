@@ -9,8 +9,8 @@ class StealMyFocus {
 
   _onWindowDemandsAttention(display, window) {
     if (!window || window.has_focus() || window.is_skip_taskbar())
-            return;
-            
+      return;
+
     Main.activateWindow(window);
   }
 

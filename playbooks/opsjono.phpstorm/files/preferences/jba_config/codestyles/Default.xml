@@ -1,8 +1,10 @@
 <code_scheme name="Default" version="173">
   <option name="LINE_SEPARATOR" value="&#10;" />
-  <MySQLCodeStyleSettings version="2">
-    <option name="KEYWORD_CASE" value="0" />
+  <MySQLCodeStyleSettings version="6">
+    <option name="USE_GENERAL_STYLE" value="false" />
+    <option name="KEYWORD_CASE" value="2" />
     <option name="TYPE_CASE" value="3" />
+    <option name="CUSTOM_TYPE_CASE" value="3" />
   </MySQLCodeStyleSettings>
   <PHPCodeStyleSettings>
     <option name="LOWER_CASE_BOOLEAN_CONST" value="true" />
@@ -24,6 +26,9 @@
     <option name="DOWHILE_BRACE_FORCE" value="3" />
     <option name="WHILE_BRACE_FORCE" value="3" />
     <option name="FOR_BRACE_FORCE" value="3" />
+    <indentOptions>
+      <option name="USE_TAB_CHARACTER" value="true" />
+    </indentOptions>
   </codeStyleSettings>
   <codeStyleSettings language="SASS">
     <indentOptions>

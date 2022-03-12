@@ -2,6 +2,22 @@
   <component name="CvsApplicationLevelConfiguration">
     <option name="PATH_TO_PASSWORD_FILE" value="$userdir/.cvspass" />
   </component>
+  <component name="DynamicPluginEnabler">
+    <trackers>
+      <map>
+        <entry key="1z6DDkW0nkGfoeNizFFhVYZNhax">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1z6Din47kFgxVu8rgkvqKT1dnyW">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+      </map>
+    </trackers>
+  </component>
   <component name="NodeJsLocalInterpreters">
     <local-interpreter path="/usr/bin/nodejs">
       <version-cache version="4.2.6" last-modified="1463787647000" />
@@ -283,6 +299,7 @@
     </trackers>
   </component>
   <component name="PropertiesComponent">
+    <property name="CWM_LOGGING_VERSION" value="1" />
     <property name="ColorChooser.RecentColors" value="192-0-0-255,,,95-0-0-255" />
     <property name="CommitChangeListDialog.DETAILS_SPLITTER_PROPORTION_2" value="0.74761903" />
     <property name="CommitChangeListDialog.SPLITTER_PROPORTION_2" value="0.55573" />
@@ -325,15 +342,16 @@
     <property name="SplitFileEditor.Proportion" value="0.5690464" />
     <property name="SqlStructureView.filterD.file.structure.state" value="true" />
     <property name="TextEditorWithPreview.SplitterProportionKey" value="0.5760986" />
-    <property name="appcds.runOnSecondStart" value="PS-212.5457.49-9c6a3a2e8b3fd97945f00f795167e78444c44e996e9b91e555c2207be7703e43" />
+    <property name="appcds.runOnSecondStart" value="PS-213.6777.58-9c2e7d62f5508699abf3d772d9c6073ee62b71514f3365390821e3eadd94240d" />
+    <property name="bundled.plugins.list.saved.version" value="PS-213.6777.58" />
     <property name="clt.was.used.run.anything.ui" value="true" />
     <property name="disable.forced.soft.wraps.notification" value="true" />
     <property name="evlsprt3.193" value="13" />
     <property name="evlsprt3.211" value="16" />
     <property name="file.chooser.recent.files" value="$USER_HOME$/code/c2o/ubuntu-imagick-base-image&#10;/home/jonathan/code/c2o/cropperjs&#10;/home/jonathan/code/c2o/plp&#10;/home/jonathan/.ssh/quaysidegroup_production_id_rsa&#10;/home/jonathan/.ssh/jmarshall_ec2_production_id_rsa&#10;/home/jonathan/code/c2o/laravel-test&#10;/home/jonathan/code/c2o/dev-test&#10;/home/jonathan/code/c2o/c2o-mobile&#10;/home/jonathan/code/c2o/payment-service&#10;/home/jonathan/code/c2o/oms&#10;/home/jonathan/code/c2o/snow&#10;/home/jonathan/code/c2o/customisation-preview/package.json&#10;/home/jonathan/code/c2o/customisation-preview&#10;/home/jonathan/code/c2o/customisation-app/jest.config.js&#10;/home/jonathan/code/c2o/customisation-app/package.json&#10;/home/jonathan/code/c2o/customisation-app&#10;/home/jonathan/code/c2o/c2o-elements/package.json&#10;/home/jonathan/code/c2o/c2o-elements&#10;/home/jonathan/code/c2o/admin-api&#10;/home/jonathan/code/c2o/c2omobile/docker-compose.yaml&#10;/home/jonathan/code/personal/martin-lifeworks-assessment&#10;/home/jonathan/code/c2o/imprintnext&#10;/home/jonathan/code/personal/paulm-pygame&#10;/home/jonathan/code/c2o/qt-e2e&#10;/home/jonathan/code/c2o/analytics&#10;/home/jonathan/code/c2o/c2o-m-e2e&#10;/home/jonathan/code/c2o/application-charge-validator&#10;/home/jonathan/code/c2o/charity-validator&#10;/home/jonathan/code/c2o/back-office-ui/node_modules/prettier&#10;/home/jonathan/code/c2o/back-office-ui" />
     <property name="file.gist.reindex.count" value="54713" />
-    <property name="fileTypeChangedCounter" value="52" />
-    <property name="fileTypeDetectors" value="com.intellij.database.vfs.DbStorageFileType$Detector:com.intellij.ide.scratch.ScratchFileServiceImpl$Detector:com.intellij.javascript.debugger.sourcemap.SourceMapFileType$MyFileTypeDetector:com.jetbrains.nodejs.util.NodeFileTypeDetector$JavaScriptFileTypeDetector:com.jetbrains.nodejs.util.NodeFileTypeDetector$TypeScriptFileTypeDetector:org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector" />
+    <property name="fileTypeChangedCounter" value="53" />
+    <property name="fileTypeDetectors" value="com.intellij.database.vfs.DbStorageFileType$Detector:com.intellij.docker.dockerFile.DockerFileTypeDetector:com.intellij.ide.scratch.ScratchFileServiceImpl$Detector:com.intellij.javascript.debugger.sourcemap.SourceMapFileType$MyFileTypeDetector:com.jetbrains.nodejs.util.NodeFileTypeDetector$JavaScriptFileTypeDetector:com.jetbrains.nodejs.util.NodeFileTypeDetector$TypeScriptFileTypeDetector:org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector" />
     <property name="find.popup.splitter" value="0.6192017" />
     <property name="got.it.tooltip.builtin.web.server.reload.on.save" value="1" />
     <property name="got.it.tooltip.cwm.invitation.notification" value="1" />
@@ -349,22 +367,18 @@
     <property name="lastTip" value="1" />
     <property name="last_opened_file_path" value="$USER_HOME$/.ssh/quaysidegroup_production_id_rsa" />
     <property name="log.file.format.editor.notification.disabled" value="true" />
-    <property name="log.trace.categories" value="#com.jetbrains.rdserver.requests&#10;#com.jetbrains.rd.ide.document&#10;#com.jetbrains.rdserver.document&#10;#com.jetbrains.rdserver.editors&#10;#com.jetbrains.rdserver.actions&#10;#com.jetbrains.rdserver.permissions" />
     <property name="perl.last.update.timestamp" value="1583325283049" />
-    <property name="registry.to.advanced.settings.migration.build" value="PS-212.5457.49" />
+    <property name="registry.to.advanced.settings.migration.build" value="PS-213.6777.58" />
     <property name="selected.color.option.type" value="TWIG_IDENTIFIER" />
     <property name="settings.code.style.selected.tab.MySQL" value="Case" />
     <property name="settings.code.style.selected.tab.PHP" value="Wrapping and Braces" />
     <property name="tasks.pass.word.conversion.enforced" value="true" />
     <property name="toolwindow.stripes.buttons.info.shown" value="true" />
-    <property name="ts.lib.d.ts.version" value="4.3.5" />
+    <property name="ts.lib.d.ts.version" value="4.5.4" />
   </component>
   <component name="TerminalCommandHistoryManager">
     <command-history-files>
       <command-history-file filename="c2o-mobile-history" project-path="$USER_HOME$/code/c2o/c2o-mobile" last-access-time="1636100841435" />
     </command-history-files>
-  </component>
-  <component name="ToolbarSettingsService">
-    <option name="NEW_TOOLBAR_SETTINGS" value="OLD_NAVBAR" />
   </component>
 </application>

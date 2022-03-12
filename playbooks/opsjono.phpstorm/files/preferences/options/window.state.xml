@@ -259,7 +259,7 @@
     <size key="GridCell.Tab.2.bottom.0.0.2560.1440" width="2514" height="416" />
   </component>
   <component name="WindowManager">
-    <frame x="0" y="32" width="2560" height="1376" extendedState="6" />
+    <frame x="0" y="28" width="2560" height="1322" extendedState="6" />
   </component>
   <component name="WindowStateApplicationService">
     <state width="1060" height="128" key="ShowUsagesActions.dimensionServiceKey" timestamp="1646647380463">

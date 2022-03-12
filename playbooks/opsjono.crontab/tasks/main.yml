@@ -10,7 +10,7 @@
     dest: "/var/spool/cron/{{ ansible_user }}"
     owner: "{{ ansible_user }}"
     group: "{{ ansible_user }}"
-    mode: 0775
+    mode: 0644
 
 - name: Make sure the Docker service is running and enabled on boot.
   service:

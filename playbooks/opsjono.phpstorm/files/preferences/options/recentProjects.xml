@@ -364,11 +364,11 @@
         </entry>
         <entry key="$USER_HOME$/code/c2o/c2o">
           <value>
-            <RecentProjectMetaInfo frameTitle="c2o – pdp.twig" opened="true" projectWorkspaceId="1z6Din47kFgxVu8rgkvqKT1dnyW">
+            <RecentProjectMetaInfo frameTitle="c2o" projectWorkspaceId="1z6Din47kFgxVu8rgkvqKT1dnyW">
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
               <option name="build" value="PS-212.5457.49" />
               <option name="buildTimestamp" value="1634128788929" />
-              <frame x="0" y="32" width="2560" height="1376" extendedState="6" />
+              <frame x="0" y="28" width="2560" height="1322" extendedState="6" />
               <option name="productionCode" value="PS" />
               <option name="projectOpenTimestamp" value="1646646742671" />
             </RecentProjectMetaInfo>
@@ -390,11 +390,11 @@
           <value>
             <RecentProjectMetaInfo frameTitle="fedora-provisioning – etc-hosts.j2" opened="true" projectWorkspaceId="1z6DDkW0nkGfoeNizFFhVYZNhax">
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PS-212.5457.49" />
-              <option name="buildTimestamp" value="1634128775753" />
+              <option name="build" value="PS-213.6777.58" />
+              <option name="buildTimestamp" value="1643632820178" />
               <frame x="2560" y="0" width="1920" height="1048" extendedState="6" />
               <option name="productionCode" value="PS" />
-              <option name="projectOpenTimestamp" value="1646646742671" />
+              <option name="projectOpenTimestamp" value="1647115781907" />
             </RecentProjectMetaInfo>
           </value>
         </entry>

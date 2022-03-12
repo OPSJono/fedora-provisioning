@@ -1,9 +1,12 @@
 import com.intellij.database.model.DasObjectWithSource
 import com.intellij.database.model.DasSchemaChild
+import com.intellij.database.model.ObjectKind
 import com.intellij.database.util.DasUtil
+import com.intellij.database.util.ObjectPath
 
 LAYOUT.ignoreDependencies = true
 LAYOUT.baseName { ctx -> baseName(ctx.object) }
+LAYOUT.fileScope { path -> fileScope(path) }
 
 
 def baseName(obj) {
@@ -22,6 +25,12 @@ def fileName(obj) {
     if (storeSeparately(cur)) return sanitize(cur.name)
   }
   return sanitize(obj.name)
+}
+
+def fileScope(path) {
+  def root = path.getName(0).toString()
+  if (root.endsWith(".sql")) return null
+  return ObjectPath.create(root, ObjectKind.SCHEMA)
 }
 
 def storeSeparately(obj) {

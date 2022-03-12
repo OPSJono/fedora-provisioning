@@ -1,6 +1,5 @@
 ---
 ## @see https://medium.com/@ankurloriya/install-gnome-extension-using-command-line-736199be1cda
-# TODO: Gnome extensions to move clock the right, move notification, de-annoy the "app is ready" notifications, hide dash in overview.
 - name: Install Gnome extensions
   copy:
     src: "opsjono.gnome-extensions/files/"

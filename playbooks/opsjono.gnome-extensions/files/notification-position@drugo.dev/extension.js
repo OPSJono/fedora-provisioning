@@ -30,7 +30,7 @@ function left()
 
 function right()
 {
-    return monitorWidth - messageListWidth - PADDING;
+    return monitorWidth - messageListWidth - (PADDING * 10);
 }
 
 // This function could be called after your extension is enabled, which could

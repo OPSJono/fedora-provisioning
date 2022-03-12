@@ -6,3 +6,5 @@ com.jetbrains.codeWithMe
 com.intellij.ideolog
 intellij.prettierJS
 io.github.donkirkby.livepycharm
+ir.msdehghan.plugins.ansible
+com.markskelton.one-dark-theme

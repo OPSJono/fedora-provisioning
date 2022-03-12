@@ -3,10 +3,12 @@
   name: Provision
   gather_facts: no
   pre_tasks:
+    # TODO: Remove python2 usage and swap to python3 for everything
     - name: install python 2
       raw: test -e /usr/bin/python || (sudo dnf update -y && sudo dnf install -y python python-dnf)
       changed_when: False
 
+    # TODO: Python2 warning
     - name: get the username running the playbook
       become: false
       local_action: command whoami
@@ -26,25 +28,26 @@
     - ansible_distribution_major_version: '8'
 
   roles:
-#    - opsjono.package_installations
-#    - opsjono.themes
-#    - opsjono.cairo-dock
+    - opsjono.package_installations
+    - opsjono.snapd
+    - opsjono.themes
+    - opsjono.cairo-dock
     - opsjono.crontab
     - opsjono.gnome-extensions
-#    - opsjono.gitkraken
-#    - opsjono.phpstorm
-#    - opsjono.datagrip
-#    - opsjono.postman
-#    - opsjono.docker
-#    - opsjono.nginx
-#    - opsjono.keybase
-#    - opsjono.vpn
-#    - opsjono.slack
+    - opsjono.gitkraken
+    - opsjono.phpstorm
+    - opsjono.datagrip
+    - opsjono.postman
+    - opsjono.docker
+    - opsjono.php-cs-fixer
+    - opsjono.nginx
+    - opsjono.keybase
+    - opsjono.vpn
+    - opsjono.slack
 
-#    - opsjono.spotify
-#    - opsjono.ssh
-#    - opsjono.snapd
-#    - opsjono.php-cs-fixer
+    - opsjono.spotify
+    - opsjono.ssh
+
 #    - opsjono.nvidia
 #    - opsjono.discord
 #    - opsjono.mjml

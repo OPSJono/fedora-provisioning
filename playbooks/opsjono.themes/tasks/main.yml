@@ -20,19 +20,33 @@
   become_user: root
   with_items:
     - "/opt/themes/pictures"
-    - "/usr/share/themes"
-    - "/usr/share/themes/WhiteSur-dark"
-    - "/usr/share/themes/WhiteSur-dark-solid"
     - "/usr/share/icons/McMojave-cursors"
     - "/usr/share/icons/McMojave-cursors"
 
-- name: Install Gnome Mac themes (takes a few minutes)
-  copy:
-    src: "opsjono.themes/files/shell-themes/"
-    dest: "/usr/share/themes/"
+- name: Clone the Whitesur-gtk-theme repo
+  ansible.builtin.git:
+    repo: https://github.com/OPSJono/Whitesur-gtk-theme.git
+    dest: "/home/{{ ansible_user }}/code/personal/whitesur-gtk-theme"
+    clone: yes
+    update: yes
+    version: 2022-03-10
+
+- name: Install the Whitesur 'Nord' theme
+  command: "/home/{{ ansible_user }}/code/personal/whitesur-gtk-theme/install.sh -c dark --nordcolor --silent-mode"
   become: true
-  become_user: root
+  become_user: "root"
 
+- name: Install the Whitesur 'Nord' theme for Flakpak
+  command: "/home/{{ ansible_user }}/code/personal/whitesur-gtk-theme/tweaks.sh --flatpak"
+  become: true
+  become_user: "root"
+
+#- name: Install the Whitesur 'Nord' theme for Snap (may take a while)
+#  command: "/home/{{ ansible_user }}/code/personal/whitesur-gtk-theme/tweaks.sh --snap"
+#  become: true
+#  become_user: "root"
+
+# Copy wallpapers
 - name: Set variables for fedora wallpapers
   set_fact:
     files_from: "opsjono.themes/files/pictures/wallpapers/fedora"
@@ -58,12 +72,5 @@
   copy:
     src: "opsjono.themes/files/cursors/McMojave-cursors/"
     dest: "/usr/share/icons/McMojave-cursors/"
-  become: true
-  become_user: root
-
-- name: Install the mac font LucidaGrande
-  copy:
-    src: "opsjono.themes/files/fonts/"
-    dest: "/usr/share/fonts/"
   become: true
   become_user: root

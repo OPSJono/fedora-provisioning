@@ -52,7 +52,7 @@
 
 - name: Ensure DataGrip preferences folder exists
   file:
-    path: "/home/{{ ansible_user }}/.config/JetBrains/DataGrip{{ datagrip_version }}"
+    path: "/home/{{ ansible_user }}/.var/app/com.jetbrains.DataGrip/config/JetBrains/DataGrip{{ datagrip_version }}"
     state: directory
     owner: "{{ ansible_user }}"
     group: "{{ ansible_user }}"
@@ -63,7 +63,14 @@
 - name: Copy personal preferences to the DataGrip directory
   copy:
     src: "opsjono.datagrip/files/preferences/"
-    dest: "/home/{{ ansible_user }}/.config/JetBrains/DataGrip{{ datagrip_version }}/"
+    dest: "/home/{{ ansible_user }}/.var/app/com.jetbrains.DataGrip/config/JetBrains/DataGrip{{ datagrip_version }}/"
     owner: "{{ ansible_user }}"
     group: "{{ ansible_user }}"
+    mode: 0775
     directory_mode: true
+
+- name: Set permissions on DataGrip preferences directory
+  shell: |
+    chmod -R 775 "/home/{{ ansible_user }}/.var/app/com.jetbrains.DataGrip/config/JetBrains/DataGrip{{ phpstorm_version }}/"
+  become: true
+  become_user: "{{ ansible_user }}"

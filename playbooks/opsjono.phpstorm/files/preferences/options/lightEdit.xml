@@ -1,0 +1,12 @@
+<application>
+  <component name="LightEdit">
+    <option name="sessionFiles">
+      <list>
+        <option value="file:///app/share/jetbrains-flatpak-wrapper/first_run.txt" />
+      </list>
+    </option>
+    <option name="frameInfo">
+      <frame x="580" y="189" width="1400" height="1000" />
+    </option>
+  </component>
+</application>
