@@ -29,6 +29,7 @@
 
   roles:
     - opsjono.package_installations
+    - opsjono.snapd
     - opsjono.themes
     - opsjono.cairo-dock
     - opsjono.crontab
@@ -46,7 +47,6 @@
 
     - opsjono.spotify
     - opsjono.ssh
-    - opsjono.snapd
 
 #    - opsjono.nvidia
 #    - opsjono.discord
