@@ -2,6 +2,7 @@
   <component name="Trusted.Paths">
     <option name="TRUSTED_PROJECT_PATHS">
       <map>
+        <entry key="$USER_HOME$/code/c2o/c2o" value="true" />
         <entry key="$USER_HOME$/code/personal/docker-qs" value="true" />
         <entry key="$USER_HOME$/code/personal/fedora-provisioning" value="true" />
       </map>
@@ -11,6 +12,7 @@
     <option name="TRUSTED_PATHS">
       <list>
         <option value="$USER_HOME$/code/personal" />
+        <option value="$USER_HOME$/code/c2o" />
       </list>
     </option>
   </component>

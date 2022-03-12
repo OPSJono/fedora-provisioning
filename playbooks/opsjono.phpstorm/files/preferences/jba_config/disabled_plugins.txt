@@ -4,3 +4,5 @@ com.jetbrains.php.wordPress
 com.intellij.database
 com.intellij.phing
 com.perl5
+com.taff.plugin.orchide
+com.markskelton.one-dark-theme

@@ -63,7 +63,7 @@
 - name: Copy personal preferences to the DataGrip directory
   copy:
     src: "opsjono.datagrip/files/preferences/"
-    dest: "/home/{{ ansible_user }}/.var/app/com.jetbrains.DataGrip/config/JetBrains/{{ datagrip_version }}/"
+    dest: "/home/{{ ansible_user }}/.var/app/com.jetbrains.DataGrip/config/JetBrains/DataGrip{{ datagrip_version }}/"
     owner: "{{ ansible_user }}"
     group: "{{ ansible_user }}"
     mode: 0775
