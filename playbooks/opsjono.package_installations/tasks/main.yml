@@ -112,3 +112,9 @@
     name: fs.inotify.max_user_watches
     value: 524288
     sysctl_set: yes
+
+- name: Install the Flathub remote repo for Flatpak
+  shell: |
+    flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+  become: true
+  become_user: root
