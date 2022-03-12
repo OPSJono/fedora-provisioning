@@ -34,7 +34,7 @@ prevent inhibate=false
 
 #K[Default] Class of the program:
 #{The only reason you may want to modify this parameter is if you made this launcher by hands. If you dropped it into the dock from the menu, it is nearly sure that you shouldn't touch it. It defines the class of the program, which is useful to link the application with its launcher.}
-StartupWMClass=
+StartupWMClass=google-chrome
 
 #b Run in a terminal?
 Terminal=false
@@ -44,8 +44,8 @@ Terminal=false
 ShowOnViewport=0
 
 #f[0;100] Order you want for this launcher among the others:
-Order=0.68194580078125
+Order=16.129058122634888
 
 Icon Type=0
 Type=Application
-Origin=/usr/share/applications/firefox.desktop
+Origin=/usr/share/applications/google-chrome.desktop

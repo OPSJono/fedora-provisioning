@@ -44,8 +44,8 @@ Terminal=false
 ShowOnViewport=0
 
 #f[0;100] Order you want for this launcher among the others:
-Order=0.68194580078125
+Order=17.974256794899702
 
 Icon Type=0
 Type=Application
-Origin=/usr/share/applications/firefox.desktop
+Origin=/usr/share/applications/spotify.desktop

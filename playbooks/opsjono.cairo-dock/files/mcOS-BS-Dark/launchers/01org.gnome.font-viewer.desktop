@@ -15,14 +15,14 @@ Container=_MainDock_
 sep_display=
 
 #s[Default] Launcher's name:
-Name=
+Name=Finder
 
 #S+[Default] Image's name or path:
-Icon=
+Icon=/home/jonathan/.config/cairo-dock/themes/mcOS-BS-Dark/icons/nautilus.svg
 
 #s[Default] Command to launch on click:
 #{Example: nautilus --no-desktop, gedit, etc. You can even enter a shortkey, e.g. <Alt>F1, <Ctrl>c,  <Ctrl>v, etc}
-Exec=
+Exec=nautilus
 
 
 #X[Extra parameters]
@@ -34,7 +34,7 @@ prevent inhibate=false
 
 #K[Default] Class of the program:
 #{The only reason you may want to modify this parameter is if you made this launcher by hands. If you dropped it into the dock from the menu, it is nearly sure that you shouldn't touch it. It defines the class of the program, which is useful to link the application with its launcher.}
-StartupWMClass=
+StartupWMClass=org
 
 #b Run in a terminal?
 Terminal=false
@@ -44,8 +44,8 @@ Terminal=false
 ShowOnViewport=0
 
 #f[0;100] Order you want for this launcher among the others:
-Order=0.68194580078125
+Order=0.80694580078125
 
 Icon Type=0
 Type=Application
-Origin=/usr/share/applications/firefox.desktop
+Origin=/usr/share/applications/org.gnome.font-viewer.desktop

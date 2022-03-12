@@ -18,11 +18,11 @@ sep_display=
 Name=
 
 #S+[Default] Image's name or path:
-Icon=
+Icon=/opt/datagrip/icon.png
 
 #s[Default] Command to launch on click:
 #{Example: nautilus --no-desktop, gedit, etc. You can even enter a shortkey, e.g. <Alt>F1, <Ctrl>c,  <Ctrl>v, etc}
-Exec=
+Exec=flatpak run com.jetbrains.DataGrip
 
 
 #X[Extra parameters]
@@ -44,8 +44,8 @@ Terminal=false
 ShowOnViewport=0
 
 #f[0;100] Order you want for this launcher among the others:
-Order=0.68194580078125
+Order=15.941558122634888
 
 Icon Type=0
 Type=Application
-Origin=/usr/share/applications/firefox.desktop
+Origin=/usr/share/applications/datagrip.desktop
