@@ -6,3 +6,4 @@ extension_uuids:
   - "notification-position@drugo.dev" # Move notification position to the top right of the screen
   - "blur-my-shell@aunetx" # Blur, in settings enable for Dash and Overview only.
   - "hide-dash@opsjono.github.com" # Hide dash in the activities overview.
+  - "fildemGMenu@gonza.com" # Hide dash in the activities overview.
