@@ -1,0 +1,606 @@
+<project version="4">
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env.example">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker/php/Dockerfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="201">
+              <caret line="131" column="25" selection-start-line="131" selection-start-column="25" selection-end-line="131" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.docker.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docker-compose.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="6" column="39" lean-forward="true" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>/nr-1167.min.js</find>
+      <find>datatab</find>
+      <find>value=&quot;al</find>
+      <find>inde</find>
+      <find>reset</find>
+      <find>$export_restrect_array</find>
+      <find>order.php</find>
+      <find>invoice_custom.php</find>
+      <find>logoForCustomerPreview</find>
+      <find>oid</find>
+      <find>logo_file</find>
+      <find>function get_custom_info()</find>
+      <find>artwork_api</find>
+      <find>001</find>
+      <find>function setFilesFromCustomisation</find>
+      <find>username</find>
+      <find>images/</find>
+      <find>last_customisations(</find>
+      <find>last_customisations</find>
+      <find>image_mark_custs</find>
+      <find>cloudy</find>
+      <find>OR countries_iso_code_3</find>
+      <find>'{$country_sql_input}'</find>
+      <find>strtolower($address_format_id_arr['countries_iso_code_2'])</find>
+      <find>['countries_iso_code_2']</find>
+      <find>countries_iso_code</find>
+      <find>Logo Preview</find>
+      <find>tep_print_heading</find>
+      <find>ImageTTFBBox</find>
+      <find>qtag</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>send_order_alert</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/cron_jobs</dir>
+      <dir>$PROJECT_DIR$/public_html</dir>
+      <dir>$PROJECT_DIR$/public_html/includes/modules/payment</dir>
+    </dirStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/public_html/help-support.php" />
+        <option value="$PROJECT_DIR$/public_html/account_track_order.php" />
+        <option value="$PROJECT_DIR$/public_html/checkout_confirmation.php" />
+        <option value="$PROJECT_DIR$/public_html/includes/classes/ps_db_access.php" />
+        <option value="$PROJECT_DIR$/public_html/access/includes/classes/ps_db_access.php" />
+        <option value="$PROJECT_DIR$/public_html/access/popup_preview.php" />
+        <option value="$PROJECT_DIR$/public_html/access/ajax.customisation_checkboxes2.php" />
+        <option value="$PROJECT_DIR$/public_html/access/order_progress_v2.php" />
+        <option value="$PROJECT_DIR$/cron_jobs/cron_cust_types.php" />
+        <option value="$PROJECT_DIR$/public_html/access/order_progress.php" />
+        <option value="$PROJECT_DIR$/public_html/access/stats_artwork_year_csv.php" />
+        <option value="$PROJECT_DIR$/public_html/access/order_progress_dev.php" />
+        <option value="$PROJECT_DIR$/public_html/access/stats_application_year_csv.php" />
+        <option value="$PROJECT_DIR$/qs/Services/AbandonedCart.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/public_html/access/includes/classes/abandoned_cart.php" />
+        <option value="$PROJECT_DIR$/public_html/ajax.names_and_numbers.php" />
+        <option value="$PROJECT_DIR$/public_html/access/abandoned_basket.php" />
+        <option value="$PROJECT_DIR$/public_html/access/includes/classes/abandoned_basket.php" />
+        <option value="$PROJECT_DIR$/public_html/access/includes/classes/order_statuses.php" />
+        <option value="$PROJECT_DIR$/public_html/access/orders.php" />
+        <option value="$PROJECT_DIR$/public_html/includes/header.php" />
+        <option value="$PROJECT_DIR$/public_html/includes/footer.php" />
+        <option value="$PROJECT_DIR$/public_html/includes/local/configure.php" />
+        <option value="$PROJECT_DIR$/public_html/includes/functions/database.php" />
+        <option value="$PROJECT_DIR$/public_html/includes/functions/general.php" />
+        <option value="$PROJECT_DIR$/public_html/support/include/PasswordHash.php" />
+        <option value="$PROJECT_DIR$/public_html/access/includes/classes/auto_assign.php" />
+        <option value="$PROJECT_DIR$/public_html/access/shopify/js/shopify.admin.app.js" />
+        <option value="$PROJECT_DIR$/public_html/access/shopify/class/class.shopify.admin.php" />
+        <option value="$PROJECT_DIR$/public_html/access/shopify/shopifyAdminJson.php" />
+        <option value="$PROJECT_DIR$/qs/Services/Cloudy.php" />
+        <option value="$PROJECT_DIR$/public_html/access/orders_send_to_digitiser_new.php" />
+        <option value="$PROJECT_DIR$/public_html/includes/classes/artwork_api.php" />
+        <option value="$PROJECT_DIR$/public_html/access/includes/classes/adestra_api.php" />
+        <option value="$PROJECT_DIR$/public_html/api/class.clothes2order_api.php" />
+        <option value="$PROJECT_DIR$/qs/Services/Customisation/OrderCustomisation.php" />
+        <option value="$PROJECT_DIR$/public_html/access/includes/modules/invoice.php" />
+        <option value="$PROJECT_DIR$/public_html/access/includes/modules/invoice_custom.php" />
+        <option value="$PROJECT_DIR$/qs/Services/Customisation/CustomisationsImage.php" />
+        <option value="$PROJECT_DIR$/public_html/access/packing_slip_new.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/public_html/access/includes/application_top.php" />
+        <option value="$PROJECT_DIR$/.docker.env" />
+        <option value="$PROJECT_DIR$/.env.example" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/public_html/includes/functions/html_output.php" />
+        <option value="$PROJECT_DIR$/public_html/ajax.changeimage.php" />
+        <option value="$PROJECT_DIR$/public_html/ajax.create_customisation_faq.php" />
+        <option value="$PROJECT_DIR$/docker/php/Dockerfile" />
+        <option value="$PROJECT_DIR$/docker-compose.yaml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" x="0" y="27" width="1030" height="914" extendedState="6" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1" />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="c2o" type="b2602c69:ProjectViewProjectNode" />
+              <item name="c2o" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="c2o" type="b2602c69:ProjectViewProjectNode" />
+              <item name="c2o" type="462c0819:PsiDirectoryNode" />
+              <item name="docker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="c2o" type="b2602c69:ProjectViewProjectNode" />
+              <item name="c2o" type="462c0819:PsiDirectoryNode" />
+              <item name="docker" type="462c0819:PsiDirectoryNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="c2o" type="b2602c69:ProjectViewProjectNode" />
+              <item name="c2o" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="c2o" type="b2602c69:ProjectViewProjectNode" />
+              <item name="c2o" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="logs" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="TerminalArrangementManager">
+    <option name="myTabStates">
+      <TerminalTabState tabName="Local" commandHistoryFileName="history-94" />
+      <TerminalTabState tabName="Local (2)" currentWorkingDirectory="$PROJECT_DIR$" commandHistoryFileName="history-100" />
+    </option>
+    <option name="mySelectedTabIndex" value="1" />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="258986000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="27" width="2560" height="1380" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27207637" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Services" order="7" show_stripe_button="false" weight="0.32936978" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Internal Method Tracing" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3293556" />
+      <window_info anchor="bottom" id="Event Log" order="12" show_stripe_button="false" side_tool="true" weight="0.32936978" />
+      <window_info anchor="bottom" id="Duplicates" order="13" weight="0.3293556" />
+      <window_info anchor="bottom" id="File Transfer" order="14" weight="0.3293556" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" show_stripe_button="false" weight="0.3298217" />
+      <window_info anchor="right" id="Remote Host" order="4" weight="0.32975337" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/public_html/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="623">
+          <caret line="261" column="33" selection-start-line="261" selection-start-column="29" selection-end-line="261" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/access/shopify/js/shopify.admin.app.js" />
+    <entry file="file://$PROJECT_DIR$/ReadMe.md" />
+    <entry file="file://$PROJECT_DIR$/public_html/access/shopify/index.php" />
+    <entry file="file://$PROJECT_DIR$/public_html/access/shopify/shopifyAdminJson.php" />
+    <entry file="file://$PROJECT_DIR$/public_html/access/shopify/class/ShopifyAdmin.php" />
+    <entry file="file://$PROJECT_DIR$/public_html/access/includes/application_top.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="946">
+          <caret line="365" column="29" selection-start-line="365" selection-start-column="29" selection-end-line="365" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/access/production_notes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/access/ajax.edit_orders_new.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#select#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/access/includes/classes/edit_order.old.php" />
+    <entry file="file://$PROJECT_DIR$/public_html/access/edit_orders_new.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/access/includes/classes/edit_order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-237">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/access/stats_instant_quote_history.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="584">
+          <caret line="29" column="63" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/access/orders_send_to_digitiser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/access/orders.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1181">
+          <caret line="1870" column="50" selection-start-line="1870" selection-start-column="50" selection-end-line="1870" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/includes/classes/order.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qs/Services/Customisation/HasCustomisationImage.php" />
+    <entry file="file://$PROJECT_DIR$/public_html/access/orders_send_to_digitiser_new.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="49" column="28" lean-forward="true" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
+          <folding>
+            <element signature="e#4074#4127#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#61908#61998#0#HTML" expanded="true" />
+            <element signature="e#62094#62117#0#HTML" expanded="true" />
+            <element signature="e#62192#62212#0#HTML" expanded="true" />
+            <element signature="e#62502#62527#0#HTML" expanded="true" />
+            <element signature="e#62632#62649#0#HTML" expanded="true" />
+            <element signature="e#62780#62856#0#HTML" expanded="true" />
+            <element signature="e#62955#62972#0#HTML" expanded="true" />
+            <element signature="e#63106#63131#0#HTML" expanded="true" />
+            <element signature="e#63224#63242#0#HTML" expanded="true" />
+            <element signature="e#63414#63439#0#HTML" expanded="true" />
+            <element signature="e#63541#63559#0#HTML" expanded="true" />
+            <element signature="e#63841#63866#0#HTML" expanded="true" />
+            <element signature="e#64036#64054#0#HTML" expanded="true" />
+            <element signature="e#64548#64570#0#HTML" expanded="true" />
+            <element signature="e#66227#66248#0#HTML" expanded="true" />
+            <element signature="e#66582#66588#1#HTML" expanded="true" />
+            <element signature="e#67214#67504#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/checkout_success.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="853">
+          <caret line="1090" column="18" selection-start-line="1090" selection-start-column="18" selection-end-line="1090" selection-end-column="18" />
+          <folding>
+            <element signature="e#9#15#1" expanded="true" />
+            <element signature="e#24#30#1" expanded="true" />
+            <element signature="e#39#45#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/external_upload/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7078">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/access/includes/classes/production.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="2891" column="92" selection-start-line="2891" selection-start-column="92" selection-end-line="2891" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/access/includes/classes/adestra_api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="405" selection-start-line="405" selection-end-line="405" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/access/includes/functions/compatibility.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1155">
+          <caret line="91" column="13" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/api/artwork.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="936">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/includes/classes/class.phpmailer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1155">
+          <caret line="217" column="16" selection-start-line="217" selection-start-column="16" selection-end-line="217" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/image_mark_custs.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/includes/classes/artwork_api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1155">
+          <caret line="112" column="13" selection-start-line="111" selection-start-column="23" selection-end-line="112" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qs/Models/C2O/CustomisationFile.php" />
+    <entry file="file://$PROJECT_DIR$/public_html/access/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="67" selection-start-line="5" selection-start-column="67" selection-end-line="5" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/api/class.clothes2order_api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1155">
+          <caret line="1060" column="67" selection-start-line="1060" selection-start-column="67" selection-end-line="1060" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/api/xml_post_order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1128">
+          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/shopify/application/class.api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1155">
+          <caret line="126" column="52" selection-start-line="126" selection-start-column="52" selection-end-line="126" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/access/includes/modules/invoice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16224">
+          <caret line="685" column="21" selection-start-line="685" selection-start-column="21" selection-end-line="685" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qs/Services/Customisation/CustomisationsImage.php" />
+    <entry file="file://$PROJECT_DIR$/public_html/access/includes/functions/general.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153072">
+          <caret line="6387" column="9" selection-start-line="6387" selection-start-column="9" selection-end-line="6387" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qs/Services/Customisation/OrderCustomisation.php" />
+    <entry file="file://$PROJECT_DIR$/qs/Traits/CustomisationFileType.php" />
+    <entry file="file://$PROJECT_DIR$/public_html/access/includes/modules/invoice_custom.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1920">
+          <caret line="89" column="45" selection-start-line="89" selection-start-column="45" selection-end-line="89" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qs/Services/Cloudy.php" />
+    <entry file="file://$PROJECT_DIR$/public_html/access/packing_slip_new.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="256" column="24" selection-start-line="256" selection-start-column="24" selection-end-line="256" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#8940#8963#0#HTML" expanded="true" />
+            <element signature="e#9565#9589#0#HTML" expanded="true" />
+            <element signature="e#9996#10058#0#HTML" expanded="true" />
+            <element signature="e#10238#10275#0#HTML" expanded="true" />
+            <element signature="e#10468#10505#0#HTML" expanded="true" />
+            <element signature="e#10830#10867#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#11954#11978#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#14293#14311#0#HTML" expanded="true" />
+            <element signature="e#14691#14845#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="e#17196#17263#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#3;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#3;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/logs/Error-2020-03-12.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/logs/Error-2020-03-11.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/ajax.create_customisation_faq.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="33" lean-forward="true" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/ajax.changeimage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="144" column="24" lean-forward="true" selection-start-line="144" selection-start-column="24" selection-end-line="144" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/includes/functions/html_output.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="1744" column="27" selection-start-line="1744" selection-start-column="27" selection-end-line="1744" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env.example">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.docker.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/_htaccess.local">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="767">
+          <caret line="92" column="69" selection-start-line="92" selection-start-column="69" selection-end-line="92" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/php/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="131" column="25" selection-start-line="131" selection-start-column="25" selection-end-line="131" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-compose.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="39" lean-forward="true" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -1,0 +1,813 @@
+<project version="4">
+  <component name="DatabaseView">
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Exceptions/Fulfilment/ApiException.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="644">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="82" column="37" selection-start-line="82" selection-start-column="37" selection-end-line="82" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.docker/php-nginx/Dockerfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="615">
+              <caret line="78" column="45" selection-start-line="78" selection-start-column="45" selection-end-line="78" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker-compose.override.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="6" column="95" selection-start-line="6" selection-start-column="95" selection-end-line="6" selection-end-column="95" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Fulfilment/CustomisationController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="896">
+              <caret line="40" column="28" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Requests/CreateCustomisationRequest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2016">
+              <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
+              <folding>
+                <element signature="e#38#78#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1400">
+              <caret line="50" column="30" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/QS/CanvasPreview/Preview.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2324">
+              <caret line="95" column="47" selection-start-line="95" selection-start-column="47" selection-end-line="95" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Collections/CanvasPreviewFileCollection.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="784">
+              <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ls</find>
+      <find>db</find>
+      <find>TODO:</find>
+      <find>createFor</find>
+      <find>FormRequest</find>
+      <find>the given data was</find>
+      <find>check_successful_response_format</find>
+      <find>dst url must be</find>
+      <find>this-&gt;api_partner_id</find>
+      <find>Data contain</find>
+      <find>customisation not</find>
+      <find>it_returns_error_if_customisation_isnt_purchased</find>
+      <find>find</find>
+      <find>customisations_artwork_file_types</find>
+      <find>Schema::create('customisations_artwork_file_types</find>
+      <find>Validation error bag</find>
+      <find>ApiException</find>
+      <find>CustomisationArtworkFileTypesSeeder</find>
+      <find>api_par</find>
+      <find>10069</find>
+      <find>api_partner_id</find>
+      <find>=&gt; 3,</find>
+      <find>hasDst</find>
+      <find>customisation_artwork_files_are_persisted</find>
+      <find>doesCustomisationHaveType</find>
+      <find>'cap'</find>
+      <find>fpm.con</find>
+      <find>Bad canvas preview file data for sku</find>
+      <find>Run Tests</find>
+      <find>docker-comp</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>file_url</replace>
+      <replace>/customisation</replace>
+      <replace>QS\ApiPartner</replace>
+      <replace>App\Validator\Ecom\Rules\CustomisationLineProperty</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/app/Validator/Fulfilment</dir>
+      <dir>$PROJECT_DIR$/app/Responses/Fulfilment</dir>
+      <dir>$PROJECT_DIR$/tests/Fulfilment/Unit/Middleware</dir>
+      <dir>$PROJECT_DIR$/app/Validator/Ecom/Rules</dir>
+      <dir>$PROJECT_DIR$/app/Validator/Fulfilment/Rules</dir>
+      <dir>$PROJECT_DIR$/app/Models/QS</dir>
+      <dir>$PROJECT_DIR$/app/Repository/Fakes</dir>
+      <dir>$PROJECT_DIR$/tests/Ecom/Feature</dir>
+      <dir>$PROJECT_DIR$/app/Http/Controllers/Ecom</dir>
+      <dir>$PROJECT_DIR$/tests/Ecom/Unit/Validator/Rules</dir>
+      <dir>$PROJECT_DIR$/routes</dir>
+      <dir>$PROJECT_DIR$/.docker/php-nginx</dir>
+      <dir>$PROJECT_DIR$/vendor/illuminate/contracts/Validation</dir>
+      <dir>$PROJECT_DIR$/app/Validator/Ecom</dir>
+      <dir>$PROJECT_DIR$/vendor</dir>
+      <dir>$PROJECT_DIR$/app/Providers</dir>
+      <dir>$PROJECT_DIR$/tests/Fulfilment/Feature/Customisations</dir>
+      <dir>$PROJECT_DIR$/app/Http/Controllers/Fulfilment</dir>
+      <dir>$PROJECT_DIR$/tests/Fulfilment/Unit/Dto</dir>
+      <dir>$PROJECT_DIR$/tests/Fulfilment/Unit/Requests</dir>
+      <dir>$PROJECT_DIR$/app/Dto/Fulfilment</dir>
+      <dir>$PROJECT_DIR$/tests/Fulfilment/Feature/Requests</dir>
+      <dir>$PROJECT_DIR$/database/migrations</dir>
+      <dir>$PROJECT_DIR$/storage/logs</dir>
+      <dir>$PROJECT_DIR$/app/Http/Requests</dir>
+      <dir>$PROJECT_DIR$/database/seeds</dir>
+      <dir>$PROJECT_DIR$/tests/Unit/Repos</dir>
+      <dir>$PROJECT_DIR$/app/Rules</dir>
+      <dir>$PROJECT_DIR$/app/Repository</dir>
+      <dir>$PROJECT_DIR$/.circleci</dir>
+    </dirStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/app/Repository/Fulfilment/QsCustomisationRepository.php" />
+      <option value="$PROJECT_DIR$/app/Repository/Fulfilment/CustomisationRepository.php" />
+      <option value="$PROJECT_DIR$/.docker.env.example" />
+      <option value="$PROJECT_DIR$/.docker/php-nginx/entrypoint.sh" />
+      <option value="$PROJECT_DIR$/app/Repository/Fakes/QsCustomisationRepositoryFake.php" />
+      <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
+      <option value="$PROJECT_DIR$/app/Validator/Fulfilment/CreateCustomisationValidator.php" />
+      <option value="$PROJECT_DIR$/app/Providers/FormRequestServiceProvider.php" />
+      <option value="$PROJECT_DIR$/tests/Fulfilment/Unit/Requests/CustomisationArtworkRequestTest.php" />
+      <option value="$PROJECT_DIR$/tests/Helpers/ValidatesFormRequests.php" />
+      <option value="$PROJECT_DIR$/app/Validator/Fulfilment/Rules/MaxLowStitchCountWidthForEmb.php" />
+      <option value="$PROJECT_DIR$/routes/fulfilment.php" />
+      <option value="$PROJECT_DIR$/app/Repository/QsApiPartnerRepository.php" />
+      <option value="$PROJECT_DIR$/app/Models/QS/ApiPartner.php" />
+      <option value="$PROJECT_DIR$/database/seeds/ApiPartnerSeeder.php" />
+      <option value="$PROJECT_DIR$/database/factories/ApiPartnerFactory.php" />
+      <option value="$PROJECT_DIR$/app/Repository/Fakes/QsApiPartnerRepositoryFake.php" />
+      <option value="$PROJECT_DIR$/tests/Ecom/Feature/CustomisationControllerTest.php" />
+      <option value="$PROJECT_DIR$/app/Validator/Ecom/CustomisationValidator.php" />
+      <option value="$PROJECT_DIR$/tests/Ecom/Unit/Validator/Rules/CustomisationLinePropertyTest.php" />
+      <option value="$PROJECT_DIR$/tests/Fulfilment/Unit/Middleware/ApiPartnerAuthUnitTest.php" />
+      <option value="$PROJECT_DIR$/app/Dto/Fulfilment/NewCustomisationDto.php" />
+      <option value="$PROJECT_DIR$/app/Repository/CustomisationRepository.php" />
+      <option value="$PROJECT_DIR$/app/Repository/QsCustomisationRepository.php" />
+      <option value="$PROJECT_DIR$/tests/Fulfilment/Feature/Requests/CreateCustomisationRequestTest.php" />
+      <option value="$PROJECT_DIR$/tests/Fulfilment/Unit/Dto/CreateCustomisationDtoTest.php" />
+      <option value="$PROJECT_DIR$/tests/Fulfilment/Unit/Requests/CreateCustomisationRequestTest.php" />
+      <option value="$PROJECT_DIR$/app/Dto/Fulfilment/CustomisationDto.php" />
+      <option value="$PROJECT_DIR$/tests/Fulfilment/Feature/Customisations/CreateCustomisationTest.php" />
+      <option value="$PROJECT_DIR$/app/Http/Requests/CreateCustomisationRequest.php" />
+      <option value="$PROJECT_DIR$/app/Http/Controllers/Fulfilment/CustomisationController.php" />
+      <option value="$PROJECT_DIR$/tests/Unit/Repos/QsCustomisationRepoTest.php" />
+      <option value="$PROJECT_DIR$/app/Rules/IsEmbroideryCustomisation.php" />
+      <option value="$PROJECT_DIR$/app/Rules/ValidEmbroideryCustomisation.php" />
+      <option value="$PROJECT_DIR$/app/Rules/ThreadColoursExist.php" />
+      <option value="$PROJECT_DIR$/app/Repository/CustomisationArtworkRepository.php" />
+      <option value="$PROJECT_DIR$/app/Http/Requests/FormRequest.php" />
+      <option value="$PROJECT_DIR$/.env" />
+      <option value="$PROJECT_DIR$/app/Http/Requests/CustomisationArtworkRequest.php" />
+      <option value="$PROJECT_DIR$/database/seeds/CustomisationArtworkFilesSeeder.php" />
+      <option value="$PROJECT_DIR$/database/seeds/CustomisationArtworkFileTypeSeeder.php" />
+      <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+      <option value="$PROJECT_DIR$/database/seeds/CustomisationsTableSeeder.php" />
+      <option value="$PROJECT_DIR$/database/seeds/CustomisationArtworkSeeder.php" />
+      <option value="$PROJECT_DIR$/tests/Fulfilment/Feature/Requests/CustomisationArtworkRequestTest.php" />
+      <option value="$PROJECT_DIR$/app/Service/ArtworkFileStorage.php" />
+      <option value="$PROJECT_DIR$/tests/Unit/Repos/QsCustomisationArtworkRepoTest.php" />
+      <option value="$PROJECT_DIR$/app/Repository/QsCustomisationArtworkRepository.php" />
+      <option value="$PROJECT_DIR$/app/Rules/CustomisationMustNotHaveArtworkFile.php" />
+      <option value="$PROJECT_DIR$/tests/Fulfilment/Feature/CustomisationProductionFileControllerTest.php" />
+      <option value="$PROJECT_DIR$/app/Models/QS/CanvasPreview/Preview.php" />
+    </changedPaths>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="customisation-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="customisation-api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="customisation-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="customisation-api" type="462c0819:PsiDirectoryNode" />
+              <item name=".circleci" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="customisation-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="customisation-api" type="462c0819:PsiDirectoryNode" />
+              <item name=".docker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="customisation-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="customisation-api" type="462c0819:PsiDirectoryNode" />
+              <item name=".docker" type="462c0819:PsiDirectoryNode" />
+              <item name="php-nginx" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="customisation-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="customisation-api" type="462c0819:PsiDirectoryNode" />
+              <item name=".docker" type="462c0819:PsiDirectoryNode" />
+              <item name="php-nginx" type="462c0819:PsiDirectoryNode" />
+              <item name="php-fpm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="customisation-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="customisation-api" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="customisation-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="customisation-api" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="customisation-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="customisation-api" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="customisation-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="customisation-api" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="Fulfilment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="customisation-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="customisation-api" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="customisation-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="customisation-api" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="customisation-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="customisation-api" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Fulfilment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="customisation-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="customisation-api" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Fulfilment" type="462c0819:PsiDirectoryNode" />
+              <item name="Feature" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="customisation-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="customisation-api" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Fulfilment" type="462c0819:PsiDirectoryNode" />
+              <item name="Feature" type="462c0819:PsiDirectoryNode" />
+              <item name="Requests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="customisation-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="customisation-api" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Unit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="customisation-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="customisation-api" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Unit" type="462c0819:PsiDirectoryNode" />
+              <item name="Repos" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="125300000" />
+  </component>
+  <component name="ToolWindowManager">
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25019532" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Commit" order="3" />
+      <window_info id="Pull Requests" order="4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32974777" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="3" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Problems View" order="5" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Internal Method Tracing" order="7" />
+      <window_info anchor="bottom" id="File Transfer" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" order="12" />
+      <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
+      <window_info anchor="bottom" id="Flow" order="14" />
+      <window_info anchor="bottom" id="Services" order="15" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TODO" order="16" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25019532" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Commit" order="3" />
+      <window_info id="Pull Requests" order="4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32974777" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="3" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Problems View" order="5" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Internal Method Tracing" order="7" />
+      <window_info anchor="bottom" id="File Transfer" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" order="12" />
+      <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
+      <window_info anchor="bottom" id="Flow" order="14" />
+      <window_info anchor="bottom" id="Services" order="15" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TODO" order="16" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
+    <recentWindows>
+      <value>Project</value>
+      <value>Find</value>
+    </recentWindows>
+  </component>
+  <component name="Trusted.Project.Settings" hasCheckedIfOldProject="true" />
+  <component name="WindowStateProjectService">
+    <state x="3517" y="494" width="635" height="449" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1626706255180">
+      <screen x="2560" y="0" width="2560" height="1440" />
+    </state>
+    <state x="3517" y="494" width="635" height="449" key="#com.intellij.fileTypes.FileTypeChooser/2560.0.2560.1440/0.32.2560.1376/5120.0.2560.1440@2560.0.2560.1440" timestamp="1626706255180" />
+    <state x="3632" y="399" width="406" height="640" key="#com.intellij.ide.util.MemberChooser" timestamp="1626700317841">
+      <screen x="2560" y="0" width="2560" height="1440" />
+    </state>
+    <state x="3632" y="399" width="406" height="640" key="#com.intellij.ide.util.MemberChooser/2560.0.2560.1440/0.32.2560.1376/5120.0.2560.1440@2560.0.2560.1440" timestamp="1626700317841" />
+    <state x="3562" y="163" width="536" height="1110" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1626704519465">
+      <screen x="2560" y="0" width="2560" height="1440" />
+    </state>
+    <state x="3562" y="163" width="536" height="1110" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/2560.0.2560.1440/0.32.2560.1376/5120.0.2560.1440@2560.0.2560.1440" timestamp="1626704519465" />
+    <state x="3573" y="478" width="524" height="482" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1626705427553">
+      <screen x="2560" y="0" width="2560" height="1440" />
+    </state>
+    <state x="3573" y="478" width="524" height="482" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/2560.0.2560.1440/0.32.2560.1376/5120.0.2560.1440@2560.0.2560.1440" timestamp="1626705427553" />
+    <state x="3581" y="591" width="508" height="255" key="#com.jetbrains.php.refactoring.move.namespace.PhpMoveNamespaceDialog#" timestamp="1626184250004">
+      <screen x="2560" y="0" width="2560" height="1440" />
+    </state>
+    <state x="3581" y="591" width="508" height="255" key="#com.jetbrains.php.refactoring.move.namespace.PhpMoveNamespaceDialog#/2560.0.2560.1440/0.32.2560.1376/5120.0.2560.1440@2560.0.2560.1440" timestamp="1626184250004" />
+    <state x="3473" y="487" width="724" height="464" key="#com.jetbrains.php.refactoring.move.namespace.PhpMoveRelatedNamespacesDialog" timestamp="1626184249998">
+      <screen x="2560" y="0" width="2560" height="1440" />
+    </state>
+    <state x="3473" y="487" width="724" height="464" key="#com.jetbrains.php.refactoring.move.namespace.PhpMoveRelatedNamespacesDialog/2560.0.2560.1440/0.32.2560.1376/5120.0.2560.1440@2560.0.2560.1440" timestamp="1626184249998" />
+    <state x="2660" y="132" width="2360" height="1176" key="DiffContextDialog" timestamp="1626187366141">
+      <screen x="2560" y="0" width="2560" height="1440" />
+    </state>
+    <state x="2660" y="132" width="2360" height="1176" key="DiffContextDialog/2560.0.2560.1440/0.32.2560.1376/5120.0.2560.1440@2560.0.2560.1440" timestamp="1626187366141" />
+    <state x="3542" y="478" key="FileChooserDialogImpl" timestamp="1628254370283">
+      <screen x="2560" y="0" width="2560" height="1440" />
+    </state>
+    <state x="3542" y="478" key="FileChooserDialogImpl/2560.0.2560.1440/0.32.2560.1376/5120.0.2560.1440@2560.0.2560.1440" timestamp="1628254370283" />
+    <state x="2806" y="128" width="2048" height="1180" key="MergeDialog" timestamp="1626698097174">
+      <screen x="2560" y="0" width="2560" height="1440" />
+    </state>
+    <state x="2806" y="128" width="2048" height="1180" key="MergeDialog/2560.0.2560.1440/0.32.2560.1376/5120.0.2560.1440@2560.0.2560.1440" timestamp="1626698097174" />
+    <state x="3472" y="481" width="726" height="475" key="MultipleFileMergeDialog" timestamp="1626698102318">
+      <screen x="2560" y="0" width="2560" height="1440" />
+    </state>
+    <state x="3472" y="481" width="726" height="475" key="MultipleFileMergeDialog/2560.0.2560.1440/0.32.2560.1376/5120.0.2560.1440@2560.0.2560.1440" timestamp="1626698102318" />
+    <state x="3636" y="644" width="397" height="149" key="NewPhpFileDialog" timestamp="1625750031162">
+      <screen x="2560" y="0" width="2560" height="1440" />
+    </state>
+    <state x="3636" y="644" width="397" height="149" key="NewPhpFileDialog/2560.0.2560.1440/0.32.2560.1376/5120.0.2560.1440@2560.0.2560.1440" timestamp="1625750031162" />
+    <state x="3489" y="321" width="692" height="795" key="VCS.ChangeListViewerDialog" timestamp="1626267810653">
+      <screen x="2560" y="0" width="2560" height="1440" />
+    </state>
+    <state x="3489" y="321" width="692" height="795" key="VCS.ChangeListViewerDialog/2560.0.2560.1440/0.32.2560.1376/5120.0.2560.1440@2560.0.2560.1440" timestamp="1626267810653" />
+    <state x="4071" y="250" width="690" height="622" key="find.popup" timestamp="1628240082713">
+      <screen x="2560" y="0" width="2560" height="1440" />
+    </state>
+    <state x="4071" y="250" width="690" height="622" key="find.popup/2560.0.2560.1440/0.32.2560.1376/5120.0.2560.1440@2560.0.2560.1440" timestamp="1628240082713" />
+    <state x="3504" y="337" key="run.anything.popup" timestamp="1625752453653">
+      <screen x="2560" y="0" width="2560" height="1440" />
+    </state>
+    <state x="3504" y="337" key="run.anything.popup/2560.0.2560.1440/0.32.2560.1376/5120.0.2560.1440@2560.0.2560.1440" timestamp="1625752453653" />
+    <state x="3503" y="345" width="672" height="687" key="search.everywhere.popup" timestamp="1632495912931">
+      <screen x="2560" y="0" width="2560" height="1440" />
+    </state>
+    <state x="3503" y="345" width="672" height="687" key="search.everywhere.popup/2560.0.2560.1440/0.32.2560.1376/5120.0.2560.1440@2560.0.2560.1440" timestamp="1632495912931" />
+    <state x="6063" y="345" width="672" height="687" key="search.everywhere.popup/2560.0.2560.1440/0.32.2560.1376/5120.0.2560.1440@5120.0.2560.1440" timestamp="1626098588260" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/Repository/QsCustomisationRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_07_08_144304_create_customisations_artwork_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/illuminate/support/Traits/EnumeratesValues.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="714" column="20" selection-start-line="714" selection-start-column="20" selection-end-line="714" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Collections/ApiCollection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Collections/ModelInstance.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Fulfilment/CustomisationProductionFileController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1115">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Rules/ValidEmbroideryCustomisation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/logs/laravel.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="735">
+          <caret line="113" column="67" lean-forward="true" selection-start-line="113" selection-start-column="67" selection-end-line="113" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Rules/UrlRespondsWithSuccess.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="947">
+          <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Unit/HandlerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2637" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Exceptions/ApiException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Exceptions/RenderableException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/FormRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="66" column="24" lean-forward="true" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
+          <folding>
+            <element signature="e#39#82#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Exceptions/Handler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/CustomisationFileTypeSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/CustomisationArtworkFileTypesSeeder.php" />
+    <entry file="file://$PROJECT_DIR$/database/seeds/CustomColoursTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/CustomisationsTableSeeder.php" />
+    <entry file="file://$PROJECT_DIR$/database/seeds/ApiPartnerSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="84" column="55" lean-forward="true" selection-start-line="84" selection-start-column="55" selection-end-line="84" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repository/QsCustomisationFileTypeRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-117">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Unit/Repos/QsFontRepoTest.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/QS/CustomisationArtwork.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Mocks/MockedGuzzleClient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Fulfilment/Feature/Requests/CustomisationArtworkRequestTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1479">
+          <caret line="107" column="13" lean-forward="true" selection-start-line="107" selection-start-column="13" selection-end-line="107" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Unit/Repos/QsCustomisationRepoTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="83" column="10" lean-forward="true" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/CustomisationArtworkSeeder.php" />
+    <entry file="file://$PROJECT_DIR$/tests/Unit/Repos/QsCustomisationArtworkRepoTest.php" />
+    <entry file="file://$PROJECT_DIR$/app/Rules/CustomisationMustNotHaveArtworkFile.php" />
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/lumen-framework/src/Testing/Concerns/MakesHttpRequests.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12152">
+          <caret line="439" column="20" selection-start-line="439" selection-start-column="20" selection-end-line="439" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Fulfilment/Feature/CustomisationProductionFileControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Service/ArtworkFileStorage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="812">
+          <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="34" selection-start-line="34" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/CustomisationArtworkFileTypeSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+          <folding>
+            <element signature="e#7#38#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repository/CustomisationArtworkRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Rules/CustomisationArtworkTypeDuplicate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="784">
+          <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.docker/php-nginx/supervisord.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="13" selection-start-line="13" selection-end-line="19" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repository/QsCustomisationArtworkRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1143">
+          <caret line="57" column="7" selection-start-line="57" selection-start-column="7" selection-end-line="57" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/CustomisationArtworkRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1143">
+          <caret line="52" column="42" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
+          <folding>
+            <element signature="e#37#66#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Exceptions/Fulfilment/ApiException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Fulfilment/CustomisationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="896">
+          <caret line="40" column="28" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/CreateCustomisationRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2016">
+          <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
+          <folding>
+            <element signature="e#38#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1400">
+          <caret line="50" column="30" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/QS/CanvasPreview/Preview.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2324">
+          <caret line="95" column="47" selection-start-line="95" selection-start-column="47" selection-end-line="95" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Collections/CanvasPreviewFileCollection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="784">
+          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="82" column="37" lean-forward="true" selection-start-line="82" selection-start-column="37" selection-end-line="82" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-compose.override.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" column="95" lean-forward="true" selection-start-line="6" selection-start-column="95" selection-end-line="6" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.docker/php-nginx/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="78" column="45" selection-start-line="78" selection-start-column="45" selection-end-line="78" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
