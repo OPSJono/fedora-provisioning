@@ -39,6 +39,9 @@ common_packages:
   - iptables
   - npm
 
+  # Required for JetBrains apps to create desktop files
+  - flatpak-xdg-utils
+
 #  - steam
 
   # Extra's to add
