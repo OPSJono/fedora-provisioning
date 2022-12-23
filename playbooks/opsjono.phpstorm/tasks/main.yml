@@ -12,27 +12,19 @@
     phpstorm_installed: true
   when: output.stdout | join('') is search(phpstorm_package_name)
 
-- name: Install PHPStorm using Flakpak (via Shell) if it isn't installed already (Takes a while)
+- name: Install PHPStorm using Flakpak (via Shell) if it isn't installed already
   shell: |
     flatpak install {{ phpstorm_package_name }} -y > /dev/null 2>&1
   become: true
   become_user: root
   when: phpstorm_installed != true
 
-- name: Update PHPStorm using Flakpak (via Shell) if it is already installed (May take a while)
+- name: Update PHPStorm using Flakpak (via Shell) if it is already installed
   shell: |
     flatpak update {{ phpstorm_package_name }} -y > /dev/null 2>&1
   become: true
   become_user: root
   when: phpstorm_installed == true
-
-- name: Ensure directory for the icon exists
-  file:
-    path: /opt/phpstorm
-    owner: "{{ ansible_user }}"
-    group: "{{ ansible_user }}"
-    mode: 0775
-    state: directory
 
 - name: Copy PhpStorm icon into place
   copy:
@@ -52,7 +44,7 @@
 
 - name: Ensure PhpStorm preferences folder exists
   file:
-    path: "/home/{{ ansible_user }}/.var/app/com.jetbrains.PhpStorm/config/JetBrains/PhpStorm{{ phpstorm_version }}"
+    path: "/home/{{ ansible_user }}/.config/JetBrains/PhpStorm{{ phpstorm_version }}"
     state: directory
     owner: "{{ ansible_user }}"
     group: "{{ ansible_user }}"
@@ -60,17 +52,24 @@
   become: true
   become_user: "{{ ansible_user }}"
 
+- name: List all PHPStorm preference files
+  find:
+    paths: "opsjono.phpstorm/files/preferences/"
+    recurse: yes
+  register: found_files
+
+- name: Save those preference files to a loopable variable
+  set_fact:
+    preference_files:
+      - "{{ found_files.files | map(attribute='path') }}"
+
 - name: Copy personal preferences to the PhpStorm directory
   copy:
-    src: "opsjono.phpstorm/files/preferences/"
-    dest: "/home/{{ ansible_user }}/.var/app/com.jetbrains.PhpStorm/config/JetBrains/PhpStorm{{ phpstorm_version }}/"
+    src: "{{ item }}"
+    dest: "/home/{{ ansible_user }}/.config/JetBrains/PhpStorm{{ phpstorm_version }}/"
     owner: "{{ ansible_user }}"
     group: "{{ ansible_user }}"
-    mode: 0775
-    directory_mode: true
+  with_items:
+    - "{{ preference_files[0] }}"
 
-- name: Set permissions on PhpStorm preferences directory
-  shell: |
-    chmod -R 775 "/home/{{ ansible_user }}/.var/app/com.jetbrains.PhpStorm/config/JetBrains/PhpStorm{{ phpstorm_version }}/"
-  become: true
-  become_user: "{{ ansible_user }}"
+## TODO: Copy these changes to the DataGrip playbook too.
