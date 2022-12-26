@@ -27,6 +27,7 @@ common_packages:
 
     #  - build-essential
   - nfs-utils
+  - liveusb-creator
 
   # Used to perform API requests
   - curl
