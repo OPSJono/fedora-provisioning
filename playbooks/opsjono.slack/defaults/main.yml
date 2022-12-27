@@ -1,0 +1,6 @@
+---
+slack_package_name: "com.slack.Slack"
+slack_search_name: "slack"
+slack_installed: false
+
+ansible_user: "{{ lookup('env','USER') }}"
