@@ -48,6 +48,7 @@ common_packages:
   - gnome-tweak-tool
   - gnome-extensions-app
   - gparted
+  - guake
 
 unwanted_packages:
   - evolution
