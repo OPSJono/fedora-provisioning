@@ -31,6 +31,7 @@
     - opsjono.package_installations
     - opsjono.snapd
     - opsjono.themes
+    - opsjono.node
 #    - opsjono.cairo-dock
 #    - opsjono.crontab
     - opsjono.gnome-extensions
