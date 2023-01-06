@@ -8,8 +8,21 @@ export ANSIBLE_SSH_ARGS='-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/
 export ANSIBLE_PIPELINING=True
 export ANSIBLE_HOST_KEY_CHECKING=False
 
+# Load NVM
+source ~/.nvm/nvm.sh
+
 function homestead() {
     ( cd ~/Homestead && vagrant $* )
 }
 
 phpco() { docker run --init -v $PWD:/mnt/src:cached --rm -u "$(id -u):$(id -g)" frbit/phpco:latest $@; return $?; }
+
+awslogin() {
+aws ecr get-login --no-include-email | bash
+}
+
+fixC2OPerms() {
+    chown -R $USER:$USER "/home/$USER/code/c2o/c2o/public_html/create-customisation/local"
+    chown -R $USER:$USER "/home/$USER/code/c2o/c2o/public_html/apply-customisation/local"
+    echo 'Done!';
+}
