@@ -1,0 +1,1 @@
+select * from products_stock where products_id = '2321' order by products_stock_id desc;

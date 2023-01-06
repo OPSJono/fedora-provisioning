@@ -1,0 +1,16 @@
+---
+- name: Install nvm
+  ansible.builtin.shell: >
+      curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+  args:
+      creates: "~/.nvm/nvm.sh"
+
+#-   name: "Install Node 16"
+#    ansible.builtin.shell: >
+#        nvm intsall 16
+#    become: false
+#
+#-   name: "Use Node 16"
+#    shell: |
+#        nvm use 16
+#    become: false

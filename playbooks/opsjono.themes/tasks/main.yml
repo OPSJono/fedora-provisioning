@@ -4,73 +4,18 @@
     src: papirus-icon-theme.repo.j2
     dest: /etc/yum.repos.d/papirus-icon-theme.repo
 
+# TODO: Download & Install Mac shell theme.
+# TODO: Install mac cursor themes to the icons directory.
+# TODO: PHPStorm is available via FlatPak now? - Would be better than manually downloading? - Flatpak may allow it to become a proper launcher on the dock?
+# TODO: Gnome extensions to move clock the right, move notification, de-annoy the "app is ready" notifications, top bar transparency (27%), hide dash in overview?
+# TODO: Chrome "launchers" in the dock open as new icons for each window. @see https://glx-dock.org/bg_topic.php?t=8984
 - name: Install Arc themes, papirus & mac icons
   dnf:
     name: ['arc-theme', 'papirus-icon-theme', 'la-capitaine-icon-theme']
     state: latest
 
-- name: Ensure the theme folders exist
-  file:
-    path: "{{ item }}"
-    state: directory
-    owner: root
-    group: root
-    mode: 0775
-  become: true
-  become_user: root
-  with_items:
-    - "/opt/themes/pictures"
-    - "/usr/share/icons/McMojave-cursors"
-    - "/usr/share/icons/McMojave-cursors"
-
-- name: Clone the Whitesur-gtk-theme repo
-  ansible.builtin.git:
-    repo: https://github.com/OPSJono/Whitesur-gtk-theme.git
-    dest: "/home/{{ ansible_user }}/code/personal/whitesur-gtk-theme"
-    clone: yes
-    update: yes
-    version: 2022-03-10
-
-- name: Install the Whitesur 'Nord' theme
-  command: "/home/{{ ansible_user }}/code/personal/whitesur-gtk-theme/install.sh -c dark --nordcolor --silent-mode"
-  become: true
-  become_user: "root"
-
-- name: Install the Whitesur 'Nord' theme for Flakpak
-  command: "/home/{{ ansible_user }}/code/personal/whitesur-gtk-theme/tweaks.sh --flatpak"
-  become: true
-  become_user: "root"
-
-#- name: Install the Whitesur 'Nord' theme for Snap (may take a while)
-#  command: "/home/{{ ansible_user }}/code/personal/whitesur-gtk-theme/tweaks.sh --snap"
-#  become: true
-#  become_user: "root"
-
-# Copy wallpapers
-- name: Set variables for fedora wallpapers
-  set_fact:
-    files_from: "opsjono.themes/files/pictures/wallpapers/fedora"
-    files_to: "/opt/themes/pictures/wallpapers/fedora"
-
-- include_tasks: copy-files.yml
-
-- name: Set variables for mac wallpapers
-  set_fact:
-    files_from: "opsjono.themes/files/pictures/wallpapers/mac"
-    files_to: "/opt/themes/pictures/wallpapers/mac"
-
-- include_tasks: copy-files.yml
-
-- name: Set variables for mac icons
-  set_fact:
-    files_from: "opsjono.themes/files/pictures/icons"
-    files_to: "/opt/themes/pictures/icons"
-
-- include_tasks: copy-files.yml
-
-- name: Install the mac cursor theme
-  copy:
-    src: "opsjono.themes/files/cursors/McMojave-cursors/"
-    dest: "/usr/share/icons/McMojave-cursors/"
-  become: true
-  become_user: root
+- name: Copy background images to pictures folder.
+  shell: |
+    mkdir -p /home/{{ ansible_user }}/Pictures/wallpapers
+    cp -R opsjono.themes/files/* /home/{{ ansible_user }}/Pictures/wallpapers/
+    chown {{ ansible_user }}:{{ ansible_user }} -R /home/{{ ansible_user }}/Pictures/wallpapers

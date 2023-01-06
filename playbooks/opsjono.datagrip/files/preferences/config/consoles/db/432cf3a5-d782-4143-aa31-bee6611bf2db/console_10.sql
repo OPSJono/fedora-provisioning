@@ -1,0 +1,7 @@
+New Relic cookies:
+login_service_login_newrelic_com_tokens
+TSNGUID
+nr_zd_logged_in
+TessenSessionId
+JSESSIONID
+login_idle_session_timeout

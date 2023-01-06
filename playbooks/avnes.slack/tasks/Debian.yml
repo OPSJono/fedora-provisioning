@@ -1,4 +1,0 @@
----
-- name: Install Slack
-  apt:
-    deb: "{{ slack_package }}"

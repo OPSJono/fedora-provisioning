@@ -4,6 +4,6 @@ sudo dnf update -y
 sudo dnf install -y git vim vim-enhanced xclip
 sudo pip3 install ansible boto boto3 scss PyMySQL
 sudo pip install boto boto3
-sudo dnf install -y awscli
+sudo dnf install -y awscli ansible
 sudo mkdir /etc/ansible/
 sudo cp ansible_hosts /etc/ansible/hosts

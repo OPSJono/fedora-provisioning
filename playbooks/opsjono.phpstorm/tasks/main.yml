@@ -1,76 +1,183 @@
 ---
 # Install & Configure PhpStorm
 
-- name: List installed packages
-  shell: |
-    flatpak list
-  register: output
-  changed_when: false
+- name: Get JSON from PhpStorm URL
+  uri:
+    url: "{{ phpstorm_releases_url }}"
+    method: GET
+    return_content: yes
+  register: phpstorm_releases
 
-- name: Set if PHPStorm is installed already
+- name: Get latest version number and download url
   set_fact:
-    phpstorm_installed: true
-  when: output.stdout | join('') is search(phpstorm_package_name)
+    get_phpstorm_available_version: "{{ phpstorm_releases.json.PS[0].version }}"
+    get_phpstorm_available_url: "{{ phpstorm_releases.json.PS[0].downloads.linux.link }}"
+    get_phpstorm_available_build: "{{ phpstorm_releases.json.PS[0].build }}"
+    get_phpstorm_major_version: "{{ phpstorm_releases.json.PS[0].majorVersion }}"
+  when:
+    - phpstorm_releases.json.PS[0].version is defined
+    - phpstorm_releases.json.PS[0].downloads.linux.link is defined
+    - phpstorm_releases.json.PS[0].build is defined
 
-- name: Install PHPStorm using Flakpak (via Shell) if it isn't installed already (Takes a while)
-  shell: |
-    flatpak install {{ phpstorm_package_name }} -y > /dev/null 2>&1
-  become: true
-  become_user: root
-  when: phpstorm_installed != true
+- name: Override the download URL for PhpStorm
+  set_fact:
+    get_phpstorm_available_url: "{{ phpstorm_override_download_url }}"
+    get_phpstorm_available_build: "{{ phpstorm_override_available_build }}"
+    get_phpstorm_available_version: "{{ phpstorm_override_available_version }}"
+    get_phpstorm_major_version: "{{ phpstorm_override_available_major_version }}"
+  when:
+    - phpstorm_override_download_url is defined
+    - phpstorm_override_available_build is defined
+    - phpstorm_override_available_version is defined
+    - phpstorm_override_available_major_version is defined
 
-- name: Update PHPStorm using Flakpak (via Shell) if it is already installed (May take a while)
-  shell: |
-    flatpak update {{ phpstorm_package_name }} -y > /dev/null 2>&1
-  become: true
-  become_user: root
-  when: phpstorm_installed == true
+#- name: Debug JSON varialbes
+#  debug:
+#    msg:
+#    - "{{ get_phpstorm_available_version }}"
+#    - "{{ get_phpstorm_available_url }}"
+#    - "{{ get_phpstorm_available_build }}"
 
-- name: Ensure directory for the icon exists
+- name: reset facts
+  set_fact:
+    phpstorm_available_version: "{{ get_phpstorm_available_version }}"
+    phpstorm_available_url: "{{ get_phpstorm_available_url }}"
+    phpstorm_available_build: "{{ get_phpstorm_available_build }}"
+  when:
+    - ci_testing is not defined
+
+#- name: debug phpstorm variables
+#  debug:
+#    msg:
+#    - "Verison: {{ phpstorm_available_version }}"
+#    - "URL: {{ phpstorm_available_url }}"
+#    - "Build path: {{ phpstorm_build_path }}"
+
+- name: Check if phpstorm is already installed
+  stat:
+    path: "{{ phpstorm_install_path }}"
+  register: phpstorm_already_exists_check
+
+- name: Does it exist?
+  set_fact:
+    phpstorm_already_exists: true
+  when: phpstorm_already_exists_check.stat.isdir is defined and phpstorm_already_exists_check.stat.isdir
+
+# JetBrains adds a file `build.txt` to the root of the download, to store the build version.
+- name: Check currently installed build version is available
+  stat:
+    path: "{{ phpstorm_build_path }}"
+  register: phpstorm_installed_build_available_check
+
+- name: Set whether the currently installed build version is avaialable
+  set_fact:
+    phpstorm_installed_build_version_available: true
+  when: phpstorm_installed_build_available_check.stat is defined and phpstorm_installed_build_available_check.stat.exists
+
+- name: Get currently installed build version
+  set_fact:
+    phpstorm_found_build_version: "{{ lookup('file', phpstorm_build_path) }}"
+  when:
+    - phpstorm_installed_build_version_available == true
+
+#- name: Debug build versions
+#  debug:
+#    msg:
+#      - "Currently installed build version: {{ phpstorm_found_build_version }}"
+#      - "Available build version: PS-{{ phpstorm_available_build }}"
+#      - "ansible_user: {{ ansible_user }}"
+
+- name: Check installed version is not the same as currently installed
+  set_fact:
+    phpstorm_can_be_installed: true
+  when:
+    - phpstorm_found_build_version != 'PS-'+phpstorm_available_build
+
+- name: Set location variables
+  set_fact:
+    phpstorm_archive_path: "{{ phpstorm_archive_location }}PhpStorm-{{ phpstorm_available_version }}.tar.gz"
+  when:
+    - ci_testing is not defined
+
+- name: Check download does not already exist
+  stat:
+    path: "{{ phpstorm_archive_path }}"
+  register: phpstorm_download_exists
+  when:
+    - phpstorm_can_be_installed == true
+
+- name: Create PhpStorm archive directory
+  file:
+    path: "{{ phpstorm_archive_location }}"
+    state: directory
+  when:
+    - phpstorm_can_be_installed == true
+
+- name: Download latest version of PhpStorm (This could take a few minutes...)
+  get_url:
+    url: "{{ phpstorm_available_url }}"
+    dest: "{{ phpstorm_archive_location }}"
+    mode: 0775
+  when:
+    - phpstorm_can_be_installed == true
+    - phpstorm_download_exists.stat.exists == false
+    - ci_testing is not defined # doing this during testing will make tests slow.
+
+- name: Remove currently installed version
+  file:
+    path: "{{ phpstorm_install_path }}" 
+    state: absent
+  when:
+    - phpstorm_can_be_installed == true
+    - phpstorm_already_exists == true
+
+- name: Create PhpStorm install directory
   file:
     path: /opt/phpstorm
+    state: directory
     owner: "{{ ansible_user }}"
     group: "{{ ansible_user }}"
     mode: 0775
-    state: directory
+  when:
+    - phpstorm_can_be_installed == true
+
+- name: Extract PhpStorm
+  unarchive:
+    extra_opts: ['--strip-components=1']
+    src: "{{ phpstorm_archive_path }}"
+    dest: "{{ phpstorm_install_path }}"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+  when:
+    - phpstorm_can_be_installed == true
+
+- name: Create symlink for phpstorm
+  file:
+    src: "{{ phpstorm_install_path }}/bin/phpstorm.sh"
+    dest: /usr/local/bin/phpstorm
+    state: link
+  when:
+    - phpstorm_can_be_installed == true
 
 - name: Copy PhpStorm icon into place
   copy:
     src: icon.png
     dest: /opt/phpstorm/icon.png
+  when:
+    - phpstorm_can_be_installed == true
 
 - name: Install phpstorm.desktop file
-  copy:
-    src: phpstorm.desktop
+  template:
+    src: phpstorm.desktop.j2
     dest: /usr/share/applications/phpstorm.desktop
+  when:
+    - phpstorm_can_be_installed == true
 
-- name: Register desktop file
-  command: update-desktop-database /usr/share/applications/
-  become: true
-  become_user: root
-  changed_when: false
-
-- name: Ensure PhpStorm preferences folder exists
-  file:
-    path: "/home/{{ ansible_user }}/.var/app/com.jetbrains.PhpStorm/config/JetBrains/PhpStorm{{ phpstorm_version }}"
-    state: directory
-    owner: "{{ ansible_user }}"
-    group: "{{ ansible_user }}"
-    mode: 0775
-  become: true
-  become_user: "{{ ansible_user }}"
-
-- name: Copy personal preferences to the PhpStorm directory
-  copy:
-    src: "opsjono.phpstorm/files/preferences/"
-    dest: "/home/{{ ansible_user }}/.var/app/com.jetbrains.PhpStorm/config/JetBrains/PhpStorm{{ phpstorm_version }}/"
-    owner: "{{ ansible_user }}"
-    group: "{{ ansible_user }}"
-    mode: 0775
-    directory_mode: true
-
-- name: Set permissions on PhpStorm preferences directory
+- name: Copy PhpStorm preferences to home folder
   shell: |
-    chmod -R 775 "/home/{{ ansible_user }}/.var/app/com.jetbrains.PhpStorm/config/JetBrains/PhpStorm{{ phpstorm_version }}/"
+    mkdir -p /home/{{ ansible_user }}/.config/JetBrains/PhpStorm{{ get_phpstorm_major_version }}
+    cp -R opsjono.phpstorm/files/preferences/config/* /home/{{ ansible_user }}/.config/JetBrains/PhpStorm{{ get_phpstorm_major_version }}
   become: true
   become_user: "{{ ansible_user }}"
+  when:
+    - phpstorm_can_be_installed == true

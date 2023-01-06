@@ -1,28 +1,25 @@
 ---
 common_packages:
   - thunderbird
-  - gnome-terminal-nautilus
   - vim-enhanced
   - htop
   - iotop
   - pv
   - screen
   - git
-  - gparted
   - tcpdump
   - rsync
   - xclip
-  - remmina
   - openssh-askpass
   - gimp
 
   ## Vagrant and libvirt related
-  - ruby-devel
-  - gcc
-  - libxslt-devel
-  - libxml2-devel
-  - libguestfs-tools-c
-  - vagrant-libvirt
+#  - ruby-devel
+#  - gcc
+#  - libxslt-devel
+#  - libxml2-devel
+#  - libguestfs-tools-c
+#  - vagrant-libvirt
 
   ## Firewall (required for vagrant-shared folders)
   - python3-firewall
@@ -30,6 +27,7 @@ common_packages:
 
     #  - build-essential
   - nfs-utils
+  - liveusb-creator
 
   # Used to perform API requests
   - curl
@@ -39,19 +37,18 @@ common_packages:
   - iptables
   - npm
 
-  # Required for JetBrains apps to create desktop files
-  - flatpak-xdg-utils
-
 #  - steam
 
   # Extra's to add
-  - ffmpeg-libs
-  - fuse-exfat
-  - gnome-tweak-tool
-  - gnome-extensions-app
   - vlc
   - vlc-extras
 
+  # Gnome specific packages
+  - gnome-terminal-nautilus
+  - gnome-tweak-tool
+  - gnome-extensions-app
+  - gparted
+  - guake
 
 unwanted_packages:
   - evolution
