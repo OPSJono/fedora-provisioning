@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configure xmlns="http://schemas.xmlsoap.org/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://schemas.xmlsoap.org/encoding/ ConfigXMLSchema.xsd">
+  <title>Cisco AnyConnect Network Visibility Module</title>
+  <file id="nvm-install">
+    <default>true</default>
+    <description>NVM install logs</description>
+    <gui>
+      <label>_tr("NVM install logs")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+      <os opsys="win10">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\NVM\Logs\*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%TEMP%\anyconnect*-nvm-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect*-nvm-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win8">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\NVM\Logs\*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%TEMP%\anyconnect*-nvm-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect*-nvm-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win7">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\NVM\Logs\*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%TEMP%\anyconnec*-nvm-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect*-nvm-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="linux">
+        <file_copy_action>
+          <action>
+            <loc>/opt/cisco/anyconnect/anyconnect*-nvm-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+    </dart>
+  </file>
+  <file id="nvm-dmp">
+    <default>true</default>
+    <description>Network Visibility dump files</description>
+    <gui>
+      <label>_tr("Network Visibility dump files")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+      <os opsys="win10">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\acnvm*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\acnvm*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win8">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\acnvm*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\acnvm*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win7">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\acnvm*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\acnvm*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="mac">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">$HOME/Library/Logs/CrashReporter/acnvmagent_*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/System/Library/Logs/CrashReporter/acnvmagent_*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">$HOME/Library/Logs/DiagnosticReports/acnvmagent_*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/Library/Logs/DiagnosticReports/acnvmagent_*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="linux">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">/var/crash/*_acnvmagent.*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+    </dart>
+  </file>
+  <file id="nvm-logs">
+    <default>true</default>
+    <description>Network Visibility application logs</description>
+    <gui>
+      <label>_tr("Network Visibility application logs")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+      <os opsys="win10">
+        <use_extern_action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l "Cisco AnyConnect Network Visibility Module" -f %TEMP%\NetworkVisibility.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\NetworkVisibility.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>wevtutil epl "Cisco AnyConnect Network Visibility Module" %TEMP%\NVM.evtx</args>
+            <clear_log apply="true">wevtutil cl "Cisco AnyConnect Network Visibility Module"</clear_log>
+            <temp_out>%TEMP%\NVM.evtx</temp_out>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="win8">
+        <use_extern_action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l "Cisco AnyConnect Network Visibility Module" -f %TEMP%\NetworkVisibility.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\NetworkVisibility.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>wevtutil epl "Cisco AnyConnect Network Visibility Module" %TEMP%\NVM.evtx</args>
+            <clear_log apply="true">wevtutil cl "Cisco AnyConnect Network Visibility Module"</clear_log>
+            <temp_out>%TEMP%\NVM.evtx</temp_out>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="win7">
+        <use_extern_action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l "Cisco AnyConnect Network Visibility Module" -f %TEMP%\NetworkVisibility.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\NetworkVisibility.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>wevtutil epl "Cisco AnyConnect Network Visibility Module" %TEMP%\NVM.evtx</args>
+            <clear_log apply="true">wevtutil cl "Cisco AnyConnect Network Visibility Module"</clear_log>
+            <temp_out>%TEMP%\NVM.evtx</temp_out>
+          </action>
+        </use_extern_action>
+      </os>
+    </dart>
+  </file>
+  <file id="nvm-profile">
+    <default>true</default>
+    <description>Network Visibility Profile</description>
+    <gui>
+      <label>_tr("Network Visibility Profile")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+      <os opsys="win10">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\NVM\NVM_ServiceProfile.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win8">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\NVM\NVM_ServiceProfile.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win7">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\NVM\NVM_ServiceProfile.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="mac">
+        <file_copy_action>
+          <action>
+            <loc>/opt/cisco/anyconnect/NVM/NVM_ServiceProfile.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          </file_copy_action>
+      </os>
+      <os opsys="linux">
+        <file_copy_action>
+          <action>
+            <loc>/opt/cisco/anyconnect/NVM/NVM_ServiceProfile.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+    </dart>
+  </file>
+</configure>
+

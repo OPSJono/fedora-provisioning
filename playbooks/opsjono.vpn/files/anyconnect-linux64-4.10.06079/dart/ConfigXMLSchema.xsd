@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 (http://www.altova.com) by Ashley (Cisco) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://schemas.xmlsoap.org/encoding/" targetNamespace="http://schemas.xmlsoap.org/encoding/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:element name="configure">
+    <xs:annotation>
+      <xs:documentation>The Config XML is responsible for specifying what to do with the files that are requested.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="title" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Serves as the label to distinguish between multiple Config XML files.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="file" minOccurs="0" maxOccurs="unbounded">
+          <xs:annotation>
+            <xs:documentation>Describes what files are to be collected and serves as the linking element to the Request XML. If no files are listed, only those files designated as "required" in the Config XML will be included in the bundle.</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="default" type="xs:boolean">
+                <xs:annotation>
+                  <xs:documentation>Used to indicate whether or not the file is included by default. </xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="description" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation>Provides a brief description of the file to be displayed in the GUI and in the summary.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="gui">
+                <xs:annotation>
+                  <xs:documentation>Contains information specific to the needs of the GUI.</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="label" type="xs:string">
+                      <xs:annotation>
+                        <xs:documentation>Indicates how a file ID will be displayed on the GUI in a manner that is easy to understand for the user. </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="file_type" minOccurs="0" maxOccurs="unbounded">
+                      <xs:annotation>
+                        <xs:documentation>Used by the GUI to determine where to display the contents of the file. </xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="n/a" />
+                          <xs:enumeration value="diag" />
+                          <xs:enumeration value="log" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="dart">
+                <xs:annotation>
+                  <xs:documentation>Contains information specific to the needs of DART.</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="required" type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>Indicates whether or not a file is required to be included in the bundle.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="os" minOccurs="0" maxOccurs="unbounded">
+                      <xs:annotation>
+                        <xs:documentation>Provides a list of the operating systems that have instructions pertaining to this particular file.</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="file_copy_action" minOccurs="0" maxOccurs="unbounded">
+                            <xs:annotation>
+                              <xs:documentation>Name of one of the subclasses of actionIfc that is used when a file to be collected is present on the client computer already.</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="action" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:annotation>
+                                    <xs:documentation>Provides the list of instructions to be carried out for that particular action.</xs:documentation>
+                                  </xs:annotation>
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="loc">
+                                        <xs:annotation>
+                                          <xs:documentation>Path to the file to be collected by file_copy_action with respect to the folder of DART executables.</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute name="gather_newest" type="xs:boolean">
+                                                <xs:annotation>
+                                                  <xs:documentation>Indicates whether or not to gather the most recent file whose name matches a given pattern.</xs:documentation>
+                                                </xs:annotation>
+                                              </xs:attribute>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="clear_log" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:annotation>
+                                          <xs:documentation>Command that is used to clear the specified file if any.</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute name="apply" type="xs:boolean">
+                                                <xs:annotation>
+                                                  <xs:documentation>Indicate whether or not DART can clean up this log when "clear log" option is specified</xs:documentation>
+                                                </xs:annotation>
+                                              </xs:attribute>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="use_extern_action" minOccurs="0" maxOccurs="unbounded">
+                            <xs:annotation>
+                              <xs:documentation>Name of one of the subclasses of actionIfc that is used when the information to be gathered is to be created by some other programs.</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="action" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:annotation>
+                                    <xs:documentation>Provides the list of instructions to be carried out for that particular action.</xs:documentation>
+                                  </xs:annotation>
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:choice>
+                                        <xs:element name="path" type="xs:string">
+                                          <xs:annotation>
+                                            <xs:documentation>Indicates the path to the executable.</xs:documentation>
+                                          </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="regis" type="xs:string">
+                                          <xs:annotation>
+                                            <xs:documentation>Indicates the path to the executable using the full registry key with the name of the key as the last part.</xs:documentation>
+                                          </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="plugin">
+                                          <xs:annotation>
+                                            <xs:documentation>Contains the name of a plugin. If empty, the name will be found as the first part in args.</xs:documentation>
+                                          </xs:annotation>
+                                          <xs:simpleType>
+                                            <xs:restriction base="xs:string" />
+                                          </xs:simpleType>
+                                        </xs:element>
+                                      </xs:choice>
+                                      <xs:element name="args" type="xs:string">
+                                        <xs:annotation>
+                                          <xs:documentation>Consists of the command line arguments for the executable. The first part MUST be the name of executable (with extension).</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="clear_log" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:annotation>
+                                          <xs:documentation>Command that is used to clear the specified file if any.</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute name="apply" type="xs:boolean">
+                                                <xs:annotation>
+                                                  <xs:documentation>Indicate whether or not DART can clean up this log when "clear log" option is specified.</xs:documentation>
+                                                </xs:annotation>
+                                              </xs:attribute>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:choice>
+                                        <xs:element name="temp_out" type="xs:string" maxOccurs="unbounded">
+                                          <xs:annotation>
+                                            <xs:documentation>Specifies the path of the temporary output file to be copied into the bundle.</xs:documentation>
+                                          </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="stdout">
+                                          <xs:annotation>
+                                            <xs:documentation>Signifies that DART is to create the process with pipes and record the stdout of the external program.</xs:documentation>
+                                          </xs:annotation>
+                                        </xs:element>
+                                      </xs:choice>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="opsys" use="required">
+                          <xs:annotation>
+                            <xs:documentation>Specifies what operating system the following set of instructions applies to.</xs:documentation>
+                          </xs:annotation>
+                          <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                              <xs:enumeration value="vista" />
+                              <xs:enumeration value="linux" />
+                              <xs:enumeration value="mac" />
+                              <xs:enumeration value="winxp" />
+                              <xs:enumeration value="win2k3" />
+                              <xs:enumeration value="win7" />
+                            </xs:restriction>
+                          </xs:simpleType>
+                        </xs:attribute>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" use="required">
+              <xs:annotation>
+                <xs:documentation>Serves as the linking element between the Request XML and the Config XML. When a particular "id" is requested, DART looks in the Config XML for a matching "id" with a set of instructions.</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:string" />
+              </xs:simpleType>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

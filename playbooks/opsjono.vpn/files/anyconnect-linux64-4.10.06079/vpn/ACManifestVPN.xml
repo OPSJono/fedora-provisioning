@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vpn rev="1.0">
+  <file version="4.10.06079" id="VPNCore" is_core="yes" type="script" action="install">
+    <uri>binaries/anyconnect-linux64-4.10.06079-core-vpn-webdeploy-k9.sh</uri>
+    <display-name>AnyConnect Secure Mobility Client</display-name>
+  </file>
+</vpn>

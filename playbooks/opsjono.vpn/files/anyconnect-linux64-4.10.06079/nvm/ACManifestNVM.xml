@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vpn rev="1.0">
+  <file version="4.10.06079" id="NVM" is_core="no" type="script" action="install" module="nvm">
+    <uri>binaries/anyconnect-linux64-4.10.06079-nvm-webdeploy-k9.sh</uri>
+    <display-name>AnyConnect Network Visibility</display-name>
+  </file>
+</vpn>

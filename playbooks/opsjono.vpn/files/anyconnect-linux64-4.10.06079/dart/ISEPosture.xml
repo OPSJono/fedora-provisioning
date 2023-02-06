@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configure xmlns="http://schemas.xmlsoap.org/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://schemas.xmlsoap.org/encoding/ ConfigXMLSchema.xsd">
+  <title>Cisco AnyConnect ISE Posture Module</title>
+  <file id="ise-posture-install">
+    <default>true</default>
+    <description>ISE Posture install logs</description>
+    <gui>
+      <label>_tr("ISE Posture install logs")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+      <os opsys="win8">
+        <file_copy_action>
+          <action>
+            <loc>%TEMP%\anyconnect*-iseposture-*.log</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect*-iseposture-*.log</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%TEMP%\anyconnect*-isecompliance-*.log</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect*-isecompliance-*.log</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%TEMP%\UninstallDriverResult.log</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\UninstallDriverResult.log</loc>
+						<clear_log apply="false"/>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win7">
+        <file_copy_action>
+          <action>
+            <loc>%TEMP%\anyconnect*-iseposture-*.log</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect*-iseposture-*.log</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%TEMP%\anyconnect*-isecompliance-*.log</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect*-isecompliance-*.log</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%TEMP%\UninstallDriverResult.log</loc>
+            <clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\UninstallDriverResult.log</loc>
+            <clear_log apply="false"/>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="vista">
+        <file_copy_action>
+          <action>
+            <loc>%TEMP%\anyconnect*-iseposture-*.log</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect*-iseposture-*.log</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%TEMP%\anyconnect*-isecompliance-*.log</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect*-isecompliance-*.log</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%TEMP%\UninstallDriverResult.log</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\UninstallDriverResult.log</loc>
+						<clear_log apply="false"/>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="winxp">
+        <file_copy_action>
+          <action>
+            <loc>%TEMP%\anyconnect*-iseposture-*.log</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect*-iseposture-*.log</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%TEMP%\anyconnect*-isecompliance-*.log</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect*-isecompliance-*.log</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%TEMP%\UninstallDriverResult.log</loc>
+					  <clear_log apply="false"/>
+          </action>
+		       <action>
+            <loc>%WINDIR%\Temp\UninstallDriverResult.log</loc>
+					  <clear_log apply="false"/>
+          </action>
+        </file_copy_action>
+      </os>
+    </dart>
+  </file>
+  <file id="ise-posture-logs">
+    <default>true</default>
+    <description>ISE Posture application logs</description>
+    <gui>
+      <label>_tr("ISE Posture application logs")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+      <os opsys="win8">
+        <use_extern_action>
+          <action>
+						<plugin/>
+            <args>wineventlog.exe -l "Cisco AnyConnect ISE Posture Module" -f %TEMP%\AnyConnect_ISEPosture.txt -o</args>
+						<clear_log apply="false"/>
+            <temp_out>%TEMP%\AnyConnect_ISEPosture.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>wevtutil epl "Cisco AnyConnect ISE Posture Module" %TEMP%\AnyConnect_ISEPosture.evtx</args>
+            <clear_log apply="true">wevtutil cl "Cisco AnyConnect ISE Posture Module"</clear_log>
+            <temp_out>%TEMP%\AnyConnect_ISEPosture.evtx</temp_out>
+          </action>
+          <action>
+            <path>%PROGRAMFILES%\Cisco\Cisco AnyConnect Secure Mobility Client\opswat</path>
+            <args>WaDiagnose.exe --log_path "%LOCALAPPDATA%\Cisco\Cisco AnyConnect Secure Mobility Client\WaDiagnose.txt" --debug_log_output_path "%LOCALAPPDATA%\Cisco\Cisco AnyConnect Secure Mobility Client" --driver_prevent_install true --auto_exit true</args>
+            <clear_log apply="false"/>
+            <temp_out>%LOCALAPPDATA%\Cisco\Cisco AnyConnect Secure Mobility Client\WaDiagnose.txt</temp_out>
+          </action>
+        </use_extern_action>
+        <file_copy_action>
+          <action>
+            <loc>%LOCALAPPDATA%\Cisco\Cisco AnyConnect Secure Mobility Client\v4DebugInfo*</loc>
+            <clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%LOCALAPPDATA%\Cisco\Cisco AnyConnect Secure Mobility Client\aciseposture.log*</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Logs\elaciseposture.log*</loc>
+						<clear_log apply="false"/>
+          </action>
+		  <action>
+            <loc>%LOCALAPPDATA%\Cisco\Cisco AnyConnect Secure Mobility Client\DartAddon*</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%LOCALAPPDATA%\Cisco\Cisco AnyConnect Secure Mobility Client\ConnectionData.xml</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+			<loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\ISE Posture\ConnectionData.xml</loc>
+			<clear_log apply="false"/>
+		  </action>
+          <action>
+			<loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\ISE Posture\aciseagent.log*</loc>
+			<clear_log apply="false"/>
+		  </action>					
+		  <action>
+            <loc>%LOCALAPPDATA%\Cisco\Cisco AnyConnect Secure Mobility Client\ISEPreferences.xml</loc>
+						<clear_log apply="false"/>
+					</action>
+					<action>
+						<loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\ISE Posture\ISEPreferences.xml</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\ISE Posture\ISEPostureCFG.xml</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\ISE Posture\DGCacheRecords.xml</loc>
+            <clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\ISE Posture\ISEPosture.json</loc>
+            <clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\CustomerExperienceFeedback\moduledata\ACASPhoneHome.cef</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\CustomerExperienceFeedback\moduledata\elACASPhoneHome.cef</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+        <use_extern_action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "del "%LOCALAPPDATA%\Cisco\Cisco AnyConnect Secure Mobility Client\v4DebugInfo*""</args>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="win7">
+        <use_extern_action>
+          <action>
+            <plugin/>
+            <args>wineventlog.exe -l "Cisco AnyConnect ISE Posture Module" -f %TEMP%\AnyConnect_ISEPosture.txt -o</args>
+            <clear_log apply="false"/>
+            <temp_out>%TEMP%\AnyConnect_ISEPosture.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>wevtutil epl "Cisco AnyConnect ISE Posture Module" %TEMP%\AnyConnect_ISEPosture.evtx</args>
+            <clear_log apply="true">wevtutil cl "Cisco AnyConnect ISE Posture Module"</clear_log>
+            <temp_out>%TEMP%\AnyConnect_ISEPosture.evtx</temp_out>
+          </action>
+          <action>
+            <path>%PROGRAMFILES%\Cisco\Cisco AnyConnect Secure Mobility Client\opswat</path>
+            <args>WaDiagnose.exe --log_path "%LOCALAPPDATA%\Cisco\Cisco AnyConnect Secure Mobility Client\WaDiagnose.txt" --debug_log_output_path "%LOCALAPPDATA%\Cisco\Cisco AnyConnect Secure Mobility Client" --driver_prevent_install true --auto_exit true</args>
+            <clear_log apply="false"/>
+            <temp_out>%LOCALAPPDATA%\Cisco\Cisco AnyConnect Secure Mobility Client\WaDiagnose.txt</temp_out>
+          </action>
+        </use_extern_action>
+        <file_copy_action>
+          <action>
+            <loc>%LOCALAPPDATA%\Cisco\Cisco AnyConnect Secure Mobility Client\v4DebugInfo*</loc>
+            <clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%LOCALAPPDATA%\Cisco\Cisco AnyConnect Secure Mobility Client\aciseposture.log*</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Logs\elaciseposture.log*</loc>
+						<clear_log apply="false"/>
+          </action>
+		  		  <action>
+            <loc>%LOCALAPPDATA%\Cisco\Cisco AnyConnect Secure Mobility Client\DartAddon*</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%LOCALAPPDATA%\Cisco\Cisco AnyConnect Secure Mobility Client\ConnectionData.xml</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+						<loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\ISE Posture\ConnectionData.xml</loc>
+						<clear_log apply="false"/>
+		  </action>
+          <action>
+			<loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\ISE Posture\aciseagent.log*</loc>
+			<clear_log apply="false"/>
+		  </action>						
+		  <action>
+            <loc>%LOCALAPPDATA%\Cisco\Cisco AnyConnect Secure Mobility Client\ISEPreferences.xml</loc>
+						<clear_log apply="false"/>
+					</action>
+					<action>
+						<loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\ISE Posture\ISEPreferences.xml</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\ISE Posture\ISEPostureCFG.xml</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\ISE Posture\DGCacheRecords.xml</loc>
+            <clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\ISE Posture\ISEPosture.json</loc>
+            <clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\CustomerExperienceFeedback\moduledata\ACASPhoneHome.cef</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\CustomerExperienceFeedback\moduledata\elACASPhoneHome.cef</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+        <use_extern_action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "del "%LOCALAPPDATA%\Cisco\Cisco AnyConnect Secure Mobility Client\v4DebugInfo*""</args>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="vista">
+        <use_extern_action>
+          <action>
+						<plugin/>
+            <args>wineventlog.exe -l "Cisco AnyConnect ISE Posture Module" -f %TEMP%\AnyConnect_ISEPosture.txt -o</args>
+						<clear_log apply="false"/>
+            <temp_out>%TEMP%\AnyConnect_ISEPosture.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>wevtutil epl "Cisco AnyConnect ISE Posture Module" %TEMP%\AnyConnect_ISEPosture.evtx</args>
+            <clear_log apply="true">wevtutil cl "Cisco AnyConnect ISE Posture Module"</clear_log>
+            <temp_out>%TEMP%\AnyConnect_ISEPosture.evtx</temp_out>
+          </action>
+        </use_extern_action>
+        <file_copy_action>
+          <action>
+            <loc>%LOCALAPPDATA%\Cisco\Cisco AnyConnect Secure Mobility Client\aciseposture.log*</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%LOCALAPPDATA%\Cisco\Cisco AnyConnect Secure Mobility Client\ConnectionData.xml</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+						<loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\ISE Posture\ConnectionData.xml</loc>
+						<clear_log apply="false"/>
+					</action>					
+					<action>
+            <loc>%LOCALAPPDATA%\Cisco\Cisco AnyConnect Secure Mobility Client\ISEPreferences.xml</loc>
+						<clear_log apply="false"/>
+					</action>
+					<action>
+						<loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\ISE Posture\ISEPreferences.xml</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\ISE Posture\ISEPostureCFG.xml</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\ISE Posture\DGCacheRecords.xml</loc>
+            <clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\ISE Posture\ISEPosture.json</loc>
+            <clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\CustomerExperienceFeedback\moduledata\ACASPhoneHome.cef</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\CustomerExperienceFeedback\moduledata\elACASPhoneHome.cef</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+		  <action>
+            <loc>%LOCALAPPDATA%\Cisco\Cisco AnyConnect Secure Mobility Client\DartAddon*</loc>
+						<clear_log apply="false"/>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="winxp">
+        <use_extern_action>
+          <action>
+						<plugin/>
+            <args>wineventlog.exe -l "Cisco AnyConnect ISE Posture Module" -f %TEMP%\AnyConnect_ISEPosture.txt -o</args>
+						<clear_log apply="false"/>
+            <temp_out>%TEMP%\AnyConnect_ISEPosture.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\System32\wbem</path>
+            <args>wmic.exe nteventlog where " logfilename='Cisco AnyConnect ISE Posture Module' " call backupeventlog "%TEMP%\AnyConnect_ISEPosture.evt"</args>
+            <clear_log apply="true">wmic.exe nteventlog where " logfilename='Cisco AnyConnect ISE Posture Module' " call ClearEventLog</clear_log>
+            <temp_out>%TEMP%\AnyConnect_ISEPosture.evt</temp_out>
+          </action>
+        </use_extern_action>
+        <file_copy_action>
+          <action>
+            <loc>%LOCALAPPDATA%\Cisco\Cisco AnyConnect Secure Mobility Client\aciseposture.log*</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%LOCALAPPDATA%\Cisco\Cisco AnyConnect Secure Mobility Client\ConnectionData.xml</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+						<loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\ISE Posture\ConnectionData.xml</loc>
+						<clear_log apply="false"/>
+					</action>					
+					<action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\ISE Posture\ISEPostureCFG.xml</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\ISE Posture\DGCacheRecords.xml</loc>
+            <clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\ISE Posture\ISEPosture.json</loc>
+            <clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\CustomerExperienceFeedback\moduledata\ACASPhoneHome.cef</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\CustomerExperienceFeedback\moduledata\elACASPhoneHome.cef</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+		  <action>
+            <loc>%LOCALAPPDATA%\Cisco\Cisco AnyConnect Secure Mobility Client\DartAddon*</loc>
+		  <clear_log apply="false"/>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="mac">
+        <use_extern_action>
+          <action>
+            <path>/opt/cisco/anyconnect/lib/opswat</path>
+            <args>waDiagnose --log_path $HOME/.cisco/iseposture/log/waDiagnose.txt --debug_log_output_path $HOME/.cisco/iseposture/log --driver_prevent_install true --auto_exit true</args>
+            <clear_log apply="false"/>
+            <stdout/>
+          </action>
+        </use_extern_action>
+        <file_copy_action>
+          <action>
+            <loc>$HOME/.cisco/iseposture/log/aciseposture.log*</loc>
+			<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>$HOME/.cisco/iseposture/log/ConnectionData.xml</loc>
+			<clear_log apply="false"/>
+		  </action>
+		  <action>
+			<loc>/opt/cisco/anyconnect/iseposture/ConnectionData.xml</loc>
+			<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>/opt/cisco/anyconnect/iseposture/ISEPostureCFG.xml</loc>
+            <clear_log apply="false"/>
+          </action>
+		  <action>
+            <loc>/opt/cisco/anyconnect/iseposture/aciseagent.log*</loc>
+            <clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>/opt/cisco/anyconnect/iseposture/DGCacheRecords.xml</loc>
+            <clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>/opt/cisco/anyconnect/iseposture/ISEPosture.json</loc>
+            <clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>$HOME/.anyconnect_ise</loc>
+			<clear_log apply="false"/>
+          </action>
+          <action>
+			<loc>/opt/cisco/anyconnect/iseposture/ISEPreferences.xml</loc>
+			<clear_log apply="false"/>
+		  </action>
+		  <action>
+            <loc>/opt/cisco/anyconnect/iseposture/elaciseposture.log*</loc>
+			<clear_log apply="false"/>
+          </action>
+		  <action>
+            <loc>$HOME/.cisco/iseposture/log/DartAddon*</loc>
+			<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>/opt/cisco/anyconnect/CustomerExperienceFeedback/moduledata/ACASPhoneHome.cef</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>/opt/cisco/anyconnect/CustomerExperienceFeedback/moduledata/elACASPhoneHome.cef</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>$HOME/.cisco/iseposture/log/waDiagnose.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>$HOME/.cisco/iseposture/log/v4DebugInfo*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+        <use_extern_action>
+          <action>
+            <args>rm -rf $HOME/.cisco/iseposture/log/v4DebugInfo*</args>
+            <clear_log apply="false"></clear_log>
+            <stdout/>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="linux">
+        <use_extern_action>
+          <action>
+            <path>/opt/cisco/anyconnect/lib/opswat</path>
+            <args>wadiagnose --log_path /tmp/wadiagnose.txt --debug_log_output_path /tmp --driver_prevent_install true --auto_exit true</args>
+            <clear_log apply="false"/>
+            <stdout/>
+          </action>
+        </use_extern_action>
+        <file_copy_action>
+          <action>
+            <loc>$HOME/.cisco/iseposture/log/aciseposture.log*</loc>
+            <clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>$HOME/.cisco/iseposture/log/ConnectionData.xml</loc>
+            <clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>/opt/cisco/anyconnect/iseposture/ConnectionData.xml</loc>
+            <clear_log apply="false"/>
+          </action>
+		  <action>
+            <loc>/opt/cisco/anyconnect/iseposture/aciseagent.log*</loc>
+            <clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>/opt/cisco/anyconnect/iseposture/ISEPostureCFG.xml</loc>
+            <clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>/opt/cisco/anyconnect/anyconnect-linux64-*iseposture-*.log</loc>
+            <clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>/var/log/anyconnect/iseposture-uninstall.log</loc>
+            <clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>/opt/cisco/anyconnect/anyconnect-linux64-*isecompliance-*.log</loc>
+            <clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>$HOME/.cisco/anyconnect/iseposture/ISEPreferences.xml</loc>
+            <clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>/opt/cisco/anyconnect/iseposture/elaciseposture.log*</loc>
+            <clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>$HOME/.cisco/iseposture/log/DartAddon*</loc>
+            <clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>/tmp/wadiagnose.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>/tmp/v4DebugInfo*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+        <use_extern_action>
+          <action>
+            <args>rm -rf /tmp/v4DebugInfo*</args>
+            <clear_log apply="false"></clear_log>
+            <stdout/>
+          </action>
+        </use_extern_action>
+      </os>
+    </dart>
+  </file>
+  <file id="iseposture-dmp">
+    <default>true</default>
+    <description>ISE Posture Dump Files</description>
+    <gui>
+      <label>_tr("ISE Posture Dump Files")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+      <os opsys="win8">
+        <use_extern_action>
+          <action>
+            <path>%PROGRAMFILES%\Cisco\Cisco AnyConnect Secure Mobility Client</path>
+            <args>acpminidump.exe -n 3 -s 1 aciseposture.exe</args>
+            <clear_log apply="false"/>
+          </action>
+        </use_extern_action>
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">%TEMP%\acise.exe*.mdmp</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\aciseposture.exe*.mdmp</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\aciseagent.exe*.mdmp</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%TEMP%\acpminidump_aciseposture.exe_*.mdmp</loc>
+            <clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%TEMP%\acpminidump.log</loc>
+            <clear_log apply="false"/>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win7">
+        <use_extern_action>
+          <action>
+            <path>%PROGRAMFILES%\Cisco\Cisco AnyConnect Secure Mobility Client</path>
+            <args>acpminidump.exe -n 3 -s 1 aciseposture.exe</args>
+            <clear_log apply="false"/>
+          </action>
+        </use_extern_action>
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">%TEMP%\acise.exe*.mdmp</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\aciseposture.exe*.mdmp</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\aciseagent.exe*.mdmp</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%TEMP%\acpminidump_aciseposture.exe_*.mdmp</loc>
+            <clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%TEMP%\acpminidump.log</loc>
+            <clear_log apply="false"/>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="vista">
+        <use_extern_action>
+          <action>
+            <path>%PROGRAMFILES%\Cisco\Cisco AnyConnect Secure Mobility Client</path>
+            <args>acpminidump.exe -n 3 -s 1 aciseposture.exe</args>
+            <clear_log apply="false"/>
+          </action>
+        </use_extern_action>
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">%TEMP%\acise.exe*.mdmp</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\aciseposture.exe*.mdmp</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\aciseagent.exe*.mdmp</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%TEMP%\acpminidump_aciseposture.exe_*.mdmp</loc>
+            <clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%TEMP%\acpminidump.log</loc>
+            <clear_log apply="false"/>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="winxp">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">%TEMP%\acise.exe*.mdmp</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\aciseposture.exe*.mdmp</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\aciseagent.exe*.mdmp</loc>
+						<clear_log apply="false"/>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="mac">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">$HOME/Library/Logs/DiagnosticReports/acise_*.crash</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc gather_newest="true">$HOME/Library/Logs/DiagnosticReports/aciseposture*.crash</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc gather_newest="true">$HOME/Library/Logs/CrashReporter/acise_*.crash</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc gather_newest="true">$HOME/Library/Logs/CrashReporter/aciseposture*.crash</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc gather_newest="true">/System/Library/Logs/CrashReporter/aciseposture*.crash</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc gather_newest="true">/System/Library/Logs/DiagnosticReports/aciseposture*.crash</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc gather_newest="true">/System/Library/Logs/CrashReporter/aciseagentd*.crash</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc gather_newest="true">/System/Library/Logs/DiagnosticReports/aciseagentd*.crash</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc gather_newest="true">/Library/Logs/CrashReporter/aciseposture*.crash</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc gather_newest="true">/Library/Logs/DiagnosticReports/aciseposture*.crash</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc gather_newest="true">/Library/Logs/CrashReporter/aciseagentd*.crash</loc>
+						<clear_log apply="false"/>
+          </action>
+          <action>
+            <loc gather_newest="true">/Library/Logs/DiagnosticReports/aciseagentd*.crash</loc>
+						<clear_log apply="false"/>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="linux">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">/var/crash/*_aciseagentd.*</loc>
+            <clear_log apply="false"/>
+          </action>
+          <action>
+            <loc gather_newest="true">/var/crash/*_aciseposture.*</loc>
+            <clear_log apply="false"/>
+          </action>
+        </file_copy_action>
+      </os>
+    </dart>
+  </file>
+</configure>

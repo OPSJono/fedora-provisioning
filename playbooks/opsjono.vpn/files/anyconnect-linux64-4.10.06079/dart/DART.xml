@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configure xmlns="http://schemas.xmlsoap.org/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://schemas.xmlsoap.org/encoding/ ConfigXMLSchema.xsd">
+    <title>Cisco AnyConnect DART</title>
+    <file id="ac-dart-logs">
+        <default>true</default>
+        <description>DART application logs</description>
+        <gui>
+            <label>_tr("DART application logs")</label>
+            <file_type>log</file_type>
+        </gui>
+        <dart>
+            <required>false</required>
+            <os opsys="win8">
+                <use_extern_action>
+                    <action>
+                        <plugin/>
+                        <args>wineventlog.exe -l "Cisco AnyConnect Diagnostics and Reporting Tool" -f %TEMP%\DART.txt</args>
+                        <clear_log apply="false"/>
+                        <temp_out>%TEMP%\DART.txt</temp_out>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\System32</path>
+                        <args>wevtutil epl "Cisco AnyConnect Diagnostics and Reporting Tool" %TEMP%\DART.evtx</args>
+                        <clear_log apply="true">wevtutil cl "Cisco AnyConnect Diagnostics and Reporting Tool"</clear_log>
+                        <temp_out>%TEMP%\DART.evtx</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="win7">
+                <use_extern_action>
+                    <action>
+                        <plugin/>
+                        <args>wineventlog.exe -l "Cisco AnyConnect Diagnostics and Reporting Tool" -f %TEMP%\DART.txt</args>
+                        <clear_log apply="false"/>
+                        <temp_out>%TEMP%\DART.txt</temp_out>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\System32</path>
+                        <args>wevtutil epl "Cisco AnyConnect Diagnostics and Reporting Tool" %TEMP%\DART.evtx</args>
+                        <clear_log apply="true">wevtutil cl "Cisco AnyConnect Diagnostics and Reporting Tool"</clear_log>
+                        <temp_out>%TEMP%\DART.evtx</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="vista">
+                <use_extern_action>
+                    <action>
+                        <plugin/>
+                        <args>wineventlog.exe -l "Cisco AnyConnect Diagnostics and Reporting Tool" -f %TEMP%\DART.txt</args>
+                        <clear_log apply="false"/>
+                        <temp_out>%TEMP%\DART.txt</temp_out>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\System32</path>
+                        <args>wevtutil epl "Cisco AnyConnect Diagnostics and Reporting Tool" %TEMP%\DART.evtx</args>
+                        <clear_log apply="true">wevtutil cl "Cisco AnyConnect Diagnostics and Reporting Tool"</clear_log>
+                        <temp_out>%TEMP%\DART.evtx</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="winxp">
+                <use_extern_action>
+                    <action>
+                        <plugin/>
+                        <args>wineventlog.exe -l "Cisco AnyConnect Diagnostics and Reporting Tool" -f %TEMP%\DART.txt</args>
+                        <clear_log apply="false"/>
+                        <temp_out>%TEMP%\DART.txt</temp_out>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\System32</path>
+                        <args>wevtutil epl "Cisco AnyConnect Diagnostics and Reporting Tool" %TEMP%\DART.evtx</args>
+                        <clear_log apply="true">wevtutil cl "Cisco AnyConnect Diagnostics and Reporting Tool"</clear_log>
+                        <temp_out>%TEMP%\DART.evtx</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="win2k3">
+                <use_extern_action>
+                    <action>
+                        <plugin/>
+                        <args>wineventlog.exe -l "Cisco AnyConnect Diagnostics and Reporting Tool" -f %TEMP%\DART.txt</args>
+                        <clear_log apply="false"/>
+                        <temp_out>%TEMP%\DART.txt</temp_out>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\System32</path>
+                        <args>wevtutil epl "Cisco AnyConnect Diagnostics and Reporting Tool" %TEMP%\DART.evtx</args>
+                        <clear_log apply="true">wevtutil cl "Cisco AnyConnect Diagnostics and Reporting Tool"</clear_log>
+                        <temp_out>%TEMP%\DART.evtx</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="mac">
+                <use_extern_action>
+                    <action>
+                        <path>/usr/bin</path>
+                        <args>log show --predicate 'subsystem contains "com.cisco.anyconnect.vpn" AND category IN { "acdartcli", "acdartui", "acdarthelper" }' --debug --info --last 1d</args>
+                        <clear_log apply="false"/>
+                        <stdout/>
+                        <temp_out>DART.log</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="linux">
+                <use_extern_action>
+                    <action>
+                        <args>journalctl -S -1d -t acdartui -t acdartcli -t acdarthelper</args>
+                        <clear_log apply="false"/>
+                        <stdout/>
+                        <temp_out>DART.log</temp_out>
+                    </action>
+                </use_extern_action>
+                <use_extern_action>
+                    <action>
+                        <args>journalctl -o export -S -1d -t acdartui -t acdartcli -t acdarthelper</args>
+                        <clear_log apply="false"/>
+                        <stdout/>
+                        <temp_out>DART.logexport</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+        </dart>
+    </file>
+    <file id="ac-dart-install">
+        <default>true</default>
+        <description>DART install logs</description>
+        <gui>
+            <label>_tr("DART install logs")</label>
+            <file_type>log</file_type>
+        </gui>
+        <dart>
+            <required>false</required>
+            <os opsys="win8">
+                <file_copy_action>
+                    <action>
+                        <loc>%TEMP%\anyconnect*-dart-*.log</loc>
+                        <clear_log apply="false"/>
+                    </action>
+                    <action>
+                        <loc>%WINDIR%\Temp\anyconnect*-dart-*.log</loc>
+                        <clear_log apply="false"/>
+                    </action>
+                </file_copy_action>
+            </os>
+            <os opsys="win7">
+                <file_copy_action>
+                    <action>
+                        <loc>%TEMP%\anyconnect*-dart-*.log</loc>
+                        <clear_log apply="false"/>
+                    </action>
+                    <action>
+                        <loc>%WINDIR%\Temp\anyconnect*-dart-*.log</loc>
+                        <clear_log apply="false"/>
+                    </action>
+                </file_copy_action>
+            </os>
+            <os opsys="vista">
+                <file_copy_action>
+                    <action>
+                        <loc>%TEMP%\anyconnect*-dart-*.log</loc>
+                        <clear_log apply="false"/>
+                    </action>
+                    <action>
+                        <loc>%WINDIR%\Temp\anyconnect*-dart-*.log</loc>
+                        <clear_log apply="false"/>
+                    </action>
+                </file_copy_action>
+            </os>
+            <os opsys="winxp">
+                <file_copy_action>
+                    <action>
+                        <loc>%TEMP%\anyconnect*-dart-*.log</loc>
+                        <clear_log apply="false"/>
+                    </action>
+                    <action>
+                        <loc>%WINDIR%\Temp\anyconnect*-dart-*.log</loc>
+                        <clear_log apply="false"/>
+                    </action>
+                </file_copy_action>
+            </os>
+            <os opsys="linux">
+                <file_copy_action>
+                    <action>
+                        <loc>/opt/cisco/anyconnect/dart/anyconnect*-dart-*.log</loc>
+                        <clear_log apply="false"/>
+                    </action>
+                </file_copy_action>
+            </os>
+        </dart>
+    </file>
+</configure>

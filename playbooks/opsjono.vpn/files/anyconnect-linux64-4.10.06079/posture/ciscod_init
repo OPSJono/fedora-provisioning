@@ -1,0 +1,217 @@
+#!/bin/sh
+#
+# Copyright (c) 2009 Cisco Systems
+# All rights reserved.
+# chkconfig: 2345 85 25
+# description: Cisco Security Daemon
+# processname: ciscod
+#
+### BEGIN INIT INFO
+# Provides: ciscod
+# Required-Start: $local_fs $network $syslog
+# Should-Start: 
+# Required-Stop:
+# Default-Start: 2 3 4 5
+# Default-Stop: 0 1 6
+# Short-Description: Cisco Security Daemon
+# Description: Starts the Cisco Security Daemon
+### END INIT INFO
+
+CISCOD_BIN=/opt/cisco/hostscan/bin/ciscod
+CISCOD_NAME=ciscod
+
+# Check for root privileges
+root_check() {
+    [ `id -u` = 0 ] && return 0 || return 1
+}
+
+# Check for ciscod binary
+bin_check() {
+    [ -x ${CISCOD_BIN} ] && return 0 || return 1
+}
+
+func_check() {
+    [ $# = 1 ] || return 1
+
+    OUTPUT=`type $1 2> /dev/null`
+    if [ $? != 0 ]; then
+        return 1
+    fi
+
+    echo $OUTPUT 2> /dev/null | grep function > /dev/null 2> /dev/null
+    if [ $? != 0 ]; then
+        return 1
+    fi
+
+    return 0
+}
+
+# Source function libraries
+[ -f /etc/init.d/functions ] &&  . /etc/init.d/functions
+
+[ -f /etc/rc.status ] && . /etc/rc.status 
+
+[ -f /lib/lsb/init-functions ] && . /lib/lsb/init-functions
+[ -f /etc/default/rcS ] && . /etc/default/rcS
+
+# Determine init helper functions
+if func_check start-stop-daemon ; then
+    STARTCMD="start-stop-daemon --start --exec"
+elif func_check daemon ; then
+    if func_check action ; then
+	STARTCMD=
+    else
+	STARTCMD=daemon
+    fi
+elif func_check startproc ; then
+    STARTCMD=startproc
+else
+    STARTCMD=
+fi
+
+STOPARG=${CISCOD_BIN}
+if func_check start-stop-daemon ; then
+    STOPCMD="start-stop-daemon --stop --retry 2 --exec"
+elif func_check killproc ; then
+    if func_check action ; then
+	STOPCMD=killall
+	STOPARG=${CISCOD_NAME}
+    else
+	STOPCMD=killproc
+    fi
+else
+    STOPCMD=killall
+    STOPARG=${CISCOD_NAME}
+fi
+
+if func_check status_of_proc ; then
+    STATUSCMD=status_of_proc
+elif func_check status ; then
+    STATUSCMD=status
+elif func_check checkproc ; then
+    STATUSCMD=checkproc -v
+else
+    STATUSCMD=echo
+fi
+
+# Initializations
+RETVAL=0
+if func_check rc_reset ; then
+    rc_reset
+fi
+
+start() {
+    root_check || exit 4
+    bin_check || exit 5
+
+    if func_check log_begin_msg ; then
+	log_begin_msg "Starting up cisco security daemon..."
+    elif ! func_check action ; then
+	echo -n $"Starting up cisco security daemon: "
+    fi
+    ${STARTCMD} ${CISCOD_BIN}
+    RETVAL=$?
+
+    if func_check action ; then
+        if [ ${RETVAL} = 0 ]; then
+            action $"Starting up cisco security daemon: " true
+        else
+            action $"Starting up cisco security daemon: " false
+        fi
+    fi
+
+    if func_check rc_status ; then
+	if [ ${RETVAL} != 0 ]; then 
+	    func_check rc_failed && rc_failed ${RETVAL}
+	else
+	    func_check rc_reset && rc_reset
+	fi
+	rc_status -v
+    fi
+	
+    func_check log_end_msg && log_end_msg $RETVAL || echo
+    return $RETVAL
+}
+
+stop() {
+    root_check || exit 4
+    bin_check || exit 5
+
+    if func_check log_begin_msg ; then
+	log_begin_msg "Shutting down cisco security daemon..."
+    elif ! func_check action ; then
+	echo -n $"Shutting down cisco security daemon: "
+    fi
+    trap "" TERM
+    ${STOPCMD} ${STOPARG}
+    RETVAL=$?
+    trap - TERM
+
+    if func_check action ; then
+	if [ ${RETVAL} = 0 ]; then
+	    action $"Shutting down cisco security daemon: " true
+	    rm -f /var/run/ciscod.pid
+	else
+	    action $"Shutting down cisco security daemon: " false
+	fi
+    fi
+
+    if func_check rc_status ; then 
+        if [ ${RETVAL} != 0 ]; then
+            func_check rc_failed && rc_failed ${RETVAL}
+        else
+            func_check rc_reset && rc_reset
+        fi
+        rc_status -v
+    fi
+
+    func_check log_end_msg && log_end_msg $RETVAL || echo
+    return $RETVAL
+}
+
+dostatus() {
+    ${STATUSCMD} ${CISCOD_BIN}
+    RETVAL=$?
+
+    if func_check rc_status ; then
+        if [ ${RETVAL} != 0 ]; then
+            func_check rc_failed && rc_failed ${RETVAL}
+        else
+            func_check rc_reset && rc_reset
+        fi
+        rc_status -v
+    fi
+
+}
+
+restart() {
+    stop
+    start
+    func_check rc_status && rc_status
+}
+
+# See how we were called.
+case "$1" in
+  start)
+	start
+	;;
+  stop)
+	stop
+	;;
+  restart)
+    restart
+    ;;
+  status)
+	dostatus
+	;;
+  *)
+	echo $"Usage: ciscod {start|stop|restart|status}"
+	exit 1
+esac
+
+if func_check rc_exit ; then
+    rc_exit
+else
+    exit $RETVAL
+fi
+

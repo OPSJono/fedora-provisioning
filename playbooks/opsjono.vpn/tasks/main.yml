@@ -7,3 +7,12 @@
   dnf:
     name: ['strongswan', 'xl2tpd', 'NetworkManager-l2tp', 'NetworkManager-l2tp-gnome']
     state: latest
+- name: Install packages required for Cisco AnyConnect / OpenConnect VPNs
+  dnf:
+    name: ['webkit2gtk4.0']
+    state: latest
+- name: Install Cisco AnyConnect Mobility Client
+  shell: |
+    ./opsjono.vpn/anyconnect-linux64-4-10.06079/vpn/vpn_install.sh -y
+  become: true
+  become_user: root

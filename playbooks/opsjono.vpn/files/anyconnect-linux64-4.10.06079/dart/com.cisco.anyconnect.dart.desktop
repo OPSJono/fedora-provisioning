@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Cisco DART
+Comment=Cisco Diagnostic AnyConnect Reporting Tool
+Exec=/opt/cisco/anyconnect/dart/dartui
+Icon=cisco-anyconnect-dart
+Terminal=false
+Encoding=UTF-8
+StartupNotify=true

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Cisco Anyconnect Secure Mobility Client
+Comment=Connect to a private network using the Cisco Anyconnect Secure Mobility Client
+Exec=/opt/cisco/anyconnect/bin/vpnui
+Icon=cisco-anyconnect
+Terminal=false
+Encoding=UTF-8
+StartupNotify=true

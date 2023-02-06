@@ -1,0 +1,19 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+"http://www.freedesktop.org/standards/menu-spec/menu-1.0.dtd">
+
+<Menu>
+  <MergeFile type="path">cisco-anyconnect-dart.menu</MergeFile>
+  <AppDir>/usr/share/applications</AppDir>
+  <DirectoryDir>/usr/share/desktop-directories</DirectoryDir>
+  <Name>Applications</Name>
+  <Menu>
+    <Name>Internet</Name>
+    <Menu>
+      <Name>Cisco AnyConnect Secure Mobility Client</Name>
+      <Directory>cisco-anyconnect.directory</Directory>
+      <Include>
+        <Filename>com.cisco.anyconnect.gui.desktop</Filename>
+      </Include>
+    </Menu>
+  </Menu>
+</Menu>

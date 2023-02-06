@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configure xmlns="http://schemas.xmlsoap.org/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://schemas.xmlsoap.org/encoding/ ConfigXMLSchema.xsd">
+  <title>Cisco AnyConnect Umbrella Roaming Security Module</title>
+  <file id="umbrella-install">
+    <default>true</default>
+    <description>Roaming Security install logs</description>
+    <gui>
+      <label>_tr("Roaming Security install logs")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+      <os opsys="win10">
+        <file_copy_action>
+          <action>
+            <loc>%TEMP%\anyconnect*-umbrella-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect*-umbrella-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win8">
+        <file_copy_action>
+          <action>
+            <loc>%TEMP%\anyconnect*-umbrella-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect*-umbrella-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win7">
+        <file_copy_action>
+          <action>
+            <loc>%TEMP%\anyconnect*-umbrella-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect*-umbrella-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+    </dart>
+  </file>
+  <file id="umbrella-dmp">
+    <default>true</default>
+    <description>Roaming Security dump files</description>
+    <gui>
+      <label>_tr("Roaming Security dump files")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+      <os opsys="win10">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\acumbrella*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\acumbrella*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\acswg*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\acswg*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win8">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\acumbrella*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\acumbrella*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\acswg*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\acswg*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win7">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\acumbrella*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\acumbrella*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\acswg*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\acswg*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="mac">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">$HOME/Library/Logs/CrashReporter/acumbrellaagent_*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">$HOME/Library/Logs/DiagnosticReports/acumbrellaagent_*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>          
+          <action>
+            <loc gather_newest="true">/Library/Logs/CrashReporter/acumbrellaagent_*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/Library/Logs/DiagnosticReports/acumbrellaagent_*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">$HOME/Library/Logs/CrashReporter/acswgagent_*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">$HOME/Library/Logs/DiagnosticReports/acswgagent_*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/Library/Logs/CrashReporter/acswgagent_*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/Library/Logs/DiagnosticReports/acswgagent_*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+              <loc gather_newest="true">$HOME/Library/Logs/CrashReporter/acumbrellacore_*</loc>
+              <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+              <loc gather_newest="true">$HOME/Library/Logs/DiagnosticReports/acumbrellacore_*</loc>
+              <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+              <loc gather_newest="true">/Library/Logs/CrashReporter/acumbrellacore_*</loc>
+              <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+              <loc gather_newest="true">/Library/Logs/DiagnosticReports/acumbrellacore_*</loc>
+              <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+              <loc gather_newest="true">$HOME/Library/Logs/CrashReporter/dnscrypt-proxy_*</loc>
+              <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+              <loc gather_newest="true">$HOME/Library/Logs/DiagnosticReports/dnscrypt-proxy_*</loc>
+              <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+              <loc gather_newest="true">/Library/Logs/CrashReporter/dnscrypt-proxy_*</loc>
+              <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+              <loc gather_newest="true">/Library/Logs/DiagnosticReports/dnscrypt-proxy_*</loc>
+              <clear_log apply="true"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+    </dart>
+  </file>
+  <file id="umbrella-logs">
+    <default>true</default>
+    <description>Roaming Security application logs</description>
+    <gui>
+      <label>_tr("Roaming Security application logs")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+      <os opsys="win10">
+        <use_extern_action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l "Cisco AnyConnect Umbrella Roaming Security Module" -f %TEMP%\Umbrella.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\Umbrella.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>wevtutil epl "Cisco AnyConnect Umbrella Roaming Security Module" %TEMP%\Umbrella.evtx</args>
+            <clear_log apply="true">wevtutil cl "Cisco AnyConnect Umbrella Roaming Security Module"</clear_log>
+            <temp_out>%TEMP%\Umbrella.evtx</temp_out>
+          </action>
+        </use_extern_action>
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Umbrella\data\dart\acumbrellaplugin.*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Umbrella\data\dart\acumbrellacommon.*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>          
+		  <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Umbrella\data\whitelist.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>        
+      </os>
+      <os opsys="win8">
+        <use_extern_action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l "Cisco AnyConnect Umbrella Roaming Security Module" -f %TEMP%\Umbrella.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\Umbrella.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>wevtutil epl "Cisco AnyConnect Umbrella Roaming Security Module" %TEMP%\Umbrella.evtx</args>
+            <clear_log apply="true">wevtutil cl "Cisco AnyConnect Umbrella Roaming Security Module"</clear_log>
+            <temp_out>%TEMP%\Umbrella.evtx</temp_out>
+          </action>
+        </use_extern_action>
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Umbrella\data\dart\acumbrellaplugin.*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Umbrella\data\dart\acumbrellacommon.*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>         
+		  <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Umbrella\data\whitelist.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>        
+      </os>
+      <os opsys="win7">
+        <use_extern_action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l "Cisco AnyConnect Umbrella Roaming Security Module" -f %TEMP%\Umbrella.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\Umbrella.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>wevtutil epl "Cisco AnyConnect Umbrella Roaming Security Module" %TEMP%\Umbrella.evtx</args>
+            <clear_log apply="true">wevtutil cl "Cisco AnyConnect Umbrella Roaming Security Module"</clear_log>
+            <temp_out>%TEMP%\Umbrella.evtx</temp_out>
+          </action>
+        </use_extern_action>
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Umbrella\data\dart\acumbrellaplugin.*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Umbrella\data\dart\acumbrellacommon.*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>       
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Umbrella\data\whitelist.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>       
+      </os>
+      <os opsys="mac">
+        <use_extern_action>
+          <action>
+            <path>/usr/bin</path>
+            <args>log show --predicate 'subsystem contains "com.cisco.anyconnect.umbrella" || senderImagePath endswith "acumbrellacore" || senderImagePath endswith "dnscrypt-proxy"' --debug --info --last 2d</args>
+            <clear_log apply="false"></clear_log>
+            <stdout/>
+            <temp_out>AnyConnect_Umbrella.log</temp_out>
+          </action>
+          <action>
+            <path>/usr/bin</path>
+            <args>log show --predicate 'subsystem contains "com.cisco.anyconnect.swg" || senderImagePath endswith "acswgagent"' --debug --info --last 2d</args>
+            <clear_log apply="false"></clear_log>
+            <stdout/>
+            <temp_out>AnyConnect_SWG.log</temp_out>
+          </action>
+        </use_extern_action>
+        <file_copy_action>
+            <action>
+                <loc>/opt/cisco/anyconnect/umbrella/data/mergedlocaldomains</loc>
+                <clear_log apply="false"></clear_log>
+            </action>
+        </file_copy_action>
+      </os>
+    </dart>
+  </file>
+  <file id="umbrella-profile">
+    <default>true</default>
+    <description>Roaming Security Profile</description>
+    <gui>
+      <label>_tr("Roaming Security Profile")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+      <os opsys="win10">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Umbrella\OrgInfo.json</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Umbrella\SWG\SWGConfig.json</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win8">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Umbrella\OrgInfo.json</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Umbrella\SWG\SWGConfig.json</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win7">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Umbrella\OrgInfo.json</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Umbrella\SWG\SWGConfig.json</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="mac">
+        <file_copy_action>
+          <action>
+            <loc>/opt/cisco/anyconnect/umbrella/OrgInfo.json</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>/opt/cisco/anyconnect/umbrella/SWG/SWGConfig.json</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+    </dart>
+  </file>
+</configure>
+

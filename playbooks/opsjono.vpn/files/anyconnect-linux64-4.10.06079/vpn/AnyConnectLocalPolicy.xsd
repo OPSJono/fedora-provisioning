@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/encoding/" targetNamespace="http://schemas.xmlsoap.org/encoding/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:element name="AnyConnectLocalPolicy">
+    <xs:complexType>
+      <xs:all minOccurs="0">
+        <xs:element name="FipsMode" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="true" />
+              <xs:enumeration value="false" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="BypassDownloader" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="true" />
+              <xs:enumeration value="false" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="RestrictScriptWebDeploy" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="true" />
+              <xs:enumeration value="false" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="RestrictHelpWebDeploy" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="true" />
+              <xs:enumeration value="false" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="RestrictResourceWebDeploy" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="true" />
+              <xs:enumeration value="false" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="RestrictLocalizationWebDeploy" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="true" />
+              <xs:enumeration value="false" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="RestrictWebLaunch" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="true" />
+              <xs:enumeration value="false" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="StrictCertificateTrust" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="true" />
+              <xs:enumeration value="false" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="EnableCRLCheck" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="true" />
+              <xs:enumeration value="false" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="OCSPRevocation" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="true" />
+              <xs:enumeration value="false" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="RestrictTunnelProtocols" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="false" />
+              <xs:enumeration value="IPSec" />
+              <xs:enumeration value="TLS" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="RestrictPreferenceCaching" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="false" />
+              <xs:enumeration value="Credentials" />
+              <xs:enumeration value="Thumbprints" />
+                       <xs:enumeration value="CredentialsAndThumbprints" />
+                       <xs:enumeration value="All" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="ExcludePemFileCertStore" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="false" />
+              <xs:enumeration value="true" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="ExcludeWinNativeCertStore" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="false" />
+              <xs:enumeration value="true" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="ExcludeMacNativeCertStore" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="false" />
+              <xs:enumeration value="true" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="ExcludeFirefoxNSSCertStore" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="false" />
+              <xs:enumeration value="true" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+		<xs:element name="RestrictServerCertStore" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="false" />
+              <xs:enumeration value="true" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="UpdatePolicy" minOccurs="0">
+          <xs:complexType>
+            <xs:all minOccurs="0">
+              <xs:element name="AllowSoftwareUpdatesFromAnyServer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="true" />
+                    <xs:enumeration value="false" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AllowComplianceModuleUpdatesFromAnyServer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="true" />
+                    <xs:enumeration value="false" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AllowVPNProfileUpdatesFromAnyServer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="true" />
+                    <xs:enumeration value="false" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AllowManagementVPNProfileUpdatesFromAnyServer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="true" />
+                    <xs:enumeration value="false" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AllowISEProfileUpdatesFromAnyServer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="true" />
+                    <xs:enumeration value="false" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AllowServiceProfileUpdatesFromAnyServer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="true" />
+                    <xs:enumeration value="false" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AllowHelpUpdatesFromAnyServer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="true" />
+                    <xs:enumeration value="false" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AllowResourceUpdatesFromAnyServer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="true" />
+                    <xs:enumeration value="false" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AllowLocalizationUpdatesFromAnyServer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="true" />
+                    <xs:enumeration value="false" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AllowScriptUpdatesFromAnyServer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="true" />
+                    <xs:enumeration value="false" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AuthorizedServerList" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ServerName" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TrustedISECertFingerprints" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="1" maxOccurs="unbounded" name="fingerprint">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="algorithm" type="xs:string" />
+                    <xs:element name="hash">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:pattern value="[\s:]*([a-fA-F0-9][\s:]*){64}" />
+                        </xs:restriction>
+                       </xs:simpleType>
+                   </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:all>
+      <xs:attribute name="acversion">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]+\.[0-9]+\.[0-9]+" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

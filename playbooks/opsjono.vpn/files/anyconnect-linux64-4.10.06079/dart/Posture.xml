@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configure xmlns="http://schemas.xmlsoap.org/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://schemas.xmlsoap.org/encoding/ ConfigXMLSchema.xsd">
+  <title>Cisco AnyConnect Posture Module</title>
+  <file id="posture-install">
+    <default>true</default>
+    <description>Posture install logs</description>
+    <gui>
+      <label>_tr("Posture install logs")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+      <os opsys="linux">
+        <file_copy_action>
+          <action>
+            <loc>/opt/cisco/hostscan/log/posture-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win8">
+        <file_copy_action>
+          <action>
+            <loc>%TEMP%\anyconnect*-posture-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect*-posture-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win7">
+        <file_copy_action>
+          <action>
+            <loc>%TEMP%\anyconnect*-posture-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect*-posture-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="vista">
+        <file_copy_action>
+          <action>
+            <loc>%TEMP%\anyconnect*-posture-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect*-posture-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="winxp">
+        <file_copy_action>
+          <action>
+            <loc>%TEMP%\anyconnect*-posture-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect*-posture-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win2k3">
+        <file_copy_action>
+          <action>
+            <loc>%TEMP%\anyconnect*-posture-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect*-posture-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+    </dart>
+  </file>
+  <file id="posture-logs">
+    <default>true</default>
+    <description>Posture application logs</description>
+    <gui>
+      <label>_tr("Posture application logs")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+      <os opsys="win8">
+        <file_copy_action>
+          <action>
+            <loc>%LOCALAPPDATA%\Cisco\Cisco HostScan\log\*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </file_copy_action>
+        <use_extern_action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l "Cisco AnyConnect Posture Module" -f %TEMP%\Posture.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\Posture.txt</temp_out>
+          </action>
+          <action>
+            <path>%LOCALAPPDATA%\Cisco\Cisco HostScan\lib</path>
+            <args>WaDiagnose.exe --log_path "%LOCALAPPDATA%\Cisco\Cisco HostScan\log\WaDiagnose.txt" --debug_log_output_path "%LOCALAPPDATA%\Cisco\Cisco Hostscan\log" --driver_prevent_install true --auto_exit true</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%LOCALAPPDATA%\Cisco\Cisco HostScan\log\WaDiagnose.txt</temp_out>
+          </action>
+	  <action>
+            <path>%PROGRAMFILES%\Cisco\Cisco HostScan\lib</path>
+            <args>WaDiagnose.exe --log_path "%LOCALAPPDATA%\Cisco\Cisco HostScan\log\WaDiagnose_clientfull.txt" --debug_log_output_path "%LOCALAPPDATA%\Cisco\Cisco HostScan\log\v4clientfull" --driver_prevent_install true --auto_exit true</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%LOCALAPPDATA%\Cisco\Cisco HostScan\log\WaDiagnose_clientfull.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>wevtutil epl "Cisco AnyConnect Posture Module" %TEMP%\Posture.evtx</args>
+            <clear_log apply="true">wevtutil cl "Cisco AnyConnect Posture Module"</clear_log>
+            <temp_out>%TEMP%\Posture.evtx</temp_out>
+          </action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l Application -s CiscoSD -f %WinDir%\temp\csd_sd_logs.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%WinDir%\temp\csd_sd_logs.txt</temp_out>
+          </action>
+          <action>
+            <plugin>wineventlog.exe</plugin>
+            <args>wineventlog.exe -l Application -s CiscoHostScan -f %WinDir%\temp\csd_hostscan_logs.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%WinDir%\temp\csd_hostscan_logs.txt</temp_out>
+          </action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l Application -s csd -f %WinDir%\temp\csd_sd_logs.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%WinDir%\temp\csd_logs.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%APPDATA%\Cisco\Cisco HostScan\csd.log" "%TEMP%\csd_3.4.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\csd_3.4.log</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%APPDATA%\Cisco\Cisco HostScan\hostscan.log" "%TEMP%\hostscan_3.4.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\hostscan_3.4.log</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%APPDATA%\Cisco\Cisco Secure Desktop\Cache\hostscan.log" "%TEMP%\hostscan_vault.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\hostscan_vault.log</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%WINDIR%\System32\config\systemprofile\AppData\Roaming\Cisco\Cisco HostScan\csd.log" "%TEMP%\csd_3.4_SBL.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\csd_3.4_SBL.log</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%WINDIR%\SysWOW64\config\systemprofile\AppData\Roaming\Cisco\Cisco HostScan\csd.log" "%TEMP%\csd_3.4_SBL.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\csd_3.4_SBL.log</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%WINDIR%\System32\config\systemprofile\AppData\Roaming\Cisco\Cisco HostScan\hostscan.log" "%TEMP%\hostscan_3.4_SBL.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\hostscan_3.4_SBL.log</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%WINDIR%\SysWOW64\config\systemprofile\AppData\Roaming\Cisco\Cisco HostScan\hostscan.log" "%TEMP%\hostscan_3.4_SBL.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\hostscan_3.4_SBL.log</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%WINDIR%\System32\config\systemprofile\AppData\Local\Cisco\Cisco HostScan\log\hostscan.log" "%TEMP%\hostscan_SBL.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\hostscan_SBL.log</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%WINDIR%\SysWOW64\config\systemprofile\AppData\Local\Cisco\Cisco HostScan\log\hostscan.log" "%TEMP%\hostscan_SBL.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\hostscan_SBL.log</temp_out>
+          </action>
+        </use_extern_action>
+        <file_copy_action>
+          <action>
+            <loc>%LOCALAPPDATA%\Cisco\Cisco Hostscan\log\v4DebugInfo*</loc>
+            <clear_log apply="false"/>
+          </action>
+          <action>
+            <loc>%LOCALAPPDATA%\Cisco\Cisco Hostscan\log\v4clientfull</loc>
+            <clear_log apply="false"/>
+          </action>
+        </file_copy_action>
+        <use_extern_action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "del "%LOCALAPPDATA%\Cisco\Cisco Hostscan\log\v4DebugInfo*""</args>
+          </action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "rmdir /q /s "%LOCALAPPDATA%\Cisco\Cisco Hostscan\log\v4clientfull""</args>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="win7">
+        <file_copy_action>
+          <action>
+            <loc>%LOCALAPPDATA%\Cisco\Cisco HostScan\log\*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </file_copy_action>
+        <use_extern_action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l "Cisco AnyConnect Posture Module" -f %TEMP%\Posture.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\Posture.txt</temp_out>
+          </action>
+          <action>
+            <path>%LOCALAPPDATA%\Cisco\Cisco HostScan\lib</path>
+            <args>WaDiagnose.exe --log_path "%LOCALAPPDATA%\Cisco\Cisco HostScan\log\WaDiagnose.txt" --debug_log_output_path "%LOCALAPPDATA%\Cisco\Cisco Hostscan\log" --driver_prevent_install true --auto_exit true</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%LOCALAPPDATA%\Cisco\Cisco HostScan\log\WaDiagnose.txt</temp_out>
+          </action>
+	  <action>
+            <path>%PROGRAMFILES%\Cisco\Cisco HostScan\lib</path>
+            <args>WaDiagnose.exe --log_path "%LOCALAPPDATA%\Cisco\Cisco HostScan\log\WaDiagnose_clientfull.txt" --debug_log_output_path "%LOCALAPPDATA%\Cisco\Cisco Hostscan\log\v4clientfull" --driver_prevent_install true --auto_exit true</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%LOCALAPPDATA%\Cisco\Cisco HostScan\log\WaDiagnose_clientfull.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>wevtutil epl "Cisco AnyConnect Posture Module" %TEMP%\Posture.evtx</args>
+            <clear_log apply="true">wevtutil cl "Cisco AnyConnect Posture Module"</clear_log>
+            <temp_out>%TEMP%\Posture.evtx</temp_out>
+          </action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l Application -s CiscoSD -f %WinDir%\temp\csd_sd_logs.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%WinDir%\temp\csd_sd_logs.txt</temp_out>
+          </action>
+          <action>
+            <plugin>wineventlog.exe</plugin>
+            <args>wineventlog.exe -l Application -s CiscoHostScan -f %WinDir%\temp\csd_hostscan_logs.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%WinDir%\temp\csd_hostscan_logs.txt</temp_out>
+          </action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l Application -s csd -f %WinDir%\temp\csd_sd_logs.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%WinDir%\temp\csd_logs.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%APPDATA%\Cisco\Cisco HostScan\csd.log" "%TEMP%\csd_3.4.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\csd_3.4.log</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%APPDATA%\Cisco\Cisco HostScan\hostscan.log" "%TEMP%\hostscan_3.4.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\hostscan_3.4.log</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%APPDATA%\Cisco\Cisco Secure Desktop\Cache\hostscan.log" "%TEMP%\hostscan_vault.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\hostscan_vault.log</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%WINDIR%\System32\config\systemprofile\AppData\Roaming\Cisco\Cisco HostScan\csd.log" "%TEMP%\csd_3.4_SBL.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\csd_3.4_SBL.log</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%WINDIR%\SysWOW64\config\systemprofile\AppData\Roaming\Cisco\Cisco HostScan\csd.log" "%TEMP%\csd_3.4_SBL.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\csd_3.4_SBL.log</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%WINDIR%\System32\config\systemprofile\AppData\Roaming\Cisco\Cisco HostScan\hostscan.log" "%TEMP%\hostscan_3.4_SBL.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\hostscan_3.4_SBL.log</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%WINDIR%\SysWOW64\config\systemprofile\AppData\Roaming\Cisco\Cisco HostScan\hostscan.log" "%TEMP%\hostscan_3.4_SBL.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\hostscan_3.4_SBL.log</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%WINDIR%\System32\config\systemprofile\AppData\Local\Cisco\Cisco HostScan\log\hostscan.log" "%TEMP%\hostscan_SBL.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\hostscan_SBL.log</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%WINDIR%\SysWOW64\config\systemprofile\AppData\Local\Cisco\Cisco HostScan\log\hostscan.log" "%TEMP%\hostscan_SBL.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\hostscan_SBL.log</temp_out>
+          </action>
+        </use_extern_action>
+        <file_copy_action>
+          <action>
+             <loc>%LOCALAPPDATA%\Cisco\Cisco Hostscan\log\v4DebugInfo*</loc>
+             <clear_log apply="false"/>
+          </action>
+          <action>
+             <loc>%LOCALAPPDATA%\Cisco\Cisco Hostscan\log\v4clientfull</loc>
+             <clear_log apply="false"/>
+          </action>
+        </file_copy_action>
+        <use_extern_action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "del "%LOCALAPPDATA%\Cisco\Cisco Hostscan\log\v4DebugInfo*""</args>
+          </action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "rmdir /q /s "%LOCALAPPDATA%\Cisco\Cisco Hostscan\log\v4clientfull""</args>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="vista">
+        <file_copy_action>
+          <action>
+            <loc>%LOCALAPPDATA%\Cisco\Cisco HostScan\log\*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </file_copy_action>
+        <use_extern_action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l "Cisco AnyConnect Posture Module" -f %TEMP%\Posture.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\Posture.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>wevtutil epl "Cisco AnyConnect Posture Module" %TEMP%\Posture.evtx</args>
+            <clear_log apply="true">wevtutil cl "Cisco AnyConnect Posture Module"</clear_log>
+            <temp_out>%TEMP%\Posture.evtx</temp_out>
+          </action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l Application -s CiscoSD -f %WinDir%\temp\csd_sd_logs.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%WinDir%\temp\csd_sd_logs.txt</temp_out>
+          </action>
+          <action>
+            <plugin>wineventlog.exe</plugin>
+            <args>wineventlog.exe -l Application -s CiscoHostScan -f %WinDir%\temp\csd_hostscan_logs.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%WinDir%\temp\csd_hostscan_logs.txt</temp_out>
+          </action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l Application -s csd -f %WinDir%\temp\csd_sd_logs.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%WinDir%\temp\csd_logs.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%APPDATA%\Cisco\Cisco HostScan\csd.log" "%TEMP%\csd_3.4.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\csd_3.4.log</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%APPDATA%\Cisco\Cisco HostScan\hostscan.log" "%TEMP%\hostscan_3.4.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\hostscan_3.4.log</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%APPDATA%\Cisco\Cisco Secure Desktop\Cache\hostscan.log" "%TEMP%\hostscan_vault.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\hostscan_vault.log</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%WINDIR%\System32\config\systemprofile\AppData\Roaming\Cisco\Cisco HostScan\csd.log" "%TEMP%\csd_3.4_SBL.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\csd_3.4_SBL.log</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%WINDIR%\SysWOW64\config\systemprofile\AppData\Roaming\Cisco\Cisco HostScan\csd.log" "%TEMP%\csd_3.4_SBL.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\csd_3.4_SBL.log</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%WINDIR%\System32\config\systemprofile\AppData\Roaming\Cisco\Cisco HostScan\hostscan.log" "%TEMP%\hostscan_3.4_SBL.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\hostscan_3.4_SBL.log</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%WINDIR%\SysWOW64\config\systemprofile\AppData\Roaming\Cisco\Cisco HostScan\hostscan.log" "%TEMP%\hostscan_3.4_SBL.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\hostscan_3.4_SBL.log</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%WINDIR%\System32\config\systemprofile\AppData\Local\Cisco\Cisco HostScan\log\hostscan.log" "%TEMP%\hostscan_SBL.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\hostscan_SBL.log</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%WINDIR%\SysWOW64\config\systemprofile\AppData\Local\Cisco\Cisco HostScan\log\hostscan.log" "%TEMP%\hostscan_SBL.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\hostscan_SBL.log</temp_out>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="winxp">
+        <file_copy_action>
+          <action>
+            <loc>%USERPROFILE%\Local Settings\Application Data\Cisco\Cisco HostScan\log\*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </file_copy_action>
+        <use_extern_action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l "Cisco AnyConnect Posture Module" -f %TEMP%\Posture.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\Posture.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32\wbem</path>
+            <args>wmic.exe nteventlog where " logfilename='Cisco AnyConnect Posture Module' " call backupeventlog "%TEMP%\Posture.evt"</args>
+            <clear_log apply="true">wmic.exe nteventlog where " logfilename='Cisco AnyConnect Posture Module' " call ClearEventLog</clear_log>
+            <temp_out>%TEMP%\Posture.evt</temp_out>
+          </action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l Application -s CiscoSD -f %WinDir%\temp\csd_sd_logs.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%WinDir%\temp\csd_sd_logs.txt</temp_out>
+          </action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l Application -s CiscoHostScan -f %WinDir%\temp\csd_hostscan_logs.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%WinDir%\temp\csd_hostscan_logs.txt</temp_out>
+          </action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l Application -s csd -f %WinDir%\temp\csd_sd_logs.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%WinDir%\temp\csd_logs.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%APPDATA%\Cisco\Cisco HostScan\csd.log" "%TEMP%\csd_3.4.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\csd_3.4.log</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%APPDATA%\Cisco\Cisco HostScan\hostscan.log" "%TEMP%\hostscan_3.4.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\hostscan_3.4.log</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%APPDATA%\Cisco\Cisco Secure Desktop\Cache\hostscan.log" "%TEMP%\hostscan_vault.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\hostscan_vault.log</temp_out>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="win2k3">
+        <file_copy_action>
+          <action>
+            <loc>%USERPROFILE%\Local Settings\Application Data\Cisco\Cisco HostScan\log\*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </file_copy_action>
+        <use_extern_action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l "Cisco AnyConnect Posture Module" -f %TEMP%\Posture.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\Posture.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32\wbem</path>
+            <args>wmic.exe nteventlog where " logfilename='Cisco AnyConnect Posture Module' " call backupeventlog "%TEMP%\Posture.evt"</args>
+            <clear_log apply="true">wmic.exe nteventlog where " logfilename='Cisco AnyConnect Posture Module' " call ClearEventLog</clear_log>
+            <temp_out>%TEMP%\Posture.evt</temp_out>
+          </action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l Application -s CiscoSD -f %WinDir%\temp\csd_sd_logs.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%WinDir%\temp\csd_sd_logs.txt</temp_out>
+          </action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l Application -s CiscoHostScan -f %WinDir%\temp\csd_hostscan_logs.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%WinDir%\temp\csd_hostscan_logs.txt</temp_out>
+          </action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l Application -s csd -f %WinDir%\temp\csd_sd_logs.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%WinDir%\temp\csd_logs.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%APPDATA%\Cisco\Cisco HostScan\csd.log" "%TEMP%\csd_3.4.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\csd_3.4.log</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%APPDATA%\Cisco\Cisco HostScan\hostscan.log" "%TEMP%\hostscan_3.4.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\hostscan_3.4.log</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>cmd.exe /C "copy "%APPDATA%\Cisco\Cisco Secure Desktop\Cache\hostscan.log" "%TEMP%\hostscan_vault.log""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\hostscan_vault.log</temp_out>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="linux">
+        <use_extern_action>
+          <action>
+            <path>$HOME/.cisco/hostscan/lib</path>
+            <args>wadiagnose --log_path $HOME/.cisco/hostscan/log/wadiagnose.txt --debug_log_output_path $HOME/.cisco/hostscan/log --driver_prevent_install true --auto_exit true</args>
+            <clear_log apply="false"></clear_log>
+            <stdout/>
+          </action>
+        </use_extern_action>
+        <use_extern_action>
+          <action>
+            <path>/opt/cisco/hostscan/lib</path>
+            <args>wadiagnose --log_path $HOME/.cisco/hostscan/log/wadiagnose_clientfull.txt --debug_log_output_path $HOME/.cisco/hostscan/log/v4clientfull --driver_prevent_install true --auto_exit true</args>
+            <clear_log apply="false"></clear_log>
+            <stdout/>
+          </action>
+        </use_extern_action>
+        <file_copy_action>
+          <action>
+            <loc>$HOME/.cisco/hostscan/log/*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </file_copy_action>
+        <use_extern_action>
+          <action>
+            <args>rm -rf $HOME/.cisco/hostscan/log/v4DebugInfo*</args>
+            <clear_log apply="false"></clear_log>
+            <stdout/>
+          </action>
+          <action>
+            <args>rm -rf $HOME/.cisco/hostscan/log/v4clientfull</args>
+            <clear_log apply="false"></clear_log>
+            <stdout/>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="mac">
+        <use_extern_action>
+          <action>
+            <path>$HOME/.cisco/hostscan/lib</path>
+            <args>waDiagnose --log_path $HOME/.cisco/hostscan/log/waDiagnose.txt --debug_log_output_path $HOME/.cisco/hostscan/log --driver_prevent_install true --auto_exit true</args>
+            <clear_log apply="false"></clear_log>
+            <stdout/>
+          </action>
+        </use_extern_action>
+        <use_extern_action>
+          <action>
+            <path>$HOME/.cisco/hostscan/lib64</path>
+            <args>waDiagnose --log_path $HOME/.cisco/hostscan/log/waDiagnose.txt --debug_log_output_path $HOME/.cisco/hostscan/log --driver_prevent_install true  --auto_exit true</args>
+            <clear_log apply="false"></clear_log>
+            <stdout/>
+          </action>
+        </use_extern_action>
+        <use_extern_action>
+          <action>
+            <path>/opt/cisco/hostscan/lib</path>
+            <args>waDiagnose --log_path $HOME/.cisco/hostscan/log/waDiagnose_clientfull.txt --debug_log_output_path $HOME/.cisco/hostscan/log/v4clientfull --driver_prevent_install true --auto_exit true</args>
+            <clear_log apply="false"></clear_log>
+            <stdout/>
+          </action>
+        </use_extern_action>
+        <use_extern_action>
+          <action>
+            <path>/opt/cisco/hostscan/lib64</path>
+            <args>waDiagnose --log_path $HOME/.cisco/hostscan/log/waDiagnose_clientfull.txt --debug_log_output_path $HOME/.cisco/hostscan/log/v4clientfull --driver_prevent_install true --auto_exit true</args>
+            <clear_log apply="false"></clear_log>
+            <stdout/>
+          </action>
+        </use_extern_action>
+        <file_copy_action>
+          <action>
+            <loc>$HOME/.cisco/hostscan/log/*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </file_copy_action>
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">$HOME/Library/Logs/DiagnosticReports/cscan_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+        <use_extern_action>
+          <action>
+            <args>rm -rf $HOME/.cisco/hostscan/log/v4DebugInfo*</args>
+            <clear_log apply="false"></clear_log>
+            <stdout/>
+          </action>
+          <action>
+            <args>rm -rf $HOME/.cisco/hostscan/log/v4clientfull</args>
+            <clear_log apply="false"></clear_log>
+            <stdout/>
+          </action>
+        </use_extern_action>
+      </os>
+    </dart>
+  </file>
+  <file id="posture-dmp">
+    <default>true</default>
+    <description>Posture dump files</description>
+    <gui>
+      <label>_tr("Posture dump files")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+      <os opsys="win8">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\cscan.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\cstub.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\ciscod.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\cnotify.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\cscan.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\cstub.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\ciscod.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\cnotify.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win7">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\cscan.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\cstub.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\ciscod.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\cnotify.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\cscan.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\cstub.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\ciscod.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\cnotify.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="vista">
+        <use_extern_action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\cscan.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\cstub.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\ciscod.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\cnotify.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\cscan.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\cstub.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\ciscod.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\cnotify.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="winxp">
+        <use_extern_action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\cscan.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\cstub.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\ciscod.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\cnotify.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\cscan.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\cstub.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\ciscod.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\cnotify.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="win2k3">
+        <use_extern_action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\cscan.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\cstub.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\ciscod.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\cnotify.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\cscan.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\cstub.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\ciscod.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\cnotify.exe*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="mac">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">$HOME/Library/Logs/CrashReporter/cscan_*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">$HOME/Library/Logs/CrashReporter/cstub_*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">$HOME/Library/Logs/CrashReporter/ciscod_*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">$HOME/Library/Logs/CrashReporter/cnotify_*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/System/Library/Logs/CrashReporter/cscan_*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/System/Library/Logs/CrashReporter/cstub_*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/System/Library/Logs/CrashReporter/ciscod_*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/System/Library/Logs/CrashReporter/cnotify_*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">$HOME/Library/Logs/DiagnosticReports/cscan_*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">$HOME/Library/Logs/DiagnosticReports/cstub_*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">$HOME/Library/Logs/DiagnosticReports/ciscod_*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">$HOME/Library/Logs/DiagnosticReports/cnotify_*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/Library/Logs/DiagnosticReports/cscan_*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/Library/Logs/DiagnosticReports/cstub_*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/Library/Logs/DiagnosticReports/ciscod_*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/Library/Logs/DiagnosticReports/cnotify_*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="linux">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">/var/crash/*_ciscod.*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/var/crash/*_cscan.*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/var/crash/*_cstub.*</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+    </dart>
+  </file>
+</configure>

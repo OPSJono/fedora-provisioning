@@ -1,0 +1,1979 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configure xmlns="http://schemas.xmlsoap.org/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://schemas.xmlsoap.org/encoding/ ConfigXMLSchema.xsd">
+  <title>Cisco AnyConnect Secure Mobility Client</title>
+  <file id="ac-install">
+    <default>true</default>
+    <description>AnyConnect install logs</description>
+    <gui>
+      <label>_tr("AnyConnect install logs")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+	  <os opsys="win8">
+        <file_copy_action>
+          <action>
+            <loc>%TEMP%\anyconnect*-core-vpn-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect*-core-vpn-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <!-- The install logs for older versions of VPN do not have "core-vpn" in them. -->
+          <!-- Example: anyconnect-win-4.3.00748-pre-deploy-k9-install-101212202019.log   -->
+          <!-- So, use a regex that strictly matches only such file names.                -->
+          <action>
+            <loc>%TEMP%\anyconnect-win-?.?.?????-*-deploy-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect-win-?.?.?????-*-deploy-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%TEMP%\anyconnect-VC_redist.x86*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect-VC_redist.x86*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\update.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\VPNManifest.dat</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\AnyConnectLocalPolicy.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Logs\UpdateHistory_*.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+        <use_extern_action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "copy "%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect VPN Client\update.txt" "%TEMP%\update_pre3.0.txt""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\update_pre3.0.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "copy "%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect VPN Client\VPNManifest.dat" "%TEMP%\VPNManifest_pre3.0.dat""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\VPNManifest_pre3.0.dat</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "copy "%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect VPN Client\AnyConnectLocalPolicy.xml" "%TEMP%\AnyConnectLocalPolicy_pre3.0.xml""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\AnyConnectLocalPolicy_pre3.0.xml</temp_out>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="win7">
+        <file_copy_action>
+          <action>
+            <loc>%TEMP%\anyconnect*-core-vpn-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect*-core-vpn-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <!-- The install logs for older versions of VPN do not have "core-vpn" in them. -->
+          <!-- Example: anyconnect-win-4.3.00748-pre-deploy-k9-install-101212202019.log   -->
+          <!-- So, use a regex that strictly matches only such file names.                -->
+          <action>
+            <loc>%TEMP%\anyconnect-win-?.?.?????-*-deploy-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect-win-?.?.?????-*-deploy-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%TEMP%\anyconnect-VC_redist.x86*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect-VC_redist.x86*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\update.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\VPNManifest.dat</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\AnyConnectLocalPolicy.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Logs\UpdateHistory_*.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+        <use_extern_action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "copy "%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect VPN Client\update.txt" "%TEMP%\update_pre3.0.txt""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\update_pre3.0.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "copy "%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect VPN Client\VPNManifest.dat" "%TEMP%\VPNManifest_pre3.0.dat""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\VPNManifest_pre3.0.dat</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "copy "%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect VPN Client\AnyConnectLocalPolicy.xml" "%TEMP%\AnyConnectLocalPolicy_pre3.0.xml""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\AnyConnectLocalPolicy_pre3.0.xml</temp_out>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="vista">
+        <file_copy_action>
+          <action>
+            <loc>%TEMP%\anyconnect*-core-vpn-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect*-core-vpn-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <!-- The install logs for older versions of VPN do not have "core-vpn" in them. -->
+          <!-- Example: anyconnect-win-4.3.00748-pre-deploy-k9-install-101212202019.log   -->
+          <!-- So, use a regex that strictly matches only such file names.                -->
+          <action>
+            <loc>%TEMP%\anyconnect-win-?.?.?????-*-deploy-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect-win-?.?.?????-*-deploy-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\update.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\VPNManifest.dat</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\AnyConnectLocalPolicy.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Logs\UpdateHistory_*.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+        <use_extern_action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "copy "%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect VPN Client\update.txt" "%TEMP%\update_pre3.0.txt""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\update_pre3.0.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "copy "%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect VPN Client\VPNManifest.dat" "%TEMP%\VPNManifest_pre3.0.dat""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\VPNManifest_pre3.0.dat</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "copy "%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect VPN Client\AnyConnectLocalPolicy.xml" "%TEMP%\AnyConnectLocalPolicy_pre3.0.xml""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\AnyConnectLocalPolicy_pre3.0.xml</temp_out>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="winxp">
+        <file_copy_action>
+          <action>
+            <loc>%TEMP%\anyconnect*-core-vpn-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect*-core-vpn-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <!-- The install logs for older versions of VPN do not have "core-vpn" in them. -->
+          <!-- Example: anyconnect-win-4.3.00748-pre-deploy-k9-install-101212202019.log   -->
+          <!-- So, use a regex that strictly matches only such file names.                -->
+          <action>
+            <loc>%TEMP%\anyconnect-win-?.?.?????-*-deploy-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect-win-?.?.?????-*-deploy-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect Secure Mobility Client\update.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect Secure Mobility Client\VPNManifest.dat</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect Secure Mobility Client\AnyConnectLocalPolicy.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect Secure Mobility Client\Logs\UpdateHistory_*.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+        <use_extern_action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "copy "%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect VPN Client\update.txt" "%TEMP%\update_pre3.0.txt""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\update_pre3.0.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "copy "%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect VPN Client\VPNManifest.dat" "%TEMP%\VPNManifest_pre3.0.dat""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\VPNManifest_pre3.0.dat</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "copy "%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect VPN Client\AnyConnectLocalPolicy.xml" "%TEMP%\AnyConnectLocalPolicy_pre3.0.xml""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\AnyConnectLocalPolicy_pre3.0.xml</temp_out>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="win2k3">
+        <file_copy_action>
+          <action>
+            <loc>%TEMP%\anyconnect*-core-vpn-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect*-core-vpn-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect Secure Mobility Client\update.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <!-- The install logs for older versions of VPN do not have "core-vpn" in them. -->
+          <!-- Example: anyconnect-win-4.3.00748-pre-deploy-k9-install-101212202019.log   -->
+          <!-- So, use a regex that strictly matches only such file names.                -->
+          <action>
+            <loc>%TEMP%\anyconnect-win-?.?.?????-*-deploy-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect-win-?.?.?????-*-deploy-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect Secure Mobility Client\VPNManifest.dat</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect Secure Mobility Client\AnyConnectLocalPolicy.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect Secure Mobility Client\Logs\UpdateHistory_*.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+        <use_extern_action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "copy "%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect VPN Client\update.txt" "%TEMP%\update_pre3.0.txt""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\update_pre3.0.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "copy "%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect VPN Client\VPNManifest.dat" "%TEMP%\VPNManifest_pre3.0.dat""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\VPNManifest_pre3.0.dat</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "copy "%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect VPN Client\AnyConnectLocalPolicy.xml" "%TEMP%\AnyConnectLocalPolicy_pre3.0.xml""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\AnyConnectLocalPolicy_pre3.0.xml</temp_out>
+          </action>
+        </use_extern_action>
+      </os>  
+      <os opsys="mac">
+        <file_copy_action>
+          <action>
+            <loc>/opt/cisco/anyconnect/vpn-Darwin_*-Release-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>/opt/cisco/anyconnect/update.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>/opt/cisco/anyconnect/VPNManifest.dat</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>/opt/cisco/anyconnect/AnyConnectLocalPolicy.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="linux">
+        <file_copy_action>
+          <action>
+            <loc>/opt/cisco/anyconnect/anyconnect*-core-vpn-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <!-- The install logs for older versions of VPN do not have "core-vpn" in them. -->
+          <!-- Example: anyconnect-linux-64-4.3.05017-k9-11074720122019.log               -->
+          <!-- So, use a regex that strictly matches only such file names.                -->
+          <action>
+            <loc>/opt/cisco/anyconnect/anyconnect-linux*-?.?.?????-k9*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>/opt/cisco/anyconnect/update.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>/opt/cisco/anyconnect/VPNManifest.dat</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>/opt/cisco/anyconnect/AnyConnectLocalPolicy.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+    </dart>
+  </file>
+  <file id="sbl-install">
+    <default>true</default>
+    <description>Start Before Logon GINA and PLAP install logs</description>
+    <gui>
+      <label>_tr("Start Before Logon install logs")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+	  <os opsys="win8">
+        <file_copy_action>
+          <action>
+            <loc>%TEMP%\anyconnect*-gina-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect*-gina-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win7">
+        <file_copy_action>
+          <action>
+            <loc>%TEMP%\anyconnect*-gina-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect*-gina-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="vista">
+        <file_copy_action>
+          <action>
+            <loc>%TEMP%\anyconnect*-gina-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect*-gina-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="winxp">
+        <file_copy_action>
+          <action>
+            <loc>%TEMP%\anyconnect*-gina-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect*-gina-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win2k3">
+        <file_copy_action>
+          <action>
+            <loc>%TEMP%\anyconnect*-gina-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect*-gina-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+    </dart>
+  </file>
+  <file id="sbl-runtime">
+    <default>true</default>
+    <description>Start Before Logon runtime logs</description>
+    <gui>
+      <label>_tr("Start Before Logon runtime logs")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+	  <os opsys="win8">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect VPN Client\Logs\vpngina_*_log.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Logs\vpngina_*_log.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win7">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect VPN Client\Logs\vpngina_*_log.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Logs\vpngina_*_log.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="vista">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect VPN Client\Logs\vpngina_*_log.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Logs\vpngina_*_log.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="winxp">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect VPN Client\Logs\vpngina_*_log.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect Secure Mobility Client\Logs\vpngina_*_log.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win2k3">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect VPN Client\Logs\vpngina_*_log.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect Secure Mobility Client\Logs\vpngina_*_log.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+    </dart>
+  </file>
+  <file id="va-runtime">
+    <default>true</default>
+    <description>Virtual Adapter runtime logs</description>
+    <gui>
+      <label>_tr("Virtual Adapter runtime logs")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+	  <os opsys="win8">
+        <file_copy_action>
+          <action>
+            <loc>%WINDIR%\inf\setupapi.app.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\inf\setupapi.dev.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win7">
+        <file_copy_action>
+          <action>
+            <loc>%WINDIR%\inf\setupapi.app.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\inf\setupapi.dev.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="vista">
+        <file_copy_action>
+          <action>
+            <loc>%WINDIR%\inf\setupapi.app.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\inf\setupapi.dev.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="winxp">
+        <file_copy_action>
+          <action>
+            <loc>%WINDIR%\setupapi.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win2k3">
+        <file_copy_action>
+          <action>
+            <loc>%WINDIR%\setupapi.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+    </dart>
+  </file>
+  <file id="global-preferences">
+    <default>true</default>
+    <description>AnyConnect Global Preferences</description>
+    <gui>
+      <label>_tr("AnyConnect Global Preferences")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+	  <os opsys="win8">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\preferences_global.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+        <use_extern_action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "copy "%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect VPN Client\preferences_global.xml" "%TEMP%\preferences_global_pre3.0.xml""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\preferences_global_pre3.0.xml</temp_out>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="win7">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\preferences_global.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+        <use_extern_action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "copy "%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect VPN Client\preferences_global.xml" "%TEMP%\preferences_global_pre3.0.xml""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\preferences_global_pre3.0.xml</temp_out>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="vista">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\preferences_global.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+        <use_extern_action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "copy "%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect VPN Client\preferences_global.xml" "%TEMP%\preferences_global_pre3.0.xml""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\preferences_global_pre3.0.xml</temp_out>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="winxp">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect Secure Mobility Client\preferences_global.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+        <use_extern_action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "copy "%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect VPN Client\preferences_global.xml" "%TEMP%\preferences_global_pre3.0.xml""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\preferences_global_pre3.0.xml</temp_out>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="win2k3">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect Secure Mobility Client\preferences_global.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+        <use_extern_action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "copy "%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect VPN Client\preferences_global.xml" "%TEMP%\preferences_global_pre3.0.xml""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\preferences_global_pre3.0.xml</temp_out>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="linux">
+        <file_copy_action>
+          <action>
+            <loc>/opt/cisco/anyconnect/.anyconnect_global</loc>
+            <clear_log apply="false"></clear_log>
+            </action>
+        </file_copy_action>
+      </os>
+      <os opsys="mac">
+        <file_copy_action>
+          <action>
+            <loc>/opt/cisco/anyconnect/.anyconnect_global</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+    </dart>
+  </file>
+  <file id="user-preferences">
+    <default>true</default>
+    <description>AnyConnect User Preferences</description>
+    <gui>
+      <label>_tr("AnyConnect User Preferences")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+	   <os opsys="win8">
+        <file_copy_action>
+          <action>
+            <loc>%USERPROFILE%\AppData\Local\Cisco\Cisco AnyConnect Secure Mobility Client\preferences.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+        <use_extern_action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "copy "%USERPROFILE%\AppData\Local\Cisco\Cisco AnyConnect VPN Client\preferences.xml" "%TEMP%\preferences_pre3.0.xml""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\preferences_pre3.0.xml</temp_out>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="win7">
+        <file_copy_action>
+          <action>
+            <loc>%USERPROFILE%\AppData\Local\Cisco\Cisco AnyConnect Secure Mobility Client\preferences.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+        <use_extern_action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "copy "%USERPROFILE%\AppData\Local\Cisco\Cisco AnyConnect VPN Client\preferences.xml" "%TEMP%\preferences_pre3.0.xml""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\preferences_pre3.0.xml</temp_out>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="vista">
+        <file_copy_action>
+          <action>
+            <loc>%USERPROFILE%\AppData\Local\Cisco\Cisco AnyConnect Secure Mobility Client\preferences.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+        <use_extern_action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "copy "%USERPROFILE%\AppData\Local\Cisco\Cisco AnyConnect VPN Client\preferences.xml" "%TEMP%\preferences_pre3.0.xml""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\preferences_pre3.0.xml</temp_out>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="winxp">
+        <file_copy_action>
+          <action>
+            <loc>%USERPROFILE%\Local Settings\Application Data\Cisco\Cisco AnyConnect Secure Mobility Client\preferences.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+        <use_extern_action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "copy "%USERPROFILE%\Local Settings\Application Data\Cisco\Cisco AnyConnect VPN Client\preferences.xml" "%TEMP%\preferences_pre3.0.xml""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\preferences_pre3.0.xml</temp_out>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="win2k3">
+        <file_copy_action>
+          <action>
+            <loc>%USERPROFILE%\Local Settings\Application Data\Cisco\Cisco AnyConnect Secure Mobility Client\preferences.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+        <use_extern_action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>cmd.exe /C "copy "%USERPROFILE%\Local Settings\Application Data\Cisco\Cisco AnyConnect VPN Client\preferences.xml" "%TEMP%\preferences_pre3.0.xml""</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\preferences_pre3.0.xml</temp_out>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="linux">
+        <file_copy_action>
+          <action>
+            <loc>$HOME/.anyconnect</loc>
+            <clear_log apply="false"></clear_log>
+            </action>
+        </file_copy_action>
+      </os>
+      <os opsys="mac">
+        <file_copy_action>
+          <action>
+            <loc>$HOME/.anyconnect</loc>
+            <clear_log apply="false"></clear_log>
+            </action>
+        </file_copy_action>
+      </os>
+    </dart>
+  </file>
+  <file id="ac-profile">
+    <default>true</default>
+    <description>AnyConnect Profile</description>
+    <gui>
+      <label>_tr("AnyConnect Profile")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+	  <os opsys="win8">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect VPN Client\Profile\*.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect VPN Client\Profile\*.xsd</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Profile\*.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Profile\*.xsd</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Profile\MgmtTun\*.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win7">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect VPN Client\Profile\*.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect VPN Client\Profile\*.xsd</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Profile\*.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Profile\*.xsd</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Profile\MgmtTun\*.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="vista">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect VPN Client\Profile\*.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect VPN Client\Profile\*.xsd</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Profile\*.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Profile\*.xsd</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Profile\MgmtTun\*.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="winxp">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect VPN Client\Profile\*.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect VPN Client\Profile\*.xsd</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect Secure Mobility Client\Profile\*.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect Secure Mobility Client\Profile\*.xsd</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win2k3">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect VPN Client\Profile\*.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect VPN Client\Profile\*.xsd</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect Secure Mobility Client\Profile\*.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect Secure Mobility Client\Profile\*.xsd</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="linux">
+        <file_copy_action>
+          <action>
+            <loc>/opt/cisco/anyconnect/profile/*.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>/opt/cisco/anyconnect/profile/*.xsd</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="mac">
+        <file_copy_action>
+          <action>
+            <loc>/opt/cisco/anyconnect/profile/*.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>/opt/cisco/anyconnect/profile/*.xsd</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>/opt/cisco/anyconnect/profile/mgmttun/*.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+    </dart>
+  </file>
+  <file id="ac-script">
+    <default>true</default>
+    <description>AnyConnect Scripting</description>
+    <gui>
+      <label>_tr("AnyConnect Scripting")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+	  <os opsys="win8">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect VPN Client\Script\*.*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Script\*.*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win7">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect VPN Client\Script\*.*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Script\*.*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="vista">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect VPN Client\Script\*.*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\Script\*.*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="winxp">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect VPN Client\Script\*.*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect Secure Mobility Client\Script\*.*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win2k3">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect VPN Client\Script\*.*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect Secure Mobility Client\Script\*.*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="linux">
+        <file_copy_action>
+          <action>
+            <loc>/opt/cisco/anyconnect/script/*.*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="mac">
+        <file_copy_action>
+          <action>
+            <loc>/opt/cisco/anyconnect/script/*.*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+    </dart>
+  </file>
+  <file id="ac-config">
+    <default>true</default>
+    <description>AnyConnect Configurations</description>
+    <gui>
+      <label>_tr("AnyConnect Configurations")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+	  <os opsys="win8">
+        <file_copy_action>
+          <action>
+            <loc>%WINDIR%\System32\drivers\etc\hosts</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\System32\drivers\etc\hosts.ac</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\*ProxySettings.keep</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win7">
+        <file_copy_action>
+          <action>
+            <loc>%WINDIR%\System32\drivers\etc\hosts</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\System32\drivers\etc\hosts.ac</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\*ProxySettings.keep</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="vista">
+        <file_copy_action>
+          <action>
+            <loc>%WINDIR%\System32\drivers\etc\hosts</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\System32\drivers\etc\hosts.ac</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\*ProxySettings.keep</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="winxp">
+        <file_copy_action>
+          <action>
+            <loc>%WINDIR%\System32\drivers\etc\hosts</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\System32\drivers\etc\hosts.ac</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\*ProxySettings.keep</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win2k3">
+        <file_copy_action>
+          <action>
+            <loc>%WINDIR%\System32\drivers\etc\hosts</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\System32\drivers\etc\hosts.ac</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\*ProxySettings.keep</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="linux">
+        <file_copy_action>
+          <action>
+            <loc>/etc/hosts</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>/etc/hosts.ac</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="mac">
+        <file_copy_action>
+          <action>
+            <loc>/etc/hosts</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>/etc/hosts.ac</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>/opt/cisco/anyconnect/ac_pf*.conf</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+    </dart>
+  </file>
+  <file id="ac-dmp">
+    <default>true</default>
+    <description>AnyConnect program Dump Files</description>
+    <gui>
+      <label>_tr("AnyConnect Program Dump Files")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+	  <os opsys="win8">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\vpnui.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\vpndownloader.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\vpnagent.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+		  <action>
+            <loc gather_newest="true">%WINDIR%\Temp\vpnmgmttun.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\vpnui.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\vpncli.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\vpndownloader.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+		  <action>
+            <loc gather_newest="true">%TEMP%\vpnmgmttun.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\low\vpndownloader.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win7">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\vpnui.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\vpndownloader.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\vpnagent.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+		  <action>
+            <loc gather_newest="true">%WINDIR%\Temp\vpnmgmttun.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\vpnui.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\vpncli.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\vpndownloader.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+		  <action>
+            <loc gather_newest="true">%TEMP%\vpnmgmttun.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\low\vpndownloader.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="vista">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\vpnui.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\vpndownloader.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\vpnagent.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+		  <action>
+            <loc gather_newest="true">%WINDIR%\temp\vpnmgmttun.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\vpnui.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\vpncli.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\vpndownloader.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+		  <action>
+            <loc gather_newest="true">%TEMP%\vpnmgmttun.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\low\vpndownloader.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="winxp">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\vpnui.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\vpndownloader.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\vpnagent.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+		  <action>
+            <loc gather_newest="true">%WINDIR%\Temp\vpnmgmttun.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\vpnui.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\vpncli.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\vpndownloader.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+		  <action>
+            <loc gather_newest="true">%TEMP%\vpnmgmttun.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win2k3">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\vpnui.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\vpndownloader.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%WINDIR%\Temp\vpnagent.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+		  		  <action>
+            <loc gather_newest="true">%WINDIR%\Temp\vpnmgmttun.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\vpnui.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\vpncli.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">%TEMP%\vpndownloader.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+		  <action>
+            <loc gather_newest="true">%TEMP%\vpnmgmttun.exe_*.mdmp</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="mac">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">$HOME/Library/Logs/CrashReporter/Cisco AnyConnect Secure Mobility Client_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">$HOME/Library/Logs/CrashReporter/vpndownloader_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">$HOME/Library/Logs/CrashReporter/vpnagentd_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+		  <action>
+            <loc gather_newest="true">$HOME/Library/Logs/CrashReporter/vpnmgmttun_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">$HOME/Library/Logs/CrashReporter/vpn_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">$HOME/Library/Logs/DiagnosticReports/Cisco AnyConnect Secure Mobility Client_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">$HOME/Library/Logs/DiagnosticReports/vpndownloader_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">$HOME/Library/Logs/DiagnosticReports/vpnagentd_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+		  <action>
+            <loc gather_newest="true">$HOME/Library/Logs/DiagnosticReports/vpnmgmttun_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">$HOME/Library/Logs/DiagnosticReports/vpn_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/System/Library/Logs/CrashReporter/Cisco AnyConnect Secure Mobility Client_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/System/Library/Logs/CrashReporter/vpndownloader_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/System/Library/Logs/CrashReporter/vpnagentd_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+		  <action>
+            <loc gather_newest="true">/System/Library/Logs/CrashReporter/vpnmgmttun_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/System/Library/Logs/CrashReporter/vpn_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/System/Library/Logs/DiagnosticReports/Cisco AnyConnect Secure Mobility Client_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/System/Library/Logs/DiagnosticReports/vpndownloader_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/System/Library/Logs/DiagnosticReports/vpnagentd_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+		  <action>
+            <loc gather_newest="true">/System/Library/Logs/DiagnosticReports/vpnmgmttun_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/System/Library/Logs/DiagnosticReports/vpn_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+		  <action>
+            <loc gather_newest="true">/Library/Logs/CrashReporter/Cisco AnyConnect Secure Mobility Client_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/Library/Logs/CrashReporter/vpndownloader_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/Library/Logs/CrashReporter/vpnagentd_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+		  <action>
+            <loc gather_newest="true">/Library/Logs/CrashReporter/vpnmgmttun_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/Library/Logs/CrashReporter/vpn_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/Library/Logs/DiagnosticReports/Cisco AnyConnect Secure Mobility Client_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/Library/Logs/DiagnosticReports/vpndownloader_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/Library/Logs/DiagnosticReports/vpnagentd_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+		  <action>
+            <loc gather_newest="true">/Library/Logs/DiagnosticReports/vpnmgmttun_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/Library/Logs/DiagnosticReports/vpn_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/Library/Logs/DiagnosticReports/Cisco AnyConnect Socket Filter_*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/Library/Logs/DiagnosticReports/com.cisco.anyconnect*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+	  </os>
+      <os opsys="linux">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">/var/crash/*_vpnui.*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/var/crash/*_vpnagentd.*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/var/crash/*_vpn.*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/var/crash/*_vpndownloader.*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/var/crash/*_vpndownloader-cli.*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/var/crash/*_acwebhelper.*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/var/crash/*_dartui.*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/var/crash/*_dartcli.*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc gather_newest="true">/var/crash/*_darthelper.*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+    </dart>
+  </file>
+  <file id="ac-logs">
+    <default>true</default>
+    <description>AnyConnect application logs</description>
+    <gui>
+      <label>_tr("AnyConnect application logs")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+	  <os opsys="win8">
+        <use_extern_action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l "Cisco AnyConnect VPN Client" -f %TEMP%\AnyConnect_pre3.0.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\AnyConnect_pre3.0.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>wevtutil epl "Cisco AnyConnect VPN Client" %TEMP%\AnyConnect_pre3.0.evtx</args>
+            <clear_log apply="true">wevtutil cl "Cisco AnyConnect VPN Client"</clear_log>
+            <temp_out>%TEMP%\AnyConnect_pre3.0.evtx</temp_out>
+          </action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l "Cisco AnyConnect Secure Mobility Client" -f %TEMP%\AnyConnect.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\AnyConnect.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>wevtutil epl "Cisco AnyConnect Secure Mobility Client" %TEMP%\AnyConnect.evtx</args>
+            <clear_log apply="true">wevtutil cl "Cisco AnyConnect Secure Mobility Client"</clear_log>
+            <temp_out>%TEMP%\AnyConnect.evtx</temp_out>
+          </action>
+        </use_extern_action>
+		<file_copy_action>
+          <action>
+            <loc>%WINDIR%\Temp\debug_routechangesv4.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\debug_routechangesv6.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win7">
+        <use_extern_action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l "Cisco AnyConnect VPN Client" -f %TEMP%\AnyConnect_pre3.0.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\AnyConnect_pre3.0.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>wevtutil epl "Cisco AnyConnect VPN Client" %TEMP%\AnyConnect_pre3.0.evtx</args>
+            <clear_log apply="true">wevtutil cl "Cisco AnyConnect VPN Client"</clear_log>
+            <temp_out>%TEMP%\AnyConnect_pre3.0.evtx</temp_out>
+          </action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l "Cisco AnyConnect Secure Mobility Client" -f %TEMP%\AnyConnect.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\AnyConnect.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>wevtutil epl "Cisco AnyConnect Secure Mobility Client" %TEMP%\AnyConnect.evtx</args>
+            <clear_log apply="true">wevtutil cl "Cisco AnyConnect Secure Mobility Client"</clear_log>
+            <temp_out>%TEMP%\AnyConnect.evtx</temp_out>
+          </action>
+        </use_extern_action>
+		<file_copy_action>
+          <action>
+            <loc>%WINDIR%\Temp\debug_routechangesv4.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\debug_routechangesv6.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="vista">
+        <use_extern_action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l "Cisco AnyConnect VPN Client" -f %TEMP%\AnyConnect_pre3.0.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\AnyConnect_pre3.0.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>wevtutil epl "Cisco AnyConnect VPN Client" %TEMP%\AnyConnect_pre3.0.evtx</args>
+            <clear_log apply="true">wevtutil cl "Cisco AnyConnect VPN Client"</clear_log>
+            <temp_out>%TEMP%\AnyConnect_pre3.0.evtx</temp_out>
+          </action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l "Cisco AnyConnect Secure Mobility Client" -f %TEMP%\AnyConnect.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\AnyConnect.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\System32</path>
+            <args>wevtutil epl "Cisco AnyConnect Secure Mobility Client" %TEMP%\AnyConnect.evtx</args>
+            <clear_log apply="true">wevtutil cl "Cisco AnyConnect Secure Mobility Client"</clear_log>
+            <temp_out>%TEMP%\AnyConnect.evtx</temp_out>
+          </action>
+        </use_extern_action>
+        <file_copy_action>
+          <action>
+            <loc>%WINDIR%\Temp\debug_routechangesv4.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\debug_routechangesv6.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="winxp">
+        <use_extern_action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l "Cisco AnyConnect VPN Client" -f %TEMP%\AnyConnect_pre3.0.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\AnyConnect_pre3.0.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\System32\wbem</path>
+            <args>wmic.exe nteventlog where " logfilename='Cisco AnyConnect VPN Client' " call backupeventlog "%TEMP%\AnyConnect_pre3.0.evt"</args>
+            <clear_log apply="true">wmic.exe nteventlog where " logfilename='Cisco AnyConnect VPN Client' " call ClearEventLog</clear_log>
+            <temp_out>%TEMP%\AnyConnect_pre3.0.evt</temp_out>
+          </action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l "Cisco AnyConnect Secure Mobility Client" -f %TEMP%\AnyConnect.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\AnyConnect.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\System32\wbem</path>
+            <args>wmic.exe nteventlog where " logfilename='Cisco AnyConnect Secure Mobility Client' " call backupeventlog "%TEMP%\AnyConnect.evt"</args>
+            <clear_log apply="true">wmic.exe nteventlog where " logfilename='Cisco AnyConnect Secure Mobility Client' " call ClearEventLog</clear_log>
+            <temp_out>%TEMP%\AnyConnect.evt</temp_out>
+          </action>
+        </use_extern_action>
+        <file_copy_action>
+          <action>
+            <loc>%WINDIR%\Temp\debug_routechangesv4.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\debug_routechangesv6.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win2k3">
+        <use_extern_action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l "Cisco AnyConnect VPN Client" -f %TEMP%\AnyConnect_pre3.0.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\AnyConnect_pre3.0.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\System32\wbem</path>
+            <args>wmic.exe nteventlog where " logfilename='Cisco AnyConnect VPN Client' " call backupeventlog "%TEMP%\AnyConnect_pre3.0.evt"</args>
+            <clear_log apply="true">wmic.exe nteventlog where " logfilename='Cisco AnyConnect VPN Client' " call ClearEventLog</clear_log>
+            <temp_out>%TEMP%\AnyConnect_pre3.0.evt</temp_out>
+          </action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l "Cisco AnyConnect Secure Mobility Client" -f %TEMP%\AnyConnect.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\AnyConnect.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\System32\wbem</path>
+            <args>wmic.exe nteventlog where " logfilename='Cisco AnyConnect Secure Mobility Client' " call backupeventlog "%TEMP%\AnyConnect.evt"</args>
+            <clear_log apply="true">wmic.exe nteventlog where " logfilename='Cisco AnyConnect Secure Mobility Client' " call ClearEventLog</clear_log>
+            <temp_out>%TEMP%\AnyConnect.evt</temp_out>
+          </action>
+        </use_extern_action>
+        <file_copy_action>
+          <action>
+            <loc>%WINDIR%\Temp\debug_routechangesv4.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\debug_routechangesv6.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="linux">
+        <file_copy_action>
+          <action>
+            <loc>/opt/cisco/anyconnect/debug_routechangesv4.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>/opt/cisco/anyconnect/debug_routechangesv6.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+        <use_extern_action>
+          <action>
+            <args>journalctl -S -1d -t acvpnagent -t acvpnui -t acvpndownloader -t acvpndownloader_major -t acvpndownloader_minor -t acvpnapi -t acvpncli -t acvpninstall -t acvpnmgmttun -t acenablefips -t acwebhelper -t acwebhelperplugin</args>
+            <clear_log apply="false"/>
+            <stdout/>
+            <temp_out>AnyConnect.log</temp_out>
+          </action>
+        </use_extern_action>
+        <use_extern_action>
+          <action>
+            <args>journalctl -o export -S -1d -t acvpnagent -t acvpnui -t acvpndownloader -t acvpndownloader_major -t acvpndownloader_minor -t acvpnapi -t acvpncli -t acvpninstall -t acvpnmgmttun -t acenablefips -t acwebhelper -t acwebhelperplugin</args>
+            <clear_log apply="false"/>
+            <stdout/>
+            <temp_out>AnyConnect.logexport</temp_out>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="mac">
+        <file_copy_action>
+          <action>
+            <loc>/opt/cisco/anyconnect/debug_routechangesv4.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>/opt/cisco/anyconnect/debug_routechangesv6.txt</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+        <use_extern_action>
+          <action>
+            <path>/usr/bin</path>
+            <args>log show --predicate 'subsystem contains "com.cisco.anyconnect.vpn" AND NOT category IN { "acdartcli", "acdartui", "acdarthelper" }' --debug --info --last 2d</args>
+            <clear_log apply="false"></clear_log>
+            <stdout/>
+            <temp_out>AnyConnect.log</temp_out>
+          </action>
+        </use_extern_action>
+        <use_extern_action>
+          <action>
+            <path>/usr/bin</path>
+            <args>log show --predicate 'subsystem contains "com.cisco.anyconnect.acsock"' --debug --info --last 1d</args>
+            <clear_log apply="false"></clear_log>
+            <stdout/>
+            <temp_out>acsock.log</temp_out>
+          </action>
+        </use_extern_action>
+      </os>
+    </dart>
+  </file>
+  <file id="ac-localization">
+    <default>true</default>
+    <description>AnyConnect Localizations</description>
+    <gui>
+      <label>_tr("AnyConnect Localizations")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+	  <os opsys="win8">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\l10n\*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win7">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\l10n\*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="vista">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\l10n\*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="winxp">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect Secure Mobility Client\l10n\*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win2k3">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Application Data\Cisco\Cisco AnyConnect Secure Mobility Client\l10n\*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="mac">
+        <file_copy_action>
+          <action>
+            <loc>/opt/cisco/anyconnect/l10n/*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="linux">
+        <file_copy_action>
+          <action>
+            <loc>/opt/cisco/anyconnect/l10n/*</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+    </dart>
+  </file>
+  <file id="ac-ui-logs">
+    <default>true</default>
+    <description>AnyConnect UI XML Log Files</description>
+    <gui>
+      <label>_tr("AnyConnect UI XML Log Files")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+	  <os opsys="win8">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">%USERPROFILE%\.cisco\vpn\log\UIHistory_*.txt</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win7">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">%USERPROFILE%\.cisco\vpn\log\UIHistory_*.txt</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="vista">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">%USERPROFILE%\.cisco\vpn\log\UIHistory_*.txt</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="winxp">
+        <file_copy_action>
+          <action>
+            <loc gather_newest="true">%USERPROFILE%\.cisco\vpn\log\UIHistory_*.txt</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="mac">
+        <file_copy_action>
+          <action>
+            <loc>$HOME/Library/Preferences/com.cisco.anyconnect.gui.plist</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>$HOME/.cisco/vpn/log/UIHistory*.txt</loc>
+            <clear_log apply="true"></clear_log>
+          </action>
+        </file_copy_action>
+		<get_file_to_copy_action>
+          <action>
+            <path>$HOME/Library/Preferences/com.cisco.anyconnect.gui.plist</path>
+          </action>
+        </get_file_to_copy_action>
+      </os>
+    </dart>
+  </file>
+  <file id="ac-dbg-log-config">
+    <default>true</default>
+    <description>AnyConnect Debug Log Configuration</description>
+    <gui>
+      <label>_tr("AnyConnect Debug Log Configuration")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+	  <os opsys="win8">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\debuglogconfig.json</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win7">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\debuglogconfig.json</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="vista">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\debuglogconfig.json</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="winxp">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\debuglogconfig.json</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+	  <os opsys="win2k3">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\debuglogconfig.json</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+	  <os opsys="linux">
+        <file_copy_action>
+          <action>
+            <loc>/opt/cisco/anyconnect/debuglogconfig.json</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="mac">
+        <file_copy_action>
+          <action>
+            <loc>/opt/cisco/anyconnect/debuglogconfig.json</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+    </dart>
+  </file>
+</configure>
+

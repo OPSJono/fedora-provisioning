@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vpn rev="1.0">
+  <file version="4.10.06079" id="DART" is_core="no" type="script" action="install" module="dart">
+    <uri>binaries/anyconnect-linux64-4.10.06079-dart-webdeploy-k9.sh</uri>
+    <display-name>AnyConnect DART</display-name>
+  </file>
+</vpn>

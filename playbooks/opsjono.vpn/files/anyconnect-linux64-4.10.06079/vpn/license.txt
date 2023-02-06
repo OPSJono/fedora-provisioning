@@ -1,0 +1,12 @@
+Supplemental End User License Agreement for AnyConnect(R) Secure Mobility Client v4.x and other VPN-related Software
+
+IMPORTANT: READ CAREFULLY
+
+By clicking accept or using the Cisco Technology, you agree that such use is governed by the Cisco End User License Agreement and the applicable Product Specific Terms (collectively, the "EULA"). You also acknowledge and agree that you have read the "Cisco Privacy Statement".   
+
+If you do not have authority to bind your company and its affiliates, or if you do not agree with the terms of the EULA, do not click 'accept' and do not use the Cisco Technology.  If you are a Cisco channel partner accepting on behalf of an end customer ("customer"), you must inform the customer that the EULA applies to customer's use of the Cisco Technology and provide the customer with access to all relevant terms.
+
+The latest version of documents can be found at the following locations.
+- Cisco End User License Agreement: https://www.cisco.com/c/en/us/about/legal/cloud-and-software/end_user_license_agreement.html
+- Applicable Product Specific Terms: https://www.cisco.com/c/en/us/about/legal/cloud-and-software/software-terms.html
+- Cisco Privacy Statement: https://www.cisco.com/c/en/us/about/legal/privacy-full.html

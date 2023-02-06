@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configure xmlns="http://schemas.xmlsoap.org/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://schemas.xmlsoap.org/encoding/ ConfigXMLSchema.xsd">
+  <title>Cisco AnyConnect AMP Enabler Module</title>
+  <file id="ampe-install">
+    <default>true</default>
+    <description>AMP Enabler install logs</description>
+    <gui>
+      <label>_tr("AMP Enabler install logs")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+	  <os opsys="win8">
+        <file_copy_action>
+          <action>
+            <loc>%TEMP%\anyconnect*-amp-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%WINDIR%\Temp\anyconnect*-amp-*.log</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win7">
+          <file_copy_action>
+              <action>
+                  <loc>%TEMP%\anyconnect*-amp-*.log</loc>
+                  <clear_log apply="false"></clear_log>
+              </action>
+              <action>
+                  <loc>%WINDIR%\Temp\anyconnect*-amp-*.log</loc>
+                  <clear_log apply="false"></clear_log>
+              </action>
+          </file_copy_action>
+      </os>
+      <os opsys="vista">
+          <file_copy_action>
+              <action>
+                  <loc>%TEMP%\anyconnect*-amp-*.log</loc>
+                  <clear_log apply="false"></clear_log>
+              </action>
+              <action>
+                  <loc>%WINDIR%\Temp\anyconnect*-amp-*.log</loc>
+                  <clear_log apply="false"></clear_log>
+              </action>
+          </file_copy_action>
+      </os>
+      <os opsys="winxp">
+          <file_copy_action>
+              <action>
+                  <loc>%TEMP%\anyconnect*-amp-*.log</loc>
+                  <clear_log apply="false"></clear_log>
+              </action>
+              <action>
+                  <loc>%WINDIR%\Temp\anyconnect*-amp-*.log</loc>
+                  <clear_log apply="false"></clear_log>
+              </action>
+          </file_copy_action>
+      </os>
+      <os opsys="win2k3">
+          <file_copy_action>
+              <action>
+                  <loc>%TEMP%\anyconnect*-amp-*.log</loc>
+                  <clear_log apply="false"></clear_log>
+              </action>
+              <action>
+                  <loc>%WINDIR%\Temp\anyconnect*-amp-*.log</loc>
+                  <clear_log apply="false"></clear_log>
+              </action>
+          </file_copy_action>
+      </os>
+    </dart>
+  </file>
+  <file id="ampe-logs">
+    <default>true</default>
+    <description>AMP Enabler application logs</description>
+    <gui>
+      <label>_tr("AMP Enabler application logs")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+	  <os opsys="win8">
+        <use_extern_action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l "Cisco AnyConnect AMP Enabler Module" -f %TEMP%\AMPEnabler.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\AMPEnabler.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>wevtutil epl "Cisco AnyConnect AMP Enabler Module" %TEMP%\AMPEnabler.evtx</args>
+            <clear_log apply="true">wevtutil cl "Cisco AnyConnect AMP Enabler Module"</clear_log>
+            <temp_out>%TEMP%\AMPEnabler.evtx</temp_out>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="win7">
+          <use_extern_action>
+              <action>
+                  <plugin></plugin>
+                  <args>wineventlog.exe -l "Cisco AnyConnect AMP Enabler Module" -f %TEMP%\AMPEnabler.txt</args>
+                  <clear_log apply="false"></clear_log>
+                  <temp_out>%TEMP%\AMPEnabler.txt</temp_out>
+              </action>
+              <action>
+                  <path>%WINDIR%\system32</path>
+                  <args>wevtutil epl "Cisco AnyConnect AMP Enabler Module" %TEMP%\AMPEnabler.evtx</args>
+                  <clear_log apply="true">wevtutil cl "Cisco AnyConnect AMP Enabler Module"</clear_log>
+                  <temp_out>%TEMP%\AMPEnabler.evtx</temp_out>
+              </action>
+          </use_extern_action>
+      </os>
+      <os opsys="vista">
+        <use_extern_action>
+          <action>
+            <plugin></plugin>
+            <args>wineventlog.exe -l "Cisco AnyConnect AMP Enabler Module" -f %TEMP%\AMPEnabler.txt</args>
+            <clear_log apply="false"></clear_log>
+            <temp_out>%TEMP%\AMPEnabler.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32</path>
+            <args>wevtutil epl "Cisco AnyConnect AMP Enabler Module" %TEMP%\AMPEnabler.evtx</args>
+            <clear_log apply="true">wevtutil cl "Cisco AnyConnect AMP Enabler Module"</clear_log>
+            <temp_out>%TEMP%\AMPEnabler.evtx</temp_out>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="winxp">
+        <use_extern_action>
+          <action>
+                <plugin></plugin>
+                <args>wineventlog.exe -l "Cisco AnyConnect AMP Enabler Module" -f %TEMP%\AMPEnabler.txt</args>
+                <clear_log apply="false"></clear_log>
+                <temp_out>%TEMP%\AMPEnabler.txt</temp_out>
+          </action>
+          <action>
+            <path>%WINDIR%\system32\wbem</path>
+            <args>wmic.exe nteventlog where " logfilename='Cisco AnyConnect AMP Enabler Module' " call backupeventlog "%TEMP%\AMPEnabler.evt"</args>
+            <clear_log apply="true">wmic.exe nteventlog where " logfilename='Cisco AnyConnect AMP Enabler Module' " call ClearEventLog</clear_log>
+            <temp_out>%TEMP%\AMPEnabler.evt</temp_out>
+          </action>
+        </use_extern_action>
+      </os>
+      <os opsys="win2k3">
+        <use_extern_action>
+            <action>
+                <plugin></plugin>
+                <args>wineventlog.exe -l "Cisco AnyConnect AMP Enabler Module" -f %TEMP%\AMPEnabler.txt</args>
+                <clear_log apply="false"></clear_log>
+                <temp_out>%TEMP%\AMPEnabler.txt</temp_out>
+            </action>
+            <action>
+                <path>%WINDIR%\system32\wbem</path>
+                <args>wmic.exe nteventlog where " logfilename='Cisco AnyConnect AMP Enabler Module' " call backupeventlog "%TEMP%\AMPEnabler.evt"</args>
+                <clear_log apply="true">wmic.exe nteventlog where " logfilename='Cisco AnyConnect AMP Enabler Module' " call ClearEventLog</clear_log>
+                <temp_out>%TEMP%\AMPEnabler.evt</temp_out>
+            </action>
+        </use_extern_action>
+      </os>
+    </dart>
+  </file>
+  <file id="amp-connector-logs">
+    <default>true</default>
+    <description>AMP Connector installation logs</description>
+    <gui>
+      <label>_tr("AMP Connector installation logs")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+	  <os opsys="win8">
+        <file_copy_action>
+			<action>
+                <loc>%WINDIR%\Temp\immpro_install.log</loc>
+                <clear_log apply="false"></clear_log>
+            </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win7">
+         <file_copy_action>
+            <action>
+                <loc>%WINDIR%\Temp\immpro_install.log</loc>
+                <clear_log apply="false"></clear_log>
+            </action>
+        </file_copy_action>
+      </os>
+      <os opsys="vista">
+       <file_copy_action>
+            <action>
+                <loc>%WINDIR%\Temp\immpro_install.log</loc>
+                <clear_log apply="false"></clear_log>
+            </action>
+        </file_copy_action>
+      </os>
+      <os opsys="winxp">
+        <file_copy_action>
+            <action>
+                <loc>%WINDIR%\Temp\immpro_install.log</loc>
+                <clear_log apply="false"></clear_log>
+            </action>
+        </file_copy_action>
+      </os>
+      <os opsys="win2k3">
+       <file_copy_action>
+            <action>
+                <loc>%WINDIR%\Temp\immpro_install.log</loc>
+                <clear_log apply="false"></clear_log>
+            </action>
+        </file_copy_action>
+      </os>
+    </dart>
+  </file>
+  <file id="amp-profile">
+    <default>true</default>
+    <description>AmpEnabler Profile</description>
+    <gui>
+      <label>_tr("AmpEnabler Profile")</label>
+      <file_type>log</file_type>
+    </gui>
+    <dart>
+      <required>false</required>
+	  <os opsys="win8">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\AMPEnabler\AMPEnabler_ServiceProfile.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\AMPEnabler\PersistedData.dat</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+	  <os opsys="win7">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\AMPEnabler\AMPEnabler_ServiceProfile.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\AMPEnabler\PersistedData.dat</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+	  <os opsys="vista">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\AMPEnabler\AMPEnabler_ServiceProfile.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\AMPEnabler\PersistedData.dat</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+	  <os opsys="winxp">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\AMPEnabler\AMPEnabler_ServiceProfile.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\AMPEnabler\PersistedData.dat</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+	  <os opsys="win2k3">
+        <file_copy_action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\AMPEnabler\AMPEnabler_ServiceProfile.xml</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+          <action>
+            <loc>%ALLUSERSPROFILE%\Cisco\Cisco AnyConnect Secure Mobility Client\AMPEnabler\PersistedData.dat</loc>
+            <clear_log apply="false"></clear_log>
+          </action>
+        </file_copy_action>
+      </os>
+	  <os opsys="mac">
+          <file_copy_action>
+              <action>
+                  <loc>/opt/cisco/anyconnect/ampenabler/AMPEnabler_ServiceProfile.xml</loc>
+                  <clear_log apply="false"></clear_log>
+              </action>
+              <action>
+                  <loc>/opt/cisco/anyconnect/ampenabler/PersistedData.dat</loc>
+                  <clear_log apply="false"></clear_log>
+              </action>
+          </file_copy_action>
+      </os>
+	</dart>
+  </file>
+</configure>
+

@@ -1,0 +1,1017 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configure xmlns="http://schemas.xmlsoap.org/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://schemas.xmlsoap.org/encoding/ ConfigXMLSchema.xsd">
+    <title>General Information</title>
+    <file id="sysinfo">
+        <default>true</default>
+        <description>System Information</description>
+        <gui>
+            <label>_tr("System Information (extensive)")</label>
+            <file_type>log</file_type>
+        </gui>
+        <dart>
+            <required>false</required>
+			<os opsys="win8">
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>systeminfo.exe</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>MSInfo32.exe /nfo %TEMP%\msinfo.nfo</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\msinfo.nfo</temp_out>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>netstat.exe -anob</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="win7">
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>systeminfo.exe</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>MSInfo32.exe /nfo %TEMP%\msinfo.nfo</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\msinfo.nfo</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="vista">
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>systeminfo.exe</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>MSInfo32.exe /nfo %TEMP%\msinfo.nfo</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\msinfo.nfo</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="winxp">
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>systeminfo.exe</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <regis>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Shared Tools\MSInfo\Path</regis>
+                        <args>MSInfo32.exe /nfo %TEMP%\msinfo</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\msinfo.nfo</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="win2k3">
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>systeminfo.exe</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <regis>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Shared Tools\MSInfo\Path</regis>
+                        <args>MSInfo32.exe /nfo %TEMP%\msinfo</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\msinfo.nfo</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="mac">
+                <use_extern_action>
+                    <action>
+                        <args>system_profiler</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <args>kextstat</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>/usr/sbin</path>
+                        <args>lsof -n -i -P +c 20</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>/usr/bin</path>
+                        <args>systemextensionsctl list</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>/usr/bin</path>
+                        <args>sw_vers</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>/bin</path>
+                        <args>ps aux</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>                                        
+                </use_extern_action>
+            </os>
+            <os opsys="linux">
+                <use_extern_action>
+                    <action>
+                        <args>uname -a</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                </use_extern_action>
+            </os>
+        </dart>
+    </file>
+    <file id="route">
+        <default>true</default>
+        <description>Route Information</description>
+        <gui>
+            <label>_tr("Route Information")</label>
+            <file_type>log</file_type>
+        </gui>
+        <dart>
+            <required>false</required>
+			<os opsys="win8">
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>route.exe print</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\System32</path>
+                        <args>netsh.exe int ipv6 show route level=verbose</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\System32</path>
+                        <args>netsh.exe int ipv6 show interface level=verbose</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\System32</path>
+                        <args>netsh.exe int ipv6 show addresses level=verbose</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\System32</path>
+                        <args>netsh.exe int ipv6 show neighbors level=verbose</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\System32</path>
+                        <args>netsh.exe int ipv6 show prefixpolicies</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="win7">
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>route.exe print</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\System32</path>
+                        <args>netsh.exe int ipv6 show route level=verbose</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\System32</path>
+                        <args>netsh.exe int ipv6 show interface level=verbose</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\System32</path>
+                        <args>netsh.exe int ipv6 show addresses level=verbose</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\System32</path>
+                        <args>netsh.exe int ipv6 show neighbors level=verbose</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\System32</path>
+                        <args>netsh.exe int ipv6 show prefixpolicies</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="vista">
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>route.exe print</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\System32</path>
+                        <args>netsh.exe int ipv6 show route level=verbose</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\System32</path>
+                        <args>netsh.exe int ipv6 show interface level=verbose</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\System32</path>
+                        <args>netsh.exe int ipv6 show addresses level=verbose</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\System32</path>
+                        <args>netsh.exe int ipv6 show neighbors level=verbose</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\System32</path>
+                        <args>netsh.exe int ipv6 show prefixpolicies</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="winxp">
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>route.exe print</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\System32</path>
+                        <args>netsh.exe int ipv6 show route level=verbose</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\System32</path>
+                        <args>netsh.exe int ipv6 show interface level=verbose</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\System32</path>
+                        <args>netsh.exe int ipv6 show addresses level=verbose</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\System32</path>
+                        <args>netsh.exe int ipv6 show neighbors level=verbose</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\System32</path>
+                        <args>netsh.exe int ipv6 show prefixpolicies</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="win2k3">
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>route.exe print</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\System32</path>
+                        <args>netsh.exe int ipv6 show route level=verbose</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\System32</path>
+                        <args>netsh.exe int ipv6 show interface level=verbose</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\System32</path>
+                        <args>netsh.exe int ipv6 show addresses level=verbose</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\System32</path>
+                        <args>netsh.exe int ipv6 show neighbors level=verbose</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\System32</path>
+                        <args>netsh.exe int ipv6 show prefixpolicies</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="mac">
+                <use_extern_action>
+                    <action>
+                        <args>netstat -rln</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <args>scutil --dns</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <args>scutil --proxy</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                  <action>
+                        <args>scutil &lt;&lt;&lt; &quot;show State:/Network/Interface&quot; &amp;&amp; scutil &lt;&lt;&lt; &quot;show State:/Network/Global/IPv4&quot; &amp;&amp; scutil &lt;&lt;&lt; &quot;show State:/Network/Global/IPv6&quot; &amp;&amp; scutil &lt;&lt;&lt; &quot;show State:/Network/Global/DNS&quot; &amp;&amp; scutil &lt;&lt;&lt; &quot;show State:/Network/Global/Proxies&quot;</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                  </action>
+                  <action>
+                        <args>scutil &lt;&lt;&lt; &quot;show State:/Network/Service/com.cisco.anyconnect/IPv4&quot; &amp;&amp; scutil &lt;&lt;&lt; &quot;show State:/Network/Service/com.cisco.anyconnect/IPv6&quot; &amp;&amp; scutil &lt;&lt;&lt; &quot;show State:/Network/Service/com.cisco.anyconnect/DNS&quot; &amp;&amp; scutil &lt;&lt;&lt; &quot;show State:/Network/Service/com.cisco.anyconnect/Proxies&quot;</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                  </action>                  
+                </use_extern_action>
+            </os>
+            <os opsys="linux">
+                <use_extern_action>
+                    <action>
+                        <args>ip route; echo; ip -6 route</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                        <temp_out>route.txt</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+        </dart>
+    </file>
+    <file id="filter">
+        <default>true</default>
+        <description>Filter Configuration</description>
+        <gui>
+            <label>_tr("Filter Configuration")</label>
+            <file_type>log</file_type>
+        </gui>
+        <dart>
+            <required>false</required>
+            <os opsys="linux">
+                <use_extern_action>
+                    <action>
+                        <args>iptables -L -n -v</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <args>ip6tables -L -n -v</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="mac">
+                <file_copy_action>
+                    <action>
+                        <loc>/etc/pf.conf</loc>
+                        <clear_log apply="false"></clear_log>
+                    </action>
+                </file_copy_action>
+                <file_copy_action>
+                    <action>
+                        <loc>/etc/resolv.conf</loc>
+                        <clear_log apply="false"></clear_log>
+                    </action>
+                </file_copy_action>
+              <use_extern_action>
+                    <action>
+                        <args>pfctl -sa</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <args>pfctl -a cisco.anyconnect.vpn -sr</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                    <action>
+                        <args>pfctl -sR</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                </use_extern_action>
+            </os>
+        </dart>
+    </file>    
+    <file id="ipconfig">
+        <default>true</default>
+        <description>Interface Configuration</description>
+        <gui>
+            <label>_tr("Interface Configuration")</label>
+            <file_type>log</file_type>
+        </gui>
+        <dart>
+            <required>false</required>
+			<os opsys="win8">
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>ipconfig.exe /all</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                </use_extern_action>
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>reg.exe export HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Adapters %TEMP%\RegTcpipParametersAdapters.txt /y</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\RegTcpipParametersAdapters.txt</temp_out>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>reg.exe export HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces %TEMP%\RegTcpipParametersInterfaces.txt /y</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\RegTcpipParametersInterfaces.txt</temp_out>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>reg.exe export HKLM\SYSTEM\CurrentControlSet\Services\NetBT\Parameters\Interfaces %TEMP%\RegNetBTParametersInterfaces.txt /y</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\RegNetBTParametersInterfaces.txt</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="win7">
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>ipconfig.exe /all</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                </use_extern_action>
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>reg.exe export HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Adapters %TEMP%\RegTcpipParametersAdapters.txt /y</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\RegTcpipParametersAdapters.txt</temp_out>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>reg.exe export HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces %TEMP%\RegTcpipParametersInterfaces.txt /y</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\RegTcpipParametersInterfaces.txt</temp_out>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>reg.exe export HKLM\SYSTEM\CurrentControlSet\Services\NetBT\Parameters\Interfaces %TEMP%\RegNetBTParametersInterfaces.txt /y</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\RegNetBTParametersInterfaces.txt</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="vista">
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>ipconfig.exe /all</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                </use_extern_action>
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>reg.exe export HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Adapters %TEMP%\RegTcpipParametersAdapters.txt /y</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\RegTcpipParametersAdapters.txt</temp_out>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>reg.exe export HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces %TEMP%\RegTcpipParametersInterfaces.txt /y</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\RegTcpipParametersInterfaces.txt</temp_out>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>reg.exe export HKLM\SYSTEM\CurrentControlSet\Services\NetBT\Parameters\Interfaces %TEMP%\RegNetBTParametersInterfaces.txt /y</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\RegNetBTParametersInterfaces.txt</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="winxp">
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>ipconfig.exe /all</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                </use_extern_action>
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>reg.exe export HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Adapters %TEMP%\RegTcpipParametersAdapters.txt /y</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\RegTcpipParametersAdapters.txt</temp_out>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>reg.exe export HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces %TEMP%\RegTcpipParametersInterfaces.txt /y</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\RegTcpipParametersInterfaces.txt</temp_out>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>reg.exe export HKLM\SYSTEM\CurrentControlSet\Services\NetBT\Parameters\Interfaces %TEMP%\RegNetBTParametersInterfaces.txt /y</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\RegNetBTParametersInterfaces.txt</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="win2k3">
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>ipconfig.exe /all</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                </use_extern_action>
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>reg.exe export HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Adapters %TEMP%\RegTcpipParametersAdapters.txt /y</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\RegTcpipParametersAdapters.txt</temp_out>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>reg.exe export HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces %TEMP%\RegTcpipParametersInterfaces.txt /y</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\RegTcpipParametersInterfaces.txt</temp_out>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>reg.exe export HKLM\SYSTEM\CurrentControlSet\Services\NetBT\Parameters\Interfaces %TEMP%\RegNetBTParametersInterfaces.txt /y</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\RegNetBTParametersInterfaces.txt</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="mac">
+                <use_extern_action>
+                    <action>
+                        <args>ifconfig -vv</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="linux">
+                <use_extern_action>
+                    <action>
+                        <args>ip addr</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                        <temp_out>interfaces.txt</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+        </dart>
+    </file>
+    <file id="Network Connectivity Test">
+        <default>false</default>
+        <description>Network Connectivity Test</description>
+        <gui>
+            <label>_tr("Network Connectivity Test")</label>
+            <file_type>log</file_type>
+        </gui>
+        <dart>
+            <required>false</required>
+			<os opsys="win8">
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>ping.exe /n 1 www.cisco.com</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="win7">
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>ping.exe /n 1 www.cisco.com</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="vista">
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>ping.exe /n 1 www.cisco.com</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="winxp">
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>ping.exe /n 1 www.cisco.com</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="win2k3">
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>ping.exe /n 1 www.cisco.com</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="mac">
+                <use_extern_action>
+                    <action>
+                        <args>ping -c 1 www.cisco.com</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="linux">
+                <use_extern_action>
+                    <action>
+                        <args>ping -c 1 www.cisco.com</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                    </action>
+                </use_extern_action>
+            </os>
+        </dart>
+    </file>
+    <file id="system-logs">
+        <default>true</default>
+        <description>System logs</description>
+        <gui>
+            <label>_tr("System logs")</label>
+            <file_type>log</file_type>
+        </gui>
+        <dart>
+            <required>false</required>
+			<os opsys="win8">
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>wevtutil.exe epl System %TEMP%\System.evtx</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\System.evtx</temp_out>
+                    </action>
+               </use_extern_action>
+            </os>
+            <os opsys="win7">
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>wevtutil.exe epl System %TEMP%\System.evtx</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\System.evtx</temp_out>
+                    </action>
+               </use_extern_action>
+            </os>
+            <os opsys="vista">
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>wevtutil.exe epl System %TEMP%\System.evtx</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\System.evtx</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="winxp">
+                <use_extern_action>
+                    <action>
+                        <plugin>wineventlog.exe</plugin>
+                        <args>wineventlog.exe -l System -f %TEMP%\System.txt</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\System.txt</temp_out>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\system32\wbem</path>
+                        <args>wmic.exe nteventlog where " logfilename='System' " call backupeventlog "%TEMP%\System.evt"</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\System.evt</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="win2k3">
+                <use_extern_action>
+                    <action>
+                        <plugin>wineventlog.exe</plugin>
+                        <args>wineventlog.exe -l System -f %TEMP%\System.txt</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\System.txt</temp_out>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\system32\wbem</path>
+                        <args>wmic.exe nteventlog where " logfilename='System' " call backupeventlog "%TEMP%\System.evt"</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\System.evt</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="linux">
+                <file_copy_action>
+                    <action>
+                        <loc>/var/log/messages</loc>
+                        <clear_log apply="false"></clear_log>
+                    </action>
+                    <action>
+                        <loc>/var/log/syslog</loc>
+                        <clear_log apply="false"></clear_log>
+                    </action>
+                    <action>
+                        <loc>/var/log/kern.log</loc>
+                        <clear_log apply="false"></clear_log>
+                    </action>
+                </file_copy_action>
+            </os>
+            <os opsys="mac">
+                <file_copy_action>
+                    <action>
+                        <loc>/var/log/system.log</loc>
+                        <clear_log apply="false"></clear_log>
+                    </action>
+                    <action>
+                        <loc>/var/log/kernel.log</loc>
+                        <clear_log apply="false"></clear_log>
+                    </action>
+                    <action>
+                        <loc>/var/log/install.log</loc>
+                        <clear_log apply="false"></clear_log>
+                    </action>
+                </file_copy_action>
+                <use_extern_action>
+                    <action>
+                        <path>/usr/bin</path>
+                        <args>log show --predicate 'eventType == logEvent' --last 1d</args>
+                        <clear_log apply="false"></clear_log>
+                        <stdout/>
+                        <temp_out>unified_log.log</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+        </dart>
+    </file>
+    <file id="system-log-hist">
+        <default>true</default>
+        <description>Old system logs (Linux/macOS only)</description>
+        <gui>
+            <label>_tr("Old system logs (Linux/macOS only)")</label>
+            <file_type>log</file_type>
+        </gui>
+        <dart>
+            <required>false</required>
+            <os opsys="linux">
+                <file_copy_action>
+                    <action>
+                        <loc>/var/log/messages.*</loc>
+                        <clear_log apply="false"></clear_log>
+                    </action>
+                    <action>
+                        <loc>/var/log/syslog.*</loc>
+                        <clear_log apply="false"></clear_log>
+                    </action>
+                    <action>
+                        <loc>/var/log/kern.log.*</loc>
+                        <clear_log apply="false"></clear_log>
+                    </action>
+                </file_copy_action>
+            </os>
+            <os opsys="mac">
+                <file_copy_action>
+                    <action>
+                        <loc>/var/log/system.log.*</loc>
+                        <clear_log apply="false"></clear_log>
+                    </action>
+                    <action>
+                        <loc>/var/log/kernel.log.*</loc>
+                        <clear_log apply="false"></clear_log>
+                    </action>
+                    <action>
+                        <loc>/var/log/install.log.*</loc>
+                        <clear_log apply="false"></clear_log>
+                    </action>
+                </file_copy_action>
+            </os>
+        </dart>
+    </file>
+    <file id="application-logs">
+        <default>true</default>
+        <description>Application logs</description>
+        <gui>
+            <label>_tr("Application logs")</label>
+            <file_type>log</file_type>
+        </gui>
+        <dart>
+            <required>false</required>
+			<os opsys="win8">
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>wevtutil.exe epl Application %TEMP%\Application.evtx</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\Application.evtx</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="win7">
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>wevtutil.exe epl Application %TEMP%\Application.evtx</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\Application.evtx</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="vista">
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>wevtutil.exe epl Application %TEMP%\Application.evtx</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\Application.evtx</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="winxp">
+                <use_extern_action>
+                    <action>
+                        <plugin>wineventlog.exe</plugin>
+                        <args>wineventlog.exe -l Application -f %TEMP%\Application.txt</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\Application.txt</temp_out>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\system32\wbem</path>
+                        <args>wmic.exe nteventlog where " logfilename='Application' " call backupeventlog "%TEMP%\Application.evt"</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\Application.evt</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="win2k3">
+                <use_extern_action>
+                    <action>
+                        <plugin>wineventlog.exe</plugin>
+                        <args>wineventlog.exe -l Application -f %TEMP%\Application.txt</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\Application.txt</temp_out>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\system32\wbem</path>
+                        <args>wmic.exe nteventlog where " logfilename='Application' " call backupeventlog "%TEMP%\Application.evt"</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\Application.evt</temp_out>
+					</action>
+                </use_extern_action>
+            </os>
+        </dart>
+    </file>
+    <file id="dart-event-logs">
+        <default>true</default>
+        <description>DART Logs</description>
+        <gui>
+            <label>_tr("DART Logs")</label>
+            <file_type>log</file_type>
+        </gui>
+        <dart>
+            <required>false</required>
+			<os opsys="win8">
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>wevtutil.exe epl "Cisco AnyConnect Diagnostics and Reporting Tool" %TEMP%\DART.evtx</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\DART.evtx</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="win7">
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>wevtutil.exe epl "Cisco AnyConnect Diagnostics and Reporting Tool" %TEMP%\DART.evtx</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\DART.evtx</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="vista">
+                <use_extern_action>
+                    <action>
+                        <path>%WINDIR%\system32</path>
+                        <args>wevtutil.exe epl "Cisco AnyConnect Diagnostics and Reporting Tool" %TEMP%\DART.evtx</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\DART.evtx</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="winxp">
+                <use_extern_action>
+                    <action>
+                        <plugin>wineventlog.exe</plugin>
+                        <args>wineventlog.exe -l "Cisco AnyConnect Diagnostics and Reporting Tool" -f %TEMP%\DART.txt</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\DART.txt</temp_out>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\system32\wbem</path>
+                        <args>wmic.exe nteventlog where " logfilename='Cisco AnyConnect Diagnostics and Reporting Tool' " call backupeventlog "%TEMP%\DART.evt"</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\DART.evt</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+            <os opsys="win2k3">
+                <use_extern_action>
+                    <action>
+                        <plugin>wineventlog.exe</plugin>
+                        <args>wineventlog.exe -l "Cisco AnyConnect Diagnostics and Reporting Tool" -f %TEMP%\DART.txt</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\DART.txt</temp_out>
+                    </action>
+                    <action>
+                        <path>%WINDIR%\system32\wbem</path>
+                        <args>wmic.exe nteventlog where " logfilename='Cisco AnyConnect Diagnostics and Reporting Tool' " call backupeventlog "%TEMP%\DART.evt"</args>
+                        <clear_log apply="false"></clear_log>
+                        <temp_out>%TEMP%\DART.evt</temp_out>
+                    </action>
+                </use_extern_action>
+            </os>
+        </dart>
+    </file>
+</configure>

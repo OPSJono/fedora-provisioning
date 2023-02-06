@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 (http://www.altova.com) by Ashley (Cisco) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://schemas.xmlsoap.org/encoding/" targetNamespace="http://schemas.xmlsoap.org/encoding/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="request">
+		<xs:annotation>
+			<xs:documentation>Request XML Schema</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="bundle" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Describes the bundle that is to be created. If it is not present, the bundle will not be uploaded.  </xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="username" type="xs:string" minOccurs="0"/>
+							<xs:element name="upload_size" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Determines the maximum size of the bundle. If the cumulative sum of all files exceeds the maximum bundle size, the bundle will be stored locally but will not be uploaded to the ASA.</xs:documentation>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:integer">
+										<xs:minInclusive value="0"/>
+										<xs:maxInclusive value="2147483647"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="protocol" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="auth" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="auth_name">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string"/>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="auth_password" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="url" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>The URL that the bundle will be uploaded to.</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="prot_name" type="xs:string" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="file" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Describes what files are to be collected and serves as the linking element to the Config XML. If no files are listed, only those files designated as "required" in the Config XML will be included in the bundle.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="name" type="xs:string" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Used as the name for the file as it will appear in the bundle.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="truncate" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Lists the specifications regarding truncation for this file.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:attribute name="size">
+										<xs:annotation>
+											<xs:documentation>Indicates the maximum size this file can be when included in the bundle.</xs:documentation>
+										</xs:annotation>
+										<xs:simpleType>
+											<xs:restriction base="xs:integer">
+												<xs:maxInclusive value="2147483647"/>
+												<xs:minInclusive value="0"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="type">
+										<xs:annotation>
+											<xs:documentation>Indicates how the file is to be truncated if necessary. </xs:documentation>
+										</xs:annotation>
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="file"/>
+												<xs:enumeration value="data"/>
+												<xs:enumeration value="none"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="id" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="comments" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Where the user can supply comments to the admin and allows the admin to insert notes into the bundle if requested from the ASA. The length of the comments that are included in the bundle will be determined by the size value that is provided for the file with ID equal to "comments".</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
