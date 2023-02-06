@@ -1,6 +1,6 @@
 ---
 common_packages:
-  - thunderbird
+  - evolution
   - vim-enhanced
   - htop
   - iotop
@@ -51,4 +51,4 @@ common_packages:
   - guake
 
 unwanted_packages:
-  - evolution
+  - thunderbird
